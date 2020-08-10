@@ -1,20 +1,11 @@
-import Head from 'next/head'
-import { Button } from 'reactstrap';
+import Head from "next/head";
+import { Button } from "reactstrap";
+import Main from "./main";
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="row">
-        <div className="col-6">
-          <Button color="primary" size="sm">First Button</Button>
-        </div>
-      </div>
-
-
+    <div>
+      <Main></Main>
     </div>
-  )
+  );
 }
