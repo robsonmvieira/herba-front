@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Navbar, NavbarToggler, Nav } from "./styles";
+import {
+  Navbar,
+  NavbarToggler,
+  Container,
+  FormList,
+  InputFormList,
+  BtnList,
+} from "./styles";
 import {
   Collapse,
   NavbarBrand,
@@ -12,7 +19,11 @@ import {
   NavbarText,
   Form,
   Input,
+  InputGroup,
+  InputGroupAddon,
+  Button,
 } from "reactstrap";
+import Products from "../../components/product";
 
 const ListProducts = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,6 +50,17 @@ const ListProducts = () => {
           </DropdownMenu>
         </UncontrolledDropdown>
       </Navbar>
+      <Container>
+        <FormList>
+          <InputFormList /> <BtnList>Cancelar</BtnList>
+        </FormList>
+        <div>
+          <Products></Products>
+          <Products></Products>
+          <Products></Products>
+          <Products></Products>
+        </div>
+      </Container>
     </div>
   );
 };
