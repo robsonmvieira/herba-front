@@ -99,7 +99,7 @@ export const InputFormList = styled.input`
   /* medium */
   @media (min-width: 361px) and (max-width: 760px) {
     width: 100%;
-    max-width: 400px;
+    /* max-width: 400px; */
     height: 48px;
     padding: 20px;
     background: #282741;
@@ -110,9 +110,9 @@ export const InputFormList = styled.input`
   /* large */
 
   @media (min-width: 761px) {
-    width: 100%;
-    max-width: 500px;
-    height: 48px;
+    width: 45%;
+    /* max-width: 500px; */
+    height: 55px;
     background: #282741;
     color: #eff0f5;
     border: none;
@@ -153,7 +153,7 @@ export const BtnList = styled.button`
     width: 20%;
     max-width: 500px;
     margin-top: 20px;
-    height: 48px;
+    height: 55px;
     background: #6e76fb;
     color: #eff0f5;
     border: none;
