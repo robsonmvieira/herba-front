@@ -8,6 +8,7 @@ import {
   BtnList,
   SpanDetalhes,
   ContainerProducts,
+  ContainerTotais,
   ContainerVenda,
   LabelSubtotalDesconto,
   FormSubtotalDesconto,
@@ -16,6 +17,8 @@ import {
   FormTotal,
   BtnFormaPagamento,
   BtnFinalizar,
+  ContainerValorTotal,
+  ContainerBusca,
 } from "./styles";
 import {
   Collapse,
@@ -35,6 +38,7 @@ import {
   Row,
 } from "reactstrap";
 import Product from "../../components/product";
+import TableProducts from "../tableproducts";
 
 const ListProducts = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,18 +66,21 @@ const ListProducts = () => {
         </UncontrolledDropdown>
       </Navbar>
       <Container>
-        <FormList>
-          <InputFormList /> <BtnList>Cancelar</BtnList>
-        </FormList>
         <ContainerVenda>
           <ContainerProducts>
+            <ContainerBusca>
+              <FormList>
+                <InputFormList /> <BtnList>Cancelar</BtnList>
+              </FormList>
+            </ContainerBusca>
             <Product />
             <Product />
             <Product />
             <Product />
             <Product />
+            <TableProducts />
           </ContainerProducts>
-          <ContainerProducts>
+          <ContainerTotais>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
             <ContainerValores>
               <LabelSubtotalDesconto>Subtotal:</LabelSubtotalDesconto>
@@ -88,6 +95,9 @@ const ListProducts = () => {
               <FormTotal>R$90,00</FormTotal>
             </ContainerValores>
             <ContainerValores>
+              <LabelSubtotalDesconto>Formas de Pagamento</LabelSubtotalDesconto>
+            </ContainerValores>
+            <ContainerValores>
               <BtnFormaPagamento>Dinheiro</BtnFormaPagamento>
             </ContainerValores>
             <ContainerValores>
@@ -96,10 +106,10 @@ const ListProducts = () => {
             <ContainerValores>
               <BtnFormaPagamento>Crédito</BtnFormaPagamento>
             </ContainerValores>
-            <ContainerValores>
+            <ContainerValorTotal>
               <BtnFinalizar>Finalizar</BtnFinalizar>
-            </ContainerValores>
-          </ContainerProducts>
+            </ContainerValorTotal>
+          </ContainerTotais>
         </ContainerVenda>
       </Container>
     </div>

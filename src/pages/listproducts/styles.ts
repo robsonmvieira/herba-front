@@ -31,17 +31,19 @@ export const FormList = styled.form`
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     justify-content: center;
+    width: 100%;
   }
   @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 15px;
     justify-content: center;
+    width: 90%;
+    justify-items: center;
   }
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,7 +75,7 @@ export const LabelList = styled.label`
     color: #eff0f5;
   }
   /* large */
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     width: 100%;
     max-width: 500px;
     height: 20px;
@@ -88,7 +90,7 @@ export const LabelList = styled.label`
 
 export const InputFormList = styled.input`
   @media (max-width: 425px) {
-    width: 80%;
+    width: 100%;
     height: 48px;
     background: #282741;
     color: #eff0f5;
@@ -100,16 +102,16 @@ export const InputFormList = styled.input`
   @media (min-width: 426px) and (max-width: 768px) {
     width: 100%;
     /* max-width: 400px; */
-    height: 48px;
-    padding: 20px;
-    background: #282741;
+    height: 40px;
+    background: #1d1f2f;
     color: #eff0f5;
     border: none;
     margin-top: 20px;
+    padding: none;
   }
   /* large */
 
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     width: 45%;
     /* max-width: 500px; */
     height: 55px;
@@ -118,6 +120,34 @@ export const InputFormList = styled.input`
     border: none;
     margin-top: 20px;
     padding: 20px;
+  }
+`;
+
+export const ContainerBusca = styled.div`
+  @media (max-width: 425px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  @media (min-width: 426px) and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    justify-items: center;
+    background: #282741;
+    height: 80px;
+    padding: none;
+  }
+
+  @media (min-width: 769px) {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin-top: 20px;
+    align-items: center;
   }
 `;
 
@@ -136,20 +166,20 @@ export const BtnList = styled.button`
   /* Medium */
 
   @media (min-width: 426px) and (max-width: 768px) {
-    width: 20%;
-    max-width: 400px;
-    height: 48px;
-    margin-top: 20px;
+    width: 30%;
+    height: 40px;
     background: #ff6198;
     color: #eff0f5;
     border: none;
     font-size: 100%;
     margin-left: 3px;
+    margin-top: 20px;
+    padding: none;
   }
 
   /* large  */
 
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     width: 20%;
     max-width: 500px;
     margin-top: 20px;
@@ -172,15 +202,41 @@ export const ContainerProducts = styled.div`
   @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 65%;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  @media (min-width: 769px) {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin-top: 20px;
+    align-items: center;
+  }
+`;
+
+export const ContainerTotais = styled.div`
+  @media (max-width: 425px) {
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
-  @media (min-width: 761px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 33%;
+    align-items: center;
+    background: #282741;
     margin-top: 20px;
+  }
+
+  @media (min-width: 769px) {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-top: 80px;
     align-items: center;
   }
 `;
@@ -197,11 +253,13 @@ export const ContainerValores = styled.div`
 
   @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    width: 90%;
     margin-top: 20px;
+    justify-items: center;
+    align-items: center;
   }
-  @media (min-width: 761px) {
+
+  @media (min-width: 769px) {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -219,7 +277,7 @@ export const ContainerVenda = styled.div`
     width: 100%;
   }
 
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     display: flexbox;
     flex-direction: column;
     width: 100%;
@@ -251,10 +309,9 @@ export const SpanDetalhes = styled.span`
     font-size: 18px;
     line-height: 21px;
     margin-top: 15px;
-    margin-left: 15px;
   }
 
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -297,11 +354,10 @@ export const LabelSubtotalDesconto = styled.span`
     font-size: 18px;
     line-height: 21px;
     margin-top: 15px;
-    width: 50%;
-    margin-left: 35px;
+    width: 100%;
   }
 
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -345,10 +401,9 @@ export const FormSubtotalDesconto = styled.span`
     font-size: 18px;
     line-height: 21px;
     margin-top: 15px;
-    width: 50%;
-    margin-right: 15px;
+    width: 20%;
   }
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
@@ -392,10 +447,9 @@ export const LabelValorTotal = styled.span`
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
-    width: 50%;
-    margin-left: 35px;
+    width: 100%;
   }
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -438,11 +492,10 @@ export const FormTotal = styled.span`
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    width: 50%;
-    margin-right: 15px;
+    width: 30%;
   }
 
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
@@ -485,16 +538,18 @@ export const BtnFormaPagamento = styled.button`
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 70%;
     line-height: 21px;
     flex-direction: row;
-    width: 40%;
-    height: 40px;
-    margin-left: 35px;
+    width: 30%;
+    height: 30px;
+    margin-left: 15px;
     border: none;
+    color: #c4c4c4;
+    overflow: auto;
   }
 
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -507,7 +562,7 @@ export const BtnFormaPagamento = styled.button`
     flex-direction: row;
     width: 40%;
     height: 40px;
-    margin-left: 35px;
+
     border: none;
   }
 `;
@@ -543,13 +598,13 @@ export const BtnFinalizar = styled.button`
     font-size: 18px;
     line-height: 21px;
     flex-direction: row;
-    width: 80%;
+    width: 40%;
     height: 40px;
-    margin-left: 35px;
     border: none;
+    color: #c4c4c4;
   }
 
-  @media (min-width: 761px) {
+  @media (min-width: 769px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -564,5 +619,17 @@ export const BtnFinalizar = styled.button`
     height: 40px;
     margin-left: 35px;
     border: none;
+  }
+`;
+
+export const ContainerValorTotal = styled.div`
+  @media (min-width: 426px) and (max-width: 768px) {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
   }
 `;
