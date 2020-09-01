@@ -6,7 +6,7 @@ import {
   ContainerBtn,
 } from "./styles";
 
-const Products = () => {
+const Product = () => {
   return (
     <ItemContainer>
       <ContainerItemInfo>
@@ -23,4 +23,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Product;

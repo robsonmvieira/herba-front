@@ -126,7 +126,7 @@ export const BtnList = styled.button`
     width: 30%;
     margin-top: 20px;
     height: 48px;
-    background: #6e76fb;
+    background: #ff6198;
     color: #eff0f5;
     border: none;
     font-size: 120%;
@@ -140,7 +140,7 @@ export const BtnList = styled.button`
     max-width: 400px;
     height: 48px;
     margin-top: 20px;
-    background: #6e76fb;
+    background: #ff6198;
     color: #eff0f5;
     border: none;
     font-size: 100%;
@@ -154,10 +154,206 @@ export const BtnList = styled.button`
     max-width: 500px;
     margin-top: 20px;
     height: 55px;
-    background: #6e76fb;
+    background: #ff6198;
     color: #eff0f5;
     border: none;
     font-size: 120%;
     margin-left: 3px;
+  }
+`;
+
+export const ContainerProducts = styled.div`
+  /* @media (max-width: 360px) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  } */
+
+  @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+`;
+
+export const ContainerValores = styled.div`
+  @media (max-width: 360px) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    background: #1d1f2f;
+  }
+
+  @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+  }
+`;
+
+export const ContainerVenda = styled.div`
+  @media (max-width: 360px) {
+    background: #1d1f2f;
+  }
+  @media (min-width: 361px) and (max-width: 760px) {
+    display: flexbox;
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+
+export const SpanDetalhes = styled.span`
+  @media (max-width: 360px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+  }
+  @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+`;
+
+export const LabelSubtotalDesconto = styled.span`
+  @media (max-width: 360px) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    width: 50%;
+    margin-left: 20px;
+  }
+`;
+
+export const FormSubtotalDesconto = styled.span`
+  @media (max-width: 360px) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    width: 50%;
+    margin-right: 15px;
+  }
+`;
+
+export const LabelValorTotal = styled.span`
+  @media (max-width: 360px) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    color: #eff0f5;
+    font-family: Roboto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    color: #eff0f5;
+    font-family: Roboto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+`;
+
+export const FormTotal = styled.span`
+  @media (max-width: 360px) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    color: #ff6198;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    color: #ff6198;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 33px;
+    width: 50%;
+    margin-right: 15px;
   }
 `;

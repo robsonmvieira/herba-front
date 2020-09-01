@@ -9,8 +9,11 @@ export const ItemContainer = styled.div`
   @media (min-width: 361px) and (max-width: 760px) {
     display: flex;
     align-items: flex-end;
-    padding: 15px;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 15px;
   }
 
   @media (min-width: 761px) {
@@ -42,7 +45,7 @@ export const ContainerItemInfo = styled.div`
 
   @media (min-width: 361px) and (max-width: 760px) {
     background: #282741;
-    width: 65%;
+    width: 70%;
     height: 70px;
     display: flex;
     flex-direction: column;
@@ -50,6 +53,14 @@ export const ContainerItemInfo = styled.div`
     justify-content: flex-end;
     max-width: 540px;
     & h6 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      margin-left: 10px;
+    }
+    & Span {
       font-family: Roboto;
       font-style: normal;
       font-weight: 500;
@@ -90,7 +101,7 @@ export const ContainerIconsInfo = styled.div`
 
   @media (min-width: 361px) and (max-width: 760px) {
     background: #282741;
-    width: 35%;
+    width: 30%;
     height: 70px;
     display: flex;
     align-items: center;
@@ -118,7 +129,7 @@ export const InputIconInfo = styled.input`
   }
 
   @media (min-width: 361px) and (max-width: 760px) {
-    width: 17%;
+    width: 35%;
     height: 30px;
     background: #fff;
     color: black;
@@ -152,7 +163,7 @@ export const ContainerBtn = styled.button`
   }
 
   @media (min-width: 361px) and (max-width: 760px) {
-    width: 30%;
+    width: 40%;
     height: 35px;
     background: #74f471;
     border-radius: 4px;

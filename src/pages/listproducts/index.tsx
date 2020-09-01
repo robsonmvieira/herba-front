@@ -6,6 +6,14 @@ import {
   FormList,
   InputFormList,
   BtnList,
+  SpanDetalhes,
+  ContainerProducts,
+  ContainerVenda,
+  LabelSubtotalDesconto,
+  FormSubtotalDesconto,
+  ContainerValores,
+  LabelValorTotal,
+  FormTotal,
 } from "./styles";
 import {
   Collapse,
@@ -22,8 +30,9 @@ import {
   InputGroup,
   InputGroupAddon,
   Button,
+  Row,
 } from "reactstrap";
-import Products from "../../components/product";
+import Product from "../../components/product";
 
 const ListProducts = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,12 +63,29 @@ const ListProducts = () => {
         <FormList>
           <InputFormList /> <BtnList>Cancelar</BtnList>
         </FormList>
-        <div>
-          <Products></Products>
-          <Products></Products>
-          <Products></Products>
-          <Products></Products>
-        </div>
+        <ContainerVenda>
+          <ContainerProducts>
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+          </ContainerProducts>
+          <ContainerProducts>
+            <SpanDetalhes> Detalhes da venda </SpanDetalhes>
+            <ContainerValores>
+              <LabelSubtotalDesconto>Subtotal:</LabelSubtotalDesconto>
+              <FormSubtotalDesconto>R$100,00</FormSubtotalDesconto>
+            </ContainerValores>
+            <ContainerValores>
+              <LabelSubtotalDesconto>Desconto:</LabelSubtotalDesconto>
+              <FormSubtotalDesconto>R$10,00</FormSubtotalDesconto>
+            </ContainerValores>
+            <ContainerValores>
+              <LabelValorTotal>Valor Total:</LabelValorTotal>
+              <FormTotal>R$90,00</FormTotal>
+            </ContainerValores>
+          </ContainerProducts>
+        </ContainerVenda>
       </Container>
     </div>
   );
