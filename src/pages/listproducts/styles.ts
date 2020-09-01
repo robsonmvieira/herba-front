@@ -21,20 +21,20 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
-  /* @media (min-width: 361px) and (max-width: 760px) {
+  /* @media (min-width: 426px) and (max-width: 768px) {
     background: red;
   } */
 `;
 
 export const FormList = styled.form`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 15px;
     justify-content: center;
   }
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,7 +50,7 @@ export const FormList = styled.form`
   }
 `;
 export const LabelList = styled.label`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     width: 80%;
     height: 20px;
     font-family: Roboto;
@@ -61,7 +61,7 @@ export const LabelList = styled.label`
     color: #eff0f5;
   }
   /* medium */
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     width: 80%;
     max-width: 400px;
     height: 20px;
@@ -87,7 +87,7 @@ export const LabelList = styled.label`
 `;
 
 export const InputFormList = styled.input`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     width: 80%;
     height: 48px;
     background: #282741;
@@ -97,7 +97,7 @@ export const InputFormList = styled.input`
     padding: 20px;
   }
   /* medium */
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     width: 100%;
     /* max-width: 400px; */
     height: 48px;
@@ -122,7 +122,7 @@ export const InputFormList = styled.input`
 `;
 
 export const BtnList = styled.button`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     width: 30%;
     margin-top: 20px;
     height: 48px;
@@ -135,7 +135,7 @@ export const BtnList = styled.button`
 
   /* Medium */
 
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     width: 20%;
     max-width: 400px;
     height: 48px;
@@ -163,13 +163,13 @@ export const BtnList = styled.button`
 `;
 
 export const ContainerProducts = styled.div`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -186,7 +186,7 @@ export const ContainerProducts = styled.div`
 `;
 
 export const ContainerValores = styled.div`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -195,7 +195,7 @@ export const ContainerValores = styled.div`
     background: #1d1f2f;
   }
 
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -210,10 +210,10 @@ export const ContainerValores = styled.div`
 `;
 
 export const ContainerVenda = styled.div`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     background: #1d1f2f;
   }
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flexbox;
     flex-direction: column;
     width: 100%;
@@ -227,7 +227,7 @@ export const ContainerVenda = styled.div`
 `;
 
 export const SpanDetalhes = styled.span`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,7 +239,7 @@ export const SpanDetalhes = styled.span`
     line-height: 21px;
     margin-top: 15px;
   }
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,7 +271,7 @@ export const SpanDetalhes = styled.span`
 `;
 
 export const LabelSubtotalDesconto = styled.span`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -285,7 +285,7 @@ export const LabelSubtotalDesconto = styled.span`
     margin-left: 15px;
     width: 50%;
   }
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -319,7 +319,7 @@ export const LabelSubtotalDesconto = styled.span`
 `;
 
 export const FormSubtotalDesconto = styled.span`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -334,7 +334,7 @@ export const FormSubtotalDesconto = styled.span`
     flex-direction: row-reverse;
     margin-right: 15px;
   }
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
@@ -365,7 +365,7 @@ export const FormSubtotalDesconto = styled.span`
 `;
 
 export const LabelValorTotal = styled.span`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -380,7 +380,7 @@ export const LabelValorTotal = styled.span`
     margin-left: 15px;
     width: 50%;
   }
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -413,7 +413,7 @@ export const LabelValorTotal = styled.span`
 `;
 
 export const FormTotal = styled.span`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -428,7 +428,7 @@ export const FormTotal = styled.span`
     width: 50%;
     margin-right: 15px;
   }
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
@@ -458,7 +458,7 @@ export const FormTotal = styled.span`
 `;
 
 export const BtnFormaPagamento = styled.button`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -474,9 +474,10 @@ export const BtnFormaPagamento = styled.button`
     padding: none;
     margin-left: 35px;
     margin-top: 15px;
+    border: none;
   }
 
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -490,6 +491,7 @@ export const BtnFormaPagamento = styled.button`
     width: 40%;
     height: 40px;
     margin-left: 35px;
+    border: none;
   }
 
   @media (min-width: 761px) {
@@ -506,11 +508,12 @@ export const BtnFormaPagamento = styled.button`
     width: 40%;
     height: 40px;
     margin-left: 35px;
+    border: none;
   }
 `;
 
 export const BtnFinalizar = styled.button`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -526,9 +529,10 @@ export const BtnFinalizar = styled.button`
     padding: none;
     margin-left: 35px;
     margin-top: 15px;
+    border: none;
   }
 
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -542,6 +546,7 @@ export const BtnFinalizar = styled.button`
     width: 80%;
     height: 40px;
     margin-left: 35px;
+    border: none;
   }
 
   @media (min-width: 761px) {
@@ -558,5 +563,6 @@ export const BtnFinalizar = styled.button`
     width: 80%;
     height: 40px;
     margin-left: 35px;
+    border: none;
   }
 `;

@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const ItemContainer = styled.div`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     display: flex;
     align-items: flex-end;
     margin-top: 15px;
     width: 90%;
   }
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -26,7 +26,7 @@ export const ItemContainer = styled.div`
 `;
 
 export const ContainerItemInfo = styled.div`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     background: #282741;
     width: 60%;
     height: 70px;
@@ -44,7 +44,7 @@ export const ContainerItemInfo = styled.div`
     }
   }
 
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     background: #282741;
     width: 70%;
     height: 70px;
@@ -91,7 +91,7 @@ export const ContainerItemInfo = styled.div`
 `;
 
 export const ContainerIconsInfo = styled.div`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     background: #282741;
     width: 40%;
     height: 70px;
@@ -100,7 +100,7 @@ export const ContainerIconsInfo = styled.div`
     justify-content: flex-end;
   }
 
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     background: #282741;
     width: 30%;
     height: 70px;
@@ -119,7 +119,7 @@ export const ContainerIconsInfo = styled.div`
 `;
 
 export const InputIconInfo = styled.input`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     width: 35%;
     height: 30px;
     background: #fff;
@@ -129,7 +129,7 @@ export const InputIconInfo = styled.input`
     margin-right: 5px;
   }
 
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     width: 35%;
     height: 30px;
     background: #fff;
@@ -151,7 +151,7 @@ export const InputIconInfo = styled.input`
 `;
 
 export const ContainerBtn = styled.button`
-  @media (max-width: 360px) {
+  @media (max-width: 425px) {
     width: 50%;
     height: 35px;
     background: #74f471;
@@ -161,9 +161,10 @@ export const ContainerBtn = styled.button`
     align-items: center;
     justify-content: center;
     margin-right: 7px;
+    border: none;
   }
 
-  @media (min-width: 361px) and (max-width: 760px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     width: 40%;
     height: 35px;
     background: #74f471;
@@ -173,6 +174,7 @@ export const ContainerBtn = styled.button`
     align-items: center;
     justify-content: center;
     margin-right: 7px;
+    border: none;
   }
 
   @media (min-width: 761px) {
@@ -185,5 +187,6 @@ export const ContainerBtn = styled.button`
     align-items: center;
     justify-content: center;
     margin-right: 7px;
+    border: none;
   }
 `;
