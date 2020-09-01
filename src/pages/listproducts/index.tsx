@@ -14,6 +14,8 @@ import {
   ContainerValores,
   LabelValorTotal,
   FormTotal,
+  BtnFormaPagamento,
+  BtnFinalizar,
 } from "./styles";
 import {
   Collapse,
@@ -69,6 +71,7 @@ const ListProducts = () => {
             <Product />
             <Product />
             <Product />
+            <Product />
           </ContainerProducts>
           <ContainerProducts>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
@@ -83,6 +86,18 @@ const ListProducts = () => {
             <ContainerValores>
               <LabelValorTotal>Valor Total:</LabelValorTotal>
               <FormTotal>R$90,00</FormTotal>
+            </ContainerValores>
+            <ContainerValores>
+              <BtnFormaPagamento>Dinheiro</BtnFormaPagamento>
+            </ContainerValores>
+            <ContainerValores>
+              <BtnFormaPagamento>Débito</BtnFormaPagamento>
+            </ContainerValores>
+            <ContainerValores>
+              <BtnFormaPagamento>Crédito</BtnFormaPagamento>
+            </ContainerValores>
+            <ContainerValores>
+              <BtnFinalizar>Finalizar</BtnFinalizar>
             </ContainerValores>
           </ContainerProducts>
         </ContainerVenda>

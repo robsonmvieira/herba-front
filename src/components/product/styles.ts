@@ -4,23 +4,24 @@ export const ItemContainer = styled.div`
   @media (max-width: 360px) {
     display: flex;
     align-items: flex-end;
-    padding: 15px;
+    margin-top: 15px;
+    width: 90%;
   }
   @media (min-width: 361px) and (max-width: 760px) {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     margin-top: 15px;
-    margin-left: 15px;
   }
 
   @media (min-width: 761px) {
     display: flex;
-    align-items: flex-end;
-    padding: 15px;
+    align-items: center;
+    margin-top: 20px;
     justify-content: center;
+    width: 100%;
   }
 `;
 
@@ -72,7 +73,7 @@ export const ContainerItemInfo = styled.div`
 
   @media (min-width: 761px) {
     background: #282741;
-    width: 40%;
+    width: 60%;
     height: 70px;
     display: flex;
     flex-direction: column;

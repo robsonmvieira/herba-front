@@ -163,16 +163,25 @@ export const BtnList = styled.button`
 `;
 
 export const ContainerProducts = styled.div`
-  /* @media (max-width: 360px) {
-    width: 50%;
+  @media (max-width: 360px) {
     display: flex;
     flex-direction: column;
-  } */
+    align-items: center;
+  }
 
   @media (min-width: 361px) and (max-width: 760px) {
     display: flex;
     flex-direction: column;
     width: 50%;
+    align-items: center;
+  }
+
+  @media (min-width: 761px) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 20px;
+    align-items: center;
   }
 `;
 
@@ -192,6 +201,12 @@ export const ContainerValores = styled.div`
     width: 100%;
     margin-top: 20px;
   }
+  @media (min-width: 761px) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+  }
 `;
 
 export const ContainerVenda = styled.div`
@@ -199,6 +214,12 @@ export const ContainerVenda = styled.div`
     background: #1d1f2f;
   }
   @media (min-width: 361px) and (max-width: 760px) {
+    display: flexbox;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media (min-width: 761px) {
     display: flexbox;
     flex-direction: column;
     width: 100%;
@@ -219,6 +240,21 @@ export const SpanDetalhes = styled.span`
     margin-top: 15px;
   }
   @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  @media (min-width: 761px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -262,7 +298,23 @@ export const LabelSubtotalDesconto = styled.span`
     line-height: 21px;
     margin-top: 15px;
     width: 50%;
-    margin-left: 20px;
+    margin-left: 35px;
+  }
+
+  @media (min-width: 761px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    width: 50%;
+    margin-left: 35px;
   }
 `;
 
@@ -283,6 +335,20 @@ export const FormSubtotalDesconto = styled.span`
     margin-right: 15px;
   }
   @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    width: 50%;
+    margin-right: 15px;
+  }
+  @media (min-width: 761px) {
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
@@ -327,8 +393,22 @@ export const LabelValorTotal = styled.span`
     font-size: 24px;
     line-height: 28px;
     width: 50%;
-    margin-left: 20px;
-    margin-top: 30px;
+    margin-left: 35px;
+  }
+  @media (min-width: 761px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    color: #eff0f5;
+    font-family: Roboto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    width: 50%;
+    margin-left: 35px;
   }
 `;
 
@@ -358,8 +438,125 @@ export const FormTotal = styled.span`
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    margin-top: 33px;
     width: 50%;
     margin-right: 15px;
+  }
+
+  @media (min-width: 761px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    color: #ff6198;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    width: 50%;
+    margin-right: 15px;
+  }
+`;
+
+export const BtnFormaPagamento = styled.button`
+  @media (max-width: 360px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    flex-direction: center;
+    width: 80%;
+    height: 50px;
+    padding: none;
+    margin-left: 35px;
+    margin-top: 15px;
+  }
+
+  @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    flex-direction: row;
+    width: 40%;
+    height: 40px;
+    margin-left: 35px;
+  }
+
+  @media (min-width: 761px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    flex-direction: row;
+    width: 40%;
+    height: 40px;
+    margin-left: 35px;
+  }
+`;
+
+export const BtnFinalizar = styled.button`
+  @media (max-width: 360px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    flex-direction: center;
+    width: 80%;
+    height: 50px;
+    padding: none;
+    margin-left: 35px;
+    margin-top: 15px;
+  }
+
+  @media (min-width: 361px) and (max-width: 760px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    flex-direction: row;
+    width: 80%;
+    height: 40px;
+    margin-left: 35px;
+  }
+
+  @media (min-width: 761px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    flex-direction: row;
+    width: 80%;
+    height: 40px;
+    margin-left: 35px;
   }
 `;
