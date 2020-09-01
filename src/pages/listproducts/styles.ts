@@ -247,6 +247,7 @@ export const LabelSubtotalDesconto = styled.span`
     line-height: 21px;
     margin-top: 15px;
     margin-left: 15px;
+    width: 50%;
   }
   @media (min-width: 361px) and (max-width: 760px) {
     display: flex;
@@ -277,7 +278,9 @@ export const FormSubtotalDesconto = styled.span`
     font-size: 18px;
     line-height: 21px;
     margin-top: 15px;
-    margin-left: 15px;
+    width: 50%;
+    flex-direction: row-reverse;
+    margin-right: 15px;
   }
   @media (min-width: 361px) and (max-width: 760px) {
     display: flex;
@@ -309,6 +312,7 @@ export const LabelValorTotal = styled.span`
     line-height: 28px;
     margin-top: 15px;
     margin-left: 15px;
+    width: 50%;
   }
   @media (min-width: 361px) and (max-width: 760px) {
     display: flex;
@@ -340,7 +344,9 @@ export const FormTotal = styled.span`
     font-size: 18px;
     line-height: 21px;
     margin-top: 15px;
-    margin-left: 15px;
+    flex-direction: row-reverse;
+    width: 50%;
+    margin-right: 15px;
   }
   @media (min-width: 361px) and (max-width: 760px) {
     display: flex;
