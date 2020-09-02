@@ -106,9 +106,10 @@ const ListProducts = () => {
             <ContainerValores>
               <BtnFormaPagamento>Crédito</BtnFormaPagamento>
             </ContainerValores>
-            <ContainerValorTotal>
+
+            <ContainerValores>
               <BtnFinalizar>Finalizar</BtnFinalizar>
-            </ContainerValorTotal>
+            </ContainerValores>
           </ContainerTotais>
         </ContainerVenda>
       </Container>

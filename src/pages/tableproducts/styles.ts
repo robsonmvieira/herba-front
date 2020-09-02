@@ -17,6 +17,7 @@ export const ContainerListLarge = styled.div`
     width: 100%;
     position: relative;
     overflow-x: 100%;
+    border: none;
   }
   & th {
     font-family: Roboto;
@@ -41,6 +42,10 @@ export const ContainerListLarge = styled.div`
     position: relative;
     padding: none;
     margin: none;
+    border: none;
+  }
+  & tbody {
+    border: none;
   }
 `;
 

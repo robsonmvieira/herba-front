@@ -520,6 +520,7 @@ export const BtnFormaPagamento = styled.button`
     margin-left: 35px;
     margin-top: 15px;
     border: none;
+    color: #c4c4c4;
   }
 
   @media (min-width: 498px) {
@@ -573,9 +574,10 @@ export const BtnFinalizar = styled.button`
     flex-direction: center;
     width: 80%;
     height: 50px;
-    padding: none;
+    margin-top: 20px;
     margin-left: 35px;
     border: none;
+    color: #c4c4c4;
   }
 
   @media (min-width: 498px) {
@@ -617,12 +619,19 @@ export const BtnFinalizar = styled.button`
 export const ContainerValorTotal = styled.div`
   @media (min-width: 497px) {
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    background: #1d1f2f;
+
+    /* display: flex;
     width: 100%;
     margin-top: 20px;
     justify-items: center;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 60px; */
   }
 
   @media (min-width: 498px) {
