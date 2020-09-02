@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const ItemContainer = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     align-items: flex-end;
     margin-top: 15px;
     width: 90%;
   }
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
   }
 
   @media (min-width: 769px) {
@@ -24,7 +24,7 @@ export const ItemContainer = styled.div`
 `;
 
 export const ContainerItemInfo = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     background: #282741;
     width: 60%;
     height: 70px;
@@ -42,7 +42,7 @@ export const ContainerItemInfo = styled.div`
     }
   }
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     /* background: #282741;
     width: 60%;
     height: 70px;
@@ -76,7 +76,7 @@ export const ContainerItemInfo = styled.div`
 `;
 
 export const ContainerIconsInfo = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     background: #282741;
     width: 40%;
     height: 70px;
@@ -85,7 +85,7 @@ export const ContainerIconsInfo = styled.div`
     justify-content: flex-end;
   }
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     /* background: #282741;
     width: 40%;
     height: 70px;
@@ -110,7 +110,7 @@ export const InputIconInfo = styled.input`
     margin-right: 5px;
   }
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 426px) {
     width: 35%;
     height: 30px;
     background: #fff;
@@ -119,7 +119,7 @@ export const InputIconInfo = styled.input`
     margin-top: 30px;
     margin-right: 5px;
   }
-
+  /*
   @media (min-width: 769px) {
     width: 17%;
     height: 30px;
@@ -128,7 +128,7 @@ export const InputIconInfo = styled.input`
     border: none;
     margin-top: 30px;
     margin-right: 5px;
-  }
+  } */
 `;
 
 export const ContainerBtn = styled.button`

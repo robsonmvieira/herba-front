@@ -27,7 +27,7 @@ export const Container = styled.div`
 `;
 
 export const FormList = styled.form`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -35,20 +35,13 @@ export const FormList = styled.form`
     justify-content: center;
     width: 100%;
   }
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     justify-items: center;
-  }
-  @media (min-width: 769px) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 15px;
-    justify-content: center;
   }
 `;
 export const LabelList = styled.label`
@@ -89,7 +82,7 @@ export const LabelList = styled.label`
 `;
 
 export const InputFormList = styled.input`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     width: 100%;
     height: 48px;
     background: #282741;
@@ -99,7 +92,7 @@ export const InputFormList = styled.input`
     padding: 20px;
   }
   /* medium */
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     width: 100%;
     /* max-width: 400px; */
     height: 40px;
@@ -107,31 +100,32 @@ export const InputFormList = styled.input`
     color: #eff0f5;
     border: none;
     margin-top: 20px;
-    padding: none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
   }
   /* large */
-
+  /*
   @media (min-width: 769px) {
     width: 45%;
-    /* max-width: 500px; */
     height: 55px;
     background: #282741;
     color: #eff0f5;
     border: none;
     margin-top: 20px;
-    padding: 20px;
-  }
+    padding: none;
+  } */
 `;
 
 export const ContainerBusca = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -139,20 +133,20 @@ export const ContainerBusca = styled.div`
     justify-items: center;
     background: #282741;
     height: 80px;
-    padding: none;
+    margin-top: 20px;
   }
-
+  /*
   @media (min-width: 769px) {
     display: flex;
     flex-direction: column;
     width: 65%;
     margin-top: 20px;
     align-items: center;
-  }
+  } */
 `;
 
 export const BtnList = styled.button`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     width: 30%;
     margin-top: 20px;
     height: 48px;
@@ -165,20 +159,21 @@ export const BtnList = styled.button`
 
   /* Medium */
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     width: 30%;
     height: 40px;
     background: #ff6198;
     color: #eff0f5;
     border: none;
     font-size: 100%;
-    margin-left: 3px;
     margin-top: 20px;
-    padding: none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
   }
 
   /* large  */
-
+  /*
   @media (min-width: 769px) {
     width: 20%;
     max-width: 500px;
@@ -189,60 +184,59 @@ export const BtnList = styled.button`
     border: none;
     font-size: 120%;
     margin-left: 3px;
-  }
+  } */
 `;
 
 export const ContainerProducts = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) and (max-width: 760px) {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 100%;
     align-items: center;
-    margin-top: 20px;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 761px) {
     display: flex;
     flex-direction: column;
     width: 65%;
-    margin-top: 20px;
+
     align-items: center;
   }
 `;
 
 export const ContainerTotais = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: 760px) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 761px) {
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 32%;
     align-items: center;
     background: #282741;
     margin-top: 20px;
   }
-
+  /*
   @media (min-width: 769px) {
     display: flex;
     flex-direction: column;
     width: 35%;
     margin-top: 80px;
     align-items: center;
-  }
+  } */
 `;
 
 export const ContainerValores = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -251,36 +245,32 @@ export const ContainerValores = styled.div`
     background: #1d1f2f;
   }
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     display: flex;
     width: 90%;
     margin-top: 20px;
     justify-items: center;
     align-items: center;
   }
-
+  /*
   @media (min-width: 769px) {
     display: flex;
     flex-direction: row;
     width: 100%;
     margin-top: 20px;
-  }
+  } */
 `;
 
 export const ContainerVenda = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: 760px) {
     background: #1d1f2f;
+    width: 100%;
   }
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 761px) {
     display: flexbox;
     flex-direction: column;
     width: 100%;
-  }
-
-  @media (min-width: 769px) {
-    display: flexbox;
-    flex-direction: column;
-    width: 100%;
+    background: #1d1f2f;
   }
 `;
 
@@ -328,7 +318,7 @@ export const SpanDetalhes = styled.span`
 `;
 
 export const LabelSubtotalDesconto = styled.span`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -342,7 +332,7 @@ export const LabelSubtotalDesconto = styled.span`
     margin-left: 15px;
     width: 50%;
   }
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -351,12 +341,12 @@ export const LabelSubtotalDesconto = styled.span`
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 100%;
     line-height: 21px;
     margin-top: 15px;
-    width: 100%;
+    width: 50%;
   }
-
+  /*
   @media (min-width: 769px) {
     display: flex;
     flex-direction: row;
@@ -371,11 +361,11 @@ export const LabelSubtotalDesconto = styled.span`
     margin-top: 15px;
     width: 50%;
     margin-left: 35px;
-  }
+  } */
 `;
 
 export const FormSubtotalDesconto = styled.span`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -383,14 +373,14 @@ export const FormSubtotalDesconto = styled.span`
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 80%;
     line-height: 21px;
     margin-top: 15px;
-    width: 50%;
+    width: 100%;
     flex-direction: row-reverse;
     margin-right: 15px;
   }
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
@@ -401,8 +391,8 @@ export const FormSubtotalDesconto = styled.span`
     font-size: 18px;
     line-height: 21px;
     margin-top: 15px;
-    width: 20%;
-  }
+    width: 50%;
+    /* }
   @media (min-width: 769px) {
     display: flex;
     flex-direction: row-reverse;
@@ -416,11 +406,12 @@ export const FormSubtotalDesconto = styled.span`
     margin-top: 15px;
     width: 50%;
     margin-right: 15px;
+  } */
   }
 `;
 
 export const LabelValorTotal = styled.span`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -435,7 +426,7 @@ export const LabelValorTotal = styled.span`
     margin-left: 15px;
     width: 50%;
   }
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -447,8 +438,8 @@ export const LabelValorTotal = styled.span`
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
-    width: 100%;
-  }
+    width: 50%;
+    /* }
   @media (min-width: 769px) {
     display: flex;
     flex-direction: row;
@@ -463,11 +454,12 @@ export const LabelValorTotal = styled.span`
     line-height: 28px;
     width: 50%;
     margin-left: 35px;
+  } */
   }
 `;
 
 export const FormTotal = styled.span`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -482,7 +474,7 @@ export const FormTotal = styled.span`
     width: 50%;
     margin-right: 15px;
   }
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
@@ -492,9 +484,9 @@ export const FormTotal = styled.span`
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    width: 30%;
+    width: 50%;
   }
-
+  /*
   @media (min-width: 769px) {
     display: flex;
     flex-direction: row-reverse;
@@ -507,11 +499,11 @@ export const FormTotal = styled.span`
     line-height: 21px;
     width: 50%;
     margin-right: 15px;
-  }
+  } */
 `;
 
 export const BtnFormaPagamento = styled.button`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -530,7 +522,7 @@ export const BtnFormaPagamento = styled.button`
     border: none;
   }
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -538,17 +530,17 @@ export const BtnFormaPagamento = styled.button`
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 70%;
+    font-size: 100%;
     line-height: 21px;
     flex-direction: row;
-    width: 30%;
+    width: 40%;
     height: 30px;
     margin-left: 15px;
     border: none;
     color: #c4c4c4;
     overflow: auto;
   }
-
+  /*
   @media (min-width: 769px) {
     display: flex;
     justify-content: center;
@@ -564,11 +556,11 @@ export const BtnFormaPagamento = styled.button`
     height: 40px;
 
     border: none;
-  }
+  } */
 `;
 
 export const BtnFinalizar = styled.button`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -583,11 +575,10 @@ export const BtnFinalizar = styled.button`
     height: 50px;
     padding: none;
     margin-left: 35px;
-    margin-top: 15px;
     border: none;
   }
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -595,15 +586,16 @@ export const BtnFinalizar = styled.button`
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 100%;
     line-height: 21px;
     flex-direction: row;
-    width: 40%;
+    width: 100%;
     height: 40px;
     border: none;
     color: #c4c4c4;
+    margin-top: 30px;
   }
-
+  /*
   @media (min-width: 769px) {
     display: flex;
     justify-content: center;
@@ -619,13 +611,23 @@ export const BtnFinalizar = styled.button`
     height: 40px;
     margin-left: 35px;
     border: none;
-  }
+  } */
 `;
 
 export const ContainerValorTotal = styled.div`
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 497px) {
     display: flex;
     width: 100%;
+    margin-top: 20px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  @media (min-width: 498px) {
+    display: flex;
+    width: 60%;
     margin-top: 20px;
     justify-items: center;
     align-items: center;

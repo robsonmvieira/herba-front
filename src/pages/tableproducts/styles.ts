@@ -5,7 +5,7 @@ export const ContainerListLarge = styled.div`
     display: none;
   }
 
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 426px) {
     /* display: flex;
     align-items: center;
     justify-content: center;
@@ -14,17 +14,15 @@ export const ContainerListLarge = styled.div`
     /* width: 100%; */
     display: flex;
     margin-bottom: 250px;
-    width: auto;
+    width: 100%;
     position: relative;
-    overflow-x: auto;
-    white-space: nowrap;
+    overflow-x: 100%;
   }
   & th {
     font-family: Roboto;
     font-style: normal;
     color: #ffffff;
     border: none;
-    width: 100%;
   }
   & thead {
     background-color: #1d1f2f;
@@ -33,38 +31,35 @@ export const ContainerListLarge = styled.div`
   & tr {
     color: #ffffff;
     border: none;
-    width: 90%;
   }
   & td {
     color: #c4c4c4;
     border: none;
-    width: 90%;
+    padding: none;
   }
   & table {
     position: relative;
-    width: 90%;
-  }
-
-  @media (min-width: 769px) {
+    padding: none;
+    margin: none;
   }
 `;
 
+// container que segura a tabela abaixo
+
 export const ItemContainer = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: 497px) {
     display: none;
   }
-  @media (min-width: 426px) and (max-width: 768px) {
+  @media (min-width: 498px) and (max-width: 760px) {
     display: flex;
     align-items: center;
     justify-content: center;
-    align-items: center;
     width: 90%;
     background-color: #282741;
-    height: 500px;
     margin-top: 20px;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 761px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,10 +68,10 @@ export const ItemContainer = styled.div`
   }
 `;
 
-export const ContainerHeaderList = styled.div`
-  background-color: red;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+// export const ContainerHeaderList = styled.div`
+//   background-color: red;
+//   width: 500%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// `;

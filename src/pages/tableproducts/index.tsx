@@ -1,8 +1,4 @@
-import {
-  ContainerListLarge,
-  ItemContainer,
-  ContainerHeaderList,
-} from "./styles";
+import { ContainerListLarge, ItemContainer } from "./styles";
 import { Table } from "reactstrap";
 
 const TableProducts = () => {
@@ -17,6 +13,7 @@ const TableProducts = () => {
               <th>Quantidade</th>
               <th>Desc</th>
               <th>Subtotal</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -26,6 +23,9 @@ const TableProducts = () => {
               <td>4</td>
               <td>5%</td>
               <td>R$55,00</td>
+              <td>
+                <img src="/image/lixeira.svg" alt="" />
+              </td>
             </tr>
             <tr>
               <td>Smart Bar</td>
@@ -33,6 +33,9 @@ const TableProducts = () => {
               <td>4</td>
               <td>5%</td>
               <td>R$55,00</td>
+              <td>
+                <img src="/image/lixeira.svg" alt="" />
+              </td>
             </tr>
             <tr>
               <td>Smart Bar</td>
@@ -40,6 +43,9 @@ const TableProducts = () => {
               <td>4</td>
               <td>5%</td>
               <td>R$55,00</td>
+              <td>
+                <img src="/image/lixeira.svg" alt="" />
+              </td>
             </tr>
           </tbody>
         </Table>
