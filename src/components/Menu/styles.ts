@@ -11,6 +11,10 @@ export const NavbarToggler = styled(NT)`
 `;
 
 export const Nav = styled(CN)`
+  display: flex;
+  align-items: flex-end;
+  background: #282741;
+
   & .nav-item .nav-link {
     color: rgba(110, 118, 251, 1);
   }

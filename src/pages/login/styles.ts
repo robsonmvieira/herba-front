@@ -5,19 +5,19 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
-  @media (min-width: 426px) {
+  @media (min-width: 776px) {
     display: flex;
     justify-content: center;
   }
 `;
 
 export const ContainerTela = styled.div`
-  @media (max-width: 425px) {
-    background: 1d1f2f;
+  @media (max-width: 775px) {
+    background: #1d1f2f;
     width: 100%;
   }
-  @media (min-width: 426px) {
-    background: 1d1f2f;
+  @media (min-width: 776px) {
+    background: #1d1f2f;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -29,11 +29,11 @@ export const ContainerTela = styled.div`
   } */
 
 export const ContainerDivisao = styled.div`
-  @media (max-width: 425px) {
+  @media (max-width: 775px) {
     background: 1d1f2f;
     width: 100%;
   }
-  @media (min-width: 426px) {
+  @media (min-width: 776px) {
     background: 1d1f2f;
     width: 50%;
     display: flex;
@@ -45,7 +45,7 @@ export const ContainerDivisao = styled.div`
 `;
 
 export const LabelLifeAdmin = styled.h1`
-  @media (max-width: 425px) {
+  @media (max-width: 775px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,11 +58,24 @@ export const LabelLifeAdmin = styled.h1`
     line-height: 84px;
   }
 
-  @media (min-width: 426px) {
+  @media (min-width: 776px) and (max-width: 929px) {
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
-    font-size: 72px;
+    font-weight: 100%;
+    font-size: 400%;
+    line-height: 84px;
+    color: #eff0f5;
+    width: 350%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 930px) {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 100%;
+    font-size: 500%;
     line-height: 84px;
     color: #eff0f5;
     width: 100%;
@@ -73,14 +86,14 @@ export const LabelLifeAdmin = styled.h1`
 `;
 
 export const FormLogin = styled.form`
-  @media (max-width: 425px) {
+  @media (max-width: 775px) {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
 
     align-items: center;
   }
-  @media (min-width: 426px) {
+  @media (min-width: 776px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,7 +108,7 @@ export const FormLogin = styled.form`
   } */
 `;
 export const LabelLogin = styled.label`
-  @media (max-width: 425px) {
+  @media (max-width: 775px) {
     width: 80%;
     height: 20px;
     font-family: Roboto;
@@ -109,7 +122,7 @@ export const LabelLogin = styled.label`
     justify-content: center;
   }
   /* medium */
-  @media (min-width: 426px) {
+  @media (min-width: 776px) {
     width: 80%;
     max-width: 400px;
     height: 20px;
@@ -119,8 +132,8 @@ export const LabelLogin = styled.label`
     font-size: 100%;
     line-height: 16px;
     color: #eff0f5;
-    margin-top: 170px;
   }
+
   /* large */
   /* @media (min-width: 761px) {
     width: 100%;
@@ -135,8 +148,26 @@ export const LabelLogin = styled.label`
   } */
 `;
 
+export const LabelLoginH2 = styled.h2`
+  @media (max-width: 775px) {
+    display: none;
+  }
+
+  @media (min-width: 776px) {
+    width: 100%;
+    height: 48px;
+    color: #eff0f5;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+`;
+
 export const InputFormLogin = styled.input`
-  @media (max-width: 425px) {
+  @media (max-width: 775px) {
     width: 80%;
     height: 48px;
     left: 43px;
@@ -146,7 +177,7 @@ export const InputFormLogin = styled.input`
     border: none;
   }
   /* medium */
-  @media (min-width: 426px) {
+  @media (min-width: 776px) {
     width: 80%;
     height: 48px;
     background: #1d1f2f;
@@ -170,7 +201,7 @@ export const InputFormLogin = styled.input`
 `;
 
 export const BtnLogin = styled.button`
-  @media (max-width: 425px) {
+  @media (max-width: 775px) {
     width: 80%;
     margin-top: 43px;
     height: 48px;
@@ -182,7 +213,7 @@ export const BtnLogin = styled.button`
 
   /* Medium */
 
-  @media (min-width: 426px) {
+  @media (min-width: 776px) {
     width: 80%;
     max-width: 400px;
     margin-top: 43px;

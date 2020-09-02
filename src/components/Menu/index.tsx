@@ -18,32 +18,30 @@ const Menu = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar light expand="md">
-        <NavbarBrand href="/">
-          <img src="image/logo-pdv 1.svg" alt="" />
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Esqueci Minha Senha</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                Sobre
-              </NavLink>
-            </NavItem>
+    <Navbar light expand="md">
+      <NavbarBrand href="/">
+        <img src="image/logo-pdv 1.svg" alt="" />
+      </NavbarBrand>
+      <NavbarToggler onClick={toggle} />
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="mr-auto d-flex" navbar>
+          <NavItem>
+            <NavLink href="/components/">Esqueci Minha Senha</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="https://github.com/reactstrap/reactstrap">
+              Sobre
+            </NavLink>
+          </NavItem>
 
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                Help Desk
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+          <NavItem>
+            <NavLink href="https://github.com/reactstrap/reactstrap">
+              Help Desk
+            </NavLink>
+          </NavItem>
+        </Nav>
+      </Collapse>
+    </Navbar>
   );
 };
 

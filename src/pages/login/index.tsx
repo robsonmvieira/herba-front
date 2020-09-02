@@ -7,6 +7,7 @@ import {
   ContainerDivisao,
   LabelLifeAdmin,
   ContainerTela,
+  LabelLoginH2,
 } from "./styles";
 import Menu from "../../components/Menu";
 
@@ -23,6 +24,7 @@ const Login = () => {
 
           <ContainerDivisao>
             <FormLogin>
+              <LabelLoginH2>Login</LabelLoginH2>
               <LabelLogin>Nome:</LabelLogin>
               <InputFormLogin></InputFormLogin>
               <LabelLogin style={{ marginTop: 25 }}>Email:</LabelLogin>
