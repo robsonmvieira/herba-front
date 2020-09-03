@@ -24,7 +24,7 @@ const Menu = () => {
       </NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
-        <Nav className="mr-auto d-flex" navbar>
+        <Nav className="mr-auto d-flex " navbar>
           <NavItem>
             <NavLink href="/components/">Esqueci Minha Senha</NavLink>
           </NavItem>
