@@ -107,28 +107,15 @@ export const FormLogin = styled.form`
     align-items: center;
   } */
 `;
-export const LabelSobre = styled.p`
-  @media (max-width: 424px) {
-    width: 70%;
-    height: 80%;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.1rem;
-    color: #eff0f5;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  @media (min-width: 425px) and (max-width: 775px) {
+export const LabelLogin = styled.label`
+  @media (max-width: 775px) {
     width: 80%;
-    height: 100%;
+    height: 20px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.1rem;
+    font-size: 120%;
+    line-height: 16px;
     color: #eff0f5;
     align-items: center;
     display: flex;
@@ -137,9 +124,13 @@ export const LabelSobre = styled.p`
   /* medium */
   @media (min-width: 776px) {
     width: 80%;
-    height: 50%;
+    max-width: 400px;
+    height: 20px;
     font-family: Roboto;
-    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    line-height: 16px;
     color: #eff0f5;
   }
 
@@ -157,29 +148,22 @@ export const LabelSobre = styled.p`
   } */
 `;
 
-export const LabelsobreH1 = styled.h1`
+export const LabelRestar = styled.h2`
   @media (max-width: 775px) {
-    width: 80%;
-    color: #6e76fb;
-    border: none;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-bottom: 50px;
-    font-size: 350%;
+    color: #eff0f5;
   }
 
   @media (min-width: 776px) {
-    width: 80%;
-    height: 50%;
-    color: #6e76fb;
+    width: 100%;
+    height: 48px;
+    color: #eff0f5;
     border: none;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
     margin-bottom: 20px;
-    font-size: 450%;
+    font-size: 300%;
   }
 `;
 
@@ -190,7 +174,7 @@ export const InputFormLogin = styled.input`
     left: 43px;
     top: 252px;
     background: #282741;
-    color: #6e76fb;
+    color: #eff0f5;
     border: none;
   }
   /* medium */
@@ -217,7 +201,7 @@ export const InputFormLogin = styled.input`
     */
 `;
 
-export const BtnLogin = styled.button`
+export const BtnEnviar = styled.button`
   @media (max-width: 775px) {
     width: 80%;
     margin-top: 43px;
@@ -232,7 +216,6 @@ export const BtnLogin = styled.button`
 
   @media (min-width: 776px) {
     width: 80%;
-    max-width: 400px;
     margin-top: 43px;
     height: 48px;
     left: 43px;
@@ -257,9 +240,3 @@ export const BtnLogin = styled.button`
 `;
 
 // abaixo é a partir de tela com 361 px
-
-export const LabelMarca = styled.span`
-  color: #2fc84c;
-  margin-left: 10px;
-  font-weight: bold;
-`;

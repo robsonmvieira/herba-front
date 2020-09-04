@@ -26,18 +26,14 @@ const Menu = () => {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="mr-auto d-flex " navbar>
           <NavItem>
-            <NavLink href="/components/">Esqueci Minha Senha</NavLink>
+            <NavLink href="/resetsenha">Esqueci Minha Senha</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
-              Sobre
-            </NavLink>
+            <NavLink href="/sobre">Sobre</NavLink>
           </NavItem>
 
           <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
-              Help Desk
-            </NavLink>
+            <NavLink href="/help">Help Desk</NavLink>
           </NavItem>
         </Nav>
       </Collapse>

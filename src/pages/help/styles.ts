@@ -107,7 +107,7 @@ export const FormLogin = styled.form`
     align-items: center;
   } */
 `;
-export const LabelSobre = styled.p`
+export const LabelHelpDesk = styled.p`
   @media (max-width: 424px) {
     width: 70%;
     height: 80%;
