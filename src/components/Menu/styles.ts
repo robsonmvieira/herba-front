@@ -3,6 +3,8 @@ import { Navbar as RN, NavbarToggler as NT, Nav as CN } from "reactstrap";
 
 export const Navbar = styled(RN)`
   background: #282741;
+
+  }
 `;
 export const NavbarToggler = styled(NT)`
   & .navbar-toggler-icon {
@@ -18,4 +20,11 @@ export const Nav = styled(CN)`
   & .nav-item .nav-link {
     color: rgba(110, 118, 251, 1);
   }
+  & .nav-link {
+    margin-left: 50px;
+  }
+`;
+
+export const ImgLogo = styled.img`
+  margin-left: 10px;
 `;
