@@ -24,10 +24,6 @@ export const ContainerTela = styled.div`
   }
 `;
 
-/* @media (min-width: 361px) and (max-width: 760px) {
-    background: red;
-  } */
-
 export const ContainerDivisao = styled.div`
   @media (max-width: 775px) {
     background: 1d1f2f;
@@ -85,7 +81,7 @@ export const LabelLifeAdmin = styled.h1`
   }
 `;
 
-export const FormLogin = styled.form`
+export const FormHelp = styled.form`
   @media (max-width: 775px) {
     display: flex;
     flex-direction: column;
@@ -100,12 +96,6 @@ export const FormLogin = styled.form`
     width: 100%;
     background-color: #282741;
   }
-  /* @media (min-width: 761px) {
-    display: flex;
-    flex-direction: column;
-    margin-top: 150px;
-    align-items: center;
-  } */
 `;
 export const LabelHelpDesk = styled.p`
   @media (max-width: 424px) {
@@ -134,7 +124,6 @@ export const LabelHelpDesk = styled.p`
     display: flex;
     justify-content: center;
   }
-  /* medium */
   @media (min-width: 776px) {
     width: 80%;
     height: 50%;
@@ -142,19 +131,6 @@ export const LabelHelpDesk = styled.p`
     font-size: 0.9rem;
     color: #eff0f5;
   }
-
-  /* large */
-  /* @media (min-width: 761px) {
-    width: 100%;
-    max-width: 500px;
-    height: 20px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 100%;
-    line-height: 16px;
-    color: #eff0f5;
-  } */
 `;
 
 export const LabelHelpDeskH1 = styled.h1`
@@ -195,81 +171,6 @@ export const LabelHelpDeskH1 = styled.h1`
     font-size: 400%;
   }
 `;
-
-export const InputFormLogin = styled.input`
-  @media (max-width: 775px) {
-    width: 80%;
-    height: 48px;
-    left: 43px;
-    top: 252px;
-    background: #282741;
-    color: #6e76fb;
-    border: none;
-  }
-  /* medium */
-  @media (min-width: 776px) {
-    width: 80%;
-    height: 48px;
-    background: #1d1f2f;
-    color: #eff0f5;
-    border: none;
-    display: flex;
-    align-items: center;
-  }
-  /* large */
-
-  /* @media (min-width: 761px) {
-    width: 80%;
-    max-width: 500px;
-    height: 40px;
-    left: 20px;
-    top: 252px;
-    background: #282741;
-    color: #eff0f5;
-    border: none;
-    */
-`;
-
-export const BtnLogin = styled.button`
-  @media (max-width: 775px) {
-    width: 80%;
-    margin-top: 43px;
-    height: 48px;
-    background: #2fc84c;
-    color: #eff0f5;
-    border: none;
-    font-size: 120%;
-  }
-
-  /* Medium */
-
-  @media (min-width: 776px) {
-    width: 80%;
-    max-width: 400px;
-    margin-top: 43px;
-    height: 48px;
-    left: 43px;
-    top: 252px;
-    background: #2fc84c;
-    color: #eff0f5;
-    border: none;
-    font-size: 100%;
-  }
-
-  /* large  */
-
-  /* @media (min-width: 761px) {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 28px;
-    height: 45px;
-    background: #6e76fb;
-    color: #eff0f5;
-    border: none;
-    font-size: 120%; */
-`;
-
-// abaixo é a partir de tela com 361 px
 
 export const LabelMarca = styled.span`
   color: #2fc84c;

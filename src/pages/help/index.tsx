@@ -1,8 +1,7 @@
 import {
   Container,
-  InputFormLogin,
   LabelHelpDesk,
-  FormLogin,
+  FormHelp,
   LabelMarca,
   ContainerDivisao,
   LabelLifeAdmin,
@@ -23,7 +22,7 @@ const Help = () => {
           </ContainerDivisao>
 
           <ContainerDivisao>
-            <FormLogin>
+            <FormHelp>
               <LabelHelpDeskH1>Help Desk</LabelHelpDeskH1>
               <LabelHelpDesk>
                 Se Você precisa de ajuda ou recebeu algum erro ao tentar
@@ -36,7 +35,7 @@ const Help = () => {
                 Produzido pela
                 <LabelMarca> Twoth Tecnologia.</LabelMarca>
               </LabelHelpDesk>
-            </FormLogin>
+            </FormHelp>
           </ContainerDivisao>
         </ContainerTela>
       </Container>

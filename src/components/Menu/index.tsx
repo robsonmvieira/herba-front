@@ -10,7 +10,9 @@ import {
   DropdownMenu,
   DropdownItem,
   NavbarText,
+  Row,
 } from "reactstrap";
+import { reverse } from "dns";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +33,6 @@ const Menu = () => {
           <NavItem>
             <NavLink href="/sobre">Sobre</NavLink>
           </NavItem>
-
           <NavItem>
             <NavLink href="/help">Help Desk</NavLink>
           </NavItem>

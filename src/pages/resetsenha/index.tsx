@@ -1,13 +1,13 @@
 import {
   Container,
-  InputFormLogin,
-  LabelLogin,
-  FormLogin,
+  InputFormReset,
+  LabelEmail,
+  FormReset,
   BtnEnviar,
   ContainerDivisao,
   LabelLifeAdmin,
   ContainerTela,
-  LabelRestar,
+  LabelResetar,
 } from "./styles";
 import Menu from "../../components/Menu";
 import ModalExample from "../../pages/modalresetsenha";
@@ -24,13 +24,13 @@ const ResetSenha = () => {
           </ContainerDivisao>
 
           <ContainerDivisao>
-            <FormLogin>
-              <LabelRestar>Resetar Senha </LabelRestar>
-              <LabelLogin style={{ marginTop: 25 }}>Email:</LabelLogin>
-              <InputFormLogin></InputFormLogin>
+            <FormReset>
+              <LabelResetar>Resetar Senha </LabelResetar>
+              <LabelEmail style={{ marginTop: 25 }}>Email:</LabelEmail>
+              <InputFormReset></InputFormReset>
 
               <BtnEnviar onClick={ModalExample}> Enviar</BtnEnviar>
-            </FormLogin>
+            </FormReset>
           </ContainerDivisao>
         </ContainerTela>
       </Container>

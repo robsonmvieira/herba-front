@@ -1,8 +1,7 @@
 import {
   Container,
-  InputFormLogin,
   LabelSobre,
-  FormLogin,
+  FormSobre,
   LabelMarca,
   ContainerDivisao,
   LabelLifeAdmin,
@@ -23,7 +22,7 @@ const Sobre = () => {
           </ContainerDivisao>
 
           <ContainerDivisao>
-            <FormLogin>
+            <FormSobre>
               <LabelsobreH1>Sobre</LabelsobreH1>
               <LabelSobre>
                 O Sistema Life Admin é um sistema de gerenciamento do seu ponto
@@ -35,7 +34,7 @@ const Sobre = () => {
                 Produzido pela
                 <LabelMarca> Twoth Tecnologia.</LabelMarca>
               </LabelSobre>
-            </FormLogin>
+            </FormSobre>
           </ContainerDivisao>
         </ContainerTela>
       </Container>
