@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, NavbarToggler, Nav } from "./styles";
+import { Navbar, NavbarToggler, Nav, ImgLogo } from "./styles";
 import {
   Collapse,
   NavbarBrand,
@@ -22,19 +22,20 @@ const Menu = () => {
   return (
     <Navbar light expand="md">
       <NavbarBrand href="/login">
-        <img src="image/logo-pdv 1.svg" alt="" />
+        <ImgLogo src="image/logo-pdv 1.svg" alt="" />
       </NavbarBrand>
+
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
-        <Nav className="mr-auto d-flex " navbar>
-          <NavItem>
-            <NavLink href="/resetsenha">Esqueci Minha Senha</NavLink>
-          </NavItem>
+        <Nav className="ml-auto d-flex " navbar>
           <NavItem>
             <NavLink href="/sobre">Sobre</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/help">Help Desk</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/resetsenha">Esqueci Minha Senha</NavLink>
           </NavItem>
         </Nav>
       </Collapse>
