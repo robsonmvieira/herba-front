@@ -140,7 +140,7 @@ export const LabelLoginH2 = styled.h2`
     justify-content: center;
     margin-top: 80px;
     margin-bottom: 80px;
-    font-size: 350%;
+    font-size: 450%;
   }
 `;
 
@@ -182,7 +182,6 @@ export const BtnLogin = styled.button`
 
   @media (min-width: 776px) {
     width: 80%;
-    max-width: 400px;
     margin-top: 43px;
     height: 48px;
     left: 43px;
