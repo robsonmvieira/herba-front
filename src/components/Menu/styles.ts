@@ -16,10 +16,19 @@ export const Nav = styled(CN)`
   background: #282741;
 
   & .nav-item .nav-link {
-    color: rgba(110, 118, 251, 1);
+    color: #eff0f5;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
   }
   & .nav-link {
-    margin-left: 50px;
+    margin-right: 50px;
     :hover {
       background-color: #2fc84c;
       font-weight: bolder;
@@ -31,6 +40,40 @@ export const Nav = styled(CN)`
       -ms-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
       -o-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
       transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+    align-items: flex-end;
+    background: #282741;
+
+    & .nav-item .nav-link {
+      color: #eff0f5;
+      justify-items: center;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    & .nav-link {
+      margin-right: 10px;
+      :hover {
+        background-color: #2fc84c;
+        font-weight: bolder;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 2px;
+        -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        -moz-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        -ms-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        -o-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+      }
     }
   }
 `;
