@@ -22,7 +22,7 @@ const Menu = () => {
   return (
     <Navbar light expand="md">
       <NavbarBrand href="/login">
-        <ImgLogo src="image/logo-pdv 1.svg" alt="" />
+        <ImgLogo src="image/logo-pdv.svg" alt="" />
       </NavbarBrand>
 
       <NavbarToggler onClick={toggle} />
