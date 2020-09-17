@@ -109,7 +109,7 @@ export const LabelLogin = styled.label`
     color: #eff0f5;
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   /* medium */
   @media (min-width: 776px) {

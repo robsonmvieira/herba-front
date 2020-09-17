@@ -21,13 +21,16 @@ const Menu = () => {
 
   return (
     <Navbar light expand="md">
-      <NavbarBrand href="/login">
+      <NavbarBrand href="/">
         <ImgLogo src="image/logo-pdv.svg" alt="" />
       </NavbarBrand>
 
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto d-flex " navbar>
+          <NavItem>
+            <NavLink href="/login">Login</NavLink>
+          </NavItem>
           <NavItem>
             <NavLink href="/sobre">Sobre</NavLink>
           </NavItem>

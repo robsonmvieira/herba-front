@@ -109,7 +109,7 @@ export const LabelEmail = styled.label`
     color: #eff0f5;
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   /* medium */
   @media (min-width: 776px) {
@@ -122,6 +122,7 @@ export const LabelEmail = styled.label`
     font-size: 100%;
     line-height: 16px;
     color: #eff0f5;
+
   }
 `;
 
@@ -136,7 +137,7 @@ export const LabelResetar = styled.h2`
     color: #eff0f5;
     border: none;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin-top: 80px;
     margin-bottom: 20px;
