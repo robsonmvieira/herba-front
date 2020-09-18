@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import { Navbar, NavbarToggler, Nav, ImgLogo } from "./styles";
+import Link from 'next/link'
+
 import {
   Collapse,
   NavbarBrand,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-  Row,
+  NavLink
 } from "reactstrap";
-import { reverse } from "dns";
+
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,24 +17,43 @@ const Menu = () => {
 
   return (
     <Navbar light expand="md">
-      <NavbarBrand href="/">
-        <ImgLogo src="image/logo-pdv.svg" alt="" />
+      <NavbarBrand>
+        <Link href="/">
+        <ImgLogo src="image/logo-pdv.svg" alt="Essa é a logo do projeto no qual remete a uma mão segurado um halteres" />
+        </Link>
       </NavbarBrand>
 
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto d-flex " navbar>
           <NavItem>
-            <NavLink href="/login">Login</NavLink>
+
+            <NavLink>
+              <Link href="/login">
+                <a style={{textDecoration:'none', color:"#fff"}}>Login</a>
+              </Link>
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/sobre">Sobre</NavLink>
+            <NavLink href="/sobre">
+              <Link href="sobre">
+                <a style={{textDecoration:'none', color:"#fff"}}>Sobre</a>
+              </Link>
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/help">Help Desk</NavLink>
+            <NavLink >
+              <Link href="/help">
+                <a style={{textDecoration:'none', color:"#fff"}}>Help Desk</a>
+              </Link>
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/resetsenha">Esqueci Minha Senha</NavLink>
+            <NavLink>
+              <Link href="/resetsenha">
+                <a style={{textDecoration:'none', color:"#fff"}}> Esqueci Minha Senha</a>
+              </Link>
+            </NavLink>
           </NavItem>
         </Nav>
       </Collapse>
