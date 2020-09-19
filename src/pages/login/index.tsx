@@ -1,15 +1,16 @@
+import React from 'react'
 import {
   Container,
   InputFormLogin,
   LabelLogin,
   FormLogin,
   BtnLogin,
-  ContainerDivisao,
-  LabelLifeAdmin,
-  ContainerTela,
-  LabelLoginH2,
-} from "./styles";
-import Menu from "../../components/Menu";
+  Side,
+  Title,
+  Wapper,
+  FormTitle
+} from './styles'
+import Menu from '../../components/Menu'
 
 const Login = () => {
   return (
@@ -17,24 +18,23 @@ const Login = () => {
       <Menu />
 
       <Container>
-        <ContainerTela>
-          <ContainerDivisao>
-            <LabelLifeAdmin> Life Admin</LabelLifeAdmin>
-          </ContainerDivisao>
-
-          <ContainerDivisao>
+        <Wapper>
+          <Side>
+            <Title> Life Admin</Title>
+          </Side>
+          <Side>
             <FormLogin>
-              <LabelLoginH2>Login</LabelLoginH2>
+              <FormTitle>Login</FormTitle>
               <LabelLogin>Nome:</LabelLogin>
-              <InputFormLogin></InputFormLogin>
+              <InputFormLogin />
               <LabelLogin style={{ marginTop: 25 }}>Email:</LabelLogin>
-              <InputFormLogin></InputFormLogin>
+              <InputFormLogin />
               <BtnLogin>Logar</BtnLogin>
             </FormLogin>
-          </ContainerDivisao>
-        </ContainerTela>
+          </Side>
+        </Wapper>
       </Container>
     </>
-  );
-};
-export default Login;
+  )
+}
+export default Login
