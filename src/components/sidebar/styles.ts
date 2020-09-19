@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media (max-width: 669px) {
+  @media (max-width: 767px) {
     display: none;
   }
-
-  @media (min-width: 670px) and (max-width: 767px) {
+  /*
+  @media (min-width: 768px) and (max-width: 767px) {
     background: #282741;
     width: 25%;
     max-width: 20%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-  }
+  } */
   @media (min-width: 768px) {
     background: #282741;
     width: 15%;
