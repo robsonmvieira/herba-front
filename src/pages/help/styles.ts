@@ -11,7 +11,7 @@ export const Container = styled.div`
   }
 `;
 
-export const ContainerTela = styled.div`
+export const Wapper = styled.div`
   @media (max-width: 775px) {
     background: #1d1f2f;
     width: 100%;
@@ -20,7 +20,6 @@ export const ContainerTela = styled.div`
     background: #1d1f2f;
     width: 100%;
     display: flex;
-    flex-direction: row;
   }
 `;
 
@@ -40,7 +39,7 @@ export const ContainerDivisao = styled.div`
   }
 `;
 
-export const LabelLifeAdmin = styled.h1`
+export const Title = styled.h1`
   @media (max-width: 775px) {
     display: flex;
     flex-direction: column;
@@ -133,7 +132,7 @@ export const LabelHelpDesk = styled.p`
   }
 `;
 
-export const LabelHelpDeskH1 = styled.h1`
+export const BoxTitle = styled.h1`
   @media (max-width: 775px) {
     width: 80%;
     color: #6e76fb;
@@ -172,7 +171,7 @@ export const LabelHelpDeskH1 = styled.h1`
   }
 `;
 
-export const LabelMarca = styled.span`
+export const LabelMarca = styled.h5`
   color: #2fc84c;
   margin-left: 10px;
   font-weight: bold;

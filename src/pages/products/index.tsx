@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import {
   Navbar,
-  NavbarToggler,
   Container,
   FormList,
   InputFormList,
@@ -17,33 +16,22 @@ import {
   FormTotal,
   BtnFormaPagamento,
   BtnFinalizar,
-  ContainerValorTotal,
-  ContainerBusca,
-} from "./styles";
+  ContainerBusca
+} from './styles'
 import {
-  Collapse,
   NavbarBrand,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-  NavbarText,
-  Form,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  Button,
-  Row,
-} from "reactstrap";
-import Product from "../../components/product";
-import TableProducts from "../tableproducts";
+  DropdownItem
+} from 'reactstrap'
+import Product from '../../components/product'
+import TableProducts from '../tableproducts'
 
 const ListProducts = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggle = () => setIsOpen(!isOpen)
 
   return (
     <div>
@@ -114,7 +102,7 @@ const ListProducts = () => {
         </ContainerVenda>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default ListProducts;
+export default ListProducts
