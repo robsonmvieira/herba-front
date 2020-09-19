@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Navbar,
-  NavbarToggler,
   Container,
   FormList,
   InputFormList,
@@ -17,25 +16,14 @@ import {
   FormTotal,
   BtnFormaPagamento,
   BtnFinalizar,
-  ContainerValorTotal,
   ContainerBusca,
 } from "./styles";
 import {
-  Collapse,
   NavbarBrand,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
-  Form,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  Button,
-  Row,
 } from "reactstrap";
 import Product from "../../components/product";
 import TableProducts from "../tableproducts";

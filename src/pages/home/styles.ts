@@ -1,37 +1,35 @@
-import { Button } from "reactstrap";
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const Containerimg = styled.section`
-  background: url("/image/home.png");
+export const ContainerFluid = styled.section`
+  background: url('/image/home.png');
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-`;
+`
 
-export const ContainerTela = styled.div`
+export const Container = styled.div`
   background: rgba(0, 0, 0, 0.35);
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
-`;
+`
 
-export const ContainerTelaLabel = styled.div`
-  /* background: rgba(400, 0, 50, 0.35); */
+export const Wapper = styled.div`
   width: 90%;
   height: 80vh;
-  margin-top: 55px;
-`;
+  margin-top: 100px;
+`
 
-export const LabelLifeAdmin = styled.h1`
+export const Title = styled.h1`
   @media (max-width: 589px) {
     font-family: Roboto;
     font-style: normal;
     font-size: 350%;
     color: #ffffff;
     width: 100%;
-    height: 25%;
+    /* height: 25%; */
     align-items: flex-start;
     display: flex;
     justify-content: start;
@@ -45,11 +43,9 @@ export const LabelLifeAdmin = styled.h1`
     font-size: 350%;
     color: #ffffff;
     width: 100%;
-    height: 25%;
     align-items: flex-start;
     display: flex;
     justify-content: start;
-    /* background: rgba(0, 8, 80, 0.35); */
     padding: none;
     margin-bottom: 0px;
   }
@@ -59,28 +55,25 @@ export const LabelLifeAdmin = styled.h1`
     font-size: 72px;
     color: #ffffff;
     width: 100%;
-    height: 25%;
     align-items: flex-start;
     display: flex;
     justify-content: start;
-    /* background: rgba(0, 8, 80, 0.35); */
     padding: none;
     margin-bottom: 0px;
   }
-`;
+`
 
-export const LabelSistema = styled.p`
+export const SubTitle = styled.h2`
   @media (max-width: 668px) {
     font-family: Roboto;
     font-style: normal;
     font-size: 100%;
     color: #ffffff;
     width: 70%;
-    height: 23%;
+    /* height: 23%; */
     align-items: flex-start;
     display: flex;
     justify-content: flex-start;
-    /* background: rgba(400, 900, 80, 0.35); */
     padding: none;
   }
 
@@ -94,10 +87,9 @@ export const LabelSistema = styled.p`
     align-items: flex-start;
     display: flex;
     justify-content: flex-start;
-    /* background: rgba(400, 900, 80, 0.35); */
     padding: none;
   }
-`;
+`
 
 // export const ContainerDivisao = styled.div`
 //   @media (max-width: 775px) {
