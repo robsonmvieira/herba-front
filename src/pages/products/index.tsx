@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import {
   Navbar,
   Container,
@@ -16,22 +16,22 @@ import {
   FormTotal,
   BtnFormaPagamento,
   BtnFinalizar,
-  ContainerBusca,
-} from "./styles";
+  ContainerBusca
+} from './styles'
 import {
   NavbarBrand,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-} from "reactstrap";
-import Product from "../../components/product";
-import TableProducts from "../tableproducts";
+  DropdownItem
+} from 'reactstrap'
+import Product from '../../components/product'
+import TableProducts from '../tableproducts'
 
 const ListProducts = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggle = () => setIsOpen(!isOpen)
 
   return (
     <div>
@@ -102,7 +102,7 @@ const ListProducts = () => {
         </ContainerVenda>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default ListProducts;
+export default ListProducts
