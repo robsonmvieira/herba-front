@@ -57,6 +57,27 @@ export const ContainerIconesLg = styled.div`
     display: flex;
     margin: none;
     padding: none;
+    justify-content: center;
+    justify-items: center;
+  }
+`;
+
+export const ContainerListaLg = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    background: #1d1f2f;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    margin: none;
+    padding: none;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
   }
 `;
 
@@ -98,8 +119,26 @@ export const IconsTags = styled.div`
     justify-content: center;
     justify-items: center;
     margin-top: 45px;
-    margin-left: 30px;
+    margin-left: 35px;
     flex-direction: column;
+  }
+`;
+
+export const ContainerList = styled.div`
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    margin-top: 10px;
+  }
+`;
+
+export const ContainerTags = styled.div`
+  @media (min-width: 768px) {
+    width: 95%;
+    display: flex;
+    margin-top: 10px;
   }
 `;
 

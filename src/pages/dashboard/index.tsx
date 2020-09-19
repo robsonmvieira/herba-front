@@ -7,6 +7,9 @@ import {
   LabelProdutoDashboardMenos,
   ContainerTudo,
   Container,
+  ContainerListaLg,
+  ContainerList,
+  ContainerTags,
 } from "./styles";
 
 import Sidebar from "../../components/sidebar";
@@ -20,31 +23,39 @@ const dashboard = () => {
         <Sidebar />
         <ContainerTudo>
           <ContainerIconesLg>
-            <IconsTags>
-              <LabelProdutoDashboard>35</LabelProdutoDashboard>
-              <LabelDescricaoDashboard>
-                Produto cadastrados
-              </LabelDescricaoDashboard>
-            </IconsTags>
-            <IconsTags>
-              <LabelProdutoDashboard>Sopa de ninhaça</LabelProdutoDashboard>
-              <LabelDescricaoDashboard>Mais vendido</LabelDescricaoDashboard>
-            </IconsTags>
-            <IconsTags>
-              <LabelProdutoDashboardMenos>5</LabelProdutoDashboardMenos>
-              <LabelDescricaoDashboard>
-                Produtos zerados
-              </LabelDescricaoDashboard>
-            </IconsTags>
-            <IconsTags>
-              <LabelProdutoDashboardMenos>
-                Suco de coca
-              </LabelProdutoDashboardMenos>
-              <LabelDescricaoDashboard>Menos vendido</LabelDescricaoDashboard>
-            </IconsTags>
+            <ContainerTags>
+              <IconsTags>
+                <LabelProdutoDashboard>35</LabelProdutoDashboard>
+                <LabelDescricaoDashboard>
+                  Produto cadastrados
+                </LabelDescricaoDashboard>
+              </IconsTags>
+              <IconsTags>
+                <LabelProdutoDashboard>Sopa de ninhaça</LabelProdutoDashboard>
+                <LabelDescricaoDashboard>Mais vendido</LabelDescricaoDashboard>
+              </IconsTags>
+              <IconsTags>
+                <LabelProdutoDashboardMenos>5</LabelProdutoDashboardMenos>
+                <LabelDescricaoDashboard>
+                  Produtos zerados
+                </LabelDescricaoDashboard>
+              </IconsTags>
+              <IconsTags>
+                <LabelProdutoDashboardMenos>
+                  Suco de coca
+                </LabelProdutoDashboardMenos>
+                <LabelDescricaoDashboard>Menos vendido</LabelDescricaoDashboard>
+              </IconsTags>
+            </ContainerTags>
           </ContainerIconesLg>
 
-          <ContainerIconesLg></ContainerIconesLg>
+          <ContainerListaLg>
+            <ContainerList></ContainerList>
+            <ContainerList></ContainerList>
+            <ContainerList></ContainerList>
+            <ContainerList></ContainerList>
+            <ContainerList></ContainerList>
+          </ContainerListaLg>
 
           <ContainerIcones>
             <IconsTags>
