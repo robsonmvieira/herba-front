@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ItemContainer = styled.div`
   @media (max-width: 497px) {
@@ -21,7 +21,7 @@ export const ItemContainer = styled.div`
     justify-content: center;
     width: 100%;
   }
-`;
+`
 
 export const ContainerItemInfo = styled.div`
   @media (max-width: 497px) {
@@ -73,7 +73,7 @@ export const ContainerItemInfo = styled.div`
   @media (min-width: 769px) {
     display: none;
   }
-`;
+`
 
 export const ContainerIconsInfo = styled.div`
   @media (max-width: 497px) {
@@ -97,7 +97,7 @@ export const ContainerIconsInfo = styled.div`
   @media (min-width: 769px) {
     display: none;
   }
-`;
+`
 
 export const InputIconInfo = styled.input`
   @media (max-width: 425px) {
@@ -129,7 +129,7 @@ export const InputIconInfo = styled.input`
     margin-top: 30px;
     margin-right: 5px;
   } */
-`;
+`
 
 export const ContainerBtn = styled.button`
   @media (max-width: 425px) {
@@ -170,4 +170,4 @@ export const ContainerBtn = styled.button`
     margin-right: 7px;
     border: none;
   }
-`;
+`
