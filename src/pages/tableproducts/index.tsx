@@ -1,5 +1,6 @@
-import { ContainerListLarge, ItemContainer } from "./styles";
-import { Table } from "reactstrap";
+import React from 'react'
+import { ContainerListLarge, ItemContainer } from './styles'
+import { Table } from 'reactstrap'
 
 const TableProducts = () => {
   return (
@@ -51,7 +52,7 @@ const TableProducts = () => {
         </Table>
       </ContainerListLarge>
     </ItemContainer>
-  );
-};
+  )
+}
 
-export default TableProducts;
+export default TableProducts
