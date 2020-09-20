@@ -2,7 +2,6 @@ import React from 'react'
 
 import { Container, ContainerSide, ContainerIcones, IconsTags } from './styles'
 import Link from 'next/link'
-import Menu from '../../components/Menu'
 
 const Sidebar = () => {
   return (

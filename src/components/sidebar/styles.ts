@@ -67,13 +67,10 @@ export const ContainerIcones = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 50%;
-    height: 50%;
+    height: 100%;
     display: flex;
     margin: none;
     align-items: center;
-    justify-content: center;
-    justify-items: center;
-    padding: none;
     flex-direction: column;
   }
 

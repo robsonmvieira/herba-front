@@ -40,21 +40,21 @@ interface Product {
   sku: string
   price: string
 }
-export const getStaticProps: GetStaticProps = async () => {
-  const res = await api.get('products')
-  const products: Product[] = res.data
+// export const getStaticProps: GetStaticProps = async () => {
+//   const res = await api.get('products')
+//   const products: Product[] = res.data
 
-  // console.log(productsList)
-  return {
-    props: {
-      products
-    }
-  }
-}
-
-const ListProducts = ({
-  products
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+//   // console.log(productsList)
+//   return {
+//     props: {
+//       products
+//     }
+//   }
+// }
+// const ListProducts = ({
+//   products
+// }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const ListProducts = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   return (
@@ -85,9 +85,9 @@ const ListProducts = ({
                 <InputFormList /> <BtnList>Cancelar</BtnList>
               </FormList>
             </ContainerBusca>
-            {products.map((p: Product) => (
+            {/* {products.map((p: Product) => (
               <Product key={p.id} title={p.name} price={p.price} />
-            ))}
+            ))} */}
             {/* <Product />
             <Product /> */}
 

@@ -27,7 +27,7 @@ const dashboard = () => {
 
       <Container>
         <ContainerSide>
-          <Sidebar> </Sidebar>
+          <Sidebar />
         </ContainerSide>
         <ContainerConteudo>
           <ContainerIconesLg>

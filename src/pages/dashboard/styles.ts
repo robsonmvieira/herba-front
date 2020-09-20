@@ -17,9 +17,6 @@ export const ContainerConteudo = styled.div`
     justify-content: center;
     align-items: center;
   }
-  /* @media (max-width: 767px) {
-    display: none; */
-  /* } */
 `
 
 export const ContainerSide = styled.div`
@@ -27,11 +24,11 @@ export const ContainerSide = styled.div`
     background: #1d1f2f;
     width: 100%;
     height: 100%;
-    display: flex
+    display: flex;
     align-items: center;
     justify-content: center;
     justify-items: center;
-    flex-direction: column;
+    flex-direction: row;
   }
   @media (min-width: 768px) {
     background: #282741;
