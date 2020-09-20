@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import Router from 'next/router'
 import {
   Container,
   LabelLogin,
@@ -41,6 +42,7 @@ const Login = () => {
       const resp = await api.post('sessions/login', { email, password })
       const { data } = resp
       localStorage.setItem('token', data)
+      Router.push('/dashboard')
     } catch (error) {
       const validationErrors = {}
 
