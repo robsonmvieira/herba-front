@@ -1,15 +1,54 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background: #1d1f2f;
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+`
+
+export const ContainerConteudo = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+    background: #1d1f2f;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* @media (max-width: 767px) {
+    display: none; */
+  }
+`
+
+export const ContainerSide = styled.div`
+  @media (max-width: 767px) {
+    background: #1d1f2f;
+    width: 100%;
+    height: 100%;
+    display: flex
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    flex-direction: column;
+  }
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 15%;
+    max-width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
 `
 
 export const ContainerTudo = styled.div`
-  @media (max-width: 766px) {
+  @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
     height: 100vh;
@@ -17,7 +56,7 @@ export const ContainerTudo = styled.div`
     justify-content: center;
   }
 
-  @media (min-width: 767px) {
+  @media (min-width: 768px) {
     background: #1d1f2f;
     width: 100%;
     display: flex;
@@ -52,7 +91,7 @@ export const ContainerIconesLg = styled.div`
 
   @media (min-width: 768px) {
     background: #1d1f2f;
-    width: 100%;
+    width: 85%;
     height: 40%;
     display: flex;
     margin: none;
@@ -69,7 +108,7 @@ export const ContainerListaLg = styled.div`
 
   @media (min-width: 768px) {
     background: #1d1f2f;
-    width: 100%;
+    width: 85%;
     height: 60%;
     display: flex;
     margin: none;
@@ -95,20 +134,6 @@ export const IconsTags = styled.div`
     justify-items: center;
     margin-top: 45px;
   }
-  /*
-  @media (min-width: 520px) and (max-width: 767px) {
-    background: #282741;
-    width: 50%;
-    height: 60%;
-    display: flex;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    margin-top: 45px;
-  } */
 
   @media (min-width: 768px) {
     background: #282741;

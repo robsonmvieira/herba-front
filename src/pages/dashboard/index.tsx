@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   ContainerIcones,
   IconsTags,
@@ -11,7 +12,9 @@ import {
   ContainerList,
   ContainerTags,
   SpanListTh,
-  SpanListTd
+  SpanListTd,
+  ContainerSide,
+  ContainerConteudo
 } from './styles'
 
 import Sidebar from '../../components/sidebar'
@@ -20,10 +23,13 @@ import Menu from '../../components/Menu'
 const dashboard = () => {
   return (
     <>
-      <Menu />
+      <Menu></Menu>
+
       <Container>
-        <Sidebar />
-        <ContainerTudo>
+        <ContainerSide>
+          <Sidebar> </Sidebar>
+        </ContainerSide>
+        <ContainerConteudo>
           <ContainerIconesLg>
             <ContainerTags>
               <IconsTags>
@@ -109,25 +115,7 @@ const dashboard = () => {
               <SpanListTd></SpanListTd>
             </ContainerList>
           </ContainerListaLg>
-
-          <ContainerIcones>
-            <IconsTags>
-              <img src="/image/produtos.svg" alt="" />
-            </IconsTags>
-            <IconsTags>
-              <img src="/image/clientes.svg" alt="" />
-            </IconsTags>
-          </ContainerIcones>
-          <ContainerIcones>
-            <IconsTags>
-              {' '}
-              <img src="/image/estatistica.svg" alt="" />
-            </IconsTags>
-            <IconsTags>
-              <img src="/image/admin.svg" alt="" />
-            </IconsTags>
-          </ContainerIcones>
-        </ContainerTudo>
+        </ContainerConteudo>
       </Container>
     </>
   )
