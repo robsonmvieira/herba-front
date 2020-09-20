@@ -1,20 +1,20 @@
-import styled from "styled-components";
-import { Navbar as RN, NavbarToggler as NT, Nav as CN } from "reactstrap";
+import styled from 'styled-components'
+import { Navbar as RN, NavbarToggler as NT, Nav as CN } from 'reactstrap'
 
 export const Navbar = styled(RN)`
   background: #282741;
-`;
+`
 export const NavbarToggler = styled(NT)`
   & .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(110, 118, 251, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
-`;
+`
 
 export const Nav = styled(CN)`
   & .nav-item .nav-link {
     color: rgba(47, 200, 76, 1);
   }
-`;
+`
 
 export const Container = styled.div`
   background: #1d1f2f;
@@ -24,7 +24,7 @@ export const Container = styled.div`
   /* @media (min-width: 426px) and (max-width: 768px) {
     background: red;
   } */
-`;
+`
 
 export const FormList = styled.form`
   @media (max-width: 497px) {
@@ -43,7 +43,7 @@ export const FormList = styled.form`
     width: 100%;
     justify-items: center;
   }
-`;
+`
 export const LabelList = styled.label`
   @media (max-width: 425px) {
     width: 80%;
@@ -79,7 +79,7 @@ export const LabelList = styled.label`
     line-height: 16px;
     color: #eff0f5;
   }
-`;
+`
 
 export const InputFormList = styled.input`
   @media (max-width: 497px) {
@@ -115,7 +115,7 @@ export const InputFormList = styled.input`
     margin-top: 20px;
     padding: none;
   } */
-`;
+`
 
 export const ContainerBusca = styled.div`
   @media (max-width: 497px) {
@@ -143,7 +143,7 @@ export const ContainerBusca = styled.div`
     margin-top: 20px;
     align-items: center;
   } */
-`;
+`
 
 export const BtnList = styled.button`
   @media (max-width: 497px) {
@@ -185,7 +185,7 @@ export const BtnList = styled.button`
     font-size: 120%;
     margin-left: 3px;
   } */
-`;
+`
 
 export const ContainerProducts = styled.div`
   @media (max-width: 497px) {
@@ -208,7 +208,7 @@ export const ContainerProducts = styled.div`
 
     align-items: center;
   }
-`;
+`
 
 export const ContainerTotais = styled.div`
   @media (max-width: 760px) {
@@ -233,7 +233,7 @@ export const ContainerTotais = styled.div`
     margin-top: 80px;
     align-items: center;
   } */
-`;
+`
 
 export const ContainerValores = styled.div`
   @media (max-width: 497px) {
@@ -259,7 +259,7 @@ export const ContainerValores = styled.div`
     width: 100%;
     margin-top: 20px;
   } */
-`;
+`
 
 export const ContainerVenda = styled.div`
   @media (max-width: 760px) {
@@ -272,7 +272,7 @@ export const ContainerVenda = styled.div`
     width: 100%;
     background: #1d1f2f;
   }
-`;
+`
 
 export const SpanDetalhes = styled.span`
   @media (max-width: 425px) {
@@ -315,7 +315,7 @@ export const SpanDetalhes = styled.span`
     margin-top: 15px;
     margin-left: 15px;
   }
-`;
+`
 
 export const LabelSubtotalDesconto = styled.span`
   @media (max-width: 497px) {
@@ -362,7 +362,7 @@ export const LabelSubtotalDesconto = styled.span`
     width: 50%;
     margin-left: 35px;
   } */
-`;
+`
 
 export const FormSubtotalDesconto = styled.span`
   @media (max-width: 497px) {
@@ -408,7 +408,7 @@ export const FormSubtotalDesconto = styled.span`
     margin-right: 15px;
   } */
   }
-`;
+`
 
 export const LabelValorTotal = styled.span`
   @media (max-width: 497px) {
@@ -456,7 +456,7 @@ export const LabelValorTotal = styled.span`
     margin-left: 35px;
   } */
   }
-`;
+`
 
 export const FormTotal = styled.span`
   @media (max-width: 497px) {
@@ -500,7 +500,7 @@ export const FormTotal = styled.span`
     width: 50%;
     margin-right: 15px;
   } */
-`;
+`
 
 export const BtnFormaPagamento = styled.button`
   @media (max-width: 497px) {
@@ -558,7 +558,7 @@ export const BtnFormaPagamento = styled.button`
 
     border: none;
   } */
-`;
+`
 
 export const BtnFinalizar = styled.button`
   @media (max-width: 497px) {
@@ -614,7 +614,7 @@ export const BtnFinalizar = styled.button`
     margin-left: 35px;
     border: none;
   } */
-`;
+`
 
 export const ContainerValorTotal = styled.div`
   @media (min-width: 497px) {
@@ -643,4 +643,4 @@ export const ContainerValorTotal = styled.div`
     justify-content: center;
     margin-top: 60px;
   }
-`;
+`

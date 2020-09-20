@@ -1,4 +1,9 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React, { useState } from 'react'
+import api from '../../services/api'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
+
+// import { NextFunctionComponent } from 'next'
 import {
   Navbar,
   Container,
@@ -25,14 +30,33 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap'
-import Product from '../../components/product'
+
 import TableProducts from '../tableproducts'
+import Product from '../../components/product'
 
-const ListProducts = () => {
+interface Product {
+  id: string
+  name: string
+  sku: string
+  price: string
+}
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await api.get('products')
+  const products: Product[] = res.data
+
+  // console.log(productsList)
+  return {
+    props: {
+      products
+    }
+  }
+}
+
+const ListProducts = ({
+  products
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [isOpen, setIsOpen] = useState(false)
-
   const toggle = () => setIsOpen(!isOpen)
-
   return (
     <div>
       <Navbar light expand="md">
@@ -61,12 +85,13 @@ const ListProducts = () => {
                 <InputFormList /> <BtnList>Cancelar</BtnList>
               </FormList>
             </ContainerBusca>
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <TableProducts />
+            {products.map((p: Product) => (
+              <Product key={p.id} title={p.name} price={p.price} />
+            ))}
+            {/* <Product />
+            <Product /> */}
+
+            {/* <TableProducts /> */}
           </ContainerProducts>
           <ContainerTotais>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
