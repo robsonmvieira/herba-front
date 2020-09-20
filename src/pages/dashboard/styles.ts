@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   background: #1d1f2f;
@@ -6,7 +6,7 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
-`;
+`
 
 export const ContainerTudo = styled.div`
   @media (max-width: 766px) {
@@ -24,7 +24,7 @@ export const ContainerTudo = styled.div`
     /* justify-content: center; */
     flex-direction: column;
   }
-`;
+`
 
 export const ContainerIcones = styled.div`
   @media (max-width: 767px) {
@@ -43,7 +43,7 @@ export const ContainerIcones = styled.div`
   @media (min-width: 768px) {
     display: none;
   }
-`;
+`
 
 export const ContainerIconesLg = styled.div`
   @media (max-width: 767px) {
@@ -60,7 +60,7 @@ export const ContainerIconesLg = styled.div`
     justify-content: center;
     justify-items: center;
   }
-`;
+`
 
 export const ContainerListaLg = styled.div`
   @media (max-width: 767px) {
@@ -79,7 +79,7 @@ export const ContainerListaLg = styled.div`
     align-items: center;
     flex-direction: column;
   }
-`;
+`
 
 export const IconsTags = styled.div`
   @media (max-width: 767px) {
@@ -119,10 +119,10 @@ export const IconsTags = styled.div`
     justify-content: center;
     justify-items: center;
     margin-top: 45px;
-    margin-left: 35px;
     flex-direction: column;
+    font-size: 1rem;
   }
-`;
+`
 
 export const ContainerList = styled.div`
   @media (min-width: 768px) {
@@ -132,20 +132,46 @@ export const ContainerList = styled.div`
     display: flex;
     margin-top: 10px;
     align-items: flex-start;
+    justify-content: space-between;
+    justify-items: center;
+    color: #fff;
+  }
+`
+export const SpanListTh = styled.span`
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
     justify-items: center;
-
+    color: #fff;
+    font-size: 1.1rem;
   }
-`;
+`
+export const SpanListTd = styled.span`
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+`
 
 export const ContainerTags = styled.div`
   @media (min-width: 768px) {
-    width: 95%;
+    width: 90%;
     display: flex;
     margin-top: 10px;
     justify-content: space-between;
   }
-`;
+`
 
 export const LabelProdutoDashboard = styled.span`
   @media (min-width: 768px) {
@@ -159,9 +185,8 @@ export const LabelProdutoDashboard = styled.span`
     font-family: Roboto;
     font-style: normal;
     font-size: 100%;
-
   }
-`;
+`
 
 export const LabelProdutoDashboardMenos = styled.span`
   @media (min-width: 768px) {
@@ -176,14 +201,14 @@ export const LabelProdutoDashboardMenos = styled.span`
     font-style: normal;
     font-size: 100%;
   }
-`;
+`
 
 export const LabelDescricaoDashboard = styled.span`
   @media (min-width: 768px) {
     color: #fff;
     width: 100%;
-    font-size: 100%;
-    height: 20%;
+    font-size: 0.9rem;
+    height: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,4 +216,4 @@ export const LabelDescricaoDashboard = styled.span`
     font-family: Roboto;
     font-style: normal;
   }
-`;
+`

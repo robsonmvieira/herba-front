@@ -10,10 +10,12 @@ import {
   ContainerListaLg,
   ContainerList,
   ContainerTags,
-} from "./styles";
+  SpanListTh,
+  SpanListTd
+} from './styles'
 
-import Sidebar from "../../components/sidebar";
-import Menu from "../../components/Menu";
+import Sidebar from '../../components/sidebar'
+import Menu from '../../components/Menu'
 
 const dashboard = () => {
   return (
@@ -50,11 +52,62 @@ const dashboard = () => {
           </ContainerIconesLg>
 
           <ContainerListaLg>
-            <ContainerList></ContainerList>
-            <ContainerList></ContainerList>
-            <ContainerList></ContainerList>
-            <ContainerList></ContainerList>
-            <ContainerList></ContainerList>
+            <ContainerList>
+              <SpanListTh>Nome</SpanListTh>
+              <SpanListTh>Preço</SpanListTh>
+              <SpanListTh>Estoque</SpanListTh>
+              <SpanListTh>Edit</SpanListTh>
+              <SpanListTh>Del</SpanListTh>
+              <SpanListTh></SpanListTh>
+            </ContainerList>
+            <ContainerList>
+              <SpanListTd>Sopa Magica </SpanListTd>
+              <SpanListTd>R$15,00</SpanListTd>
+              <SpanListTd>20</SpanListTd>
+              <SpanListTd>
+                <img src="/image/edit.svg" alt="" />
+              </SpanListTd>
+              <SpanListTd>
+                <img src="/image/lixeira.svg" alt="" />
+              </SpanListTd>
+              <SpanListTd></SpanListTd>
+            </ContainerList>
+            <ContainerList>
+              <SpanListTd>Sopa Magica </SpanListTd>
+              <SpanListTd>R$15,00</SpanListTd>
+              <SpanListTd>20</SpanListTd>
+              <SpanListTd>
+                <img src="/image/edit.svg" alt="" />
+              </SpanListTd>
+              <SpanListTd>
+                <img src="/image/lixeira.svg" alt="" />
+              </SpanListTd>
+              <SpanListTd></SpanListTd>
+            </ContainerList>
+            <ContainerList>
+              <SpanListTd>Sopa Magica </SpanListTd>
+              <SpanListTd>R$15,00</SpanListTd>
+              <SpanListTd>20</SpanListTd>
+              <SpanListTd>
+                <img src="/image/edit.svg" alt="" />
+              </SpanListTd>
+              <SpanListTd>
+                <img src="/image/lixeira.svg" alt="" />
+              </SpanListTd>
+              <SpanListTd></SpanListTd>
+            </ContainerList>
+            <ContainerList>
+              <SpanListTd>Sopa Magica </SpanListTd>
+              <SpanListTd>R$15,00</SpanListTd>
+              <SpanListTd>20</SpanListTd>
+              <SpanListTd>
+                <img src="/image/edit.svg" alt="" />
+              </SpanListTd>
+              <SpanListTd>
+                <img src="/image/lixeira.svg" alt="" />
+              </SpanListTd>
+              <SpanListTd></SpanListTd>
+            </ContainerList>
           </ContainerListaLg>
 
           <ContainerIcones>
@@ -67,7 +120,7 @@ const dashboard = () => {
           </ContainerIcones>
           <ContainerIcones>
             <IconsTags>
-              {" "}
+              {' '}
               <img src="/image/estatistica.svg" alt="" />
             </IconsTags>
             <IconsTags>
@@ -77,6 +130,6 @@ const dashboard = () => {
         </ContainerTudo>
       </Container>
     </>
-  );
-};
-export default dashboard;
+  )
+}
+export default dashboard
