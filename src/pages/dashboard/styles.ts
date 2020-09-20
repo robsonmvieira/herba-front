@@ -19,7 +19,7 @@ export const ContainerConteudo = styled.div`
   }
   /* @media (max-width: 767px) {
     display: none; */
-  }
+  /* } */
 `
 
 export const ContainerSide = styled.div`
@@ -31,7 +31,6 @@ export const ContainerSide = styled.div`
     align-items: center;
     justify-content: center;
     justify-items: center;
-
     flex-direction: column;
   }
   @media (min-width: 768px) {
