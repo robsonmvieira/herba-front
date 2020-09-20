@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import React, { useState } from 'react'
+import api from '../../services/api'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
+
+// import { NextFunctionComponent } from 'next'
 import {
   Navbar,
-  NavbarToggler,
   Container,
   FormList,
   InputFormList,
@@ -17,34 +21,42 @@ import {
   FormTotal,
   BtnFormaPagamento,
   BtnFinalizar,
-  ContainerValorTotal,
-  ContainerBusca,
-} from "./styles";
+  ContainerBusca
+} from './styles'
 import {
-  Collapse,
   NavbarBrand,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-  NavbarText,
-  Form,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  Button,
-  Row,
-} from "reactstrap";
-import Product from "../../components/product";
-import TableProducts from "../tableproducts";
+  DropdownItem
+} from 'reactstrap'
 
-const ListProducts = () => {
-  const [isOpen, setIsOpen] = useState(false);
+import TableProducts from '../tableproducts'
+import Product from '../../components/product'
 
-  const toggle = () => setIsOpen(!isOpen);
+interface Product {
+  id: string
+  name: string
+  sku: string
+  price: string
+}
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await api.get('products')
+  const products: Product[] = res.data
 
+  // console.log(productsList)
+  return {
+    props: {
+      products
+    }
+  }
+}
+
+const ListProducts = ({
+  products
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const toggle = () => setIsOpen(!isOpen)
   return (
     <div>
       <Navbar light expand="md">
@@ -73,12 +85,13 @@ const ListProducts = () => {
                 <InputFormList /> <BtnList>Cancelar</BtnList>
               </FormList>
             </ContainerBusca>
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <TableProducts />
+            {products.map((p: Product) => (
+              <Product key={p.id} title={p.name} price={p.price} />
+            ))}
+            {/* <Product />
+            <Product /> */}
+
+            {/* <TableProducts /> */}
           </ContainerProducts>
           <ContainerTotais>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
@@ -114,7 +127,7 @@ const ListProducts = () => {
         </ContainerVenda>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default ListProducts;
+export default ListProducts

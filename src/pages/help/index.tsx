@@ -4,9 +4,9 @@ import {
   FormHelp,
   LabelMarca,
   ContainerDivisao,
-  LabelLifeAdmin,
-  ContainerTela,
-  LabelHelpDeskH1,
+  Title,
+  Wapper,
+  BoxTitle,
 } from "./styles";
 import Menu from "../../components/Menu";
 
@@ -16,14 +16,14 @@ const Help = () => {
       <Menu />
 
       <Container>
-        <ContainerTela>
+        <Wapper>
           <ContainerDivisao>
-            <LabelLifeAdmin> Life Admin</LabelLifeAdmin>
+            <Title> Life Admin</Title>
           </ContainerDivisao>
 
           <ContainerDivisao>
             <FormHelp>
-              <LabelHelpDeskH1>Help Desk</LabelHelpDeskH1>
+              <BoxTitle>Help Desk</BoxTitle>
               <LabelHelpDesk>
                 Se Você precisa de ajuda ou recebeu algum erro ao tentar
                 realizar uma operação no sistema ou precisa de alguma informação
@@ -37,7 +37,7 @@ const Help = () => {
               </LabelHelpDesk>
             </FormHelp>
           </ContainerDivisao>
-        </ContainerTela>
+        </Wapper>
       </Container>
     </>
   );
