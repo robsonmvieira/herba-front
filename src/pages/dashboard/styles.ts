@@ -74,7 +74,7 @@ export const ContainerListaLg = styled.div`
     display: flex;
     margin: none;
     padding: none;
-    justify-content: center;
+    justify-content: flex-start;
     justify-items: center;
     align-items: center;
     flex-direction: column;
@@ -128,9 +128,13 @@ export const ContainerList = styled.div`
   @media (min-width: 768px) {
     background: #282741;
     width: 90%;
-    height: 15%;
+    height: 10%;
     display: flex;
     margin-top: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    justify-items: center;
+
   }
 `;
 
@@ -139,6 +143,7 @@ export const ContainerTags = styled.div`
     width: 95%;
     display: flex;
     margin-top: 10px;
+    justify-content: space-between;
   }
 `;
 
@@ -154,6 +159,7 @@ export const LabelProdutoDashboard = styled.span`
     font-family: Roboto;
     font-style: normal;
     font-size: 100%;
+
   }
 `;
 
