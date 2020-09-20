@@ -6,12 +6,11 @@ import { Toast, ToastBody, ToastHeader } from 'reactstrap'
 const Input = ({ name, ...rest }) => {
   const inputRef = useRef(null)
   const { fieldName, defaultValue, registerField, error } = useField(name)
+  const { clearError } = useField(name)
   useEffect(() => {
     registerField({
       name: fieldName,
-
       ref: inputRef.current,
-
       path: 'value'
     })
   }, [fieldName, registerField])
@@ -27,7 +26,12 @@ const Input = ({ name, ...rest }) => {
           </ToastBody>
         </Toast>
       )}
-      <CInput ref={inputRef} defaultValue={defaultValue} {...rest} />
+      <CInput
+        ref={inputRef}
+        onFocus={clearError}
+        defaultValue={defaultValue}
+        {...rest}
+      />
     </>
   )
 }
