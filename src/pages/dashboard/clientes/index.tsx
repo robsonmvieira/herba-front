@@ -15,10 +15,10 @@ import {
   ContainerConteudo
 } from './styles'
 
-import Sidebar from '../../components/sidebar'
-import Menu from '../../components/Menu'
+import Sidebar from '../../../components/sidebar'
+import Menu from '../../../components/Menu'
 
-const dashboard = () => {
+const dashProducts = () => {
   return (
     <>
       <Menu></Menu>
@@ -118,4 +118,4 @@ const dashboard = () => {
     </>
   )
 }
-export default dashboard
+export default dashProducts

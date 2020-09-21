@@ -8,13 +8,13 @@ const Sidebar = () => {
     <>
       <Container>
         <ContainerSide style={{ marginTop: '92px' }}>
-          <Link href="/Produtos">
+          <Link href="/dashboard/products">
             <a style={{ textDecoration: 'none', color: '#fff' }}>Produtos</a>
           </Link>
         </ContainerSide>
 
         <ContainerSide>
-          <Link href="/Clientes">
+          <Link href="/dashboard/clientes">
             <a style={{ textDecoration: 'none', color: '#fff' }}>Clientes</a>
           </Link>
         </ContainerSide>
