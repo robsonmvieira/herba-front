@@ -1,12 +1,31 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  }
 `
 
 export const ContainerConteudo = styled.div`
+  /* @media (max-width: 767px) {
+    display: none;
+    background: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
   @media (min-width: 768px) {
     display: none;
     background: #1d1f2f;
@@ -80,9 +99,16 @@ export const ContainerIcones = styled.div`
   }
 `
 
-export const ContainerIconesLg = styled.div`
+export const ContainerIconsLg = styled.div`
   @media (max-width: 767px) {
-    display: none;
+    background: #1d1f2f;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    margin: none;
+    padding: none;
+    justify-content: center;
+    align-items: center;
   }
 
   @media (min-width: 768px) {
@@ -99,12 +125,20 @@ export const ContainerIconesLg = styled.div`
 
 export const ContainerListaLg = styled.div`
   @media (max-width: 767px) {
-    display: none;
+    background: #1d1f2f;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin: none;
+    padding: none;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   @media (min-width: 768px) {
     background: #1d1f2f;
-    width: 85%;
+    width: 95%;
     height: 60%;
     display: flex;
     margin: none;
@@ -119,16 +153,14 @@ export const ContainerListaLg = styled.div`
 export const IconsTags = styled.div`
   @media (max-width: 767px) {
     background: #282741;
-    width: 80%;
-    height: 98px;
+    width: 90%;
+    height: 70px;
     display: flex;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     justify-items: center;
-    margin-top: 45px;
+    margin-top: 15px;
   }
 
   @media (min-width: 768px) {
@@ -146,22 +178,32 @@ export const IconsTags = styled.div`
 `
 
 export const ContainerList = styled.div`
-  @media (min-width: 768px) {
-    background: #282741;
-    width: 90%;
-    height: 10%;
-    display: flex;
-    margin-top: 10px;
-    align-items: flex-start;
-    justify-content: space-between;
-    justify-items: center;
-    color: #fff;
-  }
+  background: #282741;
+  width: 80%;
+  height: 10%;
+  display: flex;
+  margin-top: 10px;
+  align-items: flex-start;
+  justify-content: space-between;
+  justify-items: center;
+  color: #fff;
 `
 export const SpanListTh = styled.span`
+  @media (max-width: 767px) {
+    background: #282741;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 1rem;
+  }
+
   @media (min-width: 768px) {
     background: #282741;
-    width: 15%;
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -172,6 +214,18 @@ export const SpanListTh = styled.span`
   }
 `
 export const SpanListTd = styled.span`
+  @media (max-width: 767px) {
+    background: #282741;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.8rem;
+  }
+
   @media (min-width: 768px) {
     background: #282741;
     width: 15%;
@@ -186,6 +240,15 @@ export const SpanListTd = styled.span`
 `
 
 export const ContainerTags = styled.div`
+  @media (max-width: 767px) {
+    width: 90%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
   @media (min-width: 768px) {
     width: 90%;
     display: flex;
@@ -195,6 +258,19 @@ export const ContainerTags = styled.div`
 `
 
 export const LabelProdutoDashboard = styled.span`
+  @media (max-width: 767px) {
+    color: #2fc84c;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
   @media (min-width: 768px) {
     color: #2fc84c;
     width: 100%;
@@ -210,6 +286,18 @@ export const LabelProdutoDashboard = styled.span`
 `
 
 export const LabelProdutoDashboardMenos = styled.span`
+  @media (max-width: 767px) {
+    color: #ef6e6e;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
   @media (min-width: 768px) {
     color: #ef6e6e;
     width: 100%;
@@ -225,6 +313,19 @@ export const LabelProdutoDashboardMenos = styled.span`
 `
 
 export const LabelDescricaoDashboard = styled.span`
+  @media (max-width: 767px) {
+    color: #fff;
+    width: 45%;
+    font-size: 0.9rem;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-items: center;
+    font-family: Roboto;
+    font-style: normal;
+  }
+
   @media (min-width: 768px) {
     color: #fff;
     width: 100%;

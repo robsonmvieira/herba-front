@@ -1,12 +1,10 @@
 import React from 'react'
 import {
-  ContainerIcones,
   IconsTags,
-  ContainerIconesLg,
+  ContainerIconsLg,
   LabelProdutoDashboard,
   LabelDescricaoDashboard,
   LabelProdutoDashboardMenos,
-  ContainerTudo,
   Container,
   ContainerListaLg,
   ContainerList,
@@ -30,7 +28,7 @@ const dashboard = () => {
           <Sidebar />
         </ContainerSide>
         <ContainerConteudo>
-          <ContainerIconesLg>
+          <ContainerIconsLg>
             <ContainerTags>
               <IconsTags>
                 <LabelProdutoDashboard>35</LabelProdutoDashboard>
@@ -55,7 +53,7 @@ const dashboard = () => {
                 <LabelDescricaoDashboard>Menos vendido</LabelDescricaoDashboard>
               </IconsTags>
             </ContainerTags>
-          </ContainerIconesLg>
+          </ContainerIconsLg>
 
           <ContainerListaLg>
             <ContainerList>
