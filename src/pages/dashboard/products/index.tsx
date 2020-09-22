@@ -7,7 +7,8 @@ import {
   LabelProdutoDashboardMenos,
   Container,
   ContainerListaLg,
-  ContainerList,
+  TableHead,
+  TableRow,
   ContainerTags,
   SpanListTh,
   SpanListTd,
@@ -64,15 +65,14 @@ const dashProducts = () => {
               </Containeradicionar>
             </ContainerListAdicionar>
 
-            <ContainerList>
+            <TableHead>
               <SpanListTh>Nome</SpanListTh>
               <SpanListTh>Preço</SpanListTh>
               <SpanListTh>Estoque</SpanListTh>
               <SpanListTh>Edit</SpanListTh>
               <SpanListTh>Del</SpanListTh>
-              <SpanListTh></SpanListTh>
-            </ContainerList>
-            <ContainerList>
+            </TableHead>
+            <TableRow>
               <SpanListTd>Sopa Magica </SpanListTd>
               <SpanListTd>R$15,00</SpanListTd>
               <SpanListTd>20</SpanListTd>
@@ -82,9 +82,8 @@ const dashProducts = () => {
               <SpanListTd>
                 <img src="/image/lixeira.svg" alt="" />
               </SpanListTd>
-              <SpanListTd></SpanListTd>
-            </ContainerList>
-            <ContainerList>
+            </TableRow>
+            <TableRow>
               <SpanListTd>Sopa Magica </SpanListTd>
               <SpanListTd>R$15,00</SpanListTd>
               <SpanListTd>20</SpanListTd>
@@ -94,9 +93,8 @@ const dashProducts = () => {
               <SpanListTd>
                 <img src="/image/lixeira.svg" alt="" />
               </SpanListTd>
-              <SpanListTd></SpanListTd>
-            </ContainerList>
-            <ContainerList>
+            </TableRow>
+            <TableRow>
               <SpanListTd>Sopa Magica </SpanListTd>
               <SpanListTd>R$15,00</SpanListTd>
               <SpanListTd>20</SpanListTd>
@@ -106,9 +104,8 @@ const dashProducts = () => {
               <SpanListTd>
                 <img src="/image/lixeira.svg" alt="" />
               </SpanListTd>
-              <SpanListTd></SpanListTd>
-            </ContainerList>
-            <ContainerList>
+            </TableRow>
+            <TableRow>
               <SpanListTd>Sopa Magica </SpanListTd>
               <SpanListTd>R$15,00</SpanListTd>
               <SpanListTd>20</SpanListTd>
@@ -118,8 +115,7 @@ const dashProducts = () => {
               <SpanListTd>
                 <img src="/image/lixeira.svg" alt="" />
               </SpanListTd>
-              <SpanListTd></SpanListTd>
-            </ContainerList>
+            </TableRow>
           </ContainerListaLg>
         </ContainerConteudo>
       </Container>

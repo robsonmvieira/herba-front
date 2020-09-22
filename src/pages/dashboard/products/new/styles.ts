@@ -6,7 +6,6 @@ export const Container = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: #1d1f2f;
   }
 
   @media (min-width: 768px) {
@@ -186,85 +185,6 @@ export const IconsTags = styled.div`
   }
 `
 
-export const TableHead = styled.div`
-  background: #282741;
-  width: 80%;
-  height: 10%;
-  display: flex;
-  margin-top: 10px;
-  align-items: flex-start;
-  justify-content: space-between;
-  justify-items: center;
-  color: #fff;
-`
-
-export const TableRow = styled.div`
-  background: #282741;
-  width: 80%;
-  height: 10%;
-  display: flex;
-  margin-top: 10px;
-  align-items: flex-start;
-  justify-content: space-between;
-  justify-items: center;
-  color: #fff;
-`
-
-export const SpanListTh = styled.span`
-  @media (max-width: 767px) {
-    background: #282741;
-    width: 20%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    color: #fff;
-    font-size: 1rem;
-    margin-left: 10px;
-  }
-
-  @media (min-width: 768px) {
-    background: #282741;
-    width: 15%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    justify-items: flex-start;
-    color: #fff;
-    font-size: 1.1rem;
-    margin-left: 10px;
-  }
-`
-export const SpanListTd = styled.span`
-  @media (max-width: 767px) {
-    background: #282741;
-    width: 15%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    color: #fff;
-    font-size: 0.8rem;
-    margin-left: 10px;
-  }
-
-  @media (min-width: 768px) {
-    background: #282741;
-    width: 15%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    justify-items: flex-start;
-    color: #fff;
-    font-size: 0.9rem;
-    margin-left: 10px;
-  }
-`
-
 export const ContainerTags = styled.div`
   @media (max-width: 767px) {
     width: 90%;
@@ -400,4 +320,10 @@ export const Containeradicionar = styled.div`
     color: #fff;
     font-size: 1.1rem;
   }
+`
+
+export const Input = styled.input`
+  background: #282741;
+  color: #fff;
+  margin-top: 50px;
 `
