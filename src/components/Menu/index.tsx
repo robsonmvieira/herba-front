@@ -15,7 +15,7 @@ const Menu = () => {
         <Link href="/">
           <ImgLogo
             style={{ cursor: 'pointer' }}
-            src="image/logo-pdv.svg"
+            src="/image/logo-pdv.svg"
             alt="Essa é a logo do projeto no qual remete a uma mão segurado um halteres"
           />
         </Link>
