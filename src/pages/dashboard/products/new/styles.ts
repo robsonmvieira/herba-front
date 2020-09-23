@@ -116,7 +116,6 @@ export const ContainerIconsLg = styled.div`
     margin: none;
     padding: none;
     justify-content: center;
-    align-items: center;
   }
 
   @media (min-width: 768px) {
@@ -131,11 +130,11 @@ export const ContainerIconsLg = styled.div`
   }
 `
 
-export const ContainerListaLg = styled.div`
+export const ContainerNovoProduto = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
-    height: 60%;
+    height: 100%;
     display: flex;
     margin: none;
     padding: none;
@@ -188,12 +187,14 @@ export const IconsTags = styled.div`
 export const ContainerTags = styled.div`
   @media (max-width: 767px) {
     width: 90%;
+    height: 90%;
     display: flex;
     justify-items: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 50px;
+    /* margin-bottom: 50px; */
   }
   @media (min-width: 768px) {
     width: 90%;
@@ -286,19 +287,42 @@ export const LabelDescricaoDashboard = styled.span`
   }
 `
 export const ContainerListAdicionar = styled.div`
-  background: #1d1f2f;
-  width: 80%;
-  height: 10%;
+  background: red;
+  width: 100%;
+  height: 30%;
   display: flex;
-  margin-top: 50px;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   justify-items: center;
   color: #fff;
+  flex-direction: column;
+  margin-bottom: 15px;
+`
+
+export const ContainerListAdicionarComDivisao = styled.div`
+  background: red;
+  width: 80%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  color: #fff;
+  margin-bottom: 15px;
 `
 
 export const Containeradicionar = styled.div`
   @media (max-width: 767px) {
+    background: green;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-items: center;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
     background: #1d1f2f;
     width: 20%;
     height: 100%;
@@ -306,7 +330,46 @@ export const Containeradicionar = styled.div`
     align-items: flex-end;
     justify-content: flex-end;
     justify-items: center;
-    margin-top: 25px;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+`
+export const ContainerAdicionarComDivisao = styled.div`
+  @media (max-width: 767px) {
+    background: green;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-items: center;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    background: #1d1f2f;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    justify-items: center;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+`
+
+export const ContainerTituloNovoProduto = styled.div`
+  @media (max-width: 767px) {
+    background: green;
+    width: 80%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   @media (min-width: 768px) {
@@ -325,5 +388,36 @@ export const Containeradicionar = styled.div`
 export const Input = styled.input`
   background: #282741;
   color: #fff;
-  margin-top: 50px;
+  width: 100%;
+  height: 50%;
+  margin-top: 5px;
+`
+
+export const LabelInput = styled.span`
+  background: #282741;
+  color: #fff;
+  width: 100%;
+  height: 40%;
+`
+
+export const InputComDivisao = styled.input`
+  background: #282741;
+  color: #fff;
+  width: 100%;
+  height: 50%;
+  margin-top: 5px;
+`
+
+export const LabelInputComDivisao = styled.span`
+  background: #282741;
+  color: #fff;
+  width: 100%;
+  height: 40%;
+`
+
+export const Titulo = styled.h6`
+  background: #282741;
+  color: #fff;
+  width: 100%;
+  height: 100%;
 `

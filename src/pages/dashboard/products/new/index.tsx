@@ -6,13 +6,20 @@ import {
   LabelDescricaoDashboard,
   LabelProdutoDashboardMenos,
   Container,
-  ContainerListaLg,
+  ContainerNovoProduto,
   ContainerTags,
   ContainerSide,
   ContainerConteudo,
   ContainerListAdicionar,
   Containeradicionar,
-  Input
+  Input,
+  LabelInput,
+  ContainerTituloNovoProduto,
+  Titulo,
+  ContainerAdicionarComDivisao,
+  InputComDivisao,
+  LabelInputComDivisao,
+  ContainerListAdicionarComDivisao
 } from './styles'
 
 import Sidebar from '../../../../components/sidebar'
@@ -54,16 +61,57 @@ const dashProducts = () => {
               </IconsTags>
             </ContainerTags>
           </ContainerIconsLg>
+          <ContainerIconsLg>
+            <ContainerNovoProduto>
+              <ContainerTituloNovoProduto>
+                <Titulo>Novo Produto:</Titulo>
+              </ContainerTituloNovoProduto>
+              <ContainerListAdicionar>
+                <Containeradicionar>
+                  <LabelInput>Titulo:</LabelInput>
+                  <Input></Input>
+                </Containeradicionar>
+              </ContainerListAdicionar>
 
-          <ContainerListaLg>
-            <Input></Input>
-            <Input></Input>
-            <ContainerListAdicionar>
-              <Containeradicionar>
-                <img src="\image\mais.svg" alt="" />
-              </Containeradicionar>
-            </ContainerListAdicionar>
-          </ContainerListaLg>
+              <ContainerListAdicionar>
+                <Containeradicionar>
+                  <LabelInput>Categoria:</LabelInput>
+                  <Input></Input>
+                </Containeradicionar>
+              </ContainerListAdicionar>
+
+              <ContainerListAdicionarComDivisao>
+                <ContainerAdicionarComDivisao>
+                  <LabelInputComDivisao>Sku:</LabelInputComDivisao>
+                  <InputComDivisao></InputComDivisao>
+                </ContainerAdicionarComDivisao>
+
+                <ContainerAdicionarComDivisao>
+                  <LabelInputComDivisao>Custo Pv:</LabelInputComDivisao>
+                  <InputComDivisao></InputComDivisao>
+                </ContainerAdicionarComDivisao>
+              </ContainerListAdicionarComDivisao>
+
+              <ContainerListAdicionar>
+                <Containeradicionar>
+                  <LabelInput>Descrição:</LabelInput>
+                  <Input></Input>
+                </Containeradicionar>
+              </ContainerListAdicionar>
+
+              <ContainerListAdicionarComDivisao>
+                <ContainerAdicionarComDivisao>
+                  <LabelInputComDivisao>Pontos de Volume:</LabelInputComDivisao>
+                  <InputComDivisao></InputComDivisao>
+                </ContainerAdicionarComDivisao>
+
+                <ContainerAdicionarComDivisao>
+                  <LabelInputComDivisao>Preço Sugerido:</LabelInputComDivisao>
+                  <InputComDivisao></InputComDivisao>
+                </ContainerAdicionarComDivisao>
+              </ContainerListAdicionarComDivisao>
+            </ContainerNovoProduto>
+          </ContainerIconsLg>
         </ContainerConteudo>
       </Container>
     </>
