@@ -2,23 +2,26 @@ import React from 'react'
 import {
   IconsTags,
   ContainerIconsLg,
-  LabelProdutoDashboard,
+  LabelClienteDashboard,
   LabelDescricaoDashboard,
-  LabelProdutoDashboardMenos,
+  LabelClienteDashboardMenos,
   Container,
   ContainerListaLg,
-  ContainerList,
+  TableHead,
+  TableRow,
   ContainerTags,
   SpanListTh,
   SpanListTd,
   ContainerSide,
-  ContainerConteudo
+  ContainerConteudo,
+  ContainerListAdicionar,
+  Containeradicionar
 } from './styles'
 
 import Sidebar from '../../../components/sidebar'
 import Menu from '../../../components/Menu'
 
-const dashProducts = () => {
+const dashClientes = () => {
   return (
     <>
       <Menu></Menu>
@@ -31,91 +34,94 @@ const dashProducts = () => {
           <ContainerIconsLg>
             <ContainerTags>
               <IconsTags>
-                <LabelProdutoDashboard>35</LabelProdutoDashboard>
+                <LabelClienteDashboard>45</LabelClienteDashboard>
                 <LabelDescricaoDashboard>
-                  Produto cadastrados
+                  Clientes cadastrados
                 </LabelDescricaoDashboard>
               </IconsTags>
               <IconsTags>
-                <LabelProdutoDashboard>Sopa de ninhaça</LabelProdutoDashboard>
-                <LabelDescricaoDashboard>Mais vendido</LabelDescricaoDashboard>
-              </IconsTags>
-              <IconsTags>
-                <LabelProdutoDashboardMenos>5</LabelProdutoDashboardMenos>
+                <LabelClienteDashboard>Allison Cruz</LabelClienteDashboard>
                 <LabelDescricaoDashboard>
-                  Produtos zerados
+                  Melhor Cliente
                 </LabelDescricaoDashboard>
               </IconsTags>
               <IconsTags>
-                <LabelProdutoDashboardMenos>
-                  Suco de coca
-                </LabelProdutoDashboardMenos>
-                <LabelDescricaoDashboard>Menos vendido</LabelDescricaoDashboard>
+                <LabelClienteDashboardMenos>7</LabelClienteDashboardMenos>
+                <LabelDescricaoDashboard>
+                  Clientes Ociosos
+                </LabelDescricaoDashboard>
+              </IconsTags>
+              <IconsTags>
+                <LabelClienteDashboardMenos>5</LabelClienteDashboardMenos>
+                <LabelDescricaoDashboard>
+                  Clientes Inativos
+                </LabelDescricaoDashboard>
               </IconsTags>
             </ContainerTags>
           </ContainerIconsLg>
 
           <ContainerListaLg>
-            <ContainerList>
+            <ContainerListAdicionar>
+              <Containeradicionar>
+                <img src="\image\mais.svg" alt="" />
+              </Containeradicionar>
+            </ContainerListAdicionar>
+
+            <TableHead>
               <SpanListTh>Nome</SpanListTh>
-              <SpanListTh>Preço</SpanListTh>
-              <SpanListTh>Estoque</SpanListTh>
+              <SpanListTh>Telefone</SpanListTh>
+              <SpanListTh>Ultima Compra</SpanListTh>
               <SpanListTh>Edit</SpanListTh>
               <SpanListTh>Del</SpanListTh>
-              <SpanListTh></SpanListTh>
-            </ContainerList>
-            <ContainerList>
-              <SpanListTd>Sopa Magica </SpanListTd>
-              <SpanListTd>R$15,00</SpanListTd>
-              <SpanListTd>20</SpanListTd>
+            </TableHead>
+            <TableRow>
+              <SpanListTd>Anderson Cooper</SpanListTd>
+              <SpanListTd>21 964555580</SpanListTd>
+              <SpanListTd>20/05/2020</SpanListTd>
               <SpanListTd>
                 <img src="/image/edit.svg" alt="" />
               </SpanListTd>
               <SpanListTd>
                 <img src="/image/lixeira.svg" alt="" />
               </SpanListTd>
-              <SpanListTd></SpanListTd>
-            </ContainerList>
-            <ContainerList>
-              <SpanListTd>Sopa Magica </SpanListTd>
-              <SpanListTd>R$15,00</SpanListTd>
-              <SpanListTd>20</SpanListTd>
+            </TableRow>
+            <TableRow>
+              <SpanListTd>Anderson Cooper</SpanListTd>
+              <SpanListTd>21 964555580</SpanListTd>
+              <SpanListTd>20/05/2020</SpanListTd>
               <SpanListTd>
                 <img src="/image/edit.svg" alt="" />
               </SpanListTd>
               <SpanListTd>
                 <img src="/image/lixeira.svg" alt="" />
               </SpanListTd>
-              <SpanListTd></SpanListTd>
-            </ContainerList>
-            <ContainerList>
-              <SpanListTd>Sopa Magica </SpanListTd>
-              <SpanListTd>R$15,00</SpanListTd>
-              <SpanListTd>20</SpanListTd>
+            </TableRow>
+            <TableRow>
+              <SpanListTd>Anderson Cooper</SpanListTd>
+              <SpanListTd>21 964555580</SpanListTd>
+              <SpanListTd>20/05/2020</SpanListTd>
               <SpanListTd>
                 <img src="/image/edit.svg" alt="" />
               </SpanListTd>
               <SpanListTd>
                 <img src="/image/lixeira.svg" alt="" />
               </SpanListTd>
-              <SpanListTd></SpanListTd>
-            </ContainerList>
-            <ContainerList>
-              <SpanListTd>Sopa Magica </SpanListTd>
-              <SpanListTd>R$15,00</SpanListTd>
-              <SpanListTd>20</SpanListTd>
+            </TableRow>
+            <TableRow>
+              <SpanListTd>Anderson Cooper</SpanListTd>
+              <SpanListTd>21 964555580</SpanListTd>
+              <SpanListTd>20/05/2020</SpanListTd>
               <SpanListTd>
                 <img src="/image/edit.svg" alt="" />
               </SpanListTd>
               <SpanListTd>
                 <img src="/image/lixeira.svg" alt="" />
               </SpanListTd>
-              <SpanListTd></SpanListTd>
-            </ContainerList>
+            </TableRow>
           </ContainerListaLg>
         </ContainerConteudo>
       </Container>
     </>
   )
 }
-export default dashProducts
+export default dashClientes
