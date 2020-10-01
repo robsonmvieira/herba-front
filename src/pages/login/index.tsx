@@ -21,8 +21,8 @@ interface userLogin {
   password: string
 }
 const Login = () => {
-  const [errorNumber, setErrorNumber] = useState(0)
-  const [toastOpen, setToastOpen] = useState(true)
+  const [errorNumber, setErrorNumber] = useState<number>(0)
+  const [toastOpen, setToastOpen] = useState<boolean>(true)
 
   function closeToast() {
     setToastOpen(false)
