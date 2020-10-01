@@ -19,7 +19,11 @@ import {
   ContainerAdicionarComDivisao,
   InputComDivisao,
   LabelInputComDivisao,
-  ContainerListAdicionarComDivisao
+  ContainerListAdicionarComDivisao,
+  ContainerListAdicionarSemDivisao,
+  ContainerAdicionarSemDivisao,
+  ContainerIconsDeCima,
+  BtnAdicionar
 } from './styles'
 
 import Sidebar from '../../../../components/sidebar'
@@ -35,7 +39,7 @@ const dashProducts = () => {
           <Sidebar />
         </ContainerSide>
         <ContainerConteudo>
-          <ContainerIconsLg>
+          <ContainerIconsDeCima>
             <ContainerTags>
               <IconsTags>
                 <LabelProdutoDashboard>35</LabelProdutoDashboard>
@@ -60,7 +64,8 @@ const dashProducts = () => {
                 <LabelDescricaoDashboard>Menos vendido</LabelDescricaoDashboard>
               </IconsTags>
             </ContainerTags>
-          </ContainerIconsLg>
+          </ContainerIconsDeCima>
+
           <ContainerIconsLg>
             <ContainerNovoProduto>
               <ContainerTituloNovoProduto>
@@ -80,6 +85,13 @@ const dashProducts = () => {
                 </Containeradicionar>
               </ContainerListAdicionar>
 
+              <ContainerListAdicionar>
+                <Containeradicionar>
+                  <LabelInput>Descrição:</LabelInput>
+                  <Input></Input>
+                </Containeradicionar>
+              </ContainerListAdicionar>
+
               <ContainerListAdicionarComDivisao>
                 <ContainerAdicionarComDivisao>
                   <LabelInputComDivisao>Sku:</LabelInputComDivisao>
@@ -92,13 +104,6 @@ const dashProducts = () => {
                 </ContainerAdicionarComDivisao>
               </ContainerListAdicionarComDivisao>
 
-              <ContainerListAdicionar>
-                <Containeradicionar>
-                  <LabelInput>Descrição:</LabelInput>
-                  <Input></Input>
-                </Containeradicionar>
-              </ContainerListAdicionar>
-
               <ContainerListAdicionarComDivisao>
                 <ContainerAdicionarComDivisao>
                   <LabelInputComDivisao>Pontos de Volume:</LabelInputComDivisao>
@@ -110,6 +115,34 @@ const dashProducts = () => {
                   <InputComDivisao></InputComDivisao>
                 </ContainerAdicionarComDivisao>
               </ContainerListAdicionarComDivisao>
+
+              <ContainerListAdicionarSemDivisao>
+                <ContainerAdicionarSemDivisao>
+                  <LabelInputComDivisao>Sku:</LabelInputComDivisao>
+                  <InputComDivisao></InputComDivisao>
+                </ContainerAdicionarSemDivisao>
+
+                <ContainerAdicionarSemDivisao>
+                  <LabelInputComDivisao>Custo Pv:</LabelInputComDivisao>
+                  <InputComDivisao></InputComDivisao>
+                </ContainerAdicionarSemDivisao>
+
+                <ContainerAdicionarSemDivisao>
+                  <LabelInputComDivisao>Pontos de Volume:</LabelInputComDivisao>
+                  <InputComDivisao></InputComDivisao>
+                </ContainerAdicionarSemDivisao>
+
+                <ContainerAdicionarSemDivisao>
+                  <LabelInputComDivisao>Preço Sugerido:</LabelInputComDivisao>
+                  <InputComDivisao></InputComDivisao>
+                </ContainerAdicionarSemDivisao>
+              </ContainerListAdicionarSemDivisao>
+
+              <ContainerListAdicionar>
+                <Containeradicionar>
+                  <BtnAdicionar>Adicionar</BtnAdicionar>
+                </Containeradicionar>
+              </ContainerListAdicionar>
             </ContainerNovoProduto>
           </ContainerIconsLg>
         </ContainerConteudo>

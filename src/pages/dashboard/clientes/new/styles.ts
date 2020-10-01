@@ -92,11 +92,11 @@ export const ContainerIconsLg = styled.div`
   }
 `
 
-export const ContainerNovoProduto = styled.div`
+export const ContainerNovoCliente = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
-    height: 100%;
+    height: 2000px;
     display: flex;
     margin: none;
     padding: none;
@@ -167,7 +167,7 @@ export const ContainerTags = styled.div`
   }
 `
 
-export const LabelProdutoDashboard = styled.span`
+export const LabelClienteDashboard = styled.span`
   @media (max-width: 767px) {
     color: #2fc84c;
     width: 40%;
@@ -195,7 +195,7 @@ export const LabelProdutoDashboard = styled.span`
   }
 `
 
-export const LabelProdutoDashboardMenos = styled.span`
+export const LabelClienteDashboardMenos = styled.span`
   @media (max-width: 767px) {
     color: #ef6e6e;
     width: 40%;
@@ -282,7 +282,7 @@ export const ContainerListAdicionarComDivisao = styled.div`
   @media (max-width: 767px) {
     background: red;
     width: 80%;
-    height: 30%;
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -335,9 +335,8 @@ export const ContainerAdicionarComDivisao = styled.div`
     width: 40%;
     height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-items: center;
-    flex-direction: column;
   }
 
   @media (min-width: 768px) {
@@ -354,7 +353,7 @@ export const ContainerAdicionarComDivisao = styled.div`
   }
 `
 
-export const ContainerTituloNovoProduto = styled.div`
+export const ContainerTituloNovoCliente = styled.div`
   @media (max-width: 767px) {
     background: green;
     width: 80%;
@@ -400,8 +399,8 @@ export const LabelInput = styled.span`
 export const InputComDivisao = styled.input`
   background: #282741;
   color: #fff;
-  width: 100%;
-  height: 50%;
+  width: 20%;
+  height: 100%;
   margin-top: 5px;
 `
 
@@ -409,8 +408,13 @@ export const LabelInputComDivisao = styled.span`
   @media (max-width: 767px) {
     background: #282741;
     color: #fff;
-    width: 100%;
-    height: 40%;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+    size: 1.1rem;
   }
 
   @media (min-widht: 768px) {
@@ -492,7 +496,7 @@ export const ContainerIconsDeCima = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
-    height: 60%;
+    height: 20%;
     display: flex;
     margin: none;
     padding: none;
