@@ -21,7 +21,12 @@ interface userLogin {
   password: string
 }
 const Login = () => {
-  const [errorNumber, setErrorNumber] = useState(0)
+  const [errorNumber, setErrorNumber] = useState<number>(0)
+  const [toastOpen, setToastOpen] = useState<boolean>(true)
+
+  function closeToast() {
+    setToastOpen(false)
+  }
   const formRef = useRef(null)
   async function handleSubmit({ email, password }: userLogin, { reset }) {
     try {
@@ -53,11 +58,16 @@ const Login = () => {
         formRef.current.setErrors(validationErrors)
         return
       }
-      console.log('passei da validação')
-      if (error.response.status === 401) {
-        validationErrors[error.path] = error.message
-        formRef.current.setErrors(validationErrors)
+      console.log('loguei erro => ', error)
 
+      if (!error.status) {
+        setErrorNumber(500)
+        return
+      }
+
+      if (error.response.status === 401) {
+        // validationErrors[error.path] = error.message
+        // formRef.current.setErrors(validationErrors)
         setErrorNumber(401)
       }
       if (error.response.status === 500) {
@@ -86,8 +96,13 @@ const Login = () => {
         )}
         {errorNumber === 500 && (
           <div className="p-3 my-2 rounded">
-            <Toast>
-              <ToastHeader>Erro Interno</ToastHeader>
+            <Toast isOpen={toastOpen}>
+              <ToastHeader>
+                <span>Erro Interno</span>
+                <button type="button" onClick={closeToast}>
+                  x
+                </button>
+              </ToastHeader>
               <ToastBody>
                 Ocorreu um erro interno. Por favor tente mais tarde.
               </ToastBody>
