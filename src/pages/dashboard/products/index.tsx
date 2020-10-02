@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { GetServerSideProps } from 'next'
+
 import {
   IconsTags,
   ContainerIconsLg,
@@ -20,12 +22,29 @@ import {
 
 import Sidebar from '../../../components/sidebar'
 import Menu from '../../../components/Menu'
+import api from '../../../services/api'
 
-const dashProducts = () => {
+interface IProduct {
+  id: string
+  sku: string
+  name: string
+  owner_id: string
+  quantity: number
+  volume_points: string
+  price_suggest: string
+  from_zero_to_four_hundred_ninety_nine: string
+  from_five_hundred_to_nine_hundred_ninety_nine: string
+  from_one_thousand_to_three_thousand_nine_hundred_ninety_nine: string
+  more_than_four_thousand: string
+  cost_per_pv: string
+  category_id: string
+}
+
+const dashProducts = ({ products }) => {
+  // const [listProducts, setlistProducts] = useState<IProduct[]>(products)
   return (
     <>
-      <Menu></Menu>
-
+      <Menu />
       <Container>
         <ContainerSide>
           <Sidebar />
@@ -61,7 +80,7 @@ const dashProducts = () => {
           <ContainerListaLg>
             <ContainerListAdicionar>
               <Containeradicionar>
-                <img src="\image\mais.svg" alt="" />
+                <img src="\image\mais.svg" alt="icone " />
               </Containeradicionar>
             </ContainerListAdicionar>
 
@@ -72,6 +91,20 @@ const dashProducts = () => {
               <SpanListTh>Edit</SpanListTh>
               <SpanListTh>Del</SpanListTh>
             </TableHead>
+            {/* {listProducts.map(p => (
+              <TableRow key={p.id}>
+                <SpanListTd>{p.name}</SpanListTd>
+                <SpanListTd>{p.price_suggest}</SpanListTd>
+                <SpanListTd>{p.quantity}</SpanListTd>
+
+                <SpanListTd>
+                  <img src="/image/edit.svg" alt="" />
+                </SpanListTd>
+                <SpanListTd>
+                  <img src="/image/lixeira.svg" alt="" />
+                </SpanListTd>
+              </TableRow>
+            ))} */}
             <TableRow>
               <SpanListTd>Sopa Magica </SpanListTd>
               <SpanListTd>R$15,00</SpanListTd>
@@ -122,4 +155,19 @@ const dashProducts = () => {
     </>
   )
 }
-export default dashProducts
+// export default dashProducts
+// export const getServerSideProps: GetServerSideProps = async params => {
+//   const { pages } = params.query
+//   if (Number(pages) <= 0) {
+//     const response = await api.get<IProduct[]>(`products/?pages=${0}`)
+//     const products = response.data
+//     return {
+//       props: { products }
+//     }
+//   }
+//   const response = await api.get<IProduct[]>(`products/?pages=${pages}`)
+//   const products = response.data
+//   return {
+//     props: { products }
+//   }
+// }
