@@ -10,7 +10,7 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     width: 100%;
-    height: 1080px;
+    height: 100%;
     display: flex;
   }
 `
@@ -60,7 +60,7 @@ export const ContainerSide = styled.div`
     background: #282741;
     width: 15%;
     max-width: 20%;
-    height: 100%;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,12 +83,13 @@ export const ContainerIconsLg = styled.div`
   @media (min-width: 768px) {
     background: black;
     width: 90%;
-    height: 70%;
+    height: 100%;
     display: flex;
     margin: none;
     padding: none;
     justify-content: center;
     justify-items: center;
+    margin-top: 50px;
   }
 `
 
@@ -160,10 +161,10 @@ export const ContainerTags = styled.div`
   }
   @media (min-width: 768px) {
     width: 90%;
-    height: 50%;
+    height: 100%;
     display: flex;
-
     justify-content: space-between;
+    background-color: red;
   }
 `
 
@@ -265,15 +266,14 @@ export const ContainerListAdicionar = styled.div`
   }
 
   @media (min-width: 768px) {
-    background: red;
-    width: 100%;
-    height: 15%;
+    /* width: 100%;
+    height: 20%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     justify-items: center;
+    justify-content: space-between;
     color: #fff;
-    flex-direction: column;
+    background-color: yellow; */
+    display: none;
   }
 `
 
@@ -329,6 +329,7 @@ export const Containeradicionar = styled.div`
     margin-bottom: 15px;
   }
 `
+
 export const ContainerAdicionarComDivisao = styled.div`
   @media (max-width: 767px) {
     background: green;
@@ -382,18 +383,28 @@ export const ContainerTituloNovoCliente = styled.div`
 `
 
 export const Input = styled.input`
-  background: #282741;
-  color: #fff;
-  width: 100%;
-  height: 50%;
-  margin-top: 5px;
+  @media (max-widht: 767px) {
+    background: #282741;
+    color: #fff;
+    width: 100%;
+    height: 50%;
+    margin-top: 5px;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
 
 export const LabelInput = styled.span`
-  background: #282741;
-  color: #fff;
-  width: 100%;
-  height: 40%;
+  @media (max-width: 767px) {
+    background: #282741;
+    color: #fff;
+    width: 100%;
+    height: 40%;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
 
 export const InputComDivisao = styled.input`
@@ -401,7 +412,12 @@ export const InputComDivisao = styled.input`
   color: #fff;
   width: 20%;
   height: 100%;
-  margin-top: 5px;
+
+  size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 `
 
 export const LabelInputComDivisao = styled.span`
@@ -462,8 +478,7 @@ export const ContainerListAdicionarSemDivisao = styled.div`
     justify-content: space-between;
     color: #fff;
     margin-bottom: 15px;
-
-    /* display: none; */
+    display: none;
   }
 `
 
@@ -504,9 +519,9 @@ export const ContainerIconsDeCima = styled.div`
   }
 
   @media (min-width: 768px) {
-    background: black;
+    background: red;
     width: 90%;
-    height: 20%;
+    height: 100%;
     display: flex;
     margin: none;
     padding: none;
@@ -538,5 +553,65 @@ export const BtnAdicionar = styled.button`
     justify-content: center;
     justify-items: center;
     align-items: center;
+  }
+`
+
+// a partir daqui é relacionado a desktop >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+export const LabelParaDesktop = styled.span`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 30%;
+    margin-left: 5px;
+  }
+`
+
+export const ContainerAdicionarDesktop = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    background-color: red;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+`
+export const ContainerListAdicionarDesktop = styled.div`
+  /* aumenta o container com a label e o input dentro  */
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: yellow;
+  }
+`
+export const InputDesktop = styled.input`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
   }
 `

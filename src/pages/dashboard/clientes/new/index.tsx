@@ -20,10 +20,12 @@ import {
   InputComDivisao,
   LabelInputComDivisao,
   ContainerListAdicionarComDivisao,
-  ContainerListAdicionarSemDivisao,
-  ContainerAdicionarSemDivisao,
   ContainerIconsDeCima,
-  BtnAdicionar
+  BtnAdicionar,
+  ContainerAdicionarDesktop,
+  ContainerListAdicionarDesktop,
+  LabelParaDesktop,
+  InputDesktop
 } from './styles'
 
 import Sidebar from '../../../../components/sidebar'
@@ -73,101 +75,209 @@ const dashClientesNew = () => {
               <ContainerTituloNovoCliente>
                 <Titulo>Novo Cliente:</Titulo>
               </ContainerTituloNovoCliente>
+
+              {/* Aqui é desktop  */}
+              {/* <ContainerListAdicionarDesktop>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    width: '100%',
+                    height: '30%',
+                    backgroundColor: 'red',
+                    marginTop: '20px'
+                  }}
+                >
+                  <ContainerAdicionarDesktop>oi </ContainerAdicionarDesktop>
+                  <ContainerAdicionarDesktop>oi</ContainerAdicionarDesktop>
+                  <ContainerAdicionarDesktop>oi</ContainerAdicionarDesktop>
+                </div>
+              </ContainerListAdicionarDesktop> */}
+
+              <ContainerListAdicionarDesktop>
+                <ContainerAdicionarDesktop style={{ width: '40%' }}>
+                  <LabelParaDesktop>Titulo:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+                <ContainerAdicionarDesktop style={{ width: '40%' }}>
+                  <LabelParaDesktop>Data de Nascimento:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerAdicionarDesktop>
+                  <LabelParaDesktop>Sexo:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+                <ContainerAdicionarDesktop>
+                  <LabelParaDesktop>Telefone:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+                <ContainerAdicionarDesktop>
+                  <LabelParaDesktop>Cpf:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerAdicionarDesktop style={{ width: '40%' }}>
+                  <LabelParaDesktop>Email:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+                <ContainerAdicionarDesktop style={{ width: '40%' }}>
+                  <LabelParaDesktop>Profissão:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerAdicionarDesktop style={{ width: '100%' }}>
+                  <LabelParaDesktop>Endereço:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerAdicionarDesktop>
+                  <LabelParaDesktop>Bairro:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+                <ContainerAdicionarDesktop>
+                  <LabelParaDesktop>Cidade:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+                <ContainerAdicionarDesktop>
+                  <LabelParaDesktop>Estado:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerAdicionarDesktop>
+                  <LabelParaDesktop>Peso:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+                <ContainerAdicionarDesktop>
+                  <LabelParaDesktop>Altura:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+                <ContainerAdicionarDesktop>
+                  <LabelParaDesktop>Alergias:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerAdicionarDesktop
+                  style={{ flexDirection: 'row', width: '100%' }}
+                >
+                  <InputDesktop
+                    type="checkbox"
+                    style={{ width: '30%', backgroundColor: 'green' }}
+                  />
+                  <LabelParaDesktop style={{ width: '40%' }}>
+                    Alergia:
+                  </LabelParaDesktop>
+                </ContainerAdicionarDesktop>
+              </ContainerListAdicionarDesktop>
+
+              {/* Aqui é mobile  */}
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Nome:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Data Nascimento:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Sexo:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Telefone:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Cpf:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Email:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Profissão:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Enderço:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Bairro:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Cidade:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Estado:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Peso:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Altura:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Alergias:</LabelInput>
-                  <Input></Input>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
@@ -336,30 +446,6 @@ const dashClientesNew = () => {
                 </Containeradicionar>
               </ContainerListAdicionar>
 
-              {/* a partir daqui é a tela grande  */}
-
-              <ContainerListAdicionarSemDivisao>
-                <ContainerAdicionarSemDivisao>
-                  <LabelInputComDivisao>Sku:</LabelInputComDivisao>
-                  <InputComDivisao></InputComDivisao>
-                </ContainerAdicionarSemDivisao>
-
-                <ContainerAdicionarSemDivisao>
-                  <LabelInputComDivisao>Custo Pv:</LabelInputComDivisao>
-                  <InputComDivisao></InputComDivisao>
-                </ContainerAdicionarSemDivisao>
-
-                <ContainerAdicionarSemDivisao>
-                  <LabelInputComDivisao>Pontos de Volume:</LabelInputComDivisao>
-                  <InputComDivisao></InputComDivisao>
-                </ContainerAdicionarSemDivisao>
-
-                <ContainerAdicionarSemDivisao>
-                  <LabelInputComDivisao>Preço Sugerido:</LabelInputComDivisao>
-                  <InputComDivisao></InputComDivisao>
-                </ContainerAdicionarSemDivisao>
-              </ContainerListAdicionarSemDivisao>
-
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <BtnAdicionar>Adicionar</BtnAdicionar>
@@ -367,6 +453,7 @@ const dashClientesNew = () => {
               </ContainerListAdicionar>
             </ContainerNovoCliente>
           </ContainerIconsLg>
+          {/* a partir daqui é para tela desktop */}
         </ContainerConteudo>
       </Container>
     </>
