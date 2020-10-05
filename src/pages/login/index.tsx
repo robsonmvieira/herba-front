@@ -7,7 +7,8 @@ import {
   Side,
   Title,
   Wapper,
-  FormTitle
+  FormTitle,
+  InputFormLogin
 } from './styles'
 import Menu from '../../components/Menu'
 import Input from '../../components/Input'
@@ -114,12 +115,26 @@ const Login = () => {
             <Title> Life Admin</Title>
           </Side>
           <Side>
-            <Form ref={formRef} onSubmit={handleSubmit}>
+            <Form
+              style={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}
+              ref={formRef}
+              onSubmit={handleSubmit}
+            >
               <FormTitle>Login</FormTitle>
               <LabelLogin>Email:</LabelLogin>
-              <Input name="email" />
+              <InputFormLogin style={{ background: '#282741' }} name="email" />
               <LabelLogin style={{ marginTop: 25 }}>Senha:</LabelLogin>
-              <Input name="password" type="password" />
+              <InputFormLogin
+                style={{ background: '#282741' }}
+                name="password"
+                type="password"
+              />
               <BtnLogin>Logar</BtnLogin>
             </Form>
           </Side>
