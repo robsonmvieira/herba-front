@@ -17,7 +17,8 @@ import {
   ContainerSide,
   ContainerConteudo,
   ContainerListAdicionar,
-  Containeradicionar
+  Containeradicionar,
+  ContainerSpan
 } from './styles'
 
 import Sidebar from '../../../components/sidebar'
@@ -40,7 +41,7 @@ interface IProduct {
   category_id: string
 }
 
-const dashProducts = ({ products }) => {
+const dashProdutos = ({ products }) => {
   // const [listProducts, setlistProducts] = useState<IProduct[]>(products)
   return (
     <>
@@ -53,26 +54,46 @@ const dashProducts = ({ products }) => {
           <ContainerIconsLg>
             <ContainerTags>
               <IconsTags>
-                <LabelProdutoDashboard>35</LabelProdutoDashboard>
-                <LabelDescricaoDashboard>
-                  Produto cadastrados
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelProdutoDashboard>35</LabelProdutoDashboard>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Produto cadastrados
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelProdutoDashboard>Sopa de ninhaça</LabelProdutoDashboard>
-                <LabelDescricaoDashboard>Mais vendido</LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelProdutoDashboard>Sopa de ninhaça</LabelProdutoDashboard>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Mais vendido
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelProdutoDashboardMenos>5</LabelProdutoDashboardMenos>
-                <LabelDescricaoDashboard>
-                  Produtos zerados
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelProdutoDashboardMenos>5</LabelProdutoDashboardMenos>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Produtos zerados
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelProdutoDashboardMenos>
-                  Suco de coca
-                </LabelProdutoDashboardMenos>
-                <LabelDescricaoDashboard>Menos vendido</LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelProdutoDashboardMenos>
+                    Suco de coca
+                  </LabelProdutoDashboardMenos>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Menos vendido
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
             </ContainerTags>
           </ContainerIconsLg>
@@ -155,7 +176,7 @@ const dashProducts = ({ products }) => {
     </>
   )
 }
-// export default dashProducts
+export default dashProdutos
 // export const getServerSideProps: GetServerSideProps = async params => {
 //   const { pages } = params.query
 //   if (Number(pages) <= 0) {

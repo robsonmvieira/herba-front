@@ -25,13 +25,19 @@ import {
   ContainerAdicionarDesktop,
   ContainerListAdicionarDesktop,
   LabelParaDesktop,
-  InputDesktop
+  InputDesktop,
+  DivCheckBox,
+  CheckBoxDesktop,
+  LabelParaCheckBox,
+  ContainerCheckBoxDesktop,
+  BtnAdicionarDesktop,
+  ContainerSpan
 } from './styles'
 
 import Sidebar from '../../../../components/sidebar'
 import Menu from '../../../../components/Menu'
 
-const dashClientesNew = () => {
+const dashClientesNovo = () => {
   return (
     <>
       <Menu></Menu>
@@ -44,28 +50,44 @@ const dashClientesNew = () => {
           <ContainerIconsDeCima>
             <ContainerTags>
               <IconsTags>
-                <LabelClienteDashboard>35</LabelClienteDashboard>
-                <LabelDescricaoDashboard>
-                  Clientes cadastrados
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelClienteDashboard>35</LabelClienteDashboard>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Clientes cadastrados
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelClienteDashboard>Robson Shubba</LabelClienteDashboard>
-                <LabelDescricaoDashboard>
-                  Melhor Cliente
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelClienteDashboard>Robson Shubba</LabelClienteDashboard>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Melhor Cliente
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelClienteDashboardMenos>5</LabelClienteDashboardMenos>
-                <LabelDescricaoDashboard>
-                  Cliente Ocioso
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelClienteDashboardMenos>5</LabelClienteDashboardMenos>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Cliente Ocioso
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelClienteDashboardMenos>10</LabelClienteDashboardMenos>
-                <LabelDescricaoDashboard>
-                  Clientes Inativos
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelClienteDashboardMenos>10</LabelClienteDashboardMenos>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Clientes Inativos
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
             </ContainerTags>
           </ContainerIconsDeCima>
@@ -168,17 +190,172 @@ const dashClientesNew = () => {
                 </ContainerAdicionarDesktop>
               </ContainerListAdicionarDesktop>
 
+              {/* todos os check box da versão desktop >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+
+              <ContainerListAdicionarDesktop>
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+
+                    <LabelParaCheckBox>Triglicerideos</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Pressao baixa</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Insonia</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Gastrite</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Alergia</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Artrose</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Rinite</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Diabetes</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Anemia</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Sonolencia</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Depressao</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Osteoporose</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Colesterol</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Dor de Cabeça</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Asma</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Cardiopatias</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Dor nas pernas</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Hipertensao</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Indispoisção</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+
+                <ContainerCheckBoxDesktop>
+                  <DivCheckBox>
+                    <CheckBoxDesktop type="checkbox" />
+                    <LabelParaCheckBox>Intestino preso</LabelParaCheckBox>
+                  </DivCheckBox>
+                </ContainerCheckBoxDesktop>
+              </ContainerListAdicionarDesktop>
+
+              {/* aqui termina os check boxs >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+
               <ContainerListAdicionarDesktop>
                 <ContainerAdicionarDesktop
-                  style={{ flexDirection: 'row', width: '100%' }}
+                  style={{ width: '100%', marginTop: '20px' }}
                 >
-                  <InputDesktop
-                    type="checkbox"
-                    style={{ width: '30%', backgroundColor: 'green' }}
-                  />
-                  <LabelParaDesktop style={{ width: '40%' }}>
-                    Alergia:
-                  </LabelParaDesktop>
+                  <LabelParaDesktop>Outros:</LabelParaDesktop>
+                  <InputDesktop />
+                </ContainerAdicionarDesktop>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <ContainerAdicionarDesktop style={{ width: '100%' }}>
+                  <BtnAdicionarDesktop> Adicionar </BtnAdicionarDesktop>
                 </ContainerAdicionarDesktop>
               </ContainerListAdicionarDesktop>
 
@@ -186,98 +363,98 @@ const dashClientesNew = () => {
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Nome:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Data Nascimento:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Sexo:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Telefone:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Cpf:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Email:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Profissão:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Enderço:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Bairro:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Cidade:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Estado:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Peso:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Altura:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Alergias:</LabelInput>
-                  <Input />
+                  <Input style={{ width: '100%', background: '#282741' }} />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
@@ -442,7 +619,9 @@ const dashClientesNew = () => {
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Outros:</LabelInput>
-                  <Input></Input>
+                  <Input
+                    style={{ width: '100%', background: '#282741' }}
+                  ></Input>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
@@ -453,10 +632,11 @@ const dashClientesNew = () => {
               </ContainerListAdicionar>
             </ContainerNovoCliente>
           </ContainerIconsLg>
+
           {/* a partir daqui é para tela desktop */}
         </ContainerConteudo>
       </Container>
     </>
   )
 }
-export default dashClientesNew
+export default dashClientesNovo

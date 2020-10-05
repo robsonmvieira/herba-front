@@ -15,7 +15,8 @@ import {
   ContainerSide,
   ContainerConteudo,
   ContainerListAdicionar,
-  Containeradicionar
+  Containeradicionar,
+  ContainerSpan
 } from './styles'
 
 import Sidebar from '../../../components/sidebar'
@@ -34,28 +35,44 @@ const dashClientes = () => {
           <ContainerIconsLg>
             <ContainerTags>
               <IconsTags>
-                <LabelClienteDashboard>45</LabelClienteDashboard>
-                <LabelDescricaoDashboard>
-                  Clientes cadastrados
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelClienteDashboard>45</LabelClienteDashboard>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Clientes cadastrados
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelClienteDashboard>Allison Cruz</LabelClienteDashboard>
-                <LabelDescricaoDashboard>
-                  Melhor Cliente
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelClienteDashboard>Allison Cruz</LabelClienteDashboard>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Melhor Cliente
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelClienteDashboardMenos>7</LabelClienteDashboardMenos>
-                <LabelDescricaoDashboard>
-                  Clientes Ociosos
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelClienteDashboardMenos>7</LabelClienteDashboardMenos>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Clientes Ociosos
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelClienteDashboardMenos>5</LabelClienteDashboardMenos>
-                <LabelDescricaoDashboard>
-                  Clientes Inativos
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelClienteDashboardMenos>5</LabelClienteDashboardMenos>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Clientes Inativos
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
             </ContainerTags>
           </ContainerIconsLg>
@@ -68,15 +85,25 @@ const dashClientes = () => {
             </ContainerListAdicionar>
 
             <TableHead>
-              <SpanListTh>Nome</SpanListTh>
-              <SpanListTh>Telefone</SpanListTh>
-              <SpanListTh>Ultima Compra</SpanListTh>
-              <SpanListTh>Edit</SpanListTh>
-              <SpanListTh>Del</SpanListTh>
+              <ContainerSpan>
+                <SpanListTh>Nome</SpanListTh>
+              </ContainerSpan>
+              <ContainerSpan>
+                <SpanListTh>Telefone</SpanListTh>
+              </ContainerSpan>
+              <ContainerSpan>
+                <SpanListTh>Compra</SpanListTh>
+              </ContainerSpan>
+              <ContainerSpan>
+                <SpanListTh>Edit</SpanListTh>
+              </ContainerSpan>
+              <ContainerSpan>
+                <SpanListTh>Del</SpanListTh>
+              </ContainerSpan>
             </TableHead>
             <TableRow>
               <SpanListTd>Anderson Cooper</SpanListTd>
-              <SpanListTd>21 964555580</SpanListTd>
+              <SpanListTd>21964555580</SpanListTd>
               <SpanListTd>20/05/2020</SpanListTd>
               <SpanListTd>
                 <img src="/image/edit.svg" alt="" />
@@ -87,7 +114,7 @@ const dashClientes = () => {
             </TableRow>
             <TableRow>
               <SpanListTd>Anderson Cooper</SpanListTd>
-              <SpanListTd>21 964555580</SpanListTd>
+              <SpanListTd>21964555580</SpanListTd>
               <SpanListTd>20/05/2020</SpanListTd>
               <SpanListTd>
                 <img src="/image/edit.svg" alt="" />
@@ -98,7 +125,7 @@ const dashClientes = () => {
             </TableRow>
             <TableRow>
               <SpanListTd>Anderson Cooper</SpanListTd>
-              <SpanListTd>21 964555580</SpanListTd>
+              <SpanListTd>21964555580</SpanListTd>
               <SpanListTd>20/05/2020</SpanListTd>
               <SpanListTd>
                 <img src="/image/edit.svg" alt="" />
@@ -109,7 +136,7 @@ const dashClientes = () => {
             </TableRow>
             <TableRow>
               <SpanListTd>Anderson Cooper</SpanListTd>
-              <SpanListTd>21 964555580</SpanListTd>
+              <SpanListTd>21964555580</SpanListTd>
               <SpanListTd>20/05/2020</SpanListTd>
               <SpanListTd>
                 <img src="/image/edit.svg" alt="" />

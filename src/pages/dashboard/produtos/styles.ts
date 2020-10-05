@@ -286,25 +286,16 @@ export const ContainerTags = styled.div`
 export const LabelProdutoDashboard = styled.span`
   @media (max-width: 767px) {
     color: #2fc84c;
-    width: 40%;
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    width: 100%;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
-    font-size: 0.9rem;
   }
 
   @media (min-width: 768px) {
     color: #2fc84c;
     width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-size: 100%;
@@ -314,12 +305,8 @@ export const LabelProdutoDashboard = styled.span`
 export const LabelProdutoDashboardMenos = styled.span`
   @media (max-width: 767px) {
     color: #ef6e6e;
-    width: 40%;
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    width: 100%;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-size: 0.9rem;
@@ -327,11 +314,7 @@ export const LabelProdutoDashboardMenos = styled.span`
   @media (min-width: 768px) {
     color: #ef6e6e;
     width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-size: 100%;
@@ -341,13 +324,8 @@ export const LabelProdutoDashboardMenos = styled.span`
 export const LabelDescricaoDashboard = styled.span`
   @media (max-width: 767px) {
     color: #fff;
-    width: 45%;
-    font-size: 0.9rem;
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    justify-items: center;
+    width: 100%;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
   }
@@ -355,12 +333,7 @@ export const LabelDescricaoDashboard = styled.span`
   @media (min-width: 768px) {
     color: #fff;
     width: 100%;
-    font-size: 0.9rem;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
   }
@@ -399,5 +372,21 @@ export const Containeradicionar = styled.div`
     justify-items: center;
     color: #fff;
     font-size: 1.1rem;
+  }
+`
+
+export const ContainerSpan = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    width: 100%;
   }
 `

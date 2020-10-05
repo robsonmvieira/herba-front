@@ -189,10 +189,10 @@ export const IconsTags = styled.div`
 export const TableHead = styled.div`
   background: #282741;
   width: 80%;
-  height: 10%;
+  height: 15%;
   display: flex;
   margin-top: 10px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   justify-items: center;
   color: #fff;
@@ -213,7 +213,7 @@ export const TableRow = styled.div`
 export const SpanListTh = styled.span`
   @media (max-width: 767px) {
     background: #282741;
-    width: 20%;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -226,14 +226,11 @@ export const SpanListTh = styled.span`
 
   @media (min-width: 768px) {
     background: #282741;
-    width: 15%;
-    height: 100%;
+    width: 100%;
+    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    justify-items: flex-start;
     color: #fff;
-    font-size: 1.1rem;
     margin-left: 10px;
   }
 `
@@ -247,7 +244,7 @@ export const SpanListTd = styled.span`
     justify-content: center;
     justify-items: center;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-left: 10px;
   }
 
@@ -257,10 +254,10 @@ export const SpanListTd = styled.span`
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     justify-items: flex-start;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-left: 10px;
   }
 `
@@ -300,14 +297,9 @@ export const LabelClienteDashboard = styled.span`
   @media (min-width: 768px) {
     color: #2fc84c;
     width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
-    font-size: 100%;
   }
 `
 
@@ -327,14 +319,9 @@ export const LabelClienteDashboardMenos = styled.span`
   @media (min-width: 768px) {
     color: #ef6e6e;
     width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
-    font-size: 100%;
   }
 `
 
@@ -355,12 +342,7 @@ export const LabelDescricaoDashboard = styled.span`
   @media (min-width: 768px) {
     color: #fff;
     width: 100%;
-    font-size: 0.9rem;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
   }
@@ -399,5 +381,21 @@ export const Containeradicionar = styled.div`
     justify-items: center;
     color: #fff;
     font-size: 1.1rem;
+  }
+`
+
+export const ContainerSpan = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    width: 100%;
   }
 `

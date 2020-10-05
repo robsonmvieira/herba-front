@@ -10,13 +10,13 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     width: 100%;
-    height: 1080px;
+    height: 100%;
     display: flex;
   }
 `
 
 export const ContainerInclusao = styled.div`
-  background: red;
+  background: #1d1f2f;
   width: 100%;
   height: 40px;
   display: flex;
@@ -35,7 +35,7 @@ export const ContainerConteudo = styled.div`
   } */
 
   @media (min-width: 768px) {
-    background: purple;
+    background: #1d1f2f;
     width: 100%;
     height: 100%;
     display: flex;
@@ -60,7 +60,7 @@ export const ContainerSide = styled.div`
     background: #282741;
     width: 15%;
     max-width: 20%;
-    height: 100%;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,22 +81,23 @@ export const ContainerIconsLg = styled.div`
   }
 
   @media (min-width: 768px) {
-    background: black;
+    background: #1d1f2f;
     width: 90%;
-    height: 70%;
+    height: 100%;
     display: flex;
     margin: none;
     padding: none;
     justify-content: center;
     justify-items: center;
+    margin-top: 50px;
   }
 `
 
-export const ContainerNovoProduto = styled.div`
+export const ContainerNovoCliente = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
-    height: 100%;
+    height: 2000px;
     display: flex;
     margin: none;
     padding: none;
@@ -106,7 +107,7 @@ export const ContainerNovoProduto = styled.div`
   }
 
   @media (min-width: 768px) {
-    background: yellow;
+    background: #1d1f2f;
     width: 90%;
     height: 100%;
     display: flex;
@@ -135,7 +136,7 @@ export const IconsTags = styled.div`
   @media (min-width: 768px) {
     background: #282741;
     width: 20%;
-    height: 100px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,62 +161,45 @@ export const ContainerTags = styled.div`
   }
   @media (min-width: 768px) {
     width: 90%;
-    height: 50%;
+    height: 100%;
     display: flex;
-
     justify-content: space-between;
+    background-color: #1d1f2f;
   }
 `
 
-export const LabelProdutoDashboard = styled.span`
+export const LabelClienteDashboard = styled.span`
   @media (max-width: 767px) {
     color: #2fc84c;
-    width: 40%;
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    width: 100%;
+    text-align: center;
+
     font-family: Roboto;
     font-style: normal;
-    font-size: 0.9rem;
   }
 
   @media (min-width: 768px) {
     color: #2fc84c;
     width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-size: 100%;
   }
 `
 
-export const LabelProdutoDashboardMenos = styled.span`
+export const LabelClienteDashboardMenos = styled.span`
   @media (max-width: 767px) {
     color: #ef6e6e;
-    width: 40%;
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    width: 100%;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
-    font-size: 0.9rem;
   }
   @media (min-width: 768px) {
     color: #ef6e6e;
     width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-size: 100%;
@@ -225,13 +209,9 @@ export const LabelProdutoDashboardMenos = styled.span`
 export const LabelDescricaoDashboard = styled.span`
   @media (max-width: 767px) {
     color: #fff;
-    width: 45%;
-    font-size: 0.9rem;
+    width: 100%;
     height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    justify-items: center;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
   }
@@ -239,12 +219,8 @@ export const LabelDescricaoDashboard = styled.span`
   @media (min-width: 768px) {
     color: #fff;
     width: 100%;
-    font-size: 0.9rem;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    text-align: center;
+
     font-family: Roboto;
     font-style: normal;
   }
@@ -252,7 +228,7 @@ export const LabelDescricaoDashboard = styled.span`
 export const ContainerListAdicionar = styled.div`
   /* aumenta o container com a label e o input dentro  */
   @media (max-width: 767px) {
-    background: red;
+    background: #1d1f2f;
     width: 100%;
     height: 30%;
     display: flex;
@@ -265,24 +241,23 @@ export const ContainerListAdicionar = styled.div`
   }
 
   @media (min-width: 768px) {
-    background: red;
-    width: 100%;
-    height: 15%;
+    /* width: 100%;
+    height: 20%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     justify-items: center;
+    justify-content: space-between;
     color: #fff;
-    flex-direction: column;
+    background-color: yellow; */
+    display: none;
   }
 `
 
 export const ContainerListAdicionarComDivisao = styled.div`
   /* controla o container com 2 inputs e 2 labels  */
   @media (max-width: 767px) {
-    background: red;
+    background: #1d1f2f;
     width: 80%;
-    height: 30%;
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -306,7 +281,7 @@ export const ContainerListAdicionarComDivisao = styled.div`
 
 export const Containeradicionar = styled.div`
   @media (max-width: 767px) {
-    background: green;
+    background: #1d1f2f;
     width: 80%;
     height: 100%;
     display: flex;
@@ -318,7 +293,7 @@ export const Containeradicionar = styled.div`
   @media (min-width: 768px) {
     background: #1d1f2f;
     width: 100%;
-    height: 100%;
+    height: 20%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -329,15 +304,15 @@ export const Containeradicionar = styled.div`
     margin-bottom: 15px;
   }
 `
+
 export const ContainerAdicionarComDivisao = styled.div`
   @media (max-width: 767px) {
-    background: green;
+    background: #1d1f2f;
     width: 40%;
     height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-items: center;
-    flex-direction: column;
   }
 
   @media (min-width: 768px) {
@@ -354,9 +329,9 @@ export const ContainerAdicionarComDivisao = styled.div`
   }
 `
 
-export const ContainerTituloNovoProduto = styled.div`
+export const ContainerTituloNovoCliente = styled.div`
   @media (max-width: 767px) {
-    background: green;
+    background: #1d1f2f;
     width: 80%;
     height: 10%;
     display: flex;
@@ -369,7 +344,7 @@ export const ContainerTituloNovoProduto = styled.div`
   }
 
   @media (min-width: 768px) {
-    background: green;
+    background: #1d1f2f;
     width: 100%;
     height: 10%;
     display: flex;
@@ -383,50 +358,72 @@ export const ContainerTituloNovoProduto = styled.div`
 `
 
 export const Input = styled.input`
-  background: #282741;
-  color: #fff;
-  width: 100%;
-  height: 50%;
-  margin-top: 5px;
+  @media (max-width: 767px) {
+    background: #282741;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
 
 export const LabelInput = styled.span`
-  background: #282741;
-  color: #fff;
-  width: 100%;
-  height: 40%;
+  @media (max-width: 767px) {
+    background: #1d1f2f;
+    color: #ffffff;
+    width: 100%;
+    height: 40%;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
 
 export const InputComDivisao = styled.input`
   background: #282741;
   color: #fff;
-  width: 100%;
-  height: 50%;
-  margin-top: 5px;
+  width: 40px;
+  height: 100%;
+
+  size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 `
 
 export const LabelInputComDivisao = styled.span`
   @media (max-width: 767px) {
-    background: #282741;
+    background: #1d1f2f;
     color: #fff;
-    width: 100%;
-    height: 40%;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+    size: 1.1rem;
   }
 
   @media (min-widht: 768px) {
-    background: #282741;
+    /* background: #282741;
     color: #fff;
     width: 100%;
     height: 20%;
     display: flex;
     justify-items: flex-start;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: flex-start; */
+    display: none;
   }
 `
 
 export const Titulo = styled.h6`
-  background: #282741;
+  background: #1d1f2f;
   color: #fff;
   width: 100%;
   height: 90%;
@@ -451,15 +448,14 @@ export const ContainerListAdicionarSemDivisao = styled.div`
     display: none;
   }
   @media (min-width: 768px) {
-    background: blue;
+    background: #1d1f2f;
     width: 100%;
     height: 10%;
     display: flex;
     justify-content: space-between;
     color: #fff;
     margin-bottom: 15px;
-
-    /* display: none; */
+    display: none;
   }
 `
 
@@ -478,7 +474,7 @@ export const ContainerAdicionarSemDivisao = styled.div`
     display: none;
   }
   @media (min-width: 768px) {
-    background: red;
+    background: #1d1f2f;
     width: 20%;
     height: 100%;
     display: flex;
@@ -492,7 +488,7 @@ export const ContainerIconsDeCima = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
-    height: 60%;
+    height: 20%;
     display: flex;
     margin: none;
     padding: none;
@@ -500,9 +496,9 @@ export const ContainerIconsDeCima = styled.div`
   }
 
   @media (min-width: 768px) {
-    background: black;
+    background: #1d1f2f;
     width: 90%;
-    height: 20%;
+    height: 100%;
     display: flex;
     margin: none;
     padding: none;
@@ -515,13 +511,20 @@ export const ContainerIconsDeCima = styled.div`
 
 export const BtnAdicionar = styled.button`
   @media (max-width: 767px) {
-    background: #1d1f2f;
+    background: #74f471;
     width: 100%;
     height: 60%;
     display: flex;
     margin: none;
     padding: none;
     justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
   }
 
   @media (min-width: 768px) {
@@ -536,3 +539,167 @@ export const BtnAdicionar = styled.button`
     align-items: center;
   }
 `
+
+// a partir daqui é relacionado a desktop >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+export const LabelParaDesktop = styled.span`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 30%;
+    margin-left: 5px;
+    background-color: #1d1f2f;
+  }
+`
+
+export const ContainerAdicionarDesktop = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    background-color: #1d1f2f;
+
+    flex-direction: column;
+  }
+`
+export const ContainerListAdicionarDesktop = styled.div`
+  /* aumenta o container com a label e o input dentro  */
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #1d1f2f;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+`
+export const InputDesktop = styled.input`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #282741;
+    border: none;
+    color: #eff0f5;
+    height: 40px;
+  }
+`
+
+export const DivCheckBox = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    align-items: center;
+    justify-items: center;
+  }
+`
+export const CheckBoxDesktop = styled.input`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    width: 25%;
+    background-color: #1d1f2f;
+    height: 25px;
+  }
+`
+
+export const LabelParaCheckBox = styled.span`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    width: 65%;
+    height: 30px;
+    margin-left: 0px;
+    text-align: start;
+    background-color: #1d1f2f;
+    font-size: 1rem;
+    align-items: center;
+    display: flex;
+  }
+`
+
+export const ContainerCheckBoxDesktop = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    background-color: #1d1f2f;
+    margin-top: 20px;
+    flex-direction: row;
+  }
+`
+
+export const BtnAdicionarDesktop = styled.button`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    width: 330px;
+    height: 50px;
+    margin-top: 50px;
+    background-color: #74f471;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    margin-bottom: 50px;
+  }
+`
+
+export const ContainerSpan = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    width: 100%;
+  }
+`
+// #1D1F2F  - color fundo
+
+// #282741  -  color input

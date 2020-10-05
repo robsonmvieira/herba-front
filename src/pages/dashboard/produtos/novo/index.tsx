@@ -23,13 +23,14 @@ import {
   ContainerListAdicionarSemDivisao,
   ContainerAdicionarSemDivisao,
   ContainerIconsDeCima,
-  BtnAdicionar
+  BtnAdicionar,
+  ContainerSpan
 } from './styles'
 
 import Sidebar from '../../../../components/sidebar'
 import Menu from '../../../../components/Menu'
 
-const dashProducts = () => {
+const dashProdutosNovo = () => {
   return (
     <>
       <Menu></Menu>
@@ -42,26 +43,46 @@ const dashProducts = () => {
           <ContainerIconsDeCima>
             <ContainerTags>
               <IconsTags>
-                <LabelProdutoDashboard>35</LabelProdutoDashboard>
-                <LabelDescricaoDashboard>
-                  Produto cadastrados
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelProdutoDashboard>35</LabelProdutoDashboard>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Produto cadastrados
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelProdutoDashboard>Sopa de ninhaça</LabelProdutoDashboard>
-                <LabelDescricaoDashboard>Mais vendido</LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelProdutoDashboard>shake de banana</LabelProdutoDashboard>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Mais vendido
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelProdutoDashboardMenos>5</LabelProdutoDashboardMenos>
-                <LabelDescricaoDashboard>
-                  Produtos zerados
-                </LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelProdutoDashboardMenos>5</LabelProdutoDashboardMenos>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Produtos zerados
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
               <IconsTags>
-                <LabelProdutoDashboardMenos>
-                  Suco de coca
-                </LabelProdutoDashboardMenos>
-                <LabelDescricaoDashboard>Menos vendido</LabelDescricaoDashboard>
+                <ContainerSpan>
+                  <LabelProdutoDashboardMenos>
+                    Suco de coca
+                  </LabelProdutoDashboardMenos>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <LabelDescricaoDashboard>
+                    Menos vendido
+                  </LabelDescricaoDashboard>
+                </ContainerSpan>
               </IconsTags>
             </ContainerTags>
           </ContainerIconsDeCima>
@@ -107,34 +128,58 @@ const dashProducts = () => {
               <ContainerListAdicionarComDivisao>
                 <ContainerAdicionarComDivisao>
                   <LabelInputComDivisao>Pontos de Volume:</LabelInputComDivisao>
+
                   <InputComDivisao></InputComDivisao>
                 </ContainerAdicionarComDivisao>
 
                 <ContainerAdicionarComDivisao>
                   <LabelInputComDivisao>Preço Sugerido:</LabelInputComDivisao>
+
                   <InputComDivisao></InputComDivisao>
                 </ContainerAdicionarComDivisao>
               </ContainerListAdicionarComDivisao>
 
+              {/* versão desktop abaixo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+
               <ContainerListAdicionarSemDivisao>
                 <ContainerAdicionarSemDivisao>
-                  <LabelInputComDivisao>Sku:</LabelInputComDivisao>
-                  <InputComDivisao></InputComDivisao>
+                  <ContainerSpan style={{ justifyContent: 'flex-start' }}>
+                    <LabelInputComDivisao>Sku:</LabelInputComDivisao>
+                  </ContainerSpan>
+
+                  <ContainerSpan>
+                    <InputComDivisao></InputComDivisao>
+                  </ContainerSpan>
                 </ContainerAdicionarSemDivisao>
 
                 <ContainerAdicionarSemDivisao>
-                  <LabelInputComDivisao>Custo Pv:</LabelInputComDivisao>
-                  <InputComDivisao></InputComDivisao>
+                  <ContainerSpan style={{ justifyContent: 'flex-start' }}>
+                    <LabelInputComDivisao>Custo Pv:</LabelInputComDivisao>
+                  </ContainerSpan>
+
+                  <ContainerSpan>
+                    <InputComDivisao></InputComDivisao>
+                  </ContainerSpan>
                 </ContainerAdicionarSemDivisao>
 
                 <ContainerAdicionarSemDivisao>
-                  <LabelInputComDivisao>Pontos de Volume:</LabelInputComDivisao>
-                  <InputComDivisao></InputComDivisao>
+                  <ContainerSpan style={{ justifyContent: 'flex-start' }}>
+                    <LabelInputComDivisao>Pontos de Vol.:</LabelInputComDivisao>
+                  </ContainerSpan>
+
+                  <ContainerSpan>
+                    <InputComDivisao></InputComDivisao>
+                  </ContainerSpan>
                 </ContainerAdicionarSemDivisao>
 
                 <ContainerAdicionarSemDivisao>
-                  <LabelInputComDivisao>Preço Sugerido:</LabelInputComDivisao>
-                  <InputComDivisao></InputComDivisao>
+                  <ContainerSpan style={{ justifyContent: 'flex-start' }}>
+                    <LabelInputComDivisao>Preço Sugerido:</LabelInputComDivisao>
+                  </ContainerSpan>
+
+                  <ContainerSpan>
+                    <InputComDivisao></InputComDivisao>
+                  </ContainerSpan>
                 </ContainerAdicionarSemDivisao>
               </ContainerListAdicionarSemDivisao>
 
@@ -150,4 +195,4 @@ const dashProducts = () => {
     </>
   )
 }
-export default dashProducts
+export default dashProdutosNovo
