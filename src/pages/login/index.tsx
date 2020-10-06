@@ -15,7 +15,7 @@ import {
 import Menu from '../../components/Menu'
 import Input from '../../components/Input'
 import { Form } from '@unform/web'
-import api from '../../services/api'
+import api from '../../services/apiService'
 import { Toast, ToastBody, ToastHeader } from 'reactstrap'
 import * as Yup from 'yup'
 
