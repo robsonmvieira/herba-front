@@ -23,7 +23,7 @@ import {
 
 import Sidebar from '../../../components/sidebar'
 import Menu from '../../../components/Menu'
-import api from '../../../services/api'
+import api from '../../../services/apiService'
 
 interface IProduct {
   id: string

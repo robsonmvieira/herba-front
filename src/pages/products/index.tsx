@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import React, { useState } from 'react'
-import api from '../../services/api'
+import React, { useState, useContext } from 'react'
+import api from '../../services/apiService'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
-
+import { UserAuthContext } from '../../hooks/userAuth'
 // import { NextFunctionComponent } from 'next'
 import {
   Navbar,
@@ -62,13 +62,13 @@ const ListProducts = () => {
       <Navbar light expand="md">
         <div>
           <NavbarBrand href="/">
-            <img src="image/logo-pdv 1.svg" alt="" />
+            <img src="image/logo-pdv.svg" alt="" />
           </NavbarBrand>
         </div>
 
         <UncontrolledDropdown setActiveFromChild>
           <DropdownToggle tag="a" className="nav-link" caret>
-            Elaine
+            Barbara
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem tag="a" href="/blah" active>
@@ -82,7 +82,8 @@ const ListProducts = () => {
           <ContainerProducts>
             <ContainerBusca>
               <FormList>
-                <InputFormList /> <BtnList>Cancelar</BtnList>
+                <InputFormList />
+                <BtnList>Cancelar</BtnList>
               </FormList>
             </ContainerBusca>
             {/* {products.map((p: Product) => (
