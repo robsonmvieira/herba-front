@@ -68,7 +68,7 @@ const ListProducts = () => {
 
         <UncontrolledDropdown setActiveFromChild>
           <DropdownToggle tag="a" className="nav-link" caret>
-            Barbara
+            Barbara C.
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem tag="a" href="/blah" active>
