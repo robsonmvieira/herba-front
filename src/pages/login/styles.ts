@@ -243,3 +243,11 @@ export const ContainerToast = styled.div`
   }
   /* large */
 `
+
+export const BtnToast = styled.button`
+  color: #b2585b;
+  margin-left: 200px;
+  background: #c08b8e;
+  border: none;
+  font-size: 24px;
+`

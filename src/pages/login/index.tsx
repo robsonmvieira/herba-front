@@ -9,7 +9,8 @@ import {
   Wapper,
   FormTitle,
   ContainerLife,
-  ContainerToast
+  ContainerToast,
+  BtnToast
 } from './styles'
 import Menu from '../../components/Menu'
 import Input from '../../components/Input'
@@ -118,19 +119,7 @@ const Login = () => {
                       style={{ color: '#9C0606', background: '#C08B8E' }}
                     >
                       <span>Erro Interno</span>
-                      <button
-                        style={{
-                          color: '#B2585B',
-                          marginLeft: '200px',
-                          background: '#C08B8E',
-                          border: 'none',
-                          fontSize: '24px'
-                        }}
-                        type="button"
-                        onClick={closeToast}
-                      >
-                        x
-                      </button>
+                      <BtnToast onClick={closeToast}>x</BtnToast>
                     </ToastHeader>
                     <ToastBody>
                       Ocorreu um erro interno. Por favor tente mais tarde.
