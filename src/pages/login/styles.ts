@@ -1,4 +1,23 @@
 import styled from 'styled-components'
+import {
+  Toast as TToast,
+  ToastBody as TBody,
+  ToastHeader as THeader
+} from 'reactstrap'
+
+export const Toast = styled(TToast)`
+  color: #9c0606;
+  background: #c08b8e;
+`
+export const ToastBody = styled(TBody)`
+  color: #9c0606;
+  background: #c08b8e;
+`
+
+export const ToastHeader = styled(THeader)`
+  color: #9c0606;
+  background: #c08b8e;
+`
 
 export const Container = styled.div`
   background: #1d1f2f;
