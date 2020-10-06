@@ -63,7 +63,6 @@ const Login = () => {
         formRef.current.setErrors(validationErrors)
         return
       }
-      console.log('loguei erro => ', error)
 
       if (!error.status) {
         setErrorNumber(500)
