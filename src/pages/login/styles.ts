@@ -185,7 +185,8 @@ export const BtnLogin = styled.button`
     background: #2fc84c;
     color: #eff0f5;
     border: none;
-    font-size: 120%;
+    font-size: 18px;
+    outline: none !important;
   }
 
   /* Medium */
@@ -200,6 +201,7 @@ export const BtnLogin = styled.button`
     color: #eff0f5;
     border: none;
     font-size: 100%;
+    outline: none !important;
   }
 
   /* large  */

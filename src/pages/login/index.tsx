@@ -152,10 +152,10 @@ const Login = () => {
             >
               <FormTitle>Login</FormTitle>
               <LabelLogin>Email:</LabelLogin>
-              <Input style={{ background: '#282741' }} name="email" />
+              <Input placeholder="Digite seu email" name="email" />
               <LabelLogin style={{ marginTop: 25 }}>Senha:</LabelLogin>
               <Input
-                style={{ background: '#282741' }}
+                placeholder="Digite sua senha"
                 name="password"
                 type="password"
               />

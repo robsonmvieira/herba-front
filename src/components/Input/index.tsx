@@ -36,6 +36,7 @@ const Input = ({ name, ...rest }) => {
         </Toast>
       )}
       <CInput
+        style={{ background: '#282741', outline: 'none', paddingLeft: '10px' }}
         ref={inputRef}
         onFocus={clearError}
         defaultValue={defaultValue}
