@@ -1,8 +1,8 @@
 /* eslint-disable quotes */
 import axios from 'axios'
 
-const api = axios.create({
+const apiService = axios.create({
   baseURL: `${process.env.NEXT_PUBLIC_API_URL}/`
 })
 
-export default api
+export default apiService
