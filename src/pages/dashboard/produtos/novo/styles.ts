@@ -24,16 +24,6 @@ export const ContainerInclusao = styled.div`
 `
 
 export const ContainerConteudo = styled.div`
-  /* @media (max-width: 767px) {
-    display: none;
-    background: red;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-
   @media (min-width: 768px) {
     background: #1d1f2f;
     width: 100%;
@@ -288,15 +278,6 @@ export const ContainerListAdicionarComDivisao = styled.div`
     margin-bottom: 15px;
   }
   @media (min-width: 768px) {
-    /* background: red;
-    width: 100%;
-    height: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    justify-items: center;
-    color: #fff;
-    margin-bottom: 15px; */
     display: none;
   }
 `
@@ -386,8 +367,8 @@ export const Input = styled.input`
   height: 40px;
   margin-top: 5px;
   border: none;
+  padding-left: 5px;
   & :focus {
-    background-color: #0e1146;
     outline: none;
   }
 `
@@ -407,6 +388,8 @@ export const InputComDivisao = styled.input`
   height: 40px;
   margin-top: 5px;
   border: none;
+  outline: none;
+  padding-left: 5px;
 `
 
 export const LabelInputComDivisao = styled.span`
@@ -440,15 +423,6 @@ export const Titulo = styled.h6`
 export const ContainerListAdicionarSemDivisao = styled.div`
   /* controla o container com 2 inputs e 2 labels  */
   @media (max-width: 767px) {
-    /* background: red;
-    width: 80%;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    justify-items: center;
-    color: #fff;
-    margin-bottom: 15px; */
     display: none;
   }
   @media (min-width: 768px) {
@@ -467,15 +441,6 @@ export const ContainerListAdicionarSemDivisao = styled.div`
 export const ContainerAdicionarSemDivisao = styled.div`
   /* controla o container com 2 inputs e 2 labels  */
   @media (max-width: 767px) {
-    /* background: red;
-    width: 80%;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    justify-items: center;
-    color: #fff;
-    margin-bottom: 15px; */
     display: none;
   }
   @media (min-width: 768px) {

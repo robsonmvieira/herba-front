@@ -603,6 +603,8 @@ export const InputDesktop = styled.input`
     border: none;
     color: #eff0f5;
     height: 40px;
+    outline: none;
+    padding-left: 5px;
   }
 `
 

@@ -20,10 +20,6 @@ export const Container = styled.div`
   background: #1d1f2f;
   width: 100%;
   height: 100vh;
-
-  /* @media (min-width: 426px) and (max-width: 768px) {
-    background: red;
-  } */
 `
 
 export const FormList = styled.form`
@@ -90,6 +86,8 @@ export const InputFormList = styled.input`
     border: none;
     margin-top: 20px;
     padding: 20px;
+    padding-left: 5px;
+    outline: none;
   }
   /* medium */
   @media (min-width: 498px) {
@@ -103,18 +101,9 @@ export const InputFormList = styled.input`
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 10px;
+    padding-left: 5px;
+    outline: none;
   }
-  /* large */
-  /*
-  @media (min-width: 769px) {
-    width: 45%;
-    height: 55px;
-    background: #282741;
-    color: #eff0f5;
-    border: none;
-    margin-top: 20px;
-    padding: none;
-  } */
 `
 
 export const ContainerBusca = styled.div`
@@ -135,14 +124,6 @@ export const ContainerBusca = styled.div`
     height: 80px;
     margin-top: 20px;
   }
-  /*
-  @media (min-width: 769px) {
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-    margin-top: 20px;
-    align-items: center;
-  } */
 `
 
 export const BtnList = styled.button`
@@ -171,20 +152,6 @@ export const BtnList = styled.button`
     margin-left: 20px;
     margin-right: 10px;
   }
-
-  /* large  */
-  /*
-  @media (min-width: 769px) {
-    width: 20%;
-    max-width: 500px;
-    margin-top: 20px;
-    height: 55px;
-    background: #ff6198;
-    color: #eff0f5;
-    border: none;
-    font-size: 120%;
-    margin-left: 3px;
-  } */
 `
 
 export const ContainerProducts = styled.div`
@@ -225,14 +192,6 @@ export const ContainerTotais = styled.div`
     background: #282741;
     margin-top: 20px;
   }
-  /*
-  @media (min-width: 769px) {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    margin-top: 80px;
-    align-items: center;
-  } */
 `
 
 export const ContainerValores = styled.div`
@@ -252,13 +211,6 @@ export const ContainerValores = styled.div`
     justify-items: center;
     align-items: center;
   }
-  /*
-  @media (min-width: 769px) {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 20px;
-  } */
 `
 
 export const ContainerVenda = styled.div`
@@ -346,22 +298,6 @@ export const LabelSubtotalDesconto = styled.span`
     margin-top: 15px;
     width: 50%;
   }
-  /*
-  @media (min-width: 769px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
-    color: #958a8a;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    margin-top: 15px;
-    width: 50%;
-    margin-left: 35px;
-  } */
 `
 
 export const FormSubtotalDesconto = styled.span`
@@ -392,21 +328,6 @@ export const FormSubtotalDesconto = styled.span`
     line-height: 21px;
     margin-top: 15px;
     width: 50%;
-    /* }
-  @media (min-width: 769px) {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: end;
-    color: #958a8a;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    margin-top: 15px;
-    width: 50%;
-    margin-right: 15px;
-  } */
   }
 `
 
@@ -439,22 +360,6 @@ export const LabelValorTotal = styled.span`
     font-size: 24px;
     line-height: 28px;
     width: 50%;
-    /* }
-  @media (min-width: 769px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
-    color: #eff0f5;
-    font-family: Roboto;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    width: 50%;
-    margin-left: 35px;
-  } */
   }
 `
 
@@ -486,20 +391,6 @@ export const FormTotal = styled.span`
     line-height: 21px;
     width: 50%;
   }
-  /*
-  @media (min-width: 769px) {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: end;
-    color: #ff6198;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    width: 50%;
-    margin-right: 15px;
-  } */
 `
 
 export const BtnFormaPagamento = styled.button`
@@ -541,23 +432,6 @@ export const BtnFormaPagamento = styled.button`
     color: #c4c4c4;
     overflow: auto;
   }
-  /*
-  @media (min-width: 769px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2fc84c;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    flex-direction: row;
-    width: 40%;
-    height: 40px;
-
-    border: none;
-  } */
 `
 
 export const BtnFinalizar = styled.button`
@@ -598,23 +472,6 @@ export const BtnFinalizar = styled.button`
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  /*
-  @media (min-width: 769px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2fc84c;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 21px;
-    flex-direction: row;
-    width: 80%;
-    height: 40px;
-    margin-left: 35px;
-    border: none;
-  } */
 `
 
 export const ContainerValorTotal = styled.div`
@@ -625,14 +482,6 @@ export const ContainerValorTotal = styled.div`
     margin-top: 20px;
     align-items: center;
     background: #1d1f2f;
-
-    /* display: flex;
-    width: 100%;
-    margin-top: 20px;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 60px; */
   }
 
   @media (min-width: 498px) {
