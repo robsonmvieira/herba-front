@@ -62,7 +62,7 @@ const ListProducts = () => {
       <Navbar light expand="ml">
         <div>
           <NavbarBrand href="/">
-            <img src="image/logo-pdv 1.svg" alt="" />
+            <img src="image/logo-pdv.svg" alt="" />
           </NavbarBrand>
         </div>
 
