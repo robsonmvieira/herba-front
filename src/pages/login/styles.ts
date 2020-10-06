@@ -3,11 +3,13 @@ import styled from 'styled-components'
 export const Container = styled.div`
   background: #1d1f2f;
   width: 100%;
-  /* height: 100vh; */
+  height: 1000px;
 
   @media (min-width: 776px) {
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 1000px;
   }
 `
 
@@ -28,15 +30,22 @@ export const Side = styled.div`
   @media (max-width: 775px) {
     background: 1d1f2f;
     width: 100%;
+    margin-top: 0px;
+    display: flex;
+    justify-content: 'center';
+    align-items: 'center';
+    flex-direction: column;
   }
   @media (min-width: 776px) {
     background: 1d1f2f;
     width: 50%;
     display: flex;
-    flex-direction: row;
-    margin-top: 25px;
+    flex-direction: column;
+    margin-top: 0px;
     display: flex;
-    padding: 40px;
+    padding: 0px;
+    justify-content: 'flex-start';
+    align-items: 'flex-start';
   }
 `
 
@@ -45,12 +54,13 @@ export const Title = styled.h1`
     display: flex;
     flex-direction: column;
     align-items: center;
+
     color: #eff0f5;
     width: 100%;
     font-family: Roboto;
     font-style: normal;
     font-weight: 100%;
-    font-size: 300%;
+    font-size: 400%;
     line-height: 84px;
   }
 
@@ -86,7 +96,8 @@ export const FormLogin = styled.form`
     display: flex;
     flex-direction: column;
     margin-top: 25px;
-
+    justify-content: center;
+    justify-items: center;
     align-items: center;
   }
   @media (min-width: 776px) {
@@ -114,7 +125,6 @@ export const LabelLogin = styled.label`
   /* medium */
   @media (min-width: 776px) {
     width: 80%;
-    max-width: 400px;
     height: 20px;
     font-family: Roboto;
     font-style: normal;
@@ -131,14 +141,14 @@ export const FormTitle = styled.h2`
   }
 
   @media (min-width: 776px) {
-    width: 100%;
+    width: 80%;
     height: 48px;
     color: #eff0f5;
     border: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 65px;
     margin-bottom: 80px;
     font-size: 450%;
   }
@@ -206,3 +216,28 @@ export const BtnLogin = styled.button`
 `
 
 // abaixo é a partir de tela com 361 px
+
+export const ContainerLife = styled.div`
+  @media (max-width: 775px) {
+    margin-top: 80px;
+  }
+  /* medium */
+  @media (min-width: 776px) {
+    margin-top: 215px;
+  }
+  /* large */
+`
+export const ContainerToast = styled.div`
+  @media (max-width: 775px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  /* medium */
+  @media (min-width: 776px) {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  /* large */
+`
