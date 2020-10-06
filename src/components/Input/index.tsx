@@ -17,16 +17,26 @@ const Input = ({ name, ...rest }) => {
   return (
     <>
       {error && (
-        <Toast style={{ background: 'red' }}>
-          <ToastHeader style={{ color: '#fff', background: 'red' }}>
+        <Toast
+          style={{
+            background: '#C08B8E',
+            width: '90%',
+            flexBasis: '80%',
+            maxWidth: '80%'
+          }}
+        >
+          <ToastHeader style={{ color: '#9C0606', background: '#C08B8E' }}>
             Erro de validação.
           </ToastHeader>
-          <ToastBody style={{ color: '#fff' }}>
+          <ToastBody
+            style={{ color: '#9C0606', background: '#C08B8E', height: '60px' }}
+          >
             Há erro em um ou mais campos - {error}
           </ToastBody>
         </Toast>
       )}
       <CInput
+        style={{ background: '#282741', outline: 'none', paddingLeft: '10px' }}
         ref={inputRef}
         onFocus={clearError}
         defaultValue={defaultValue}

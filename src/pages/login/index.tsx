@@ -8,7 +8,9 @@ import {
   Title,
   Wapper,
   FormTitle,
-  InputFormLogin
+  ContainerLife,
+  ContainerToast,
+  BtnToast
 } from './styles'
 import Menu from '../../components/Menu'
 import Input from '../../components/Input'
@@ -83,55 +85,66 @@ const Login = () => {
     <>
       <Menu />
       <Container>
-        {errorNumber === 401 && (
-          <div className="p-3 my-2 rounded">
-            <Toast style={{ background: 'red' }}>
-              <ToastHeader style={{ color: '#fff', background: 'red' }}>
-                Não Autorizado
-              </ToastHeader>
-              <ToastBody style={{ color: '#fff' }}>
-                Email ou Senha estão incorretos
-              </ToastBody>
-            </Toast>
-          </div>
-        )}
-        {errorNumber === 500 && (
-          <div className="p-3 my-2 rounded">
-            <Toast isOpen={toastOpen}>
-              <ToastHeader>
-                <span>Erro Interno</span>
-                <button type="button" onClick={closeToast}>
-                  x
-                </button>
-              </ToastHeader>
-              <ToastBody>
-                Ocorreu um erro interno. Por favor tente mais tarde.
-              </ToastBody>
-            </Toast>
-          </div>
-        )}
         <Wapper>
-          <Side>
-            <Title> Life Admin</Title>
+          <Side
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyItems: 'center',
+              marginRight: '20px'
+            }}
+          >
+            {errorNumber === 401 && (
+              <div className="p-3 my-2 rounded">
+                <Toast>
+                  <ToastHeader>Não Autorizado</ToastHeader>
+                  <ToastBody>Email ou Senha estão incorretos</ToastBody>
+                </Toast>
+              </div>
+            )}
+
+            <ContainerLife>
+              <Title> Life Admin</Title>
+            </ContainerLife>
           </Side>
           <Side>
+            <ContainerToast>
+              {errorNumber === 500 && (
+                <div className="p-3 my-2 rounded" style={{ maxWidth: '100%' }}>
+                  <Toast
+                    isOpen={toastOpen}
+                    style={{ color: '#9C0606', background: '#C08B8E' }}
+                  >
+                    <ToastHeader
+                      style={{ color: '#9C0606', background: '#C08B8E' }}
+                    >
+                      <span>Erro Interno</span>
+                      <BtnToast onClick={closeToast}>x</BtnToast>
+                    </ToastHeader>
+                    <ToastBody>
+                      Ocorreu um erro interno. Por favor tente mais tarde.
+                    </ToastBody>
+                  </Toast>
+                </div>
+              )}
+            </ContainerToast>
             <Form
+              ref={formRef}
+              onSubmit={handleSubmit}
               style={{
                 width: '100%',
                 display: 'flex',
-                justifyContent: 'center',
                 flexDirection: 'column',
+                justifyContent: 'center',
                 alignItems: 'center'
               }}
-              ref={formRef}
-              onSubmit={handleSubmit}
             >
               <FormTitle>Login</FormTitle>
               <LabelLogin>Email:</LabelLogin>
-              <InputFormLogin style={{ background: '#282741' }} name="email" />
+              <Input placeholder="Digite seu email" name="email" />
               <LabelLogin style={{ marginTop: 25 }}>Senha:</LabelLogin>
-              <InputFormLogin
-                style={{ background: '#282741' }}
+              <Input
+                placeholder="Digite sua senha"
                 name="password"
                 type="password"
               />

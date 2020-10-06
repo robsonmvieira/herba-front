@@ -596,6 +596,7 @@ export const BtnFinalizar = styled.button`
     border: none;
     color: #c4c4c4;
     margin-top: 30px;
+    margin-bottom: 30px;
   }
   /*
   @media (min-width: 769px) {
