@@ -10,13 +10,15 @@ import {
   FormTitle,
   ContainerLife,
   ContainerToast,
-  BtnToast
+  BtnToast,
+  Toast,
+  ToastBody,
+  ToastHeader
 } from './styles'
 import Menu from '../../components/Menu'
 import Input from '../../components/Input'
 import { Form } from '@unform/web'
 import api from '../../services/api'
-import { Toast, ToastBody, ToastHeader } from 'reactstrap'
 import * as Yup from 'yup'
 
 interface userLogin {
@@ -86,14 +88,7 @@ const Login = () => {
       <Menu />
       <Container>
         <Wapper>
-          <Side
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyItems: 'center',
-              marginRight: '20px'
-            }}
-          >
+          <Side>
             {errorNumber === 401 && (
               <div className="p-3 my-2 rounded">
                 <Toast>
@@ -111,13 +106,8 @@ const Login = () => {
             <ContainerToast>
               {errorNumber === 500 && (
                 <div className="p-3 my-2 rounded" style={{ maxWidth: '100%' }}>
-                  <Toast
-                    isOpen={toastOpen}
-                    style={{ color: '#9C0606', background: '#C08B8E' }}
-                  >
-                    <ToastHeader
-                      style={{ color: '#9C0606', background: '#C08B8E' }}
-                    >
+                  <Toast isOpen={toastOpen}>
+                    <ToastHeader>
                       <span>Erro Interno</span>
                       <BtnToast onClick={closeToast}>x</BtnToast>
                     </ToastHeader>
