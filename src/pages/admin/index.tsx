@@ -1,83 +1,158 @@
-import React, { useState, useCallback } from 'react'
-
+import React, { useState, useRef, useCallback } from 'react'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { Container } from '../../../styles/admin'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 import Input from '../../components/Input'
 import { Form } from '@unform/web'
+import * as Yup from 'yup'
+import apiService from '../../services/apiService'
 
-const Admin = () => {
-  // const populateDatabase = useCallback(() => {
-  //   console.log('loguei')
-  // }, [])
+interface FormDataSubmit {
+  name: string
+  description: string
+}
+interface Roles {
+  id: string
+  name: string
+  slug: string
+  description: string
+}
+const Admin = ({
+  roles
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  const createRoleRef = useRef(null)
+  const createPermissionRef = useRef(null)
 
-  const [modalToogleCreateRoles, setModalToogleCreateRoles] = useState(false)
-  const [modalToogleCreatePositions, setModalToogleCreatePositions] = useState(
+  const [errorNumber, setErrorNumber] = useState<number>(0)
+  const [modaltoggleCreateRoles, setModaltoggleCreateRoles] = useState(false)
+  const [modaltoggleCreatePositions, setModaltoggleCreatePositions] = useState(
     false
   )
-  const [modalToogleListRoles, setModalToogleListRoles] = useState(false)
-  const [modalToogleListPositions, setModalToogleListPositions] = useState(
+  const [modaltoggleListRoles, setModaltoggleListRoles] = useState(false)
+  const [modaltoggleListPositions, setModaltoggleListPositions] = useState(
     false
   )
 
-  const toogleModalListPositions = () =>
-    setModalToogleListPositions(!modalToogleListPositions)
+  const toggleModalListPositions = () =>
+    setModaltoggleListPositions(!modaltoggleListPositions)
 
-  const toogleModalCreatePositions = () =>
-    setModalToogleCreatePositions(!modalToogleCreatePositions)
+  const toggleModalCreatePositions = () =>
+    setModaltoggleCreatePositions(!modaltoggleCreatePositions)
 
-  const toogleModalListRoles = () =>
-    setModalToogleListRoles(!modalToogleListRoles)
+  const toggleModalListRoles = () =>
+    setModaltoggleListRoles(!modaltoggleListRoles)
 
   const toggleModalCreateRoles = () =>
-    setModalToogleCreateRoles(!modalToogleCreateRoles)
+    setModaltoggleCreateRoles(!modaltoggleCreateRoles)
 
-  const handleSubmit = useCallback(() => {
-    console.log('log')
-  }, [])
+  async function handleRoleSubmit(
+    { name, description }: FormDataSubmit,
+    { reset }
+  ) {
+    // toggleModalCreateRoles()
+    const slug = name.split(' ').join('-')
+    try {
+      createRoleRef.current.setErrors({})
+
+      const schema = Yup.object().shape({
+        name: Yup.string().required(),
+        slug: Yup.string().required(),
+        description: Yup.string().required()
+      })
+
+      await schema.validate(
+        { name, slug, description },
+        {
+          abortEarly: false
+        }
+      )
+
+      // validacao ok
+      const response = await apiService.post('/roles', {
+        name,
+        slug,
+        description
+      })
+      console.log(response.data)
+    } catch (error) {
+      const validationErrors = {}
+
+      if (error instanceof Yup.ValidationError) {
+        error.inner.forEach(err => {
+          validationErrors[err.path] = err.message
+        })
+        createRoleRef.current.setErrors(validationErrors)
+        return
+      }
+
+      if (!error.status) {
+        setErrorNumber(500)
+        return
+      }
+
+      if (error.response.status === 401) {
+        // validationErrors[error.path] = error.message
+        // formRef.current.setErrors(validationErrors)
+        setErrorNumber(401)
+      }
+      if (error.response.status === 500) {
+        setErrorNumber(500)
+      }
+    } finally {
+      reset()
+    }
+    // reset()
+  }
+  const handlePermissionSubmit = useCallback(
+    ({ name, description }: FormDataSubmit, { reset }) => {
+      console.log('permissao')
+      toggleModalCreatePositions()
+      reset()
+    },
+    []
+  )
+
   return (
     <Container>
       <div>
         <Button color="danger" onClick={toggleModalCreateRoles}>
           Nova Posição
         </Button>
-        <Modal isOpen={modalToogleCreateRoles} toggle={toggleModalCreateRoles}>
+
+        <Modal isOpen={modaltoggleCreateRoles} toggle={toggleModalCreateRoles}>
           <ModalHeader toggle={toggleModalCreateRoles}>
             Nova Posição
           </ModalHeader>
           <ModalBody>
-            <Form onSubmit={handleSubmit}>
+            <Form ref={createRoleRef} onSubmit={handleRoleSubmit}>
               <label>Name</label>
-              <Input name="Name"></Input>
+              <Input name="name"></Input>
               <label>Description</label>
-              <Input name="Description"></Input>
+              <Input name="description"></Input>
+              <Button color="primary">Salvar</Button>
+              <Button color="secondary" onClick={toggleModalCreateRoles}>
+                Canecelar
+              </Button>
             </Form>
           </ModalBody>
-          <ModalFooter>
-            <Button color="primary" onClick={toggleModalCreateRoles}>
-              Salvar
-            </Button>{' '}
-            <Button color="secondary" onClick={toggleModalCreateRoles}>
-              Canecelar
-            </Button>
-          </ModalFooter>
         </Modal>
       </div>
 
-      {/* proxima modal >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+      {/* new permission */}
 
       <div>
-        <Button color="danger" onClick={toogleModalCreatePositions}>
+        <Button color="danger" onClick={toggleModalCreatePositions}>
           Nova Permissão
         </Button>
         <Modal
-          isOpen={modalToogleCreatePositions}
-          toggle={toogleModalCreatePositions}
+          isOpen={modaltoggleCreatePositions}
+          toggle={toggleModalCreatePositions}
         >
-          <ModalHeader toggle={toogleModalCreatePositions}>
+          <ModalHeader toggle={toggleModalCreatePositions}>
             Nova Permissão
           </ModalHeader>
           <ModalBody>
-            <Form onSubmit={handleSubmit}>
+            <Form ref={createPermissionRef} onSubmit={handlePermissionSubmit}>
               <label>Name</label>
               <Input name="Name"></Input>
               <label>Description</label>
@@ -85,66 +160,65 @@ const Admin = () => {
             </Form>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={toogleModalCreatePositions}>
+            <Button color="primary" onClick={toggleModalCreatePositions}>
               Salvar
             </Button>{' '}
-            <Button color="secondary" onClick={toogleModalCreatePositions}>
+            <Button color="secondary" onClick={toggleModalCreatePositions}>
               Canecelar
             </Button>
           </ModalFooter>
         </Modal>
       </div>
 
-      {/* proxima modal >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+      {/*  List Roles modal */}
 
       <div>
-        <Button color="danger" onClick={toogleModalListRoles}>
+        <Button color="danger" onClick={toggleModalListRoles}>
           Listar Posições
         </Button>
-        <Modal isOpen={modalToogleListRoles} toggle={toogleModalListRoles}>
-          <ModalHeader toggle={toogleModalListRoles}>
+        <Modal isOpen={modaltoggleListRoles} toggle={toggleModalListRoles}>
+          <ModalHeader toggle={toggleModalListRoles}>
             Listar Posições
           </ModalHeader>
           <ModalBody>
             <ul>
-              <li>
-                <div>
-                  <span>Name:</span>
-                  <span>Associado</span>
-                </div>
-                <div>
-                  <span>Slug:</span>
-                  <span>Associado</span>
-                </div>
-                <div>
-                  <span>Description:</span>
-                  <span>Associado</span>
-                </div>
-              </li>
+              {roles.map(el => (
+                <li key={el.id}>
+                  <div>
+                    <span>Name: </span>
+                    <span>{el.name}</span>
+                  </div>
+                  <div>
+                    <span>Slug: </span>
+                    <span>{el.slug}</span>
+                  </div>
+                  <div>
+                    <span>Description: </span>
+                    <span>{el.description}</span>
+                  </div>
+                </li>
+              ))}
             </ul>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={toogleModalListRoles}>
-              Salvar
-            </Button>{' '}
-            <Button color="secondary" onClick={toogleModalListRoles}>
-              Cancelar
+            <Button color="secondary" onClick={toggleModalListRoles}>
+              Fechar
             </Button>
           </ModalFooter>
         </Modal>
       </div>
 
-      {/* proxima modal >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+      {/* Permissions List */}
 
       <div>
-        <Button color="danger" onClick={toogleModalListPositions}>
+        <Button color="danger" onClick={toggleModalListPositions}>
           Listar Permissões
         </Button>
         <Modal
-          isOpen={modalToogleListPositions}
-          toggle={toogleModalListPositions}
+          isOpen={modaltoggleListPositions}
+          toggle={toggleModalListPositions}
         >
-          <ModalHeader toggle={toogleModalListPositions}>
+          <ModalHeader toggle={toggleModalListPositions}>
             Listar Posições
           </ModalHeader>
           <ModalBody>
@@ -166,10 +240,10 @@ const Admin = () => {
             </ul>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={toogleModalListPositions}>
+            <Button color="primary" onClick={toggleModalListPositions}>
               Salvar
             </Button>{' '}
-            <Button color="secondary" onClick={toogleModalListPositions}>
+            <Button color="secondary" onClick={toggleModalListPositions}>
               Cancelar
             </Button>
           </ModalFooter>
@@ -179,3 +253,11 @@ const Admin = () => {
   )
 }
 export default Admin
+
+export const getServerSideProps: GetServerSideProps = async context => {
+  const response = await apiService('/roles')
+  const roles: Roles[] = response.data
+  return {
+    props: { roles }
+  }
+}
