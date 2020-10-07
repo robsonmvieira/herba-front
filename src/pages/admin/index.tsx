@@ -5,9 +5,13 @@ import {
   DivDivindoTela,
   DivDivindoTelaHorizontal,
   DivDivindoTelaHorizontalSpan,
-  LabelSpan
+  LabelSpan,
+  DivDivindoTelaHorizontalDash,
+  DivDashs,
+  Button,
+  DivDashsInterno
 } from '../../../styles/admin'
-import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
+import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
 import Input from '../../components/Input'
 import { Form } from '@unform/web'
 import * as Yup from 'yup'
@@ -22,6 +26,7 @@ interface Roles {
   slug: string
   description: string
 }
+
 const Admin = ({
   roles
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
@@ -29,6 +34,11 @@ const Admin = ({
   const createPermissionRef = useRef(null)
 
   const [errorNumber, setErrorNumber] = useState<number>(0)
+  const [
+    modaltoggleCreateAssociados,
+    setModaltoggleCreateAssociados
+  ] = useState(false)
+
   const [modaltoggleCreateRoles, setModaltoggleCreateRoles] = useState(false)
   const [modaltoggleCreatePositions, setModaltoggleCreatePositions] = useState(
     false
@@ -37,6 +47,9 @@ const Admin = ({
   const [modaltoggleListPositions, setModaltoggleListPositions] = useState(
     false
   )
+
+  const toggleModalCreateAssociados = () =>
+    setModaltoggleCreateAssociados(!modaltoggleCreateAssociados)
 
   const toggleModalListPositions = () =>
     setModaltoggleListPositions(!modaltoggleListPositions)
@@ -119,7 +132,17 @@ const Admin = ({
 
   return (
     <Container>
-      <DivDivindoTela></DivDivindoTela>
+      <DivDivindoTela>
+        <DivDivindoTelaHorizontalDash>
+          <DivDashs>
+            <DivDashsInterno></DivDashsInterno>
+            <DivDashsInterno></DivDashsInterno>
+            <DivDashsInterno></DivDashsInterno>
+            <DivDashsInterno></DivDashsInterno>
+            <DivDashsInterno></DivDashsInterno>
+          </DivDashs>
+        </DivDivindoTelaHorizontalDash>
+      </DivDivindoTela>
       <DivDivindoTela>
         <DivDivindoTelaHorizontalSpan>
           <LabelSpan>Permissões</LabelSpan>
@@ -271,7 +294,48 @@ const Admin = ({
         <DivDivindoTelaHorizontalSpan>
           <LabelSpan>Associados</LabelSpan>
         </DivDivindoTelaHorizontalSpan>
-        <DivDivindoTelaHorizontal></DivDivindoTelaHorizontal>
+        <DivDivindoTelaHorizontal>
+          <div>
+            <Button color="danger" onClick={toggleModalCreateAssociados}>
+              Criar Associados
+            </Button>
+            <Modal
+              isOpen={modaltoggleCreateAssociados}
+              toggle={toggleModalCreateAssociados}
+            >
+              <ModalHeader toggle={toggleModalCreateAssociados}>
+                Criar Associados
+              </ModalHeader>
+              <ModalBody>
+                <Form onSubmit={handlePermissionSubmit}>
+                  <label>Nome</label>
+                  <Input name="Name" />
+
+                  <label>Password</label>
+                  <Input name="PassWord" />
+
+                  <label>email</label>
+                  <Input name="Email" />
+
+                  <label>isAdmin</label>
+                  <Input type="checkbox" name="IsAdmin" />
+
+                  <label>Posição</label>
+                  <select name="Roles" />
+
+                  <label>Permissão</label>
+                  <select name="permissions" />
+                </Form>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="primary">Salvar</Button>
+                <Button color="secondary" onClick={toggleModalCreateAssociados}>
+                  Cancelar
+                </Button>
+              </ModalFooter>
+            </Modal>
+          </div>
+        </DivDivindoTelaHorizontal>
 
         <DivDivindoTelaHorizontalSpan>
           <LabelSpan>Pagamentos</LabelSpan>
