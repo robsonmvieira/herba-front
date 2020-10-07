@@ -1,12 +1,17 @@
 import React, { useState, useRef, useCallback } from 'react'
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
-import { Container } from '../../../styles/admin'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+import {
+  Container,
+  DivDivindoTela,
+  DivDivindoTelaHorizontal,
+  DivDivindoTelaHorizontalSpan,
+  LabelSpan
+} from '../../../styles/admin'
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
 import Input from '../../components/Input'
 import { Form } from '@unform/web'
 import * as Yup from 'yup'
 import apiService from '../../services/apiService'
-
 interface FormDataSubmit {
   name: string
   description: string
@@ -114,141 +119,170 @@ const Admin = ({
 
   return (
     <Container>
-      <div>
-        <Button color="danger" onClick={toggleModalCreateRoles}>
-          Nova Posição
-        </Button>
-
-        <Modal isOpen={modaltoggleCreateRoles} toggle={toggleModalCreateRoles}>
-          <ModalHeader toggle={toggleModalCreateRoles}>
-            Nova Posição
-          </ModalHeader>
-          <ModalBody>
-            <Form ref={createRoleRef} onSubmit={handleRoleSubmit}>
-              <label>Name</label>
-              <Input name="name"></Input>
-              <label>Description</label>
-              <Input name="description"></Input>
-              <Button color="primary">Salvar</Button>
-              <Button color="secondary" onClick={toggleModalCreateRoles}>
-                Canecelar
-              </Button>
-            </Form>
-          </ModalBody>
-        </Modal>
-      </div>
-
-      {/* new permission */}
-
-      <div>
-        <Button color="danger" onClick={toggleModalCreatePositions}>
-          Nova Permissão
-        </Button>
-        <Modal
-          isOpen={modaltoggleCreatePositions}
-          toggle={toggleModalCreatePositions}
-        >
-          <ModalHeader toggle={toggleModalCreatePositions}>
-            Nova Permissão
-          </ModalHeader>
-          <ModalBody>
-            <Form ref={createPermissionRef} onSubmit={handlePermissionSubmit}>
-              <label>Name</label>
-              <Input name="Name"></Input>
-              <label>Description</label>
-              <Input name="Description"></Input>
-            </Form>
-          </ModalBody>
-          <ModalFooter>
-            <Button color="primary" onClick={toggleModalCreatePositions}>
-              Salvar
-            </Button>{' '}
-            <Button color="secondary" onClick={toggleModalCreatePositions}>
-              Canecelar
+      <DivDivindoTela></DivDivindoTela>
+      <DivDivindoTela>
+        <DivDivindoTelaHorizontalSpan>
+          <LabelSpan>Permissões</LabelSpan>
+        </DivDivindoTelaHorizontalSpan>
+        <DivDivindoTelaHorizontal>
+          <div>
+            <Button color="danger" onClick={toggleModalCreateRoles}>
+              Nova Posição
             </Button>
-          </ModalFooter>
-        </Modal>
-      </div>
 
-      {/*  List Roles modal */}
+            <Modal
+              isOpen={modaltoggleCreateRoles}
+              toggle={toggleModalCreateRoles}
+            >
+              <ModalHeader toggle={toggleModalCreateRoles}>
+                Nova Posição
+              </ModalHeader>
+              <ModalBody>
+                <Form ref={createRoleRef} onSubmit={handleRoleSubmit}>
+                  <label>Name</label>
+                  <Input name="name"></Input>
+                  <label>Description</label>
+                  <Input name="description"></Input>
+                  <Button color="primary">Salvar</Button>
+                  <Button color="secondary" onClick={toggleModalCreateRoles}>
+                    Cancelar
+                  </Button>
+                </Form>
+              </ModalBody>
+            </Modal>
+          </div>
 
-      <div>
-        <Button color="danger" onClick={toggleModalListRoles}>
-          Listar Posições
-        </Button>
-        <Modal isOpen={modaltoggleListRoles} toggle={toggleModalListRoles}>
-          <ModalHeader toggle={toggleModalListRoles}>
-            Listar Posições
-          </ModalHeader>
-          <ModalBody>
-            <ul>
-              {roles.map(el => (
-                <li key={el.id}>
-                  <div>
-                    <span>Name: </span>
-                    <span>{el.name}</span>
-                  </div>
-                  <div>
-                    <span>Slug: </span>
-                    <span>{el.slug}</span>
-                  </div>
-                  <div>
-                    <span>Description: </span>
-                    <span>{el.description}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </ModalBody>
-          <ModalFooter>
-            <Button color="secondary" onClick={toggleModalListRoles}>
-              Fechar
+          {/* new permission */}
+
+          <div>
+            <Button color="danger" onClick={toggleModalCreatePositions}>
+              Nova Permissão
             </Button>
-          </ModalFooter>
-        </Modal>
-      </div>
+            <Modal
+              isOpen={modaltoggleCreatePositions}
+              toggle={toggleModalCreatePositions}
+            >
+              <ModalHeader toggle={toggleModalCreatePositions}>
+                Nova Permissão
+              </ModalHeader>
+              <ModalBody>
+                <Form
+                  ref={createPermissionRef}
+                  onSubmit={handlePermissionSubmit}
+                >
+                  <label>Name</label>
+                  <Input name="Name"></Input>
+                  <label>Description</label>
+                  <Input name="Description"></Input>
+                </Form>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="primary" onClick={toggleModalCreatePositions}>
+                  Salvar
+                </Button>{' '}
+                <Button color="secondary" onClick={toggleModalCreatePositions}>
+                  Cancelar
+                </Button>
+              </ModalFooter>
+            </Modal>
+          </div>
 
-      {/* Permissions List */}
+          {/*  List Roles modal */}
 
-      <div>
-        <Button color="danger" onClick={toggleModalListPositions}>
-          Listar Permissões
-        </Button>
-        <Modal
-          isOpen={modaltoggleListPositions}
-          toggle={toggleModalListPositions}
-        >
-          <ModalHeader toggle={toggleModalListPositions}>
-            Listar Posições
-          </ModalHeader>
-          <ModalBody>
-            <ul>
-              <li>
-                <div>
-                  <span>Name:</span>
-                  <span>Associado</span>
-                </div>
-                <div>
-                  <span>Slug:</span>
-                  <span>Associado</span>
-                </div>
-                <div>
-                  <span>Description:</span>
-                  <span>Associado</span>
-                </div>
-              </li>
-            </ul>
-          </ModalBody>
-          <ModalFooter>
-            <Button color="primary" onClick={toggleModalListPositions}>
-              Salvar
-            </Button>{' '}
-            <Button color="secondary" onClick={toggleModalListPositions}>
-              Cancelar
+          <div>
+            <Button color="danger" onClick={toggleModalListRoles}>
+              Listar Posições
             </Button>
-          </ModalFooter>
-        </Modal>
-      </div>
+            <Modal isOpen={modaltoggleListRoles} toggle={toggleModalListRoles}>
+              <ModalHeader toggle={toggleModalListRoles}>
+                Listar Posições
+              </ModalHeader>
+              <ModalBody>
+                <ul>
+                  {roles.map(el => (
+                    <li key={el.id}>
+                      <div>
+                        <span>Name: </span>
+                        <span>{el.name}</span>
+                      </div>
+                      <div>
+                        <span>Slug: </span>
+                        <span>{el.slug}</span>
+                      </div>
+                      <div>
+                        <span>Description: </span>
+                        <span>{el.description}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="secondary" onClick={toggleModalListRoles}>
+                  Fechar
+                </Button>
+              </ModalFooter>
+            </Modal>
+          </div>
+
+          {/* Permissions List */}
+
+          <div>
+            <Button color="danger" onClick={toggleModalListPositions}>
+              Listar Permissões
+            </Button>
+            <Modal
+              isOpen={modaltoggleListPositions}
+              toggle={toggleModalListPositions}
+            >
+              <ModalHeader toggle={toggleModalListPositions}>
+                Listar Posições
+              </ModalHeader>
+              <ModalBody>
+                <ul>
+                  <li>
+                    <div>
+                      <span>Name:</span>
+                      <span>Associado</span>
+                    </div>
+                    <div>
+                      <span>Slug:</span>
+                      <span>Associado</span>
+                    </div>
+                    <div>
+                      <span>Description:</span>
+                      <span>Associado</span>
+                    </div>
+                  </li>
+                </ul>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="primary" onClick={toggleModalListPositions}>
+                  Salvar
+                </Button>{' '}
+                <Button color="secondary" onClick={toggleModalListPositions}>
+                  Cancelar
+                </Button>
+              </ModalFooter>
+            </Modal>
+          </div>
+        </DivDivindoTelaHorizontal>
+
+        <DivDivindoTelaHorizontalSpan>
+          <LabelSpan>Associados</LabelSpan>
+        </DivDivindoTelaHorizontalSpan>
+        <DivDivindoTelaHorizontal></DivDivindoTelaHorizontal>
+
+        <DivDivindoTelaHorizontalSpan>
+          <LabelSpan>Pagamentos</LabelSpan>
+        </DivDivindoTelaHorizontalSpan>
+        <DivDivindoTelaHorizontal></DivDivindoTelaHorizontal>
+
+        <DivDivindoTelaHorizontalSpan>
+          <LabelSpan>Geral</LabelSpan>
+        </DivDivindoTelaHorizontalSpan>
+        <DivDivindoTelaHorizontal></DivDivindoTelaHorizontal>
+      </DivDivindoTela>
     </Container>
   )
 }

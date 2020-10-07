@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 import { Container } from '../../../../styles/associados'
 import Input from '../../../components/Input'
 import { Form } from '@unform/web'
-
+import {} from './styles'
 const Associados = () => {
   const handleSubmit = useCallback(() => {
     console.log('log')
