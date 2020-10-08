@@ -87,7 +87,7 @@ export const DivIconTags = styled.div`
     font-weight: bolder;
     overflow: hidden;
     width: 100%;
-    border-radius: 2px;
+    border-radius: 40px;
     -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     -moz-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     -ms-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
