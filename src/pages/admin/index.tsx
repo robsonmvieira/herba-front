@@ -9,7 +9,11 @@ import {
   DivDivindoTelaHorizontalDash,
   DivDashs,
   Button,
-  DivDashsInterno
+  DivDashsInterno,
+  Toast,
+  ToastBody,
+  ToastHeader,
+  BtnToast
 } from '../../../styles/admin'
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
 import Input from '../../components/Input'
@@ -39,6 +43,8 @@ const Admin = ({
     setModaltoggleCreateAssociados
   ] = useState(false)
 
+  const [toastOpen, setToastOpen] = useState<boolean>(false)
+
   const [modaltoggleCreateRoles, setModaltoggleCreateRoles] = useState(false)
   const [modaltoggleCreatePositions, setModaltoggleCreatePositions] = useState(
     false
@@ -62,6 +68,10 @@ const Admin = ({
 
   const toggleModalCreateRoles = () =>
     setModaltoggleCreateRoles(!modaltoggleCreateRoles)
+
+  function closeToast() {
+    setToastOpen(false)
+  }
 
   async function handleRoleSubmit(
     { name, description }: FormDataSubmit,
@@ -91,6 +101,9 @@ const Admin = ({
         slug,
         description
       })
+      toggleModalCreateRoles()
+      setToastOpen(true)
+
       console.log(response.data)
     } catch (error) {
       const validationErrors = {}
@@ -132,14 +145,32 @@ const Admin = ({
 
   return (
     <Container>
+      <Toast isOpen={toastOpen}>
+        <ToastHeader>
+          <span>Salvo no Banco</span>
+          <BtnToast onClick={closeToast}>x</BtnToast>
+        </ToastHeader>
+        <ToastBody>Dados Salvo com Sucesso!</ToastBody>
+      </Toast>
+
       <DivDivindoTela>
         <DivDivindoTelaHorizontalDash>
           <DivDashs>
-            <DivDashsInterno></DivDashsInterno>
-            <DivDashsInterno></DivDashsInterno>
-            <DivDashsInterno></DivDashsInterno>
-            <DivDashsInterno></DivDashsInterno>
-            <DivDashsInterno></DivDashsInterno>
+            <DivDashsInterno>
+              <LabelSpan>Total de Clientes</LabelSpan>
+            </DivDashsInterno>
+            <DivDashsInterno>
+              <LabelSpan>Renda Mensal</LabelSpan>
+            </DivDashsInterno>
+            <DivDashsInterno>
+              <LabelSpan>Custo Mensal</LabelSpan>
+            </DivDashsInterno>
+            <DivDashsInterno>
+              <LabelSpan>Usuários</LabelSpan>
+            </DivDashsInterno>
+            <DivDashsInterno>
+              <LabelSpan>Outros</LabelSpan>
+            </DivDashsInterno>
           </DivDashs>
         </DivDivindoTelaHorizontalDash>
       </DivDivindoTela>
@@ -200,9 +231,9 @@ const Admin = ({
                 </Form>
               </ModalBody>
               <ModalFooter>
-                <Button color="primary" onClick={toggleModalCreatePositions}>
+                <Button color="primary" onClick={handlePermissionSubmit}>
                   Salvar
-                </Button>{' '}
+                </Button>
                 <Button color="secondary" onClick={toggleModalCreatePositions}>
                   Cancelar
                 </Button>
@@ -259,7 +290,7 @@ const Admin = ({
               toggle={toggleModalListPositions}
             >
               <ModalHeader toggle={toggleModalListPositions}>
-                Listar Posições
+                Listar Permissões
               </ModalHeader>
               <ModalBody>
                 <ul>
@@ -280,9 +311,9 @@ const Admin = ({
                 </ul>
               </ModalBody>
               <ModalFooter>
-                <Button color="primary" onClick={toggleModalListPositions}>
+                <Button color="primary" onClick={handleRoleSubmit}>
                   Salvar
-                </Button>{' '}
+                </Button>
                 <Button color="secondary" onClick={toggleModalListPositions}>
                   Cancelar
                 </Button>
@@ -328,7 +359,10 @@ const Admin = ({
                 </Form>
               </ModalBody>
               <ModalFooter>
-                <Button color="primary">Salvar</Button>
+                <Button color="primary" onClick={toggleModalCreateAssociados}>
+                  Salvar
+                </Button>
+
                 <Button color="secondary" onClick={toggleModalCreateAssociados}>
                   Cancelar
                 </Button>

@@ -1,5 +1,32 @@
 import styled from 'styled-components'
-import { Button as BButton } from 'reactstrap'
+import {
+  Button as BButton,
+  Toast as TToast,
+  ToastBody as TBody,
+  ToastHeader as THeader
+} from 'reactstrap'
+
+export const BtnToast = styled.button`
+  color: #b2585b;
+  margin-left: 200px;
+  background: #c08b8e;
+  border: none;
+  font-size: 24px;
+`
+
+export const Toast = styled(TToast)`
+  color: #9c0606;
+  background: #c08b8e;
+`
+export const ToastBody = styled(TBody)`
+  color: #9c0606;
+  background: #c08b8e;
+`
+
+export const ToastHeader = styled(THeader)`
+  color: #9c0606;
+  background: #c08b8e;
+`
 
 export const Button = styled(BButton)`
   color: #fff;
