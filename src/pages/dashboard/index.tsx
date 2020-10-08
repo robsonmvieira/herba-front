@@ -1,12 +1,15 @@
 import React from 'react'
 import Menu from '../../components/Menu'
-import Sidebar from '../../components/sidebar'
 
 import {
   Container,
   DivDivindoTela,
   DivCortandoTela,
-  IconsTags
+  IconsTags,
+  SpanTitulo,
+  DivIconTags,
+  DivSpan,
+  DivImg
 } from '../../../styles/dashboard'
 
 const dashAdmin = () => {
@@ -17,24 +20,100 @@ const dashAdmin = () => {
         <DivDivindoTela>
           <DivCortandoTela>
             <IconsTags>
-              <img src="/image/produtos.svg" alt="" />
+              <DivIconTags>
+                <DivSpan>
+                  <SpanTitulo>Produtos</SpanTitulo>
+                </DivSpan>
+                <DivImg>
+                  <img src="/image/produtos.svg" alt="" />
+                </DivImg>
+              </DivIconTags>
             </IconsTags>
           </DivCortandoTela>
           <DivCortandoTela>
             <IconsTags>
-              <img src="/image/clientes.svg" alt="" />
+              <DivIconTags>
+                <DivSpan>
+                  <SpanTitulo>Clientes</SpanTitulo>
+                </DivSpan>
+                <DivImg>
+                  <img src="/image/clientes.svg" alt="" />
+                </DivImg>
+              </DivIconTags>
+            </IconsTags>
+          </DivCortandoTela>
+
+          <DivCortandoTela>
+            <IconsTags>
+              <DivIconTags>
+                <DivSpan>
+                  <SpanTitulo>Controles</SpanTitulo>
+                </DivSpan>
+                <DivImg>
+                  <img src="/image/estatistica.svg" alt="" />
+                </DivImg>
+              </DivIconTags>
+            </IconsTags>
+          </DivCortandoTela>
+        </DivDivindoTela>
+
+        <DivDivindoTela>
+          <DivCortandoTela>
+            <IconsTags>
+              <DivIconTags>
+                <DivSpan>
+                  <SpanTitulo>Perfil</SpanTitulo>
+                </DivSpan>
+                <DivImg>
+                  <img src="/image/admin.svg" alt="" />
+                </DivImg>
+              </DivIconTags>
+            </IconsTags>
+          </DivCortandoTela>
+
+          <DivCortandoTela>
+            <IconsTags>
+              <DivIconTags>
+                <DivSpan>
+                  <SpanTitulo>PDV</SpanTitulo>
+                </DivSpan>
+                <DivImg>
+                  <img src="/image/codebar.svg" alt="" />
+                </DivImg>
+              </DivIconTags>
+            </IconsTags>
+          </DivCortandoTela>
+
+          <DivCortandoTela>
+            <IconsTags>
+              <DivIconTags>
+                <SpanTitulo></SpanTitulo>
+              </DivIconTags>
             </IconsTags>
           </DivCortandoTela>
         </DivDivindoTela>
         <DivDivindoTela>
           <DivCortandoTela>
             <IconsTags>
-              <img src="/image/estatistica.svg" alt="" />
+              <DivIconTags>
+                <SpanTitulo></SpanTitulo>
+              </DivIconTags>
             </IconsTags>
           </DivCortandoTela>
+
           <DivCortandoTela>
             <IconsTags>
-              <img src="/image/admin.svg" alt="" />
+              <DivIconTags>
+                <SpanTitulo></SpanTitulo>
+              </DivIconTags>
+            </IconsTags>
+          </DivCortandoTela>
+
+          <DivCortandoTela>
+            <IconsTags>
+              <DivIconTags>
+                <SpanTitulo></SpanTitulo>
+              </DivIconTags>
             </IconsTags>
           </DivCortandoTela>
         </DivDivindoTela>
