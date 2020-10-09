@@ -494,3 +494,54 @@ export const ContainerValorTotal = styled.div`
     margin-top: 60px;
   }
 `
+
+export const TableHead = styled.div`
+  background: #282741;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  color: #fff;
+`
+export const ContainerSpan = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    width: 100%;
+  }
+`
+export const SpanListTh = styled.span`
+  @media (max-width: 767px) {
+    background: #282741;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-left: 10px;
+  }
+`
