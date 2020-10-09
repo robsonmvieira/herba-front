@@ -2,9 +2,6 @@ import React from 'react'
 import {
   Navbar,
   Container,
-  FormList,
-  InputFormList,
-  BtnList,
   SpanDetalhes,
   ContainerProducts,
   ContainerTotais,
@@ -14,7 +11,6 @@ import {
   ContainerValores,
   LabelValorTotal,
   FormTotal,
-  BtnFormaPagamento,
   BtnFinalizar,
   ContainerBusca,
   TableHead,
@@ -23,7 +19,8 @@ import {
   SpanListTd,
   TableRow,
   DivTabela,
-  ContainerSpanTotais
+  ContainerSpanTotais,
+  HTitulo
 } from '../styles'
 import {
   NavbarBrand,
@@ -58,12 +55,8 @@ const CloseBox = () => {
         <ContainerVenda>
           <ContainerProducts>
             <ContainerBusca>
-              <FormList>
-                <InputFormList />
-                <BtnList>Cancelar</BtnList>
-              </FormList>
+              <HTitulo>Fluxo de Caixa </HTitulo>
             </ContainerBusca>
-
             <DivTabela>
               <TableHead>
                 <ContainerSpan>
@@ -74,9 +67,6 @@ const CloseBox = () => {
                 </ContainerSpan>
                 <ContainerSpan>
                   <SpanListTh>Estoque</SpanListTh>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <SpanListTh>Tipo de Venda</SpanListTh>
                 </ContainerSpan>
               </TableHead>
 
@@ -90,9 +80,6 @@ const CloseBox = () => {
                 <ContainerSpan>
                   <SpanListTd>27 Un.</SpanListTd>
                 </ContainerSpan>
-                <ContainerSpan>
-                  <SpanListTd>Crédito</SpanListTd>
-                </ContainerSpan>
               </TableRow>
 
               <TableRow>
@@ -105,9 +92,6 @@ const CloseBox = () => {
                 <ContainerSpan>
                   <SpanListTd>13 Un.</SpanListTd>
                 </ContainerSpan>
-                <ContainerSpan>
-                  <SpanListTd>Débito</SpanListTd>
-                </ContainerSpan>
               </TableRow>
 
               <TableRow>
@@ -119,9 +103,6 @@ const CloseBox = () => {
                 </ContainerSpan>
                 <ContainerSpan>
                   <SpanListTd>5 Un.</SpanListTd>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <SpanListTd>Dinheiro</SpanListTd>
                 </ContainerSpan>
               </TableRow>
             </DivTabela>
@@ -145,14 +126,7 @@ const CloseBox = () => {
                 <FormSubtotalDesconto>Cookie</FormSubtotalDesconto>
               </ContainerSpanTotais>
             </ContainerValores>
-            <ContainerValores>
-              <ContainerSpanTotais>
-                <LabelSubtotalDesconto>Caixa Aplicado:</LabelSubtotalDesconto>
-              </ContainerSpanTotais>
-              <ContainerSpanTotais>
-                <FormSubtotalDesconto>R$30,00</FormSubtotalDesconto>
-              </ContainerSpanTotais>
-            </ContainerValores>
+
             <ContainerValores>
               <ContainerSpanTotais>
                 <LabelSubtotalDesconto>Subtotais:</LabelSubtotalDesconto>
@@ -171,7 +145,7 @@ const CloseBox = () => {
             </ContainerValores>
             <ContainerValores>
               <LabelValorTotal>Valor Total:</LabelValorTotal>
-              <FormTotal>R$120,00</FormTotal>
+              <FormTotal>R$90,00</FormTotal>
             </ContainerValores>
             <ContainerValores>
               <LabelValorTotal>Dinheiro:</LabelValorTotal>
@@ -181,17 +155,6 @@ const CloseBox = () => {
               <LabelValorTotal>Cartões:</LabelValorTotal>
               <FormTotal>R$40,00</FormTotal>
             </ContainerValores>
-            <ContainerValores>
-              <LabelValorTotal>Saldo Caixa:</LabelValorTotal>
-              <FormTotal>R$30,00</FormTotal>
-            </ContainerValores>
-            <ContainerValores>
-              <LabelSubtotalDesconto>Em Caixa:</LabelSubtotalDesconto>
-            </ContainerValores>
-            <ContainerValores>
-              <BtnFormaPagamento>Aplicar</BtnFormaPagamento>
-            </ContainerValores>
-
             <ContainerValores>
               <BtnFinalizar>Fechar Caixa</BtnFinalizar>
             </ContainerValores>

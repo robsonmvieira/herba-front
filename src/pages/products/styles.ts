@@ -111,6 +111,8 @@ export const ContainerBusca = styled.div`
   @media (max-width: 497px) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
     width: 100%;
   }
@@ -120,6 +122,7 @@ export const ContainerBusca = styled.div`
     flex-direction: column;
     width: 90%;
     align-items: center;
+    justify-content: center;
     justify-items: center;
     background: #282741;
     height: 80px;
@@ -517,7 +520,7 @@ export const ContainerSpan = styled.div`
     justify-items: center;
     padding: 0 10px;
     width: 100%;
-    height: 100%
+    height: 100%;
   }
 `
 
@@ -581,11 +584,13 @@ export const SpanListTh = styled.span`
     justify-items: center;
     color: #fff;
     font-size: 1rem;
+    font-weight: bold
   }
 `
 export const DivTabela = styled.div`
   width: 90%;
-  height: 100%; `
+  height: 100%;
+  margin-top: 20px `
 
 
   export const ContainerSpanTotais = styled.div`
@@ -606,4 +611,9 @@ export const DivTabela = styled.div`
     width: 50%;
     height: 50px
   }
+`
+
+export const HTitulo = styled.h2`
+  color: #fff
+
 `
