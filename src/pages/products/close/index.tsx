@@ -19,7 +19,11 @@ import {
   ContainerBusca,
   TableHead,
   ContainerSpan,
-  SpanListTh
+  SpanListTh,
+  SpanListTd,
+  TableRow,
+  DivTabela,
+  ContainerSpanTotais
 } from '../styles'
 import {
   NavbarBrand,
@@ -60,67 +64,132 @@ const CloseBox = () => {
               </FormList>
             </ContainerBusca>
 
-            <div style={{width: '90%', color: '#9C0606', background: '#C08B8E', height: '100%' }}>
+            <DivTabela>
+              <TableHead>
+                <ContainerSpan>
+                  <SpanListTh>Produto</SpanListTh>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTh>Saída</SpanListTh>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTh>Estoque</SpanListTh>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTh>Tipo de Venda</SpanListTh>
+                </ContainerSpan>
+              </TableHead>
 
-            <TableHead>
-              <ContainerSpan>
-                <SpanListTh>Produto</SpanListTh>
-              </ContainerSpan>
-              <ContainerSpan>
-                <SpanListTh>Saída</SpanListTh>
-              </ContainerSpan>
-              <ContainerSpan>
-                <SpanListTh>Estoque</SpanListTh>
-              </ContainerSpan>
-              <ContainerSpan>
-                <SpanListTh>Tipo de Venda</SpanListTh>
-              </ContainerSpan>
+              <TableRow>
+                <ContainerSpan>
+                  <SpanListTd>Shake de Banana</SpanListTd>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTd>5 Un.</SpanListTd>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTd>27 Un.</SpanListTd>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTd>Crédito</SpanListTd>
+                </ContainerSpan>
+              </TableRow>
 
-            </TableHead>
+              <TableRow>
+                <ContainerSpan>
+                  <SpanListTd>Cookie de amendoa</SpanListTd>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTd>8 Un.</SpanListTd>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTd>13 Un.</SpanListTd>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTd>Débito</SpanListTd>
+                </ContainerSpan>
+              </TableRow>
 
-
-
-
-
-
-            </div>
+              <TableRow>
+                <ContainerSpan>
+                  <SpanListTd>Shake de Protein</SpanListTd>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTd>1 Un.</SpanListTd>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTd>5 Un.</SpanListTd>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTd>Dinheiro</SpanListTd>
+                </ContainerSpan>
+              </TableRow>
+            </DivTabela>
           </ContainerProducts>
           <ContainerTotais>
             <SpanDetalhes> Fechamento do dia </SpanDetalhes>
 
             <ContainerValores>
-            <LabelSubtotalDesconto>N° de Vendas:</LabelSubtotalDesconto>
-              <FormSubtotalDesconto>5</FormSubtotalDesconto>
+              <ContainerSpanTotais>
+                <LabelSubtotalDesconto>N° de Vendas:</LabelSubtotalDesconto>
+              </ContainerSpanTotais>
+              <ContainerSpanTotais>
+                <FormSubtotalDesconto>5</FormSubtotalDesconto>
+              </ContainerSpanTotais>
             </ContainerValores>
             <ContainerValores>
-            <LabelSubtotalDesconto>Carro Chefe:</LabelSubtotalDesconto>
-              <FormSubtotalDesconto>Shake Banana</FormSubtotalDesconto>
+              <ContainerSpanTotais>
+                <LabelSubtotalDesconto>Carro Chefe:</LabelSubtotalDesconto>
+              </ContainerSpanTotais>
+              <ContainerSpanTotais>
+                <FormSubtotalDesconto>Cookie</FormSubtotalDesconto>
+              </ContainerSpanTotais>
             </ContainerValores>
             <ContainerValores>
-              <LabelSubtotalDesconto>Subtotais:</LabelSubtotalDesconto>
-              <FormSubtotalDesconto>R$100,00</FormSubtotalDesconto>
+              <ContainerSpanTotais>
+                <LabelSubtotalDesconto>Caixa Aplicado:</LabelSubtotalDesconto>
+              </ContainerSpanTotais>
+              <ContainerSpanTotais>
+                <FormSubtotalDesconto>R$30,00</FormSubtotalDesconto>
+              </ContainerSpanTotais>
             </ContainerValores>
             <ContainerValores>
-              <LabelSubtotalDesconto>Descontos:</LabelSubtotalDesconto>
-              <FormSubtotalDesconto>R$10,00</FormSubtotalDesconto>
+              <ContainerSpanTotais>
+                <LabelSubtotalDesconto>Subtotais:</LabelSubtotalDesconto>
+              </ContainerSpanTotais>
+              <ContainerSpanTotais>
+                <FormSubtotalDesconto>R$100,00</FormSubtotalDesconto>
+              </ContainerSpanTotais>
+            </ContainerValores>
+            <ContainerValores>
+              <ContainerSpanTotais>
+                <LabelSubtotalDesconto>Descontos:</LabelSubtotalDesconto>
+              </ContainerSpanTotais>
+              <ContainerSpanTotais>
+                <FormSubtotalDesconto>R$10,00</FormSubtotalDesconto>
+              </ContainerSpanTotais>
             </ContainerValores>
             <ContainerValores>
               <LabelValorTotal>Valor Total:</LabelValorTotal>
-              <FormTotal>R$90,00</FormTotal>
+              <FormTotal>R$120,00</FormTotal>
             </ContainerValores>
             <ContainerValores>
-            <LabelValorTotal>Valor Dinheiro:</LabelValorTotal>
-              <FormTotal>R$90,00</FormTotal>
+              <LabelValorTotal>Dinheiro:</LabelValorTotal>
+              <FormTotal>R$50,00</FormTotal>
             </ContainerValores>
             <ContainerValores>
-            <LabelValorTotal>Valor Cartões:</LabelValorTotal>
-              <FormTotal>R$90,00</FormTotal>
+              <LabelValorTotal>Cartões:</LabelValorTotal>
+              <FormTotal>R$40,00</FormTotal>
+            </ContainerValores>
+            <ContainerValores>
+              <LabelValorTotal>Saldo Caixa:</LabelValorTotal>
+              <FormTotal>R$30,00</FormTotal>
             </ContainerValores>
             <ContainerValores>
               <LabelSubtotalDesconto>Em Caixa:</LabelSubtotalDesconto>
             </ContainerValores>
             <ContainerValores>
-            <BtnFormaPagamento>Aplicar</BtnFormaPagamento>
+              <BtnFormaPagamento>Aplicar</BtnFormaPagamento>
             </ContainerValores>
 
             <ContainerValores>
