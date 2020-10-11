@@ -1,7 +1,21 @@
-import { DivCortandoTela } from './../../../styles/dashboard';
+import { DivCortandoTela } from './../../../styles/dashboard'
 import styled from 'styled-components'
-import { Navbar as RN, NavbarToggler as NT, Nav as CN } from 'reactstrap'
+import {
+  Navbar as RN,
+  NavbarToggler as NT,
+  Nav as CN,
+  DropdownItem as DDropDow,
+  DropdownMenu as MDropDow
+} from 'reactstrap'
 
+export const DropdownMenu = styled(MDropDow)`
+  left: -130px;
+  background: #282741;
+`
+
+export const DropdownItem = styled(DDropDow)`
+  width: 100%;
+`
 export const Navbar = styled(RN)`
   background: #282741;
 `
@@ -225,6 +239,7 @@ export const ContainerVenda = styled.div`
   @media (min-width: 761px) {
     display: flexbox;
     flex-direction: column;
+    background: #282741;
     width: 100%;
     background: #1d1f2f;
   }
@@ -524,7 +539,6 @@ export const ContainerSpan = styled.div`
   }
 `
 
-
 export const TableRow = styled.div`
   background: #282741;
   width: 100%;
@@ -584,22 +598,20 @@ export const SpanListTh = styled.span`
     justify-items: center;
     color: #fff;
     font-size: 1rem;
-    font-weight: bold
+    font-weight: bold;
   }
 `
 export const DivTabela = styled.div`
   width: 90%;
   height: 100%;
-  margin-top: 20px `
-
-
-  export const ContainerSpanTotais = styled.div`
+  margin-top: 20px;
+`
+export const ContainerSpanTotais = styled.div`
   @media (max-width: 767px) {
     display: flex;
     justify-content: center;
     width: 50%;
-    height: 50px
-
+    height: 50px;
   }
 
   @media (min-width: 768px) {
@@ -609,11 +621,10 @@ export const DivTabela = styled.div`
     justify-items: center;
     padding: 0 10px;
     width: 50%;
-    height: 50px
+    height: 50px;
   }
 `
 
 export const HTitulo = styled.h2`
-  color: #fff
-
+  color: #fff;
 `

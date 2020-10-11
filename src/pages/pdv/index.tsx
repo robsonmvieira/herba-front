@@ -18,15 +18,11 @@ import {
   FormTotal,
   BtnFormaPagamento,
   BtnFinalizar,
-  ContainerBusca
+  ContainerBusca,
+  DropdownItem,
+  DropdownMenu
 } from './styles'
-import {
-  NavbarBrand,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from 'reactstrap'
+import { NavbarBrand, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
 import apiService from '../../services/apiService'
 import Product from '../../components/product'
 
