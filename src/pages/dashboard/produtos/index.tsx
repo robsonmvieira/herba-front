@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { GetServerSideProps } from 'next'
 
 import {
@@ -177,18 +177,18 @@ const dashProdutos = ({ products }) => {
   )
 }
 export default dashProdutos
-// export const getServerSideProps: GetServerSideProps = async params => {
-//   const { pages } = params.query
-//   if (Number(pages) <= 0) {
-//     const response = await api.get<IProduct[]>(`products/?pages=${0}`)
-//     const products = response.data
-//     return {
-//       props: { products }
-//     }
-//   }
-//   const response = await api.get<IProduct[]>(`products/?pages=${pages}`)
-//   const products = response.data
-//   return {
-//     props: { products }
-//   }
-// }
+export const getServerSideProps: GetServerSideProps = async params => {
+  const { pages } = params.query
+  if (Number(pages) <= 0) {
+    const response = await api.get<IProduct[]>(`products/?pages=${0}`)
+    const products = response.data
+    return {
+      props: { products }
+    }
+  }
+  const response = await api.get<IProduct[]>(`products/?pages=${pages}`)
+  const products = response.data
+  return {
+    props: { products }
+  }
+}
