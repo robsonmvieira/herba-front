@@ -37,31 +37,32 @@ interface Product {
   price: string
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
-  const cookie = req.headers.cookie
+export const getServerSideProps: GetServerSideProps = async params => {
+  const cookie = params.req.headers.cookie
   const response = await apiService.get<Product[]>('/products?pages=1', {
     headers: { cookie: cookie || '' }
   })
+  const products = response.data
   const userName = formatUserName(cookie)
   if (!cookie) {
-    res.statusCode = 302
-    res.setHeader('Location', '/login')
-    res.end()
+    params.res.statusCode = 302
+    params.res.setHeader('Location', '/login')
+    params.res.end()
     return { props: {} }
   }
-  if (res.statusCode === 401 && !req) {
-    res.statusCode = 302
-    res.setHeader('Location', '/login')
-    res.end()
+  if (params.res.statusCode === 401 && !params.req) {
+    params.res.statusCode = 302
+    params.res.setHeader('Location', '/login')
+    params.res.end()
     return { props: {} }
   }
-  if (res.statusCode === 401 && req) {
-    res.statusCode = 302
-    res.setHeader('Location', '/login')
-    res.end()
+  if (params.res.statusCode === 401 && params.req) {
+    params.res.statusCode = 302
+    params.res.setHeader('Location', '/login')
+    params.res.end()
     return { props: {} }
   }
-  return { props: { products: response.data, userName } }
+  return { props: { products, userName } }
 }
 const ListProducts = ({
   products,
@@ -98,7 +99,16 @@ const ListProducts = ({
               </FormList>
             </ContainerBusca>
           </ContainerProducts>
-          {/* <div>{products.map(p => (<ul key={p.}></ul>))}</div> */}
+          <div>
+            {products.map((p: Product) => (
+              <ul key={p.id}>
+                <li>
+                  <span style={{ color: '#fff' }}>{p.name}</span>
+                  <span style={{ color: '#fff' }}>{p.price}</span>
+                </li>
+              </ul>
+            ))}
+          </div>
           <ContainerTotais>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
             <ContainerValores>
