@@ -87,10 +87,10 @@ const dashAdmin = () => {
           <DivCortandoTela>
             <IconsTags>
               <DivIconTags>
-              <DivSpan>
+                <DivSpan>
                   <SpanTitulo>Caixa</SpanTitulo>
                 </DivSpan>
-              <DivImg>
+                <DivImg>
                   <img src="/image/closebox.svg" alt="" />
                 </DivImg>
               </DivIconTags>
