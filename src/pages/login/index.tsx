@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import Router from 'next/router'
+import { GetServerSideProps } from 'next'
 import {
   Container,
   LabelLogin,
@@ -18,14 +18,28 @@ import {
 import Menu from '../../components/Menu'
 import Input from '../../components/Input'
 import { Form } from '@unform/web'
-import api from '../../services/apiService'
 import * as Yup from 'yup'
+import apiService from '../../services/apiService'
+import { useRouter } from 'next/router'
 
-interface userLogin {
+interface UserLogin {
   email: string
   password: string
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
+  const token = req.headers.cookie
+  if (token) {
+    res.statusCode = 302
+    res.setHeader('Location', '/products')
+    res.end()
+    return { props: {} }
+  }
+  return { props: {} }
+}
+
 const Login = () => {
+  const router = useRouter()
   const [errorNumber, setErrorNumber] = useState<number>(0)
   const [toastOpen, setToastOpen] = useState<boolean>(true)
 
@@ -33,7 +47,12 @@ const Login = () => {
     setToastOpen(false)
   }
   const formRef = useRef(null)
-  async function handleSubmit({ email, password }: userLogin, { reset }) {
+  async function handleSubmit(
+    { email, password }: UserLogin,
+    { reset },
+    e: React.FormEvent<HTMLInputElement>
+  ) {
+    e.preventDefault()
     try {
       formRef.current.setErrors({})
 
@@ -49,10 +68,12 @@ const Login = () => {
         }
       )
       // validation ok
-      const resp = await api.post('sessions/login', { email, password })
-      const { data } = resp
-      localStorage.setItem('token', data)
-      Router.push('/dashboard')
+      await apiService.post(
+        '/sessions',
+        { email, password },
+        { withCredentials: true }
+      )
+      router.push('/products')
     } catch (error) {
       const validationErrors = {}
 

@@ -1,9 +1,6 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import React, { useState, useContext } from 'react'
-import api from '../../services/apiService'
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import { UserAuthContext } from '../../hooks/userAuth'
-// import { NextFunctionComponent } from 'next'
+import React, { useState } from 'react'
+import { formatUserName } from '../../utils/formatUserName'
+import { GetServerSideProps, InferGetStaticPropsType } from 'next'
 import {
   Navbar,
   Container,
@@ -30,9 +27,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap'
-
-import TableProducts from '../tableproducts'
-import Product from '../../components/product'
+import apiService from '../../services/apiService'
 
 interface Product {
   id: string
@@ -40,21 +35,37 @@ interface Product {
   sku: string
   price: string
 }
-// export const getStaticProps: GetStaticProps = async () => {
-//   const res = await api.get('products')
-//   const products: Product[] = res.data
 
-//   // console.log(productsList)
-//   return {
-//     props: {
-//       products
-//     }
-//   }
-// }
-// const ListProducts = ({
-//   products
-// }: InferGetStaticPropsType<typeof getStaticProps>) => {
-const ListProducts = () => {
+export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
+  const cookie = req.headers.cookie
+  const response = await apiService('/products?pages=1', {
+    headers: { cookie: cookie || '' }
+  })
+  const userName = formatUserName(cookie)
+  if (!cookie) {
+    res.statusCode = 302
+    res.setHeader('Location', '/login')
+    res.end()
+    return { props: {} }
+  }
+  if (res.statusCode === 401 && !req) {
+    res.statusCode = 302
+    res.setHeader('Location', '/login')
+    res.end()
+    return { props: {} }
+  }
+  if (res.statusCode === 401 && req) {
+    res.statusCode = 302
+    res.setHeader('Location', '/login')
+    res.end()
+    return { props: {} }
+  }
+  return { props: { roles: response.data, userName } }
+}
+const ListProducts = ({
+  roles,
+  userName
+}: InferGetStaticPropsType<typeof getServerSideProps>) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
   return (
@@ -67,11 +78,10 @@ const ListProducts = () => {
         </div>
 
         <UncontrolledDropdown setActiveFromChild>
-          <DropdownToggle tag="a" className="nav-link" caret>
-            Barbara C.
-          </DropdownToggle>
+          <p style={{ color: '#fff' }}>{userName}</p>
+          <DropdownToggle tag="a" className="nav-link" caret></DropdownToggle>
           <DropdownMenu>
-            <DropdownItem tag="a" href="/blah" active>
+            <DropdownItem tag="a" active>
               Log-Off
             </DropdownItem>
           </DropdownMenu>
@@ -86,13 +96,6 @@ const ListProducts = () => {
                 <BtnList>Cancelar</BtnList>
               </FormList>
             </ContainerBusca>
-            {/* {products.map((p: Product) => (
-              <Product key={p.id} title={p.name} price={p.price} />
-            ))} */}
-            {/* <Product />
-            <Product /> */}
-
-            {/* <TableProducts /> */}
           </ContainerProducts>
           <ContainerTotais>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>

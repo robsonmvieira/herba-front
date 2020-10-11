@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Navbar, NavbarToggler, Nav, ImgLogo } from './styles'
 import Link from 'next/link'
-
+// import { userContext } from '../../hooks/userAuth'
 import { Collapse, NavbarBrand, NavItem, NavLink } from 'reactstrap'
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
-
+  // const { user } = userContext()
   const toggle = () => setIsOpen(!isOpen)
 
   return (
