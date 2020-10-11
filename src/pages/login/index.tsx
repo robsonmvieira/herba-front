@@ -35,7 +35,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   //     res.end()
   //     return { props: {} }
   //   }
-  //   return { props: {} }
+  return { props: {} }
 }
 
 const Login = () => {
