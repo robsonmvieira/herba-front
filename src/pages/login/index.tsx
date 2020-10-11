@@ -28,18 +28,18 @@ interface UserLogin {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
-  const token = req.headers.cookie
-  if (token) {
-    res.statusCode = 302
-    res.setHeader('Location', '/pdv')
-    res.end()
-    return { props: {} }
-  }
-  return { props: {} }
+  //   const token = req.headers.cookie
+  //   if (token) {
+  //     res.statusCode = 302
+  //     // res.setHeader('Location', '/pdv')
+  //     res.end()
+  //     return { props: {} }
+  //   }
+  //   return { props: {} }
 }
 
 const Login = () => {
-  const router = useRouter()
+  // const router = useRouter()
   const [errorNumber, setErrorNumber] = useState<number>(0)
   const [toastOpen, setToastOpen] = useState<boolean>(true)
 
@@ -68,12 +68,13 @@ const Login = () => {
         }
       )
       // validation ok
-      await apiService.post(
+      const response = await apiService.post(
         '/sessions',
         { email, password },
         { withCredentials: true }
       )
-      router.push('/pdv')
+      console.log('76', response.data)
+      // router.push('/pdv')
     } catch (error) {
       const validationErrors = {}
 
