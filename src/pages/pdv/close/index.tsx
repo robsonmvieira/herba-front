@@ -20,15 +20,11 @@ import {
   TableRow,
   DivTabela,
   ContainerSpanTotais,
-  HTitulo
-} from '../styles'
-import {
-  NavbarBrand,
-  UncontrolledDropdown,
-  DropdownToggle,
+  HTitulo,
   DropdownMenu,
   DropdownItem
-} from 'reactstrap'
+} from '../styles'
+import { NavbarBrand, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
 
 const CloseBox = () => {
   return (
