@@ -31,7 +31,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   const token = req.headers.cookie
   if (token) {
     res.statusCode = 302
-    res.setHeader('Location', '/products')
+    res.setHeader('Location', '/pdv')
     res.end()
     return { props: {} }
   }
@@ -73,7 +73,7 @@ const Login = () => {
         { email, password },
         { withCredentials: true }
       )
-      router.push('/products')
+      router.push('/pdv')
     } catch (error) {
       const validationErrors = {}
 
