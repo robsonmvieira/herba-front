@@ -1,3 +1,4 @@
+import { DivCortandoTela } from './../../../styles/dashboard';
 import styled from 'styled-components'
 import { Navbar as RN, NavbarToggler as NT, Nav as CN } from 'reactstrap'
 
@@ -110,6 +111,8 @@ export const ContainerBusca = styled.div`
   @media (max-width: 497px) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
     width: 100%;
   }
@@ -119,6 +122,7 @@ export const ContainerBusca = styled.div`
     flex-direction: column;
     width: 90%;
     align-items: center;
+    justify-content: center;
     justify-items: center;
     background: #282741;
     height: 80px;
@@ -282,7 +286,7 @@ export const LabelSubtotalDesconto = styled.span`
     line-height: 21px;
     margin-top: 15px;
     margin-left: 15px;
-    width: 50%;
+    width: 100%;
   }
   @media (min-width: 498px) {
     display: flex;
@@ -295,21 +299,20 @@ export const LabelSubtotalDesconto = styled.span`
     font-weight: 500;
     font-size: 100%;
     line-height: 21px;
-    margin-top: 15px;
-    width: 50%;
+    width: 100%;
   }
 `
 
 export const FormSubtotalDesconto = styled.span`
   @media (max-width: 497px) {
     display: flex;
-    justify-content: start;
+    justify-content: end;
     align-items: start;
     color: #958a8a;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 80%;
+    font-size: 100%;
     line-height: 21px;
     margin-top: 15px;
     width: 100%;
@@ -318,16 +321,14 @@ export const FormSubtotalDesconto = styled.span`
   }
   @media (min-width: 498px) {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: end;
+    justify-content: flex-end;
     color: #958a8a;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 100%;
     line-height: 21px;
-    margin-top: 15px;
-    width: 50%;
+    width: 100%;
   }
 `
 
@@ -493,4 +494,126 @@ export const ContainerValorTotal = styled.div`
     justify-content: center;
     margin-top: 60px;
   }
+`
+
+export const TableHead = styled.div`
+  background: #282741;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  color: #fff;
+`
+export const ContainerSpan = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+  }
+`
+
+
+export const TableRow = styled.div`
+  background: #282741;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  justify-items: center;
+  color: #fff;
+`
+export const SpanListTd = styled.span`
+  @media (max-width: 767px) {
+    background: #282741;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.7rem;
+    margin-left: 10px;
+  }
+
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 1rem;
+  }
+`
+export const SpanListTh = styled.span`
+  @media (max-width: 767px) {
+    background: #282741;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold
+  }
+`
+export const DivTabela = styled.div`
+  width: 90%;
+  height: 100%;
+  margin-top: 20px `
+
+
+  export const ContainerSpanTotais = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50px
+
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0 10px;
+    width: 50%;
+    height: 50px
+  }
+`
+
+export const HTitulo = styled.h2`
+  color: #fff
+
 `
