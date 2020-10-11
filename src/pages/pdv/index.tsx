@@ -39,12 +39,11 @@ interface Product {
 
 export const getServerSideProps: GetServerSideProps = async params => {
   const cookie = params.req.headers.cookie
-  const response = await apiService.get<Product[]>('/products?pages=1', {
-    headers: { cookie: cookie || '' }
-  })
-  const products = response.data
-  const userName = formatUserName(cookie)
   if (!cookie) {
+    // console.log('Não tenho...')
+    // params.res.writeHead(302, {
+    //   Location: '/login'
+    // })
     params.res.statusCode = 302
     params.res.setHeader('Location', '/login')
     params.res.end()
@@ -53,15 +52,26 @@ export const getServerSideProps: GetServerSideProps = async params => {
   if (params.res.statusCode === 401 && !params.req) {
     params.res.statusCode = 302
     params.res.setHeader('Location', '/login')
+    // params.res.writeHead(302, {
+    //   Location: '/login'
+    // })
     params.res.end()
     return { props: {} }
   }
   if (params.res.statusCode === 401 && params.req) {
     params.res.statusCode = 302
     params.res.setHeader('Location', '/login')
+    // params.res.writeHead(302, {
+    //   Location: '/login'
+    // })
     params.res.end()
     return { props: {} }
   }
+  const response = await apiService.get<Product[]>('/products?pages=1', {
+    headers: { cookie: cookie || '' }
+  })
+  const products = response.data
+  const userName = formatUserName(cookie)
   return { props: { products, userName } }
 }
 const ListProducts = ({
