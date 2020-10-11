@@ -21,7 +21,7 @@ import {
   DivTabela,
   ContainerSpanTotais,
   HTitulo
-} from '../../styles'
+} from '../styles'
 import {
   NavbarBrand,
   UncontrolledDropdown,
