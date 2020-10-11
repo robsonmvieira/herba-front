@@ -20,7 +20,15 @@ import {
   BtnFinalizar,
   ContainerBusca,
   DropdownItem,
-  DropdownMenu
+  DropdownMenu,
+  TableHead,
+  DivTabela,
+  ContainerSpan,
+  SpanListTh,
+  TableRow,
+  SpanListTd,
+  TableRowPdv,
+  ContainerTabelaPdv
 } from './styles'
 import { NavbarBrand, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
 import apiService from '../../services/apiService'
@@ -30,7 +38,7 @@ interface Product {
   id: string
   name: string
   sku: string
-  price: string
+  price_suggest: string
 }
 
 export const getServerSideProps: GetServerSideProps = async params => {
@@ -68,6 +76,7 @@ export const getServerSideProps: GetServerSideProps = async params => {
   })
   const products = response.data
   // const userName = formatUserName(cookie)
+  console.log(products)
   return { props: { products } }
 }
 const ListProducts = ({
@@ -104,17 +113,38 @@ const ListProducts = ({
                 <BtnList>Cancelar</BtnList>
               </FormList>
             </ContainerBusca>
+
+            <DivTabela>
+              <TableHead>
+                <ContainerSpan>
+                  <SpanListTh>Produto</SpanListTh>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTh>Preço</SpanListTh>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTh>Qtd.</SpanListTh>
+                </ContainerSpan>
+                <ContainerSpan>
+                  <SpanListTh>Excluir</SpanListTh>
+                </ContainerSpan>
+              </TableHead>
+            </DivTabela>
+            <ContainerTabelaPdv>
+              <TableRowPdv>
+                {products.map((p: Product) => (
+                  <ContainerSpan key={p.id}>
+                    <SpanListTd> {p.name} </SpanListTd>
+                    <SpanListTd> {p.price_suggest} </SpanListTd>
+                    <SpanListTd>
+                      <input style={{ width: '40px' }} name="qtd" />
+                    </SpanListTd>
+                  </ContainerSpan>
+                ))}
+              </TableRowPdv>
+            </ContainerTabelaPdv>
           </ContainerProducts>
-          <div>
-            {products.map((p: Product) => (
-              <ul key={p.id}>
-                <li>
-                  <span style={{ color: '#fff' }}>{p.name}</span>
-                  <span style={{ color: '#fff' }}>{p.price}</span>
-                </li>
-              </ul>
-            ))}
-          </div>
+
           <ContainerTotais>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
             <ContainerValores>

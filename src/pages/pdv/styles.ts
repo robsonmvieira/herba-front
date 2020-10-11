@@ -184,6 +184,7 @@ export const ContainerProducts = styled.div`
     flex-direction: column;
     width: 100%;
     align-items: center;
+    justify-content: center;
   }
 
   @media (min-width: 761px) {
@@ -535,7 +536,9 @@ export const ContainerSpan = styled.div`
     justify-items: center;
     padding: 0 10px;
     width: 100%;
-    height: 100%;
+    height: 70px;
+    background: #282741;
+    margin-bottom: 5px;
   }
 `
 
@@ -553,7 +556,7 @@ export const SpanListTd = styled.span`
   @media (max-width: 767px) {
     background: #282741;
     width: 100%;
-    height: 40px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -568,11 +571,11 @@ export const SpanListTd = styled.span`
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
     color: #fff;
     font-size: 1rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
   }
 `
 export const SpanListTh = styled.span`
@@ -591,20 +594,23 @@ export const SpanListTh = styled.span`
   @media (min-width: 768px) {
     background: #282741;
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     justify-items: center;
     color: #fff;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
   }
 `
 export const DivTabela = styled.div`
   width: 90%;
-  height: 100%;
-  margin-top: 20px;
+  height: 60px;
+  margin-top: 40px;
+  background: #282741;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 export const ContainerSpanTotais = styled.div`
   @media (max-width: 767px) {
@@ -627,4 +633,17 @@ export const ContainerSpanTotais = styled.div`
 
 export const HTitulo = styled.h2`
   color: #fff;
+`
+export const TableRowPdv = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`
+
+export const ContainerTabelaPdv = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: center;
+  margin-bottom: 50px;
 `
