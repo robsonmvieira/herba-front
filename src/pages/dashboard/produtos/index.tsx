@@ -1,6 +1,5 @@
 import React from 'react'
 import { GetServerSideProps } from 'next'
-
 import {
   IconsTags,
   ContainerIconsLg,
@@ -112,7 +111,7 @@ const dashProdutos = ({ products }) => {
               <SpanListTh>Edit</SpanListTh>
               <SpanListTh>Del</SpanListTh>
             </TableHead>
-            {/* {listProducts.map(p => (
+            {products.map(p => (
               <TableRow key={p.id}>
                 <SpanListTd>{p.name}</SpanListTd>
                 <SpanListTd>{p.price_suggest}</SpanListTd>
@@ -125,8 +124,8 @@ const dashProdutos = ({ products }) => {
                   <img src="/image/lixeira.svg" alt="" />
                 </SpanListTd>
               </TableRow>
-            ))} */}
-            <TableRow>
+            ))}
+            {/* <TableRow>
               <SpanListTd>Sopa Magica </SpanListTd>
               <SpanListTd>R$15,00</SpanListTd>
               <SpanListTd>20</SpanListTd>
@@ -169,7 +168,7 @@ const dashProdutos = ({ products }) => {
               <SpanListTd>
                 <img src="/image/lixeira.svg" alt="" />
               </SpanListTd>
-            </TableRow>
+            </TableRow> */}
           </ContainerListaLg>
         </ContainerConteudo>
       </Container>
@@ -178,15 +177,20 @@ const dashProdutos = ({ products }) => {
 }
 export default dashProdutos
 export const getServerSideProps: GetServerSideProps = async params => {
+  const cookie = params.req.headers.cookie
   const { pages } = params.query
   if (Number(pages) <= 0) {
-    const response = await api.get<IProduct[]>(`products/?pages=${0}`)
+    const response = await api.get<IProduct[]>(`products/?pages=${pages}`, {
+      headers: { cookie: cookie || '' }
+    })
     const products = response.data
     return {
       props: { products }
     }
   }
-  const response = await api.get<IProduct[]>(`products/?pages=${pages}`)
+  const response = await api.get<IProduct[]>(`/products?pages=${pages}`, {
+    headers: { cookie: cookie || '' }
+  })
   const products = response.data
   return {
     props: { products }
