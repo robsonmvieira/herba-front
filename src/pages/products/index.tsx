@@ -28,6 +28,7 @@ import {
   DropdownItem
 } from 'reactstrap'
 import apiService from '../../services/apiService'
+import Product from '../../components/product'
 
 interface Product {
   id: string
@@ -38,7 +39,7 @@ interface Product {
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   const cookie = req.headers.cookie
-  const response = await apiService('/products?pages=1', {
+  const response = await apiService.get<Product[]>('/products?pages=1', {
     headers: { cookie: cookie || '' }
   })
   const userName = formatUserName(cookie)
@@ -60,10 +61,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
     res.end()
     return { props: {} }
   }
-  return { props: { roles: response.data, userName } }
+  return { props: { products: response.data, userName } }
 }
 const ListProducts = ({
-  roles,
+  products,
   userName
 }: InferGetStaticPropsType<typeof getServerSideProps>) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -97,6 +98,7 @@ const ListProducts = ({
               </FormList>
             </ContainerBusca>
           </ContainerProducts>
+          {/* <div>{products.map(p => (<ul key={p.}></ul>))}</div> */}
           <ContainerTotais>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
             <ContainerValores>
