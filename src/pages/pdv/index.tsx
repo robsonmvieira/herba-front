@@ -25,7 +25,6 @@ import {
   DivTabela,
   ContainerSpan,
   SpanListTh,
-  SpanListTd,
   TableRowPdv,
   ContainerTabelaPdv,
   DivListTd,
@@ -40,6 +39,7 @@ import { NavbarBrand, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
 import apiService from '../../services/apiService'
 import Product from '../../components/product'
 import { useRouter } from 'next/router'
+// import { nextPagePagination } from '../../utils/nexPagePagination'
 interface Product {
   id: string
   name: string
@@ -141,6 +141,7 @@ const ListProducts = ({
       currentPage++
       setProducts(response.data)
     }
+    // nextPagePagination(currentPage, apiService, setProducts)
   }, [currentPage])
 
   const previusPage = useCallback(async () => {
@@ -203,56 +204,52 @@ const ListProducts = ({
             </ContainerBusca>
 
             <DivTabela>
-              
-                <ContainerSpanTh>
-                  <SpanListTh>Nome</SpanListTh>
-                </ContainerSpanTh>
-                <ContainerSpanThNumber>
-                  <SpanListTh>Preço</SpanListTh>
-                </ContainerSpanThNumber>
-                <ContainerSpanThNumber>
-                  <SpanListTh>Qtd.</SpanListTh>
-                </ContainerSpanThNumber>
-                <ContainerSpanThNumber>
-                  <SpanListTh>Desc</SpanListTh>
-                </ContainerSpanThNumber>
-                <ContainerSpanThNumber>
-                  <SpanListTh>Sub</SpanListTh>
-                </ContainerSpanThNumber>
-                <ContainerSpanThBtn>
-                  <SpanListTh></SpanListTh>
-                </ContainerSpanThBtn>
-                <ContainerSpanThBtn>
-                  <SpanListTh></SpanListTh>
-                </ContainerSpanThBtn>
-              
+              <ContainerSpanTh>
+                <SpanListTh>Nome</SpanListTh>
+              </ContainerSpanTh>
+              <ContainerSpanThNumber>
+                <SpanListTh>Preço</SpanListTh>
+              </ContainerSpanThNumber>
+              <ContainerSpanThNumber>
+                <SpanListTh>Qtd.</SpanListTh>
+              </ContainerSpanThNumber>
+              <ContainerSpanThNumber>
+                <SpanListTh>Desc</SpanListTh>
+              </ContainerSpanThNumber>
+              <ContainerSpanThNumber>
+                <SpanListTh>Sub</SpanListTh>
+              </ContainerSpanThNumber>
+              <ContainerSpanThBtn>
+                <SpanListTh></SpanListTh>
+              </ContainerSpanThBtn>
+              <ContainerSpanThBtn>
+                <SpanListTh></SpanListTh>
+              </ContainerSpanThBtn>
             </DivTabela>
             <ContainerTabelaPdv>
               <TableRowPdv>
                 {products.map((p: Product) => (
                   <ContainerSpan key={p.id}>
                     <DivListTd> {p.name} </DivListTd>
-                    
-                    
+
                     <DivListTdOut> {p.price_suggest} </DivListTdOut>
-                                        
+
                     <DivListTdOut>
                       <input style={{ width: '40px' }} name="qtd" />
                     </DivListTdOut>
                     <DivListTdOut>
-                    <SpanListTdOut> {p.price_suggest} </SpanListTdOut>
+                      <SpanListTdOut> {p.price_suggest} </SpanListTdOut>
                     </DivListTdOut>
                     <DivListTdOut>
-                    <SpanListTdOut> {p.price_suggest} </SpanListTdOut>
+                      <SpanListTdOut> {p.price_suggest} </SpanListTdOut>
                     </DivListTdOut>
                     <DivListTdImg>
-                    <img src="/image/adicionar.svg" alt=""/>
+                      <img src="/image/adicionar.svg" alt="" />
                     </DivListTdImg>
                     <DivListTdImg>
-                    <img src="/image/lixeirapdv.svg" alt=""/>
-                      </DivListTdImg>
+                      <img src="/image/lixeirapdv.svg" alt="" />
+                    </DivListTdImg>
                   </ContainerSpan>
-                  
                 ))}
                 <div>
                   <button onClick={previusPage}>anterior</button>
