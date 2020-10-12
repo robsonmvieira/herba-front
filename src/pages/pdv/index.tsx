@@ -21,21 +21,26 @@ import {
   ContainerBusca,
   DropdownItem,
   DropdownMenu,
-  TableHead,
-  DivTabela,
-  ContainerSpan,
-  SpanListTh,
-  TableRowPdv,
-  ContainerTabelaPdv,
-  DivListTd,
-  ContainerSpanTh,
-  SpanListTdOut,
-  DivListTdImg,
-  ContainerSpanThBtn,
-  ContainerSpanThNumber,
-  DivListTdOut
+  Tr,
+  TrBody,
+  Th,
+  TBody,
+  TabelaBody,
+  BoxCustomName,
+  Whapper,
+  Td,
+  TdCustomImage,
+  WhapperCustomBtn,
+  WhapperCustomNumber,
+  BoxBodyNumbers,
+  InputPdv,
+  BtnPreviosNext,
+  DivBtnPreviusNext,
+  UncontrolledDropdown,
+  UserName,
+  ContainerTh
 } from './styles'
-import { NavbarBrand, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
+import { NavbarBrand, DropdownToggle } from 'reactstrap'
 import apiService from '../../services/apiService'
 import Product from '../../components/product'
 import { useRouter } from 'next/router'
@@ -182,9 +187,12 @@ const ListProducts = ({
         </div>
 
         <UncontrolledDropdown setActiveFromChild>
-          <p style={{ color: '#fff' }}>John Doe</p>
+        <UserName>John Doe</UserName>
           <DropdownToggle tag="a" className="nav-link" caret></DropdownToggle>
           <DropdownMenu>
+            <DropdownItem tag="a" active>
+              Fechar Caixa
+            </DropdownItem>
             <DropdownItem tag="a" active>
               Log-Off
             </DropdownItem>
@@ -203,60 +211,65 @@ const ListProducts = ({
               </FormList>
             </ContainerBusca>
 
-            <DivTabela>
-              <ContainerSpanTh>
-                <SpanListTh>Nome</SpanListTh>
-              </ContainerSpanTh>
-              <ContainerSpanThNumber>
-                <SpanListTh>Preço</SpanListTh>
-              </ContainerSpanThNumber>
-              <ContainerSpanThNumber>
-                <SpanListTh>Qtd.</SpanListTh>
-              </ContainerSpanThNumber>
-              <ContainerSpanThNumber>
-                <SpanListTh>Desc</SpanListTh>
-              </ContainerSpanThNumber>
-              <ContainerSpanThNumber>
-                <SpanListTh>Sub</SpanListTh>
-              </ContainerSpanThNumber>
-              <ContainerSpanThBtn>
-                <SpanListTh></SpanListTh>
-              </ContainerSpanThBtn>
-              <ContainerSpanThBtn>
-                <SpanListTh></SpanListTh>
-              </ContainerSpanThBtn>
-            </DivTabela>
-            <ContainerTabelaPdv>
-              <TableRowPdv>
+          <ContainerTh>
+            <Tr>
+              
+                <Whapper>
+                  <Th>Nome</Th>
+                </Whapper>
+                <WhapperCustomNumber>
+                  <Th>Preço</Th>
+                </WhapperCustomNumber>
+                <WhapperCustomNumber>
+                  <Th>Qtd.</Th>
+                </WhapperCustomNumber>
+                <WhapperCustomNumber>
+                  <Th>Desc</Th>
+                </WhapperCustomNumber>
+                <WhapperCustomNumber>
+                  <Th>Sub</Th>
+                </WhapperCustomNumber>
+                <WhapperCustomBtn />
+                <WhapperCustomBtn />
+              
+            </Tr>
+          </ContainerTh>
+            <TabelaBody>
+              <TBody>
                 {products.map((p: Product) => (
-                  <ContainerSpan key={p.id}>
-                    <DivListTd> {p.name} </DivListTd>
-
-                    <DivListTdOut> {p.price_suggest} </DivListTdOut>
-
-                    <DivListTdOut>
-                      <input style={{ width: '40px' }} name="qtd" />
-                    </DivListTdOut>
-                    <DivListTdOut>
-                      <SpanListTdOut> {p.price_suggest} </SpanListTdOut>
-                    </DivListTdOut>
-                    <DivListTdOut>
-                      <SpanListTdOut> {p.price_suggest} </SpanListTdOut>
-                    </DivListTdOut>
-                    <DivListTdImg>
-                      <img src="/image/adicionar.svg" alt="" />
-                    </DivListTdImg>
-                    <DivListTdImg>
-                      <img src="/image/lixeirapdv.svg" alt="" />
-                    </DivListTdImg>
-                  </ContainerSpan>
+                  <TrBody key={p.id}>
+                    <BoxCustomName><Td> {p.name}</Td></BoxCustomName>
+                    
+                    
+                    <BoxBodyNumbers><Td> {p.price_suggest} </Td> </BoxBodyNumbers>
+                                        
+                    <BoxBodyNumbers>
+                    <InputPdv name="qtd" />
+                    </BoxBodyNumbers>
+                    <BoxBodyNumbers>
+                    <Td> {p.price_suggest} </Td>
+                    </BoxBodyNumbers>
+                    <BoxBodyNumbers>
+                    <Td> {p.price_suggest} </Td>
+                    </BoxBodyNumbers>
+                    <TdCustomImage>
+                    <img src="/image/adicionar.svg" alt=""/>
+                    </TdCustomImage>
+                    <TdCustomImage>
+                    <img src="/image/lixeirapdv.svg" alt=""/>
+                      </TdCustomImage>
+                  </TrBody>                  
                 ))}
-                <div>
-                  <button onClick={previusPage}>anterior</button>
-                  <button onClick={nextProducts}>Próximo</button>
-                </div>
-              </TableRowPdv>
-            </ContainerTabelaPdv>
+
+
+                <DivBtnPreviusNext >
+                  <BtnPreviosNext onClick={previusPage}><img src="/image/left.svg" /> anterior</BtnPreviosNext>
+                  <BtnPreviosNext onClick={nextProducts}> Próximo <img src="/image/right.svg" /></BtnPreviosNext>
+                </DivBtnPreviusNext>
+
+
+              </TBody>
+            </TabelaBody>
           </ContainerProducts>
 
           <ContainerTotais>

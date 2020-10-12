@@ -1,12 +1,32 @@
-import { DivCortandoTela } from './../../../styles/dashboard'
 import styled from 'styled-components'
 import {
   Navbar as RN,
   NavbarToggler as NT,
   Nav as CN,
   DropdownItem as DDropDow,
-  DropdownMenu as MDropDow
+  DropdownMenu as MDropDow,
+  UncontrolledDropdown as ControleDropDow
 } from 'reactstrap'
+
+export const UncontrolledDropdown = styled(ControleDropDow)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: none !important;
+  padding: none !important;
+   & > p{
+   margin-top: 15px;
+   }
+
+`
+
+export const UserName = styled.p`
+  color: #fff;
+  /* margin: none !important;
+  padding: none !important; */
+
+`
+
 
 export const DropdownMenu = styled(MDropDow)`
   left: -130px;
@@ -102,7 +122,8 @@ export const InputFormList = styled.input`
     margin-top: 20px;
     padding: 20px;
     padding-left: 5px;
-    outline: none;
+    outline: none !important;
+
   }
   /* medium */
   @media (min-width: 498px) {
@@ -117,7 +138,8 @@ export const InputFormList = styled.input`
     margin-left: 20px;
     margin-right: 10px;
     padding-left: 5px;
-    outline: none;
+    outline: none !important;
+
   }
 `
 
@@ -154,6 +176,7 @@ export const BtnList = styled.button`
     border: none;
     font-size: 120%;
     margin-left: 3px;
+    outline: none !important;
   }
 
   /* Medium */
@@ -169,6 +192,8 @@ export const BtnList = styled.button`
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 10px;
+    outline: none !important;
+
   }
 `
 
@@ -207,6 +232,7 @@ export const ContainerTotais = styled.div`
     display: flex;
     flex-direction: column;
     width: 32%;
+    height:650px;
     align-items: center;
     background: #282741;
     margin-top: 20px;
@@ -226,7 +252,7 @@ export const ContainerValores = styled.div`
   @media (min-width: 498px) {
     display: flex;
     width: 90%;
-    margin-top: 20px;
+    margin-top: 32px;
     justify-items: center;
     align-items: center;
   }
@@ -429,6 +455,8 @@ export const BtnFormaPagamento = styled.button`
     margin-top: 15px;
     border: none;
     color: #c4c4c4;
+    outline: none !important;
+
   }
 
   @media (min-width: 498px) {
@@ -448,8 +476,58 @@ export const BtnFormaPagamento = styled.button`
     border: none;
     color: #c4c4c4;
     overflow: auto;
+    outline: none !important;
+
   }
 `
+
+
+export const BtnPreviosNext = styled.button`
+  @media (max-width: 497px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    flex-direction: center;
+    width: 80%;
+    height: 50px;
+    padding: none;
+    margin-top: 15px;
+    border: none;
+    color: #fff;
+    outline: none !important;
+  }
+
+  @media (min-width: 498px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 21px;
+    flex-direction: row;
+    width: 30%;
+    height: 40px;
+    border: none;
+    color: #fff;
+    overflow: auto;
+    margin-top: 15px;
+    outline: none !important;
+    
+
+  }
+`
+
+
+
 
 export const BtnFinalizar = styled.button`
   @media (max-width: 497px) {
@@ -469,6 +547,8 @@ export const BtnFinalizar = styled.button`
     margin-left: 35px;
     border: none;
     color: #c4c4c4;
+    outline: none !important;
+
   }
 
   @media (min-width: 498px) {
@@ -488,6 +568,8 @@ export const BtnFinalizar = styled.button`
     color: #c4c4c4;
     margin-top: 30px;
     margin-bottom: 30px;
+    outline: none !important;
+
   }
 `
 
@@ -521,11 +603,26 @@ export const TableHead = styled.div`
   justify-items: center;
   color: #fff;
 `
-export const ContainerSpan = styled.div`
-  @media (max-width: 767px) {
+export const TrBody = styled.div`
+  @media (max-width: 424px){
+
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+
+
+  }
+  
+  
+ @media (min-width:425px) and (max-width: 767px) {
     display: flex;
     justify-content:space-around;
-    width: 20%;
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+
+
   }
 
   @media (min-width: 768px) {
@@ -534,17 +631,31 @@ export const ContainerSpan = styled.div`
     justify-content: space-around;
     justify-items: center;
     width: 100%;
-    height: 120px;
+    height: 80px;
     background: #282741;
-    margin-bottom: 5px;
+    margin-top: 10px;
   }
 `
 
-export const ContainerSpanTh = styled.div`
-  @media (max-width: 767px) {
+export const Whapper = styled.div`
+ 
+ @media (max-width: 424px){
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 60%;
+    height:100%;
+    background: #1D1F2F;
+
+    
+ }
+ 
+ 
+  @media (min-width:425px) and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+    background: #1D1F2F;
   }
 
   @media (min-width: 768px) {
@@ -553,17 +664,30 @@ export const ContainerSpanTh = styled.div`
     justify-content: center;
     justify-items: center;
     width: 30%;
-    height: 70px;
-    background: #282741;
+    height: 40px;
+    background: #1D1F2F;
     margin-bottom: 5px;
   }
 `
 
-export const ContainerSpanThNumber = styled.div`
-  @media (max-width: 767px) {
+export const WhapperCustomNumber = styled.div`
+  
+  @media (max-width: 424px){
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 30%;
+    height:100%;
+    background: #1D1F2F;
+
+  }
+  
+  @media (min-width:425px) and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height:100%;
+    background: #1D1F2F;
+
   }
 
   @media (min-width: 768px) {
@@ -572,19 +696,31 @@ export const ContainerSpanThNumber = styled.div`
     justify-content: center;
     justify-items: center;
     width: 10%;
-    height: 70px;
-    background: #282741;
+    height: 40px;
+    background: #1d1f2f;
     margin-bottom: 5px;
   }
 `
 
 
 
-export const ContainerSpanThBtn = styled.div`
-  @media (max-width: 767px) {
+export const WhapperCustomBtn = styled.div`
+  
+  @media (max-width:424px){
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    background: #1D1F2F;
+
+
+  }
+  
+  @media (min-width:425px) and (max-width: 767px) {
     display: flex;
     justify-content: center;
     width: 20%;
+    background: #1D1F2F;
+
   }
 
   @media (min-width: 768px) {
@@ -593,8 +729,8 @@ export const ContainerSpanThBtn = styled.div`
     justify-content: center;
     justify-items: center;
     width: 5%;
-    height: 70px;
-    background: #282741;
+    height: 40px;
+    background: #1d1f2f;
     margin-bottom: 5px;
   }
 `
@@ -637,8 +773,10 @@ export const SpanListTd = styled.span`
   }
 `
 
-export const SpanListTdOut = styled.span`
-  @media (max-width: 767px) {
+export const Td = styled.span`
+  
+  
+  @media (max-width: 424px) {
     background: #282741;
     width: 100%;
     height: 100%;
@@ -647,14 +785,27 @@ export const SpanListTdOut = styled.span`
     justify-content: center;
     justify-items: center;
     color: #fff;
-    font-size: 0.7rem;
-    margin-left: 10px;
+    font-size: 0.8rem;
+
+  }  
+  
+  
+  @media (min-width:425) and(max-width: 767px) {
+    background: #282741;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.9rem;
   }
 
   @media (min-width: 768px) {
     background: #282741;
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     color: #fff;
     font-size: 1rem;
@@ -667,8 +818,25 @@ export const SpanListTdOut = styled.span`
 
 
 
-export const DivListTd = styled.div`
-  @media (max-width: 767px) {
+export const BoxCustomName = styled.div`
+  
+  @media (max-width: 424px){
+    background: #282741;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center
+
+  }
+
+
+  
+  @media (min-width:425px) and (max-width: 767px) {
     background: #282741;
     width: 100%;
     height: 100%;
@@ -677,8 +845,9 @@ export const DivListTd = styled.div`
     justify-content: center;
     justify-items: center;
     color: #fff;
-    font-size: 0.7rem;
-    margin-left: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    flex-wrap: nowrap
   }
 
   @media (min-width: 768px) {
@@ -690,22 +859,55 @@ export const DivListTd = styled.div`
     font-size: 1rem;
     text-align: center;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    flex-wrap: nowrap
+
   }
 `
 
-export const DivListTdOut = styled.div`
-  @media (max-width: 767px) {
+export const InputPdv = styled.input`
+  
+  @media (max-width: 424px ) {
+    width: 25px
+    
+  }
+  @media (min-width:425px) and (max-width: 767px) {
+    width: 30px
+    
+  }
+
+  @media (min-width: 768px) {
+    width: 40px
+  }
+`
+
+
+
+export const BoxBodyNumbers = styled.div`
+  
+  @media (max-width: 424px){
     background: #282741;
-    width: 100%;
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     justify-items: center;
     color: #fff;
-    font-size: 0.7rem;
-    margin-left: 10px;
+    font-size: 0.8rem;
+
+  }
+  
+  @media (min-width:425px) and (max-width: 767px) {
+    background: #282741;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.9rem;
   }
 
   @media (min-width: 768px) {
@@ -723,10 +925,10 @@ export const DivListTdOut = styled.div`
 
 
 
-export const DivListTdImg = styled.div`
+export const TdCustomImage = styled.div`
   @media (max-width: 767px) {
     background: #282741;
-    width: 100%;
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -734,7 +936,6 @@ export const DivListTdImg = styled.div`
     justify-items: center;
     color: #fff;
     font-size: 0.7rem;
-    margin-left: 10px;
   }
 
   @media (min-width: 768px) {
@@ -751,9 +952,23 @@ export const DivListTdImg = styled.div`
 `
 
 
-export const SpanListTh = styled.span`
-  @media (max-width: 767px) {
-    background: #282741;
+export const Th = styled.span`
+  
+  @media (max-width: 424px){
+    background: #1d1f2f;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  
+  @media (min-width: 425px) and (max-width: 767px) {
+    background: #1d1f2f;
     width: 100%;
     height: 100%;
     display: flex;
@@ -765,7 +980,7 @@ export const SpanListTh = styled.span`
   }
 
   @media (min-width: 768px) {
-    background: #282741;
+    background: #1d1f2f;
     width: 100%;
     display: flex;
     align-items: center;
@@ -773,27 +988,30 @@ export const SpanListTh = styled.span`
     justify-items: center;
     color: #fff;
     font-size: 1.1rem;
-    font-weight: bold;
   }
 `
-export const DivTabela = styled.div`
+export const Tr = styled.div`
+  width: 98%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  background: #1D1F2F;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+export const ContainerTh = styled.div`
   width: 90%;
-  height: 75px;
+  height: 90px;
   margin-top: 40px;
   background: #282741;
   display: flex;
   justify-content: space-around;
   align-items: center;
 `
-export const ContainerSpanTotais = styled.div`
-  @media (max-width: 767px) {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    height: 50px;
-  }
 
-  @media (min-width: 768px) {
+
+export const ContainerSpanTotais = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -801,23 +1019,28 @@ export const ContainerSpanTotais = styled.div`
     padding: 0 10px;
     width: 50%;
     height: 50px;
-  }
+  
 `
 
 export const HTitulo = styled.h2`
   color: #fff;
 `
-export const TableRowPdv = styled.div`
+export const TBody = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: space-around
+  justify-content: space-around;
 `
 
-export const ContainerTabelaPdv = styled.div`
+export const TabelaBody = styled.div`
   display: flex;
   flex-direction: row;
   width: 90%;
   justify-content: space-between;
   margin-bottom: 50px;
+`
+
+export const DivBtnPreviusNext = styled.div`
+  display: flex;
+  justify-Content: space-between;
 `
