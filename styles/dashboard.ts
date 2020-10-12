@@ -82,16 +82,17 @@ export const DivIconTags = styled.div`
   justify-content: center;
   align-items: center;
   justify-items: flex-end;
+  cursor: pointer;
   :hover {
     background-color: #2fc84c;
     font-weight: bolder;
     overflow: hidden;
     width: 100%;
-    border-radius: 40px;
     -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     -moz-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     -ms-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     -o-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+
   }
 `
