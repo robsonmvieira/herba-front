@@ -610,7 +610,8 @@ export const TrBody = styled.div`
     display: flex;
     width: 100%;
     height: 100px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+
 
   }
   
@@ -620,7 +621,7 @@ export const TrBody = styled.div`
     justify-content:space-around;
     width: 100%;
     height: 60px;
-    margin-bottom: 10px;
+    margin-top: 10px;
 
 
   }
@@ -633,7 +634,7 @@ export const TrBody = styled.div`
     width: 100%;
     height: 80px;
     background: #282741;
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
 `
 
@@ -1000,7 +1001,7 @@ export const Tr = styled.div`
   justify-content: space-around;
   align-items: center;
 `
-export const DivTr = styled.div`
+export const ContainerTh = styled.div`
   width: 90%;
   height: 90px;
   margin-top: 40px;

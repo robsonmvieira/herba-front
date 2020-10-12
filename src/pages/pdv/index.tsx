@@ -38,7 +38,7 @@ import {
   DivBtnPreviusNext,
   UncontrolledDropdown,
   UserName,
-  DivTr
+  ContainerTh
 } from './styles'
 import { NavbarBrand, DropdownToggle } from 'reactstrap'
 import apiService from '../../services/apiService'
@@ -209,7 +209,7 @@ const ListProducts = ({
               </FormList>
             </ContainerBusca>
 
-          <DivTr>
+          <ContainerTh>
             <Tr>
               
                 <Whapper>
@@ -231,7 +231,7 @@ const ListProducts = ({
                 <WhapperCustomBtn />
               
             </Tr>
-          </DivTr>
+          </ContainerTh>
             <TabelaBody>
               <TBody>
                 {products.map((p: Product) => (
