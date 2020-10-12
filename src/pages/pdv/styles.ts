@@ -1,4 +1,3 @@
-import { DivCortandoTela } from './../../../styles/dashboard'
 import styled from 'styled-components'
 import {
   Navbar as RN,
