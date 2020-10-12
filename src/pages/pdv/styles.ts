@@ -522,10 +522,20 @@ export const TableHead = styled.div`
   color: #fff;
 `
 export const ContainerSpan = styled.div`
-  @media (max-width: 767px) {
+  @media (max-width: 424px){
+
+    display: flex;
+    width: 100%;
+    height: 100px;
+  }
+  
+  
+ @media (min-width:425px) and (max-width: 767px) {
     display: flex;
     justify-content:space-around;
-    width: 20%;
+    width: 100%;
+    height: 80px;
+
   }
 
   @media (min-width: 768px) {
@@ -541,10 +551,20 @@ export const ContainerSpan = styled.div`
 `
 
 export const ContainerSpanTh = styled.div`
-  @media (max-width: 767px) {
+ 
+ @media (max-width: 424px){
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 60%;
+    height:100%
+ }
+ 
+ 
+  @media (min-width:425px) and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height:100%
   }
 
   @media (min-width: 768px) {
@@ -560,10 +580,19 @@ export const ContainerSpanTh = styled.div`
 `
 
 export const ContainerSpanThNumber = styled.div`
-  @media (max-width: 767px) {
+  
+  @media (max-width: 424px){
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 30%;
+    height:100%
+  }
+  
+  @media (min-width:425px) and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height:100%
   }
 
   @media (min-width: 768px) {
@@ -581,7 +610,15 @@ export const ContainerSpanThNumber = styled.div`
 
 
 export const ContainerSpanThBtn = styled.div`
-  @media (max-width: 767px) {
+  
+  @media (max-width:424px){
+    display: flex;
+    justify-content: center;
+    width: 25%;
+
+  }
+  
+  @media (min-width:425px) and (max-width: 767px) {
     display: flex;
     justify-content: center;
     width: 20%;
@@ -638,7 +675,9 @@ export const SpanListTd = styled.span`
 `
 
 export const SpanListTdOut = styled.span`
-  @media (max-width: 767px) {
+  
+  
+  @media (max-width: 424px) {
     background: #282741;
     width: 100%;
     height: 100%;
@@ -647,8 +686,21 @@ export const SpanListTdOut = styled.span`
     justify-content: center;
     justify-items: center;
     color: #fff;
-    font-size: 0.7rem;
-    margin-left: 10px;
+    font-size: 0.8rem;
+
+  }  
+  
+  
+  @media (min-width:425) and(max-width: 767px) {
+    background: #282741;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.9rem;
   }
 
   @media (min-width: 768px) {
@@ -668,7 +720,24 @@ export const SpanListTdOut = styled.span`
 
 
 export const DivListTd = styled.div`
-  @media (max-width: 767px) {
+  
+  @media (max-width: 424px){
+    background: #282741;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center
+
+  }
+
+
+  
+  @media (min-width:425px) and (max-width: 767px) {
     background: #282741;
     width: 100%;
     height: 100%;
@@ -677,8 +746,8 @@ export const DivListTd = styled.div`
     justify-content: center;
     justify-items: center;
     color: #fff;
-    font-size: 0.7rem;
-    margin-left: 10px;
+    font-size: 0.9rem;
+    text-align: center
   }
 
   @media (min-width: 768px) {
@@ -694,18 +763,49 @@ export const DivListTd = styled.div`
   }
 `
 
+export const InputPdv = styled.input`
+  
+  @media (max-width: 424px ) {
+    width: 25px
+    
+  }
+  @media (min-width:425px) and (max-width: 767px) {
+    width: 30px
+    
+  }
+
+  @media (min-width: 768px) {
+    width: 40px
+  }
+`
+
+
+
 export const DivListTdOut = styled.div`
-  @media (max-width: 767px) {
+  
+  @media (max-width: 424px){
     background: #282741;
-    width: 100%;
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     justify-items: center;
     color: #fff;
-    font-size: 0.7rem;
-    margin-left: 10px;
+    font-size: 0.8rem;
+
+  }
+  
+  @media (min-width:425px) and (max-width: 767px) {
+    background: #282741;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.9rem;
   }
 
   @media (min-width: 768px) {
@@ -726,7 +826,7 @@ export const DivListTdOut = styled.div`
 export const DivListTdImg = styled.div`
   @media (max-width: 767px) {
     background: #282741;
-    width: 100%;
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -734,7 +834,6 @@ export const DivListTdImg = styled.div`
     justify-items: center;
     color: #fff;
     font-size: 0.7rem;
-    margin-left: 10px;
   }
 
   @media (min-width: 768px) {
@@ -752,7 +851,21 @@ export const DivListTdImg = styled.div`
 
 
 export const SpanListTh = styled.span`
-  @media (max-width: 767px) {
+  
+  @media (max-width: 424px){
+    background: #282741;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  
+  @media (min-width: 425px) and (max-width: 767px) {
     background: #282741;
     width: 100%;
     height: 100%;
@@ -786,14 +899,6 @@ export const DivTabela = styled.div`
   align-items: center;
 `
 export const ContainerSpanTotais = styled.div`
-  @media (max-width: 767px) {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    height: 50px;
-  }
-
-  @media (min-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -801,7 +906,7 @@ export const ContainerSpanTotais = styled.div`
     padding: 0 10px;
     width: 50%;
     height: 50px;
-  }
+  
 `
 
 export const HTitulo = styled.h2`

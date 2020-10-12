@@ -34,7 +34,8 @@ import {
   DivListTdImg,
   ContainerSpanThBtn,
   ContainerSpanThNumber,
-  DivListTdOut
+  DivListTdOut,
+  InputPdv
 } from './styles'
 import { NavbarBrand, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
 import apiService from '../../services/apiService'
@@ -220,10 +221,8 @@ const ListProducts = ({
                   <SpanListTh>Sub</SpanListTh>
                 </ContainerSpanThNumber>
                 <ContainerSpanThBtn>
-                  <SpanListTh></SpanListTh>
                 </ContainerSpanThBtn>
                 <ContainerSpanThBtn>
-                  <SpanListTh></SpanListTh>
                 </ContainerSpanThBtn>
               
             </DivTabela>
@@ -237,7 +236,7 @@ const ListProducts = ({
                     <DivListTdOut> {p.price_suggest} </DivListTdOut>
                                         
                     <DivListTdOut>
-                      <input style={{ width: '40px' }} name="qtd" />
+                    <InputPdv name="qtd" />
                     </DivListTdOut>
                     <DivListTdOut>
                     <SpanListTdOut> {p.price_suggest} </SpanListTdOut>
