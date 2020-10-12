@@ -514,19 +514,37 @@ export const ContainerValorTotal = styled.div`
 
 export const TableHead = styled.div`
   background: #282741;
-  width: 100%;
+  width: 80%;
   height: 15%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   justify-items: center;
   color: #fff;
 `
 export const ContainerSpan = styled.div`
   @media (max-width: 767px) {
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
+    width: 20%;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-items: center;
     width: 100%;
+    height: 120px;
+    background: #282741;
+    margin-bottom: 5px;
+  }
+`
+
+export const ContainerSpanTh = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 20%;
   }
 
   @media (min-width: 768px) {
@@ -534,13 +552,53 @@ export const ContainerSpan = styled.div`
     align-items: center;
     justify-content: center;
     justify-items: center;
-    padding: 0 10px;
-    width: 100%;
+    width: 30%;
     height: 70px;
     background: #282741;
     margin-bottom: 5px;
   }
 `
+
+export const ContainerSpanThNumber = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 10%;
+    height: 70px;
+    background: #282741;
+    margin-bottom: 5px;
+  }
+`
+
+
+
+export const ContainerSpanThBtn = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 5%;
+    height: 70px;
+    background: #282741;
+    margin-bottom: 5px;
+  }
+`
+
 
 export const TableRow = styled.div`
   background: #282741;
@@ -568,6 +626,33 @@ export const SpanListTd = styled.span`
 
   @media (min-width: 768px) {
     background: #282741;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    font-size: 1rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+`
+
+export const SpanListTdOut = styled.span`
+  @media (max-width: 767px) {
+    background: #282741;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.7rem;
+    margin-left: 10px;
+  }
+
+  @media (min-width: 768px) {
+    background: #282741;
     width: 100%;
     height: 100%;
     display: flex;
@@ -578,6 +663,94 @@ export const SpanListTd = styled.span`
     justify-content: center;
   }
 `
+
+
+
+
+export const DivListTd = styled.div`
+  @media (max-width: 767px) {
+    background: #282741;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.7rem;
+    margin-left: 10px;
+  }
+
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center
+  }
+`
+
+export const DivListTdOut = styled.div`
+  @media (max-width: 767px) {
+    background: #282741;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.7rem;
+    margin-left: 10px;
+  }
+
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center
+  }
+`
+
+
+
+export const DivListTdImg = styled.div`
+  @media (max-width: 767px) {
+    background: #282741;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    font-size: 0.7rem;
+    margin-left: 10px;
+  }
+
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 5%;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center
+  }
+`
+
+
 export const SpanListTh = styled.span`
   @media (max-width: 767px) {
     background: #282741;
@@ -599,17 +772,17 @@ export const SpanListTh = styled.span`
     justify-content: center;
     justify-items: center;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.1rem;
     font-weight: bold;
   }
 `
 export const DivTabela = styled.div`
   width: 90%;
-  height: 60px;
+  height: 75px;
   margin-top: 40px;
   background: #282741;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 `
 export const ContainerSpanTotais = styled.div`
@@ -638,12 +811,13 @@ export const TableRowPdv = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: space-around
 `
 
 export const ContainerTabelaPdv = styled.div`
   display: flex;
   flex-direction: row;
   width: 90%;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 50px;
 `

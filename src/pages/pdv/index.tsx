@@ -27,7 +27,14 @@ import {
   SpanListTh,
   SpanListTd,
   TableRowPdv,
-  ContainerTabelaPdv
+  ContainerTabelaPdv,
+  DivListTd,
+  ContainerSpanTh,
+  SpanListTdOut,
+  DivListTdImg,
+  ContainerSpanThBtn,
+  ContainerSpanThNumber,
+  DivListTdOut
 } from './styles'
 import { NavbarBrand, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
 import apiService from '../../services/apiService'
@@ -161,31 +168,56 @@ const ListProducts = ({
             </ContainerBusca>
 
             <DivTabela>
-              <TableHead>
-                <ContainerSpan>
-                  <SpanListTh>Produto</SpanListTh>
-                </ContainerSpan>
-                <ContainerSpan>
+              
+                <ContainerSpanTh>
+                  <SpanListTh>Nome</SpanListTh>
+                </ContainerSpanTh>
+                <ContainerSpanThNumber>
                   <SpanListTh>Preço</SpanListTh>
-                </ContainerSpan>
-                <ContainerSpan>
+                </ContainerSpanThNumber>
+                <ContainerSpanThNumber>
                   <SpanListTh>Qtd.</SpanListTh>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <SpanListTh>Excluir</SpanListTh>
-                </ContainerSpan>
-              </TableHead>
+                </ContainerSpanThNumber>
+                <ContainerSpanThNumber>
+                  <SpanListTh>Desc</SpanListTh>
+                </ContainerSpanThNumber>
+                <ContainerSpanThNumber>
+                  <SpanListTh>Sub</SpanListTh>
+                </ContainerSpanThNumber>
+                <ContainerSpanThBtn>
+                  <SpanListTh></SpanListTh>
+                </ContainerSpanThBtn>
+                <ContainerSpanThBtn>
+                  <SpanListTh></SpanListTh>
+                </ContainerSpanThBtn>
+              
             </DivTabela>
             <ContainerTabelaPdv>
               <TableRowPdv>
                 {products.map((p: Product) => (
                   <ContainerSpan key={p.id}>
-                    <SpanListTd> {p.name} </SpanListTd>
-                    <SpanListTd> {p.price_suggest} </SpanListTd>
-                    <SpanListTd>
+                    <DivListTd> {p.name} </DivListTd>
+                    
+                    
+                    <DivListTdOut> {p.price_suggest} </DivListTdOut>
+                                        
+                    <DivListTdOut>
                       <input style={{ width: '40px' }} name="qtd" />
-                    </SpanListTd>
+                    </DivListTdOut>
+                    <DivListTdOut>
+                    <SpanListTdOut> {p.price_suggest} </SpanListTdOut>
+                    </DivListTdOut>
+                    <DivListTdOut>
+                    <SpanListTdOut> {p.price_suggest} </SpanListTdOut>
+                    </DivListTdOut>
+                    <DivListTdImg>
+                    <img src="/image/adicionar.svg" alt=""/>
+                    </DivListTdImg>
+                    <DivListTdImg>
+                    <img src="/image/lixeirapdv.svg" alt=""/>
+                      </DivListTdImg>
                   </ContainerSpan>
+                  
                 ))}
                 <div>
                   <button>anterior</button>
