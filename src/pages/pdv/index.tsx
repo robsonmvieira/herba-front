@@ -26,18 +26,21 @@ import {
   Th,
   TBody,
   TabelaBody,
-  TdCustomName,
+  BoxCustomName,
   Whapper,
-  TdSpan,
+  Td,
   TdCustomImage,
   WhapperCustomBtn,
   WhapperCustomNumber,
   BoxBodyNumbers,
   InputPdv,
   BtnPreviosNext,
-  DivBtnPreviusNext
+  DivBtnPreviusNext,
+  UncontrolledDropdown,
+  UserName,
+  DivTr
 } from './styles'
-import { NavbarBrand, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
+import { NavbarBrand, DropdownToggle } from 'reactstrap'
 import apiService from '../../services/apiService'
 import Product from '../../components/product'
 import { useRouter } from 'next/router'
@@ -182,9 +185,12 @@ const ListProducts = ({
         </div>
 
         <UncontrolledDropdown setActiveFromChild>
-          <p style={{ color: '#fff' }}>John Doe</p>
+        <UserName>John Doe</UserName>
           <DropdownToggle tag="a" className="nav-link" caret></DropdownToggle>
           <DropdownMenu>
+            <DropdownItem tag="a" active>
+              Fechar Caixa
+            </DropdownItem>
             <DropdownItem tag="a" active>
               Log-Off
             </DropdownItem>
@@ -203,6 +209,7 @@ const ListProducts = ({
               </FormList>
             </ContainerBusca>
 
+          <DivTr>
             <Tr>
               
                 <Whapper>
@@ -224,23 +231,24 @@ const ListProducts = ({
                 <WhapperCustomBtn />
               
             </Tr>
+          </DivTr>
             <TabelaBody>
               <TBody>
                 {products.map((p: Product) => (
                   <TrBody key={p.id}>
-                    <TdCustomName> {p.name} </TdCustomName>
+                    <BoxCustomName><Td> {p.name}</Td></BoxCustomName>
                     
                     
-                    <BoxBodyNumbers> {p.price_suggest} </BoxBodyNumbers>
+                    <BoxBodyNumbers><Td> {p.price_suggest} </Td> </BoxBodyNumbers>
                                         
                     <BoxBodyNumbers>
                     <InputPdv name="qtd" />
                     </BoxBodyNumbers>
                     <BoxBodyNumbers>
-                    <TdSpan> {p.price_suggest} </TdSpan>
+                    <Td> {p.price_suggest} </Td>
                     </BoxBodyNumbers>
                     <BoxBodyNumbers>
-                    <TdSpan> {p.price_suggest} </TdSpan>
+                    <Td> {p.price_suggest} </Td>
                     </BoxBodyNumbers>
                     <TdCustomImage>
                     <img src="/image/adicionar.svg" alt=""/>

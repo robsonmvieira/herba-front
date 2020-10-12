@@ -5,8 +5,29 @@ import {
   NavbarToggler as NT,
   Nav as CN,
   DropdownItem as DDropDow,
-  DropdownMenu as MDropDow
+  DropdownMenu as MDropDow,
+  UncontrolledDropdown as ControleDropDow
 } from 'reactstrap'
+
+export const UncontrolledDropdown = styled(ControleDropDow)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: none !important;
+  padding: none !important;
+   & > p{
+   margin-top: 15px;
+   }
+
+`
+
+export const UserName = styled.p`
+  color: #fff;
+  /* margin: none !important;
+  padding: none !important; */
+
+`
+
 
 export const DropdownMenu = styled(MDropDow)`
   left: -130px;
@@ -102,7 +123,8 @@ export const InputFormList = styled.input`
     margin-top: 20px;
     padding: 20px;
     padding-left: 5px;
-    outline: none;
+    outline: none !important;
+
   }
   /* medium */
   @media (min-width: 498px) {
@@ -117,7 +139,8 @@ export const InputFormList = styled.input`
     margin-left: 20px;
     margin-right: 10px;
     padding-left: 5px;
-    outline: none;
+    outline: none !important;
+
   }
 `
 
@@ -154,6 +177,7 @@ export const BtnList = styled.button`
     border: none;
     font-size: 120%;
     margin-left: 3px;
+    outline: none !important;
   }
 
   /* Medium */
@@ -169,6 +193,8 @@ export const BtnList = styled.button`
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 10px;
+    outline: none !important;
+
   }
 `
 
@@ -207,6 +233,7 @@ export const ContainerTotais = styled.div`
     display: flex;
     flex-direction: column;
     width: 32%;
+    height:650px;
     align-items: center;
     background: #282741;
     margin-top: 20px;
@@ -226,7 +253,7 @@ export const ContainerValores = styled.div`
   @media (min-width: 498px) {
     display: flex;
     width: 90%;
-    margin-top: 20px;
+    margin-top: 32px;
     justify-items: center;
     align-items: center;
   }
@@ -429,6 +456,8 @@ export const BtnFormaPagamento = styled.button`
     margin-top: 15px;
     border: none;
     color: #c4c4c4;
+    outline: none !important;
+
   }
 
   @media (min-width: 498px) {
@@ -448,6 +477,8 @@ export const BtnFormaPagamento = styled.button`
     border: none;
     color: #c4c4c4;
     overflow: auto;
+    outline: none !important;
+
   }
 `
 
@@ -470,7 +501,7 @@ export const BtnPreviosNext = styled.button`
     margin-top: 15px;
     border: none;
     color: #fff;
-    outline: none
+    outline: none !important;
   }
 
   @media (min-width: 498px) {
@@ -490,7 +521,8 @@ export const BtnPreviosNext = styled.button`
     color: #fff;
     overflow: auto;
     margin-top: 15px;
-    outline: none
+    outline: none !important;
+    
 
   }
 `
@@ -516,6 +548,8 @@ export const BtnFinalizar = styled.button`
     margin-left: 35px;
     border: none;
     color: #c4c4c4;
+    outline: none !important;
+
   }
 
   @media (min-width: 498px) {
@@ -535,6 +569,8 @@ export const BtnFinalizar = styled.button`
     color: #c4c4c4;
     margin-top: 30px;
     margin-bottom: 30px;
+    outline: none !important;
+
   }
 `
 
@@ -574,6 +610,8 @@ export const TrBody = styled.div`
     display: flex;
     width: 100%;
     height: 100px;
+    margin-bottom: 10px;
+
   }
   
   
@@ -581,7 +619,9 @@ export const TrBody = styled.div`
     display: flex;
     justify-content:space-around;
     width: 100%;
-    height: 80px;
+    height: 60px;
+    margin-bottom: 10px;
+
 
   }
 
@@ -591,9 +631,9 @@ export const TrBody = styled.div`
     justify-content: space-around;
     justify-items: center;
     width: 100%;
-    height: 120px;
+    height: 80px;
     background: #282741;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 `
 
@@ -603,7 +643,10 @@ export const Whapper = styled.div`
     display: flex;
     justify-content: center;
     width: 60%;
-    height:100%
+    height:100%;
+    background: #1D1F2F;
+
+    
  }
  
  
@@ -611,7 +654,8 @@ export const Whapper = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    height:100%
+    height:100%;
+    background: #1D1F2F;
   }
 
   @media (min-width: 768px) {
@@ -620,8 +664,8 @@ export const Whapper = styled.div`
     justify-content: center;
     justify-items: center;
     width: 30%;
-    height: 70px;
-    background: #282741;
+    height: 40px;
+    background: #1D1F2F;
     margin-bottom: 5px;
   }
 `
@@ -632,14 +676,18 @@ export const WhapperCustomNumber = styled.div`
     display: flex;
     justify-content: center;
     width: 30%;
-    height:100%
+    height:100%;
+    background: #1D1F2F;
+
   }
   
   @media (min-width:425px) and (max-width: 767px) {
     display: flex;
     justify-content: center;
     width: 40%;
-    height:100%
+    height:100%;
+    background: #1D1F2F;
+
   }
 
   @media (min-width: 768px) {
@@ -648,8 +696,8 @@ export const WhapperCustomNumber = styled.div`
     justify-content: center;
     justify-items: center;
     width: 10%;
-    height: 70px;
-    background: #282741;
+    height: 40px;
+    background: #1d1f2f;
     margin-bottom: 5px;
   }
 `
@@ -662,6 +710,8 @@ export const WhapperCustomBtn = styled.div`
     display: flex;
     justify-content: center;
     width: 25%;
+    background: #1D1F2F;
+
 
   }
   
@@ -669,6 +719,8 @@ export const WhapperCustomBtn = styled.div`
     display: flex;
     justify-content: center;
     width: 20%;
+    background: #1D1F2F;
+
   }
 
   @media (min-width: 768px) {
@@ -677,8 +729,8 @@ export const WhapperCustomBtn = styled.div`
     justify-content: center;
     justify-items: center;
     width: 5%;
-    height: 70px;
-    background: #282741;
+    height: 40px;
+    background: #1d1f2f;
     margin-bottom: 5px;
   }
 `
@@ -721,7 +773,7 @@ export const SpanListTd = styled.span`
   }
 `
 
-export const TdSpan = styled.span`
+export const Td = styled.span`
   
   
   @media (max-width: 424px) {
@@ -741,7 +793,7 @@ export const TdSpan = styled.span`
   @media (min-width:425) and(max-width: 767px) {
     background: #282741;
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -753,7 +805,7 @@ export const TdSpan = styled.span`
   @media (min-width: 768px) {
     background: #282741;
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     color: #fff;
     font-size: 1rem;
@@ -766,7 +818,7 @@ export const TdSpan = styled.span`
 
 
 
-export const TdCustomName = styled.div`
+export const BoxCustomName = styled.div`
   
   @media (max-width: 424px){
     background: #282741;
@@ -794,7 +846,8 @@ export const TdCustomName = styled.div`
     justify-items: center;
     color: #fff;
     font-size: 0.9rem;
-    text-align: center
+    text-align: center;
+    flex-wrap: nowrap
   }
 
   @media (min-width: 768px) {
@@ -806,7 +859,9 @@ export const TdCustomName = styled.div`
     font-size: 1rem;
     text-align: center;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    flex-wrap: nowrap
+
   }
 `
 
@@ -900,7 +955,7 @@ export const TdCustomImage = styled.div`
 export const Th = styled.span`
   
   @media (max-width: 424px){
-    background: #282741;
+    background: #1d1f2f;
     width: 100%;
     height: 100%;
     display: flex;
@@ -913,7 +968,7 @@ export const Th = styled.span`
   
   
   @media (min-width: 425px) and (max-width: 767px) {
-    background: #282741;
+    background: #1d1f2f;
     width: 100%;
     height: 100%;
     display: flex;
@@ -925,7 +980,7 @@ export const Th = styled.span`
   }
 
   @media (min-width: 768px) {
-    background: #282741;
+    background: #1d1f2f;
     width: 100%;
     display: flex;
     align-items: center;
@@ -933,18 +988,29 @@ export const Th = styled.span`
     justify-items: center;
     color: #fff;
     font-size: 1.1rem;
-    font-weight: bold;
   }
 `
 export const Tr = styled.div`
+  width: 98%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  background: #1D1F2F;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+export const DivTr = styled.div`
   width: 90%;
-  height: 75px;
+  height: 90px;
   margin-top: 40px;
   background: #282741;
   display: flex;
   justify-content: space-around;
   align-items: center;
 `
+
+
 export const ContainerSpanTotais = styled.div`
     display: flex;
     align-items: center;
