@@ -568,7 +568,7 @@ export const TableHead = styled.div`
   justify-items: center;
   color: #fff;
 `
-export const ContainerSpan = styled.div`
+export const TrBody = styled.div`
   @media (max-width: 424px){
 
     display: flex;
@@ -597,7 +597,7 @@ export const ContainerSpan = styled.div`
   }
 `
 
-export const ContainerSpanTh = styled.div`
+export const Whapper = styled.div`
  
  @media (max-width: 424px){
     display: flex;
@@ -626,7 +626,7 @@ export const ContainerSpanTh = styled.div`
   }
 `
 
-export const ContainerSpanThNumber = styled.div`
+export const WhapperCustomNumber = styled.div`
   
   @media (max-width: 424px){
     display: flex;
@@ -656,7 +656,7 @@ export const ContainerSpanThNumber = styled.div`
 
 
 
-export const ContainerSpanThBtn = styled.div`
+export const WhapperCustomBtn = styled.div`
   
   @media (max-width:424px){
     display: flex;
@@ -721,7 +721,7 @@ export const SpanListTd = styled.span`
   }
 `
 
-export const SpanListTdOut = styled.span`
+export const TdSpan = styled.span`
   
   
   @media (max-width: 424px) {
@@ -766,7 +766,7 @@ export const SpanListTdOut = styled.span`
 
 
 
-export const DivListTd = styled.div`
+export const TdCustomName = styled.div`
   
   @media (max-width: 424px){
     background: #282741;
@@ -828,7 +828,7 @@ export const InputPdv = styled.input`
 
 
 
-export const DivListTdOut = styled.div`
+export const BoxBodyNumbers = styled.div`
   
   @media (max-width: 424px){
     background: #282741;
@@ -870,7 +870,7 @@ export const DivListTdOut = styled.div`
 
 
 
-export const DivListTdImg = styled.div`
+export const TdCustomImage = styled.div`
   @media (max-width: 767px) {
     background: #282741;
     width: 20%;
@@ -897,7 +897,7 @@ export const DivListTdImg = styled.div`
 `
 
 
-export const SpanListTh = styled.span`
+export const Th = styled.span`
   
   @media (max-width: 424px){
     background: #282741;
@@ -936,7 +936,7 @@ export const SpanListTh = styled.span`
     font-weight: bold;
   }
 `
-export const DivTabela = styled.div`
+export const Tr = styled.div`
   width: 90%;
   height: 75px;
   margin-top: 40px;
@@ -959,17 +959,22 @@ export const ContainerSpanTotais = styled.div`
 export const HTitulo = styled.h2`
   color: #fff;
 `
-export const TableRowPdv = styled.div`
+export const TBody = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: space-around
+  justify-content: space-around;
 `
 
-export const ContainerTabelaPdv = styled.div`
+export const TabelaBody = styled.div`
   display: flex;
   flex-direction: row;
   width: 90%;
   justify-content: space-between;
   margin-bottom: 50px;
+`
+
+export const DivBtnPreviusNext = styled.div`
+  display: flex;
+  justify-Content: space-between;
 `
