@@ -147,7 +147,7 @@ export const ContainerBusca = styled.div`
 export const BtnList = styled.button`
   @media (max-width: 497px) {
     width: 30%;
-    margin-top: 20px;
+    margin-top: 21px;
     height: 48px;
     background: #ff6198;
     color: #eff0f5;
