@@ -451,6 +451,53 @@ export const BtnFormaPagamento = styled.button`
   }
 `
 
+
+export const BtnPreviosNext = styled.button`
+  @media (max-width: 497px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    flex-direction: center;
+    width: 80%;
+    height: 50px;
+    padding: none;
+    margin-top: 15px;
+    border: none;
+    color: #fff;
+    outline: none
+  }
+
+  @media (min-width: 498px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 21px;
+    flex-direction: row;
+    width: 30%;
+    height: 40px;
+    border: none;
+    color: #fff;
+    overflow: auto;
+    margin-top: 15px;
+    outline: none
+
+  }
+`
+
+
+
+
 export const BtnFinalizar = styled.button`
   @media (max-width: 497px) {
     display: flex;

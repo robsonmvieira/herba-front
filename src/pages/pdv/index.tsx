@@ -35,7 +35,8 @@ import {
   ContainerSpanThBtn,
   ContainerSpanThNumber,
   DivListTdOut,
-  InputPdv
+  InputPdv,
+  BtnPreviosNext
 } from './styles'
 import { NavbarBrand, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
 import apiService from '../../services/apiService'
@@ -253,9 +254,9 @@ const ListProducts = ({
                   </ContainerSpan>
                   
                 ))}
-                <div>
-                  <button onClick={previusPage}>anterior</button>
-                  <button onClick={nextProducts}>Próximo</button>
+                <div style={{display: 'flex', justifyContent: "space-between"}}>
+                  <BtnPreviosNext onClick={previusPage}><img src="/image/left.svg" /> anterior</BtnPreviosNext>
+                  <BtnPreviosNext onClick={nextProducts}> Próximo <img src="/image/right.svg" /></BtnPreviosNext>
                 </div>
               </TableRowPdv>
             </ContainerTabelaPdv>
