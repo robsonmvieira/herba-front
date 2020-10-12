@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { formatUserName } from '../../utils/formatUserName'
+import React, { useCallback, useState } from 'react'
+// import { formatUserName } from '../../utils/formatUserName'
 import { GetServerSideProps, InferGetStaticPropsType } from 'next'
 import {
   Navbar,
@@ -25,7 +25,6 @@ import {
   DivTabela,
   ContainerSpan,
   SpanListTh,
-  TableRow,
   SpanListTd,
   TableRowPdv,
   ContainerTabelaPdv
@@ -33,7 +32,7 @@ import {
 import { NavbarBrand, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
 import apiService from '../../services/apiService'
 import Product from '../../components/product'
-
+import { useRouter } from 'next/router'
 interface Product {
   id: string
   name: string
@@ -71,20 +70,67 @@ export const getServerSideProps: GetServerSideProps = async params => {
   //   params.res.end()
   //   return { props: {} }
   // }
-  const response = await apiService.get<Product[]>('/products?pages=1', {
-    // headers: { cookie: cookie || '' }
-  })
-  const products = response.data
+  const { pages } = params.query
+  if (pages) {
+    const response = await apiService.get<Product[]>(
+      `/products?pages=${pages}`
+      // {
+      //   // headers: { cookie: cookie || '' }
+      // }
+    )
+    const productsList = response.data
+    // const userName = formatUserName(cookie)
+    return { props: { productsList } }
+  }
+  const response = await apiService.get<Product[]>(
+    `/products?pages=${0}`
+    // {
+    //   // headers: { cookie: cookie || '' }
+    // }
+  )
+  const productsList = response.data
   // const userName = formatUserName(cookie)
-  console.log(products)
-  return { props: { products } }
+  return { props: { productsList } }
 }
+
 const ListProducts = ({
-  products,
-  userName
+  productsList
 }: InferGetStaticPropsType<typeof getServerSideProps>) => {
+  const router = useRouter()
+
   const [isOpen, setIsOpen] = useState(false)
+
   const toggle = () => setIsOpen(!isOpen)
+
+  const [products, setProducts] = useState(productsList)
+
+  let currentPage = router.query.pages ? Number(router.query.pages) : 1
+
+  const nextProducts = useCallback(async () => {
+    // verify if current page is 0 or NaN
+    if (currentPage <= 0 || currentPage !== Number(currentPage)) {
+      const response = await apiService.get(`/products?pages=${1}`)
+      currentPage++
+      setProducts(response.data)
+    }
+
+    // verify if current page is equal 1
+    if (currentPage === 1) {
+      const response = await apiService.get(
+        `/products?pages=${currentPage + 1}`
+      )
+      currentPage++
+      setProducts(response.data)
+    } else {
+      // then current page is biggest than one
+      const response = await apiService.get(
+        `/products?pages=${currentPage + 1}`
+      )
+      currentPage++
+      setProducts(response.data)
+    }
+  }, [currentPage])
+
   return (
     <div>
       <Navbar light expand="ml">
@@ -95,7 +141,7 @@ const ListProducts = ({
         </div>
 
         <UncontrolledDropdown setActiveFromChild>
-          <p style={{ color: '#fff' }}>{userName}</p>
+          <p style={{ color: '#fff' }}>John Doe</p>
           <DropdownToggle tag="a" className="nav-link" caret></DropdownToggle>
           <DropdownMenu>
             <DropdownItem tag="a" active>
@@ -141,6 +187,10 @@ const ListProducts = ({
                     </SpanListTd>
                   </ContainerSpan>
                 ))}
+                <div>
+                  <button>anterior</button>
+                  <button onClick={nextProducts}>Próximo</button>
+                </div>
               </TableRowPdv>
             </ContainerTabelaPdv>
           </ContainerProducts>
