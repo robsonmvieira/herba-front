@@ -131,6 +131,21 @@ const ListProducts = ({
     }
   }, [currentPage])
 
+  const previusPage = useCallback(async () => {
+    // verify if current page is one or NaN
+    if (currentPage === 1 || currentPage !== Number(currentPage)) {
+      const response = await apiService.get(`/products?pages=${1}`)
+      // currentPage++
+      setProducts(response.data)
+    } else {
+      // then current page is bigger than one
+      const response = await apiService.get(
+        `/products?pages=${currentPage - 1}`
+      )
+      currentPage--
+      setProducts(response.data)
+    }
+  }, [currentPage])
   return (
     <div>
       <Navbar light expand="ml">
@@ -188,7 +203,7 @@ const ListProducts = ({
                   </ContainerSpan>
                 ))}
                 <div>
-                  <button>anterior</button>
+                  <button onClick={previusPage}>anterior</button>
                   <button onClick={nextProducts}>Próximo</button>
                 </div>
               </TableRowPdv>
