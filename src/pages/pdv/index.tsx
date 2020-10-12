@@ -38,9 +38,10 @@ import {
   DivBtnPreviusNext,
   UncontrolledDropdown,
   UserName,
-  ContainerTh
+  ContainerTh,
+  DropdownToggle
 } from './styles'
-import { NavbarBrand, DropdownToggle } from 'reactstrap'
+import { NavbarBrand  } from 'reactstrap'
 import apiService from '../../services/apiService'
 import Product from '../../components/product'
 import { useRouter } from 'next/router'

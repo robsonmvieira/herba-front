@@ -5,8 +5,13 @@ import {
   Nav as CN,
   DropdownItem as DDropDow,
   DropdownMenu as MDropDow,
-  UncontrolledDropdown as ControleDropDow
+  UncontrolledDropdown as ControleDropDow,
+  DropdownToggle as DDropdownToggle
 } from 'reactstrap'
+
+export const DropdownToggle = styled(DDropdownToggle)`
+  cursor: pointer;
+`
 
 export const UncontrolledDropdown = styled(ControleDropDow)`
   display: flex;
@@ -31,10 +36,12 @@ export const UserName = styled.p`
 export const DropdownMenu = styled(MDropDow)`
   left: -130px;
   background: #282741;
+
 `
 
 export const DropdownItem = styled(DDropDow)`
   width: 100%;
+  cursor: pointer;
 `
 export const Navbar = styled(RN)`
   background: #282741;
