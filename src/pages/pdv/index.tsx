@@ -103,8 +103,13 @@ const ListProducts = ({
   const toggle = () => setIsOpen(!isOpen)
 
   const [products, setProducts] = useState(productsList)
+  const [termOfFind, setTermOfFind] = useState('')
 
   let currentPage = router.query.pages ? Number(router.query.pages) : 1
+
+  // function searchProducHandler(e) {
+
+  // }
 
   const nextProducts = useCallback(async () => {
     // verify if current page is 0 or NaN
@@ -146,6 +151,19 @@ const ListProducts = ({
       setProducts(response.data)
     }
   }, [currentPage])
+
+  const searchProductHandler = useCallback(async termOfFind => {
+    const cacheProducts = products
+    const response = await apiService.get(
+      `/associates/productByLike/?terms=${termOfFind}`
+    )
+    setTermOfFind(termOfFind)
+    setProducts(response.data)
+    if (termOfFind.length === 0) {
+      setProducts(cacheProducts)
+    }
+  }, [])
+
   return (
     <div>
       <Navbar light expand="ml">
@@ -170,7 +188,9 @@ const ListProducts = ({
           <ContainerProducts>
             <ContainerBusca>
               <FormList>
-                <InputFormList />
+                <InputFormList
+                  onChange={e => searchProductHandler(e.target.value)}
+                />
                 <BtnList>Cancelar</BtnList>
               </FormList>
             </ContainerBusca>
