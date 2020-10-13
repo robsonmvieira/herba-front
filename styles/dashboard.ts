@@ -67,7 +67,7 @@ export const DivImg = styled.div`
   align-items: center;
 `
 
-export const Title = styled.span`
+export const Title = styled.a`
   width: 100%;
   height: 100%;
   text-align: center;

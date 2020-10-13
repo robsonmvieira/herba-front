@@ -22,7 +22,7 @@ const dashAdmin = () => {
             <IconsTags>
               <BoxSpan>
                 <BoxCustom>
-                  <Title>Produtos</Title>
+                  <Title href={'/dashboard/produtos'}>Produtos</Title>
                 </BoxCustom>
                 <DivImg>
                   <img src="/image/produtos.svg" alt="" />
@@ -34,7 +34,7 @@ const dashAdmin = () => {
             <IconsTags>
               <BoxSpan>
                 <BoxCustom>
-                  <Title>Clientes</Title>
+                  <Title href={'/dashboard/clientes'}>Clientes</Title>
                 </BoxCustom>
                 <DivImg>
                   <img src="/image/clientes.svg" alt="" />
@@ -75,7 +75,7 @@ const dashAdmin = () => {
             <IconsTags>
               <BoxSpan>
                 <BoxCustom>
-                  <Title>PDV</Title>
+                  <Title href={'/pdv'}>PDV</Title>
                 </BoxCustom>
                 <DivImg>
                   <img src="/image/codebar.svg" alt="" />
@@ -88,7 +88,7 @@ const dashAdmin = () => {
             <IconsTags>
               <BoxSpan>
                 <BoxCustom>
-                  <Title>Caixa</Title>
+                  <Title href={'/pdd'}>PDD</Title>
                 </BoxCustom>
                 <DivImg>
                   <img src="/image/closebox.svg" alt="" />
