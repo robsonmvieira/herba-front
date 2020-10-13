@@ -8,7 +8,7 @@ const Sidebar = () => {
     <>
       <Container>
         <ContainerSide style={{ marginTop: '92px' }}>
-          <Link href="/dashboard/products">
+          <Link href="/dashboard/produtos">
             <a style={{ textDecoration: 'none', color: '#fff' }}>Produtos</a>
           </Link>
         </ContainerSide>
@@ -23,6 +23,15 @@ const Sidebar = () => {
           <Link href="/Estatisticas">
             <a style={{ textDecoration: 'none', color: '#fff' }}>
               Estatísticas
+            </a>
+          </Link>
+        </ContainerSide>
+
+
+        <ContainerSide>
+          <Link href="/dashboard">
+            <a style={{ textDecoration: 'none', color: '#fff' }}>
+              Painel
             </a>
           </Link>
         </ContainerSide>
