@@ -121,9 +121,7 @@ const dashProdutos = ({ products }) => {
           <ContainerListaLg>
           <ContainerBusca>
               <FormList>
-                <InputFormList
-                  
-                />
+                <InputFormList/>
                 <BtnList>Cancelar</BtnList>
               </FormList>
             </ContainerBusca>

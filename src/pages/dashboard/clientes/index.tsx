@@ -7,16 +7,27 @@ import {
   LabelClienteDashboardMenos,
   Container,
   ContainerListaLg,
-  TableHead,
-  TableRow,
+  Tr,
+  TabelaBody,
   ContainerTags,
-  SpanListTh,
-  SpanListTd,
   ContainerSide,
   ContainerConteudo,
   ContainerListAdicionar,
   Containeradicionar,
-  ContainerSpan
+  Whapper,
+  WhapperCustomName,
+  ContainerSpan,
+  Th,
+  TBody,
+  BoxTdCustomName,
+  BoxTd,
+  Td,
+  DivBtnPreviusNext,
+  BtnPreviosNext,
+  ContainerBusca,
+  FormList,
+  InputFormList,
+  BtnList
 } from './styles'
 
 import Sidebar from '../../../components/sidebar'
@@ -84,67 +95,50 @@ const dashClientes = () => {
               </Containeradicionar>
             </ContainerListAdicionar>
 
-            <TableHead>
-              <ContainerSpan>
-                <SpanListTh>Nome</SpanListTh>
-              </ContainerSpan>
-              <ContainerSpan>
-                <SpanListTh>Telefone</SpanListTh>
-              </ContainerSpan>
-              <ContainerSpan>
-                <SpanListTh>Compra</SpanListTh>
-              </ContainerSpan>
-              <ContainerSpan>
-                <SpanListTh>Edit</SpanListTh>
-              </ContainerSpan>
-              <ContainerSpan>
-                <SpanListTh>Del</SpanListTh>
-              </ContainerSpan>
-            </TableHead>
-            <TableRow>
-              <SpanListTd>Anderson Cooper</SpanListTd>
-              <SpanListTd>21964555580</SpanListTd>
-              <SpanListTd>20/05/2020</SpanListTd>
-              <SpanListTd>
-                <img src="/image/edit.svg" alt="" />
-              </SpanListTd>
-              <SpanListTd>
-                <img src="/image/lixeira.svg" alt="" />
-              </SpanListTd>
-            </TableRow>
-            <TableRow>
-              <SpanListTd>Anderson Cooper</SpanListTd>
-              <SpanListTd>21964555580</SpanListTd>
-              <SpanListTd>20/05/2020</SpanListTd>
-              <SpanListTd>
-                <img src="/image/edit.svg" alt="" />
-              </SpanListTd>
-              <SpanListTd>
-                <img src="/image/lixeira.svg" alt="" />
-              </SpanListTd>
-            </TableRow>
-            <TableRow>
-              <SpanListTd>Anderson Cooper</SpanListTd>
-              <SpanListTd>21964555580</SpanListTd>
-              <SpanListTd>20/05/2020</SpanListTd>
-              <SpanListTd>
-                <img src="/image/edit.svg" alt="" />
-              </SpanListTd>
-              <SpanListTd>
-                <img src="/image/lixeira.svg" alt="" />
-              </SpanListTd>
-            </TableRow>
-            <TableRow>
-              <SpanListTd>Anderson Cooper</SpanListTd>
-              <SpanListTd>21964555580</SpanListTd>
-              <SpanListTd>20/05/2020</SpanListTd>
-              <SpanListTd>
-                <img src="/image/edit.svg" alt="" />
-              </SpanListTd>
-              <SpanListTd>
-                <img src="/image/lixeira.svg" alt="" />
-              </SpanListTd>
-            </TableRow>
+            <ContainerBusca>
+              <FormList>
+                <InputFormList/>
+                <BtnList>Cancelar</BtnList>
+              </FormList>
+            </ContainerBusca>
+
+
+            <Tr>
+              <WhapperCustomName>
+                <Th>Nome</Th>
+              </WhapperCustomName>
+              <Whapper>
+                <Th>Telefone</Th>
+              </Whapper>
+              <Whapper>
+                <Th>Compra</Th>
+              </Whapper>
+              <Whapper>
+                <Th>Edit</Th>
+              </Whapper>
+              <Whapper>
+                <Th>Del</Th>
+              </Whapper>
+            </Tr>
+          <TabelaBody>
+            <TBody>
+              <BoxTdCustomName><Td>Anderson Cooper</Td></BoxTdCustomName>
+              <BoxTd><Td>21964555580</Td></BoxTd>
+              <BoxTd><Td>20/05/2020</Td></BoxTd>
+              <BoxTd>
+              <img src="/image/edit.svg" alt="" />
+              </BoxTd>
+              <BoxTd>
+              <img src="/image/lixeira.svg" alt="" />
+              </BoxTd>   
+
+              </TBody>
+          </TabelaBody>
+                <DivBtnPreviusNext >
+                  <BtnPreviosNext ><img src="/image/left.svg" /> anterior</BtnPreviosNext>
+                  <BtnPreviosNext > Próximo <img src="/image/right.svg" /></BtnPreviosNext>
+                </DivBtnPreviusNext>
+            
           </ContainerListaLg>
         </ContainerConteudo>
       </Container>
