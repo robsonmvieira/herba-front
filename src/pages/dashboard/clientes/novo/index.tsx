@@ -31,7 +31,14 @@ import {
   LabelParaCheckBox,
   ContainerCheckBoxDesktop,
   BtnAdicionarDesktop,
-  ContainerSpan
+  ContainerSpan,
+  ContainerAdicionarDesktopCustom,
+  BoxAdicionarDesktopCustom,
+  DivCheckBoxCustomPremium,
+  CheckBoxDesktopCustomPremium,
+  LabelParaCheckBoxCustomPremium,
+  ContainerListAdicionarCustomMobile,
+  InputComDivisaoCustomMobile
 } from './styles'
 
 import Sidebar from '../../../../components/sidebar'
@@ -117,14 +124,14 @@ const dashClientesNovo = () => {
               </ContainerListAdicionarDesktop> */}
 
               <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktop style={{ width: '40%' }}>
+                <ContainerAdicionarDesktopCustom >
                   <LabelParaDesktop>Titulo:</LabelParaDesktop>
                   <InputDesktop />
-                </ContainerAdicionarDesktop>
-                <ContainerAdicionarDesktop style={{ width: '40%' }}>
+                </ContainerAdicionarDesktopCustom>
+                <ContainerAdicionarDesktopCustom >
                   <LabelParaDesktop>Data de Nascimento:</LabelParaDesktop>
                   <InputDesktop />
-                </ContainerAdicionarDesktop>
+                </ContainerAdicionarDesktopCustom>
               </ContainerListAdicionarDesktop>
 
               <ContainerListAdicionarDesktop>
@@ -143,14 +150,14 @@ const dashClientesNovo = () => {
               </ContainerListAdicionarDesktop>
 
               <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktop style={{ width: '40%' }}>
+                <ContainerAdicionarDesktopCustom>
                   <LabelParaDesktop>Email:</LabelParaDesktop>
                   <InputDesktop />
-                </ContainerAdicionarDesktop>
-                <ContainerAdicionarDesktop style={{ width: '40%' }}>
+                </ContainerAdicionarDesktopCustom>
+                <ContainerAdicionarDesktopCustom>
                   <LabelParaDesktop>Profissão:</LabelParaDesktop>
                   <InputDesktop />
-                </ContainerAdicionarDesktop>
+                </ContainerAdicionarDesktopCustom>
               </ContainerListAdicionarDesktop>
 
               <ContainerListAdicionarDesktop>
@@ -345,116 +352,122 @@ const dashClientesNovo = () => {
               {/* aqui termina os check boxs >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
               <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktop
-                  style={{ width: '100%', marginTop: '20px' }}
-                >
+                <BoxAdicionarDesktopCustom>
                   <LabelParaDesktop>Outros:</LabelParaDesktop>
                   <InputDesktop />
-                </ContainerAdicionarDesktop>
+                </BoxAdicionarDesktopCustom>
               </ContainerListAdicionarDesktop>
 
               <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktop style={{ width: '100%' }}>
+              <DivCheckBoxCustomPremium>
+                    <CheckBoxDesktopCustomPremium type="checkbox" />
+                    <LabelParaCheckBoxCustomPremium>Cliente Premium</LabelParaCheckBoxCustomPremium>
+                    <img src="/image/premium.svg" alt=""/>
+                  </DivCheckBoxCustomPremium>
+              </ContainerListAdicionarDesktop>
+
+              <ContainerListAdicionarDesktop>
+                <BoxAdicionarDesktopCustom >
                   <BtnAdicionarDesktop> Adicionar </BtnAdicionarDesktop>
-                </ContainerAdicionarDesktop>
+                </BoxAdicionarDesktopCustom>
               </ContainerListAdicionarDesktop>
 
               {/* Aqui é mobile  */}
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Nome:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Data Nascimento:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Sexo:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Telefone:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Cpf:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Email:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Profissão:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Enderço:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Bairro:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Cidade:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Estado:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Peso:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Altura:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Alergias:</LabelInput>
-                  <Input style={{ width: '100%', background: '#282741' }} />
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
 
@@ -619,11 +632,15 @@ const dashClientesNovo = () => {
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Outros:</LabelInput>
-                  <Input
-                    style={{ width: '100%', background: '#282741' }}
-                  ></Input>
+                  <Input/>
                 </Containeradicionar>
               </ContainerListAdicionar>
+
+              <ContainerListAdicionarCustomMobile>
+                  <InputComDivisaoCustomMobile type="checkbox"></InputComDivisaoCustomMobile>
+                  <LabelInputComDivisao>Cliente Premium:</LabelInputComDivisao>
+                  <img src="/image/premium.svg" alt=""/>
+                  </ContainerListAdicionarCustomMobile>
 
               <ContainerListAdicionar>
                 <Containeradicionar>

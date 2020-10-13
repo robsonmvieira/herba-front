@@ -10,7 +10,7 @@ export const Container = styled.div`
   align-items: flex-start;
 `
 
-export const DivDivindoTela = styled.div`
+export const ContainerGrid = styled.div`
   width: 100%;
   height: 30%;
   display: flex;
@@ -18,7 +18,7 @@ export const DivDivindoTela = styled.div`
   justify-content: center;
   align-items: center;
 `
-export const DivCortandoTela = styled.div`
+export const Grid = styled.div`
   width: 30%;
   height: 100%;
   display: flex;
@@ -51,7 +51,7 @@ export const IconsTags = styled.div`
   justify-items: center;
 `
 
-export const DivSpan = styled.div`
+export const BoxCustom = styled.div`
   width: 100%;
   height: 20%;
   display: flex;
@@ -67,14 +67,14 @@ export const DivImg = styled.div`
   align-items: center;
 `
 
-export const SpanTitulo = styled.span`
+export const Title = styled.a`
   width: 100%;
   height: 100%;
   text-align: center;
   color: #fff;
 `
 
-export const DivIconTags = styled.div`
+export const BoxSpan = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -82,16 +82,17 @@ export const DivIconTags = styled.div`
   justify-content: center;
   align-items: center;
   justify-items: flex-end;
+  cursor: pointer;
   :hover {
     background-color: #2fc84c;
     font-weight: bolder;
     overflow: hidden;
     width: 100%;
-    border-radius: 40px;
     -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     -moz-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     -ms-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     -o-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+
   }
 `

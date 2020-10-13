@@ -8,16 +8,32 @@ import {
   LabelProdutoDashboardMenos,
   Container,
   ContainerListaLg,
-  TableHead,
-  TableRow,
+  Tr,
+  TrBody,
   ContainerTags,
-  SpanListTh,
-  SpanListTd,
+  Th,
+  Td,
   ContainerSide,
   ContainerConteudo,
   ContainerListAdicionar,
   Containeradicionar,
-  ContainerSpan
+  ContainerSpan,
+  ContainerTh,
+  Whapper,
+  TabelaBody,
+  TBody,
+  BoxTd,
+  BoxTdCustomName,
+  WhapperCustomName,
+  DivBtnPreviusNext,
+  BtnPreviosNext,
+  ContainerBusca,
+  FormList,
+  InputFormList,
+  BtnList
+  
+  
+  
 } from './styles'
 
 import Sidebar from '../../../components/sidebar'
@@ -42,8 +58,11 @@ interface IProduct {
 
 const dashProdutos = ({ products }) => {
   // const [listProducts, setlistProducts] = useState<IProduct[]>(products)
+
+  
   return (
     <>
+
       <Menu />
       <Container>
         <ContainerSide>
@@ -97,78 +116,76 @@ const dashProdutos = ({ products }) => {
             </ContainerTags>
           </ContainerIconsLg>
 
+          
+
           <ContainerListaLg>
-            <ContainerListAdicionar>
-              <Containeradicionar>
-                <img src="\image\mais.svg" alt="icone " />
-              </Containeradicionar>
-            </ContainerListAdicionar>
+          <ContainerBusca>
+              <FormList>
+                <InputFormList/>
+                <BtnList>Cancelar</BtnList>
+              </FormList>
+            </ContainerBusca>
 
-            <TableHead>
-              <SpanListTh>Nome</SpanListTh>
-              <SpanListTh>Preço</SpanListTh>
-              <SpanListTh>Estoque</SpanListTh>
-              <SpanListTh>Edit</SpanListTh>
-              <SpanListTh>Del</SpanListTh>
-            </TableHead>
+            <ContainerTh>
+            <Tr>
+            <WhapperCustomName>
+              <Th>Nome</Th>
+            </WhapperCustomName>
+            <Whapper>
+
+              <Th>Preço</Th>
+            </Whapper>
+            <Whapper>
+
+              <Th>Estoque</Th>
+            </Whapper>
+            <Whapper>
+
+              <Th>Edit</Th>
+            </Whapper>
+            <Whapper>
+
+              <Th>Del</Th>
+            </Whapper>
+
+            </Tr>
+            </ContainerTh>
+
+            <TabelaBody>
+            <TBody>
+            
             {products.map(p => (
-              <TableRow key={p.id}>
-                <SpanListTd>{p.name}</SpanListTd>
-                <SpanListTd>{p.price_suggest}</SpanListTd>
-                <SpanListTd>{p.quantity}</SpanListTd>
-
-                <SpanListTd>
+              <TrBody key={p.id}>
+                <BoxTdCustomName>
+                <Td>{p.name}</Td>
+                </BoxTdCustomName>
+                <BoxTd>
+                <Td>{p.price_suggest}</Td>
+                </BoxTd>
+                <BoxTd>
+                <Td>{p.quantity}</Td>
+                </BoxTd>
+                <BoxTd>
+                <Td>
                   <img src="/image/edit.svg" alt="" />
-                </SpanListTd>
-                <SpanListTd>
+                </Td>
+                </BoxTd>
+                <BoxTd>
+                <Td>
                   <img src="/image/lixeira.svg" alt="" />
-                </SpanListTd>
-              </TableRow>
+                </Td>
+                </BoxTd>
+              </TrBody>
             ))}
-            {/* <TableRow>
-              <SpanListTd>Sopa Magica </SpanListTd>
-              <SpanListTd>R$15,00</SpanListTd>
-              <SpanListTd>20</SpanListTd>
-              <SpanListTd>
-                <img src="/image/edit.svg" alt="" />
-              </SpanListTd>
-              <SpanListTd>
-                <img src="/image/lixeira.svg" alt="" />
-              </SpanListTd>
-            </TableRow>
-            <TableRow>
-              <SpanListTd>Sopa Magica </SpanListTd>
-              <SpanListTd>R$15,00</SpanListTd>
-              <SpanListTd>20</SpanListTd>
-              <SpanListTd>
-                <img src="/image/edit.svg" alt="" />
-              </SpanListTd>
-              <SpanListTd>
-                <img src="/image/lixeira.svg" alt="" />
-              </SpanListTd>
-            </TableRow>
-            <TableRow>
-              <SpanListTd>Sopa Magica </SpanListTd>
-              <SpanListTd>R$15,00</SpanListTd>
-              <SpanListTd>20</SpanListTd>
-              <SpanListTd>
-                <img src="/image/edit.svg" alt="" />
-              </SpanListTd>
-              <SpanListTd>
-                <img src="/image/lixeira.svg" alt="" />
-              </SpanListTd>
-            </TableRow>
-            <TableRow>
-              <SpanListTd>Sopa Magica </SpanListTd>
-              <SpanListTd>R$15,00</SpanListTd>
-              <SpanListTd>20</SpanListTd>
-              <SpanListTd>
-                <img src="/image/edit.svg" alt="" />
-              </SpanListTd>
-              <SpanListTd>
-                <img src="/image/lixeira.svg" alt="" />
-              </SpanListTd>
-            </TableRow> */}
+
+                <DivBtnPreviusNext >
+                  <BtnPreviosNext ><img src="/image/left.svg" /> anterior</BtnPreviosNext>
+                  <BtnPreviosNext > Próximo <img src="/image/right.svg" /></BtnPreviosNext>
+                </DivBtnPreviusNext>
+
+           </TBody>
+           </TabelaBody>
+           
           </ContainerListaLg>
         </ContainerConteudo>
       </Container>
@@ -195,4 +212,5 @@ export const getServerSideProps: GetServerSideProps = async params => {
   return {
     props: { products }
   }
+  
 }

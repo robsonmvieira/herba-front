@@ -3,12 +3,12 @@ import Menu from '../../components/Menu'
 
 import {
   Container,
-  DivDivindoTela,
-  DivCortandoTela,
+  ContainerGrid,
+  Grid,
   IconsTags,
-  SpanTitulo,
-  DivIconTags,
-  DivSpan,
+  Title,
+  BoxSpan,
+  BoxCustom,
   DivImg
 } from '../../../styles/dashboard'
 
@@ -17,111 +17,111 @@ const dashAdmin = () => {
     <>
       <Menu />
       <Container>
-        <DivDivindoTela>
-          <DivCortandoTela>
+        <ContainerGrid>
+          <Grid>
             <IconsTags>
-              <DivIconTags>
-                <DivSpan>
-                  <SpanTitulo>Produtos</SpanTitulo>
-                </DivSpan>
+              <BoxSpan>
+                <BoxCustom>
+                  <Title href={'/dashboard/produtos'}>Produtos</Title>
+                </BoxCustom>
                 <DivImg>
                   <img src="/image/produtos.svg" alt="" />
                 </DivImg>
-              </DivIconTags>
+              </BoxSpan>
             </IconsTags>
-          </DivCortandoTela>
-          <DivCortandoTela>
+          </Grid>
+          <Grid>
             <IconsTags>
-              <DivIconTags>
-                <DivSpan>
-                  <SpanTitulo>Clientes</SpanTitulo>
-                </DivSpan>
+              <BoxSpan>
+                <BoxCustom>
+                  <Title href={'/dashboard/clientes'}>Clientes</Title>
+                </BoxCustom>
                 <DivImg>
                   <img src="/image/clientes.svg" alt="" />
                 </DivImg>
-              </DivIconTags>
+              </BoxSpan>
             </IconsTags>
-          </DivCortandoTela>
+          </Grid>
 
-          <DivCortandoTela>
+          <Grid>
             <IconsTags>
-              <DivIconTags>
-                <DivSpan>
-                  <SpanTitulo>Controles</SpanTitulo>
-                </DivSpan>
+              <BoxSpan>
+                <BoxCustom>
+                  <Title>Controles</Title>
+                </BoxCustom>
                 <DivImg>
                   <img src="/image/estatistica.svg" alt="" />
                 </DivImg>
-              </DivIconTags>
+              </BoxSpan>
             </IconsTags>
-          </DivCortandoTela>
-        </DivDivindoTela>
+          </Grid>
+        </ContainerGrid>
 
-        <DivDivindoTela>
-          <DivCortandoTela>
+        <ContainerGrid>
+          <Grid>
             <IconsTags>
-              <DivIconTags>
-                <DivSpan>
-                  <SpanTitulo>Perfil</SpanTitulo>
-                </DivSpan>
+              <BoxSpan>
+                <BoxCustom>
+                  <Title>Perfil</Title>
+                </BoxCustom>
                 <DivImg>
                   <img src="/image/admin.svg" alt="" />
                 </DivImg>
-              </DivIconTags>
+              </BoxSpan>
             </IconsTags>
-          </DivCortandoTela>
+          </Grid>
 
-          <DivCortandoTela>
+          <Grid>
             <IconsTags>
-              <DivIconTags>
-                <DivSpan>
-                  <SpanTitulo>PDV</SpanTitulo>
-                </DivSpan>
+              <BoxSpan>
+                <BoxCustom>
+                  <Title href={'/pdv'}>PDV</Title>
+                </BoxCustom>
                 <DivImg>
                   <img src="/image/codebar.svg" alt="" />
                 </DivImg>
-              </DivIconTags>
+              </BoxSpan>
             </IconsTags>
-          </DivCortandoTela>
+          </Grid>
 
-          <DivCortandoTela>
+          <Grid>
             <IconsTags>
-              <DivIconTags>
-                <DivSpan>
-                  <SpanTitulo>Caixa</SpanTitulo>
-                </DivSpan>
+              <BoxSpan>
+                <BoxCustom>
+                  <Title href={'/pdd'}>PDD</Title>
+                </BoxCustom>
                 <DivImg>
                   <img src="/image/closebox.svg" alt="" />
                 </DivImg>
-              </DivIconTags>
+              </BoxSpan>
             </IconsTags>
-          </DivCortandoTela>
-        </DivDivindoTela>
-        <DivDivindoTela>
-          <DivCortandoTela>
+          </Grid>
+        </ContainerGrid>
+        <ContainerGrid>
+          <Grid>
             <IconsTags>
-              <DivIconTags>
-                <SpanTitulo></SpanTitulo>
-              </DivIconTags>
+              <BoxSpan>
+                <Title></Title>
+              </BoxSpan>
             </IconsTags>
-          </DivCortandoTela>
+          </Grid>
 
-          <DivCortandoTela>
+          <Grid>
             <IconsTags>
-              <DivIconTags>
-                <SpanTitulo></SpanTitulo>
-              </DivIconTags>
+              <BoxSpan>
+                <Title></Title>
+              </BoxSpan>
             </IconsTags>
-          </DivCortandoTela>
+          </Grid>
 
-          <DivCortandoTela>
+          <Grid>
             <IconsTags>
-              <DivIconTags>
-                <SpanTitulo></SpanTitulo>
-              </DivIconTags>
+              <BoxSpan>
+                <Title></Title>
+              </BoxSpan>
             </IconsTags>
-          </DivCortandoTela>
-        </DivDivindoTela>
+          </Grid>
+        </ContainerGrid>
       </Container>
     </>
   )
