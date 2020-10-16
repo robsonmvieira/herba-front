@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState, useRef, useEffect } from 'react'
 // import { formatUserName } from '../../utils/formatUserName'
 import { GetServerSideProps, InferGetStaticPropsType } from 'next'
 import {
@@ -9,7 +9,7 @@ import {
   BtnList,
   SpanDetalhes,
   ContainerProducts,
-  ContainerTotais,
+  ContainerTotal,
   ContainerVenda,
   LabelSubtotalDesconto,
   FormSubtotalDesconto,
@@ -41,9 +41,9 @@ import {
   ContainerTh,
   DropdownToggle
 } from './styles'
-import { NavbarBrand  } from 'reactstrap'
+import { NavbarBrand } from 'reactstrap'
 import apiService from '../../services/apiService'
-import Product from '../../components/product'
+// import Product from '../../components/product'
 import { useRouter } from 'next/router'
 // import { nextPagePagination } from '../../utils/nexPagePagination'
 interface Product {
@@ -51,7 +51,19 @@ interface Product {
   name: string
   sku: string
   price_suggest: string
+  inputName: string
 }
+
+interface ProductItemSale {
+  product_quantity: number
+  product_pdv_id: string
+}
+// interface SaleInput {
+//   owner_id: string
+//   descount: number
+//   type_of_payment: string
+//   itemsSalesPDV: ProductItemSale[]
+// }
 
 export const getServerSideProps: GetServerSideProps = async params => {
   // const cookie = params.req.headers.cookie
@@ -91,7 +103,11 @@ export const getServerSideProps: GetServerSideProps = async params => {
       //   // headers: { cookie: cookie || '' }
       // }
     )
-    const productsList = response.data
+    const res = response.data.map(p => ({
+      ...p,
+      inputName: `${p.id}+${p.name}`
+    }))
+    const productsList = res
     // const userName = formatUserName(cookie)
     return { props: { productsList } }
   }
@@ -101,7 +117,11 @@ export const getServerSideProps: GetServerSideProps = async params => {
     //   // headers: { cookie: cookie || '' }
     // }
   )
-  const productsList = response.data
+  const res = response.data.map(p => ({
+    ...p,
+    inputName: `${p.id}+${p.name}`
+  }))
+  const productsList = res
   // const userName = formatUserName(cookie)
   return { props: { productsList } }
 }
@@ -110,26 +130,44 @@ const ListProducts = ({
   productsList
 }: InferGetStaticPropsType<typeof getServerSideProps>) => {
   const router = useRouter()
-
+  const inputRefs = useRef([])
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
 
   const [products, setProducts] = useState(productsList)
+
   const [termOfFind, setTermOfFind] = useState('')
+
+  let option = ''
+
+  // useEffect(() => {}, [products])
+  // useEffect(() => {}, [inputRefs])
+  const typePaymentHandler = (value: number) => {
+    if (value === 1) {
+      option = 'dinheiro'
+    } else if (value === 2) {
+      option = 'debito'
+    } else {
+      option = 'credito'
+    }
+    return value
+  }
 
   let currentPage = router.query.pages ? Number(router.query.pages) : 1
 
-  // function searchProducHandler(e) {
-
-  // }
+  function searchProducHandler(e) {}
 
   const nextProducts = useCallback(async () => {
     // verify if current page is 0 or NaN
-    if (currentPage <= 0 || currentPage !== Number(currentPage)) {
+    if (currentPage <= 0 || !isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       currentPage++
-      setProducts(response.data)
+      const res = response.data.map(p => ({
+        ...p,
+        inputName: `${p.id}+${p.name}`
+      }))
+      setProducts(res)
     }
 
     // verify if current page is equal 1
@@ -138,21 +176,29 @@ const ListProducts = ({
         `/products?pages=${currentPage + 1}`
       )
       currentPage++
-      setProducts(response.data)
+      const res = response.data.map(p => ({
+        ...p,
+        inputName: `${p.id}+${p.name}`
+      }))
+      setProducts(res)
     } else {
       // then current page is biggest than one
       const response = await apiService.get(
         `/products?pages=${currentPage + 1}`
       )
       currentPage++
-      setProducts(response.data)
+      const res = response.data.map(p => ({
+        ...p,
+        inputName: `${p.id}+${p.name}`
+      }))
+      setProducts(res)
     }
     // nextPagePagination(currentPage, apiService, setProducts)
   }, [currentPage])
 
   const previusPage = useCallback(async () => {
     // verify if current page is one or NaN
-    if (currentPage === 1 || currentPage !== Number(currentPage)) {
+    if (currentPage === 1 || !isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       // currentPage++
       setProducts(response.data)
@@ -172,11 +218,59 @@ const ListProducts = ({
       `/associates/productByLike/?terms=${termOfFind}`
     )
     setTermOfFind(termOfFind)
-    setProducts(response.data)
+    const res = response.data.map(p => ({
+      ...p,
+      inputName: `${p.id}+${p.name}`
+    }))
+    setProducts(res)
     if (termOfFind.length === 0) {
       setProducts(cacheProducts)
     }
   }, [])
+
+  const valueQuantityHandler = (ev: string) => {}
+
+  // new sale Started
+  const newSale = {
+    owner_id: '9addaa98-ef00-4a21-b781-861b6e8fbc92',
+    descount: 10,
+    itemsSalesPDV: []
+  }
+
+  const addItemToBasketHandler = (product: Product, index: number) => {
+    const inputvalue = inputRefs.current.find(
+      i => i.name === `${product.id}+${product.name}`
+    )
+    const productQuantity = Number(inputvalue.value)
+
+    if (inputvalue.value <= 0 || isNaN(productQuantity)) return
+
+    const itemSale = {
+      product_pdv_id: product.id,
+      product_quantity: productQuantity
+    }
+
+    const hasItemInBasket = newSale.itemsSalesPDV.find(
+      item => item.id === itemSale.product_pdv_id
+    )
+
+    console.log(hasItemInBasket)
+    if (!hasItemInBasket) {
+      newSale.itemsSalesPDV.push(itemSale)
+      console.log(newSale)
+    } else {
+      const index = newSale.itemsSalesPDV.findIndex(
+        item => item.id === itemSale.product_pdv_id
+      )
+
+      newSale.itemsSalesPDV[index].product_quantity += itemSale.product_quantity
+    }
+  }
+  const sendSaleHandler = async () => {
+    const data = { ...newSale, type_of_payment: option }
+    const response = await apiService.post('/salesPDV', data)
+    // todo logic to redirect after save sales
+  }
 
   return (
     <div>
@@ -188,7 +282,7 @@ const ListProducts = ({
         </div>
 
         <UncontrolledDropdown setActiveFromChild>
-        <UserName>John Doe</UserName>
+          <UserName>John Doe</UserName>
           <DropdownToggle tag="a" className="nav-link" caret></DropdownToggle>
           <DropdownMenu>
             <DropdownItem tag="a" active>
@@ -212,9 +306,8 @@ const ListProducts = ({
               </FormList>
             </ContainerBusca>
 
-          <ContainerTh>
-            <Tr>
-              
+            <ContainerTh>
+              <Tr>
                 <Whapper>
                   <Th>Nome</Th>
                 </Whapper>
@@ -232,48 +325,57 @@ const ListProducts = ({
                 </WhapperCustomNumber>
                 <WhapperCustomBtn />
                 <WhapperCustomBtn />
-              
-            </Tr>
-          </ContainerTh>
+              </Tr>
+            </ContainerTh>
             <TabelaBody>
               <TBody>
-                {products.map((p: Product) => (
+                {products.map((p: Product, index: number) => (
                   <TrBody key={p.id}>
-                    <BoxCustomName><Td> {p.name}</Td></BoxCustomName>
-                    
-                    
-                    <BoxBodyNumbers><Td> {p.price_suggest} </Td> </BoxBodyNumbers>
-                                        
+                    <BoxCustomName>
+                      <Td>{p.name}</Td>
+                    </BoxCustomName>
+
                     <BoxBodyNumbers>
-                    <InputPdv name="qtd" />
+                      <Td>{p.price_suggest}</Td>
                     </BoxBodyNumbers>
                     <BoxBodyNumbers>
-                    <Td> {p.price_suggest} </Td>
+                      <InputPdv
+                        ref={el =>
+                          el ? inputRefs.current.push(el) : (el = null)
+                        }
+                        name={`${p.inputName}`}
+                        onChange={e => valueQuantityHandler(e.target.value)}
+                      />
                     </BoxBodyNumbers>
                     <BoxBodyNumbers>
-                    <Td> {p.price_suggest} </Td>
+                      <Td> {p.price_suggest} </Td>
                     </BoxBodyNumbers>
-                    <TdCustomImage>
-                    <img src="/image/adicionar.svg" alt=""/>
+                    <BoxBodyNumbers>
+                      <Td> {p.price_suggest} </Td>
+                    </BoxBodyNumbers>
+                    <TdCustomImage
+                      onClick={() => addItemToBasketHandler(p, index)}
+                    >
+                      <img src="/image/adicionar.svg" alt="" />
                     </TdCustomImage>
                     <TdCustomImage>
-                    <img src="/image/lixeirapdv.svg" alt=""/>
-                      </TdCustomImage>
-                  </TrBody>                  
+                      <img src="/image/lixeirapdv.svg" alt="" />
+                    </TdCustomImage>
+                  </TrBody>
                 ))}
-
-
-                <DivBtnPreviusNext >
-                  <BtnPreviosNext onClick={previusPage}><img src="/image/left.svg" /> anterior</BtnPreviosNext>
-                  <BtnPreviosNext onClick={nextProducts}> Próximo <img src="/image/right.svg" /></BtnPreviosNext>
+                <DivBtnPreviusNext>
+                  <BtnPreviosNext onClick={previusPage}>
+                    <img src="/image/left.svg" /> anterior
+                  </BtnPreviosNext>
+                  <BtnPreviosNext onClick={nextProducts}>
+                    Próximo <img src="/image/right.svg" />
+                  </BtnPreviosNext>
                 </DivBtnPreviusNext>
-
-
               </TBody>
             </TabelaBody>
           </ContainerProducts>
 
-          <ContainerTotais>
+          <ContainerTotal>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
             <ContainerValores>
               <LabelSubtotalDesconto>Subtotal:</LabelSubtotalDesconto>
@@ -291,19 +393,25 @@ const ListProducts = ({
               <LabelSubtotalDesconto>Formas de Pagamento</LabelSubtotalDesconto>
             </ContainerValores>
             <ContainerValores>
-              <BtnFormaPagamento>Dinheiro</BtnFormaPagamento>
+              <BtnFormaPagamento onClick={() => typePaymentHandler(1)}>
+                Dinheiro
+              </BtnFormaPagamento>
             </ContainerValores>
             <ContainerValores>
-              <BtnFormaPagamento>Débito</BtnFormaPagamento>
+              <BtnFormaPagamento onClick={() => typePaymentHandler(2)}>
+                Débito
+              </BtnFormaPagamento>
             </ContainerValores>
             <ContainerValores>
-              <BtnFormaPagamento>Crédito</BtnFormaPagamento>
+              <BtnFormaPagamento onClick={() => typePaymentHandler(3)}>
+                Crédito
+              </BtnFormaPagamento>
             </ContainerValores>
 
             <ContainerValores>
-              <BtnFinalizar>Finalizar</BtnFinalizar>
+              <BtnFinalizar onClick={sendSaleHandler}>Finalizar</BtnFinalizar>
             </ContainerValores>
-          </ContainerTotais>
+          </ContainerTotal>
         </ContainerVenda>
       </Container>
     </div>
