@@ -280,7 +280,7 @@ const dashProdutos = ({ productsList }) => {
                 <ContainerBtnPagination>
                   <BtnPreviosNext
                     onClick={previusPage}
-                    disabled={products.length < 10}
+                    disabled={products.length < 10 || currentPage <= 1}
                   >
                     <img src="/image/left.svg" /> anterior
                   </BtnPreviosNext>

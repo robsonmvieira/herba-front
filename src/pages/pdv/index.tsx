@@ -377,10 +377,16 @@ const ListProducts = ({
                   </TrBody>
                 ))}
                 <DivBtnPreviusNext>
-                  <BtnPreviosNext onClick={previusPage}>
+                  <BtnPreviosNext
+                    onClick={previusPage}
+                    disabled={products.length < 10 || currentPage <= 1}
+                  >
                     <img src="/image/left.svg" /> anterior
                   </BtnPreviosNext>
-                  <BtnPreviosNext onClick={nextProducts}>
+                  <BtnPreviosNext
+                    onClick={nextProducts}
+                    disabled={products.length < 10}
+                  >
                     Próximo <img src="/image/right.svg" />
                   </BtnPreviosNext>
                 </DivBtnPreviusNext>
