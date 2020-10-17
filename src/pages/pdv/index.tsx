@@ -131,7 +131,9 @@ const ListProducts = ({
   productsList
 }: InferGetStaticPropsType<typeof getServerSideProps>) => {
   const router = useRouter()
+
   const inputRefs = useRef([])
+
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
@@ -139,9 +141,12 @@ const ListProducts = ({
   const [products, setProducts] = useState(productsList)
 
   const [termOfFind, setTermOfFind] = useState('')
+
   const [showToast, setShowToast] = useState(false)
 
   let option = ''
+
+  let currentPage = router.query.pages ? Number(router.query.pages) : 1
 
   // useEffect(() => {}, [products])
   // useEffect(() => {}, [inputRefs])
@@ -158,9 +163,6 @@ const ListProducts = ({
   function toggleToast() {
     setShowToast(!showToast)
   }
-
-  let currentPage = router.query.pages ? Number(router.query.pages) : 1
-
   function searchProducHandler(e) {}
 
   const nextProducts = useCallback(async () => {
@@ -203,7 +205,7 @@ const ListProducts = ({
 
   const previusPage = useCallback(async () => {
     // verify if current page is one or NaN
-    if (currentPage === 1 || !isNaN(currentPage)) {
+    if (currentPage === 1 || isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       // currentPage++
       setProducts(response.data)
