@@ -263,8 +263,7 @@ export const ContainerVenda = styled.div`
     width: 100%;
   }
   @media (min-width: 761px) {
-    display: flexbox;
-    flex-direction: column;
+    display: flex;
     background: #282741;
     width: 100%;
     background: #1d1f2f;
@@ -405,6 +404,8 @@ export const LabelValorTotal = styled.span`
   }
 `
 
+
+
 export const FormTotal = styled.span`
   @media (max-width: 497px) {
     display: flex;
@@ -426,6 +427,36 @@ export const FormTotal = styled.span`
     flex-direction: row-reverse;
     align-items: end;
     color: #ff6198;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    width: 50%;
+  }
+`
+
+export const FormTotalCustomColor = styled.span`
+  @media (max-width: 497px) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    color: #2fc84c;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    flex-direction: row-reverse;
+    width: 50%;
+    margin-right: 15px;
+  }
+  @media (min-width: 498px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    color: #2fc84c;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -653,7 +684,7 @@ export const WhapperCustomNumber = styled.div`
   @media (max-width: 424px) {
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 100%;
     height: 100%;
     background: #1d1f2f;
   }
@@ -984,4 +1015,326 @@ export const TabelaBody = styled.div`
 export const DivBtnPreviusNext = styled.div`
   display: flex;
   justify-content: space-between;
+`
+
+export const BoxDetalhes = styled.div`
+  @media (max-width: 425px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+  }
+  @media (min-width: 426px) and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+  }
+
+  @media (min-width: 769px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+`
+export const Detalhes = styled.span`
+  @media (max-width: 425px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+  }
+  @media (min-width: 426px) and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+  }
+
+  @media (min-width: 769px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+`
+
+
+export const Label = styled.span`
+  @media (max-width: 497px) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 100%;
+  }
+  @media (min-width: 498px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 21px;
+    width: 100%;
+  }
+`
+
+export const Descricao = styled.span`
+  @media (max-width: 497px) {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 21px;
+    margin-top: 15px;
+    width: 100%;
+    flex-direction: row-reverse;
+    margin-right: 15px;
+  }
+  @media (min-width: 498px) {
+    display: flex;
+    justify-content: flex-end;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 21px;
+    width: 100%;
+  }
+`
+
+export const ContainerTotais = styled.div`
+  @media (max-width: 760px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 761px) {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    height:600px;
+    align-items: center;
+    background: #282741;
+    margin-top: 20px;
+  }
+`
+
+export const ContainerIconsLg = styled.div`
+  @media (max-width: 767px) {
+    background: #1d1f2f;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    margin: none;
+    padding: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    background: #1d1f2f;
+    width: 85%;
+    height: 90%;
+    display: flex;
+    margin: none;
+    padding: none;
+    justify-content: center;
+    justify-items: center;
+  }
+`
+
+
+export const ContainerTags = styled.div`
+  @media (max-width: 767px) {
+    width: 90%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  @media (min-width: 768px) {
+    width: 90%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    height: 80%
+  }
+`
+
+
+export const IconsTags = styled.div`
+  @media (max-width: 767px) {
+    background: #282741;
+    width: 90%;
+    height: 70px;
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    margin-top: 15px;
+  }
+
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 25%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 10px;
+    flex-direction: column;
+    font-size: 1rem;
+  }
+`
+
+
+export const ContainerSpan = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    width: 100%;
+  }
+`
+
+export const LabelClienteDashboard = styled.span`
+  @media (max-width: 767px) {
+    color: #2fc84c;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 768px) {
+    color: #2fc84c;
+    width: 100%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+  }
+`
+
+export const LabelDescricaoDashboard = styled.span`
+  @media (max-width: 767px) {
+    color: #fff;
+    width: 45%;
+    font-size: 0.9rem;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-items: center;
+    font-family: Roboto;
+    font-style: normal;
+  }
+
+  @media (min-width: 768px) {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+`
+
+
+export const LabelClienteDashboardMenos = styled.span`
+  @media (max-width: 767px) {
+    color: #ef6e6e;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+  @media (min-width: 768px) {
+    color: #ef6e6e;
+    width: 100%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+  }
 `
