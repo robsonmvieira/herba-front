@@ -1,6 +1,7 @@
 import React, { useCallback, useState, useRef, useEffect } from 'react'
 // import { formatUserName } from '../../utils/formatUserName'
 import { GetServerSideProps, InferGetStaticPropsType } from 'next'
+import Toast from '../../components/Toast'
 import {
   Navbar,
   Container,
@@ -138,6 +139,7 @@ const ListProducts = ({
   const [products, setProducts] = useState(productsList)
 
   const [termOfFind, setTermOfFind] = useState('')
+  const [showToast, setShowToast] = useState(false)
 
   let option = ''
 
@@ -152,6 +154,9 @@ const ListProducts = ({
       option = 'credito'
     }
     return value
+  }
+  function toggleToast() {
+    setShowToast(!showToast)
   }
 
   let currentPage = router.query.pages ? Number(router.query.pages) : 1
@@ -254,10 +259,8 @@ const ListProducts = ({
       item => item.id === itemSale.product_pdv_id
     )
 
-    console.log(hasItemInBasket)
     if (!hasItemInBasket) {
       newSale.itemsSalesPDV.push(itemSale)
-      console.log(newSale)
     } else {
       const index = newSale.itemsSalesPDV.findIndex(
         item => item.id === itemSale.product_pdv_id
@@ -265,6 +268,7 @@ const ListProducts = ({
 
       newSale.itemsSalesPDV[index].product_quantity += itemSale.product_quantity
     }
+    toggleToast()
   }
   const sendSaleHandler = async () => {
     const data = { ...newSale, type_of_payment: option }
@@ -273,7 +277,7 @@ const ListProducts = ({
   }
 
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
       <Navbar light expand="ml">
         <div>
           <NavbarBrand href="/">
@@ -328,6 +332,13 @@ const ListProducts = ({
               </Tr>
             </ContainerTh>
             <TabelaBody>
+              {showToast && (
+                <Toast
+                  headerMessage="Pronto!"
+                  bodyMessage="Produto adicionado a cesta "
+                  isOpen={showToast}
+                />
+              )}
               <TBody>
                 {products.map((p: Product, index: number) => (
                   <TrBody key={p.id}>

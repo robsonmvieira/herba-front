@@ -404,8 +404,6 @@ export const LabelValorTotal = styled.span`
   }
 `
 
-
-
 export const FormTotal = styled.span`
   @media (max-width: 497px) {
     display: flex;
@@ -905,27 +903,31 @@ export const BoxBodyNumbers = styled.div`
 
 export const TdCustomImage = styled.div`
   @media (max-width: 767px) {
-    background: #282741;
     width: 20%;
+    color: #fff;
     height: 100%;
+    cursor: pointer;
+    font-size: 0.7rem;
+    background: #282741;
+
     display: flex;
     align-items: center;
     justify-content: center;
     justify-items: center;
-    color: #fff;
-    font-size: 0.7rem;
   }
 
   @media (min-width: 768px) {
-    background: #282741;
     width: 5%;
-    height: 100%;
-    display: flex;
     color: #fff;
+    height: 100%;
+    cursor: pointer;
     font-size: 1rem;
     text-align: center;
-    justify-content: center;
+    background: #282741;
+
+    display: flex;
     align-items: center;
+    justify-content: center;
   }
 `
 export const Th = styled.span`
@@ -1102,7 +1104,6 @@ export const Detalhes = styled.span`
   }
 `
 
-
 export const Label = styled.span`
   @media (max-width: 497px) {
     display: flex;
@@ -1173,7 +1174,7 @@ export const ContainerTotais = styled.div`
     display: flex;
     flex-direction: column;
     width: 32%;
-    height:600px;
+    height: 600px;
     align-items: center;
     background: #282741;
     margin-top: 20px;
@@ -1204,7 +1205,6 @@ export const ContainerIconsLg = styled.div`
   }
 `
 
-
 export const ContainerTags = styled.div`
   @media (max-width: 767px) {
     width: 90%;
@@ -1220,10 +1220,9 @@ export const ContainerTags = styled.div`
     display: flex;
     margin-top: 10px;
     justify-content: space-between;
-    height: 80%
+    height: 80%;
   }
 `
-
 
 export const IconsTags = styled.div`
   @media (max-width: 767px) {
@@ -1251,8 +1250,6 @@ export const IconsTags = styled.div`
     font-size: 1rem;
   }
 `
-
-
 export const ContainerSpan = styled.div`
   @media (max-width: 767px) {
     display: flex;
@@ -1315,8 +1312,6 @@ export const LabelDescricaoDashboard = styled.span`
     font-size: 14px;
   }
 `
-
-
 export const LabelClienteDashboardMenos = styled.span`
   @media (max-width: 767px) {
     color: #ef6e6e;
