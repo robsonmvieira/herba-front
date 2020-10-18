@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, { useCallback, useState, useRef, useEffect } from 'react'
 // import { formatUserName } from '../../utils/formatUserName'
 import { GetServerSideProps, InferGetStaticPropsType } from 'next'
@@ -56,15 +57,15 @@ interface Product {
 }
 
 interface ProductItemSale {
-  product_quantity: number
   product_pdv_id: string
+  product_quantity: number
 }
-// interface SaleInput {
-//   owner_id: string
-//   descount: number
-//   type_of_payment: string
-//   itemsSalesPDV: ProductItemSale[]
-// }
+interface newSaleProps {
+  owner_id: string
+  descount: number
+  type_of_payment: string
+  itemsSalesPDV: ProductItemSale[]
+}
 
 export const getServerSideProps: GetServerSideProps = async params => {
   // const cookie = params.req.headers.cookie
@@ -144,22 +145,29 @@ const ListProducts = ({
 
   const [showToast, setShowToast] = useState(false)
 
-  let option = ''
+  const [option, setOption] = useState('')
+  const [newSale, setNewSale] = useState<newSaleProps>({
+    owner_id: '9addaa98-ef00-4a21-b781-861b6e8fbc92',
+    descount: 10,
+    type_of_payment: option,
+    itemsSalesPDV: []
+  })
+
+  // let option = ''
+  useEffect(() => {}, [newSale])
 
   let currentPage = router.query.pages ? Number(router.query.pages) : 1
 
-  // useEffect(() => {}, [products])
-  // useEffect(() => {}, [inputRefs])
-  const typePaymentHandler = (value: number) => {
-    if (value === 1) {
-      option = 'dinheiro'
-    } else if (value === 2) {
-      option = 'debito'
-    } else {
-      option = 'credito'
-    }
-    return value
-  }
+  // const typePaymentHandler = (value: number) => {
+  //   if (value === 1) {
+  //     option = 'dinheiro'
+  //   } else if (value === 2) {
+  //     option = 'debito'
+  //   } else {
+  //     option = 'credito'
+  //   }
+  //   return value
+  // }
   function toggleToast() {
     setShowToast(!showToast)
   }
@@ -170,7 +178,7 @@ const ListProducts = ({
     if (currentPage <= 0 || !isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       currentPage++
-      const res = response.data.map(p => ({
+      const res = response.data.map((p: Product) => ({
         ...p,
         inputName: `${p.id}+${p.name}`
       }))
@@ -183,7 +191,7 @@ const ListProducts = ({
         `/products?pages=${currentPage + 1}`
       )
       currentPage++
-      const res = response.data.map(p => ({
+      const res = response.data.map((p: Product) => ({
         ...p,
         inputName: `${p.id}+${p.name}`
       }))
@@ -194,7 +202,7 @@ const ListProducts = ({
         `/products?pages=${currentPage + 1}`
       )
       currentPage++
-      const res = response.data.map(p => ({
+      const res = response.data.map((p: Product) => ({
         ...p,
         inputName: `${p.id}+${p.name}`
       }))
@@ -225,7 +233,7 @@ const ListProducts = ({
       `/associates/productByLike/?terms=${termOfFind}`
     )
     setTermOfFind(termOfFind)
-    const res = response.data.map(p => ({
+    const res = response.data.map((p: Product) => ({
       ...p,
       inputName: `${p.id}+${p.name}`
     }))
@@ -237,46 +245,54 @@ const ListProducts = ({
 
   const valueQuantityHandler = (ev: string) => {}
 
-  // new sale Started
-  const newSale = {
-    owner_id: '9addaa98-ef00-4a21-b781-861b6e8fbc92',
-    descount: 10,
-    itemsSalesPDV: []
-  }
+  const addItemToBasketHandler = useCallback(
+    (product: Product) => {
+      const inputvalue = inputRefs.current.find(
+        i => i.name === `${product.id}+${product.name}`
+      )
+      const productQuantity = Number(inputvalue.value)
 
-  const addItemToBasketHandler = (product: Product, index: number) => {
-    const inputvalue = inputRefs.current.find(
-      i => i.name === `${product.id}+${product.name}`
-    )
-    const productQuantity = Number(inputvalue.value)
+      if (inputvalue.value <= 0 || isNaN(productQuantity)) return
 
-    if (inputvalue.value <= 0 || isNaN(productQuantity)) return
-
-    const itemSale = {
-      product_pdv_id: product.id,
-      product_quantity: productQuantity
-    }
-
-    const hasItemInBasket = newSale.itemsSalesPDV.find(
-      item => item.id === itemSale.product_pdv_id
-    )
-
-    if (!hasItemInBasket) {
-      newSale.itemsSalesPDV.push(itemSale)
-    } else {
-      const index = newSale.itemsSalesPDV.findIndex(
-        item => item.id === itemSale.product_pdv_id
+      const itemSale = {
+        product_pdv_id: product.id,
+        product_quantity: productQuantity
+      }
+      const hasItemInBasket = newSale.itemsSalesPDV.find(
+        item => item.product_pdv_id === itemSale.product_pdv_id
       )
 
-      newSale.itemsSalesPDV[index].product_quantity += itemSale.product_quantity
-    }
-    toggleToast()
-  }
-  const sendSaleHandler = async () => {
+      if (!hasItemInBasket) {
+        setNewSale({
+          ...newSale,
+          itemsSalesPDV: [...newSale.itemsSalesPDV, itemSale]
+        })
+        newSale.itemsSalesPDV.push(itemSale)
+      } else {
+        setNewSale({
+          ...newSale,
+          itemsSalesPDV: newSale.itemsSalesPDV.map(p =>
+            p.product_pdv_id === itemSale.product_pdv_id
+              ? {
+                  product_pdv_id: p.product_pdv_id,
+                  product_quantity:
+                    p.product_quantity + itemSale.product_quantity
+                }
+              : p
+          )
+        })
+      }
+      toggleToast()
+    },
+    [newSale]
+  )
+
+  const sendSaleHandler = useCallback(async () => {
+    // const data = { ...newSale, type_of_payment: option }
     const data = { ...newSale, type_of_payment: option }
     const response = await apiService.post('/salesPDV', data)
     // todo logic to redirect after save sales
-  }
+  }, [option, newSale])
 
   return (
     <div style={{ position: 'relative' }}>
@@ -342,7 +358,7 @@ const ListProducts = ({
                 />
               )}
               <TBody>
-                {products.map((p: Product, index: number) => (
+                {products.map((p: Product) => (
                   <TrBody key={p.id}>
                     <BoxCustomName>
                       <Td>{p.name}</Td>
@@ -366,9 +382,7 @@ const ListProducts = ({
                     <BoxBodyNumbers>
                       <Td> {p.price_suggest} </Td>
                     </BoxBodyNumbers>
-                    <TdCustomImage
-                      onClick={() => addItemToBasketHandler(p, index)}
-                    >
+                    <TdCustomImage onClick={() => addItemToBasketHandler(p)}>
                       <img src="/image/adicionar.svg" alt="" />
                     </TdCustomImage>
                     <TdCustomImage>
@@ -412,17 +426,17 @@ const ListProducts = ({
               <LabelSubtotalDesconto>Formas de Pagamento</LabelSubtotalDesconto>
             </ContainerValores>
             <ContainerValores>
-              <BtnFormaPagamento onClick={() => typePaymentHandler(1)}>
+              <BtnFormaPagamento onClick={() => setOption('dinheiro')}>
                 Dinheiro
               </BtnFormaPagamento>
             </ContainerValores>
             <ContainerValores>
-              <BtnFormaPagamento onClick={() => typePaymentHandler(2)}>
+              <BtnFormaPagamento onClick={() => setOption('debito')}>
                 Débito
               </BtnFormaPagamento>
             </ContainerValores>
             <ContainerValores>
-              <BtnFormaPagamento onClick={() => typePaymentHandler(3)}>
+              <BtnFormaPagamento onClick={() => setOption('credito')}>
                 Crédito
               </BtnFormaPagamento>
             </ContainerValores>
