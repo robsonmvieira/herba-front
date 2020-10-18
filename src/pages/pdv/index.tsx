@@ -171,7 +171,7 @@ const ListProducts = ({
   function toggleToast() {
     setShowToast(!showToast)
   }
-  function searchProducHandler(e) {}
+  // function searchProducHandler(e) {}
 
   const nextProducts = useCallback(async () => {
     // verify if current page is 0 or NaN

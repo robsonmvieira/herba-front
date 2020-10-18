@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Navbar,
   Container,
@@ -27,14 +27,50 @@ import {
   FormTotalCustomColor
 } from '../styles'
 import { NavbarBrand } from 'reactstrap'
+import { GetServerSideProps, InferGetStaticPropsType } from 'next'
+import apiService from '../../../services/apiService'
 
-const CloseBox = () => {
+interface SaleProps {
+  id: string
+  created_at: string
+  updated_at: string
+  collaborator_id: string
+  type_of_payment: string
+  sub_total: string
+  descount: number
+  total: string
+  owner_id: string
+}
+
+const CloseBox = ({
+  salesOfDay
+}: InferGetStaticPropsType<typeof getServerSideProps>) => {
+  const [salesSize, setSalesSize] = useState<number>(salesOfDay.length)
+  const [totalSalesByDebito, setTotalSalesByDebito] = useState(
+    salesOfDay
+      .filter((p: SaleProps) => p.type_of_payment === 'debito')
+      .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
+  )
+  const [parsedToBRLDebitosales, setParsedToBRLDebitosales] = useState('')
+
+  useEffect(() => {
+    setParsedToBRLDebitosales(
+      new Intl.NumberFormat([], {
+        style: 'currency',
+        currency: 'BRL'
+      }).format(totalSalesByDebito)
+    )
+  }, [totalSalesByDebito])
+
   return (
     <div>
       <Navbar light expand="ml">
         <div>
           <NavbarBrand href="/">
-            <img src="image/logo-pdv.svg" alt="" />
+            <img
+              src="/image/logo-pdv.svg"
+              alt="this is a logo push left side of menu on top level"
+            />
           </NavbarBrand>
         </div>
 
@@ -56,7 +92,9 @@ const CloseBox = () => {
               <ContainerTags>
                 <IconsTags>
                   <ContainerSpan>
-                    <LabelClienteDashboard>R$15,00</LabelClienteDashboard>
+                    <LabelClienteDashboard>
+                      {/* {parsedToBRLDebitosales} */}50,00
+                    </LabelClienteDashboard>
                   </ContainerSpan>
                   <ContainerSpan>
                     <LabelDescricaoDashboard>
@@ -66,7 +104,11 @@ const CloseBox = () => {
                 </IconsTags>
                 <IconsTags>
                   <ContainerSpan>
-                    <LabelClienteDashboard>R$15,00</LabelClienteDashboard>
+                    {parsedToBRLDebitosales && (
+                      <LabelClienteDashboard>
+                        {parsedToBRLDebitosales}
+                      </LabelClienteDashboard>
+                    )}
                   </ContainerSpan>
                   <ContainerSpan>
                     <LabelDescricaoDashboard>
@@ -97,7 +139,7 @@ const CloseBox = () => {
 
             <ContainerValores>
               <Label>N° de Vendas:</Label>
-              <Descricao>5</Descricao>
+              <Descricao>{salesSize}</Descricao>
             </ContainerValores>
             <ContainerValores>
               <Label>Carro Chefe:</Label>
@@ -137,3 +179,14 @@ const CloseBox = () => {
 }
 
 export default CloseBox
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const response = await apiService.get<SaleProps[]>(
+    '/associates//salesOfDay/?associado=9addaa98-ef00-4a21-b781-861b6e8fbc92'
+  )
+  const res = response.data
+  console.log(res)
+  return {
+    props: { salesOfDay: res }
+  }
+}
