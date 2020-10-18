@@ -46,12 +46,28 @@ const CloseBox = ({
   salesOfDay
 }: InferGetStaticPropsType<typeof getServerSideProps>) => {
   const [salesSize, setSalesSize] = useState<number>(salesOfDay.length)
+
+  const [totalValueSales, setTotalValueSales] = useState(
+    salesOfDay.reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
+  )
+
   const [totalSalesByDebito, setTotalSalesByDebito] = useState(
     salesOfDay
       .filter((p: SaleProps) => p.type_of_payment === 'debito')
       .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
   )
+
   const [parsedToBRLDebitosales, setParsedToBRLDebitosales] = useState('')
+  const [parsedToBRLTotal, setParsedToBRLTotal] = useState('')
+
+  useEffect(() => {
+    setParsedToBRLTotal(
+      new Intl.NumberFormat([], {
+        style: 'currency',
+        currency: 'BRL'
+      }).format(Number(totalValueSales))
+    )
+  }, [totalValueSales])
 
   useEffect(() => {
     setParsedToBRLDebitosales(
@@ -158,7 +174,9 @@ const CloseBox = ({
             </ContainerValores>
             <ContainerValores>
               <LabelValorTotal>Valor Total:</LabelValorTotal>
-              <FormTotalCustomColor>R$90,00</FormTotalCustomColor>
+              {parsedToBRLTotal && (
+                <FormTotalCustomColor>{parsedToBRLTotal}</FormTotalCustomColor>
+              )}
             </ContainerValores>
             <ContainerValores>
               <LabelValorTotal>Dinheiro:</LabelValorTotal>
