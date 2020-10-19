@@ -57,8 +57,22 @@ const CloseBox = ({
       .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
   )
 
-  const [parsedToBRLDebitosales, setParsedToBRLDebitosales] = useState('')
+  const [totalSalesByCredito, setTotalSalesByCredito] = useState(
+    salesOfDay
+      .filter((p: SaleProps) => p.type_of_payment === 'credito')
+      .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
+  )
+
+  const [totalSalesByMoney, setTotalSalesByMoney] = useState(
+    salesOfDay
+      .filter((p: SaleProps) => p.type_of_payment === 'dinheiro')
+      .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
+  )
+
   const [parsedToBRLTotal, setParsedToBRLTotal] = useState('')
+  const [parsedToBRLDebitosales, setParsedToBRLDebitosales] = useState('')
+  const [parsedToBRLCreditosales, setParsedToBRLCreditoSales] = useState('')
+  const [parsedToBRLMoneySales, setParsedToBRLMoneySales] = useState('')
 
   useEffect(() => {
     setParsedToBRLTotal(
@@ -77,6 +91,24 @@ const CloseBox = ({
       }).format(totalSalesByDebito)
     )
   }, [totalSalesByDebito])
+
+  useEffect(() => {
+    setParsedToBRLCreditoSales(
+      new Intl.NumberFormat([], {
+        style: 'currency',
+        currency: 'BRL'
+      }).format(totalSalesByCredito)
+    )
+  }, [totalSalesByCredito])
+
+  useEffect(() => {
+    setParsedToBRLMoneySales(
+      new Intl.NumberFormat([], {
+        style: 'currency',
+        currency: 'BRL'
+      }).format(totalSalesByMoney)
+    )
+  }, [totalSalesByMoney])
 
   return (
     <div>
@@ -108,9 +140,11 @@ const CloseBox = ({
               <ContainerTags>
                 <IconsTags>
                   <ContainerSpan>
-                    <LabelClienteDashboard>
-                      {/* {parsedToBRLDebitosales} */}50,00
-                    </LabelClienteDashboard>
+                    {parsedToBRLMoneySales && (
+                      <LabelClienteDashboard>
+                        {parsedToBRLMoneySales}
+                      </LabelClienteDashboard>
+                    )}
                   </ContainerSpan>
                   <ContainerSpan>
                     <LabelDescricaoDashboard>
@@ -135,7 +169,7 @@ const CloseBox = ({
                 <IconsTags>
                   <ContainerSpan>
                     <LabelClienteDashboardMenos>
-                      R$15,00
+                      {parsedToBRLCreditosales}
                     </LabelClienteDashboardMenos>
                   </ContainerSpan>
                   <ContainerSpan>
