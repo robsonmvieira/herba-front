@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Modal, ModalHeader, ModalBody } from 'reactstrap'
 
 import { GetServerSideProps } from 'next'
@@ -101,11 +101,8 @@ const dashProdutos = ({ productsList }) => {
     if (currentPage <= 0 || isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       // currentPage++
-      const res = response.data.map(p => ({
-        ...p,
-        inputName: `${p.id}+${p.name}`
-      }))
-      setProducts(res)
+
+      setProducts(response.data)
     }
 
     // verify if current page is equal 1
@@ -114,32 +111,27 @@ const dashProdutos = ({ productsList }) => {
         `/products?pages=${currentPage + 1}`
       )
       currentPage++
-      const res = response.data.map(p => ({
-        ...p,
-        inputName: `${p.id}+${p.name}`
-      }))
-      setProducts(res)
+
+      setProducts(response.data)
     } else {
       // then current page is biggest than one
       const response = await apiService.get(
         `/products?pages=${currentPage + 1}`
       )
       currentPage++
-      const res = response.data.map(p => ({
-        ...p,
-        inputName: `${p.id}+${p.name}`
-      }))
-      setProducts(res)
+      console.log(currentPage)
+      setProducts(response.data)
     }
     // nextPagePagination(currentPage, apiService, setProducts)
   }, [currentPage])
 
   const previusPage = useCallback(async () => {
     // verify if current page is one or NaN
-
+    console.log('130')
     if (currentPage === 1 || isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       // currentPage++
+      console.log(currentPage)
       setProducts(response.data)
     } else {
       // then current page is bigger than one
@@ -147,6 +139,8 @@ const dashProdutos = ({ productsList }) => {
         `/products?pages=${currentPage - 1}`
       )
       currentPage--
+      console.log(currentPage)
+
       setProducts(response.data)
     }
   }, [currentPage])
@@ -280,7 +274,7 @@ const dashProdutos = ({ productsList }) => {
                 <ContainerBtnPagination>
                   <BtnPreviosNext
                     onClick={previusPage}
-                    disabled={products.length < 10 || currentPage <= 1}
+                    disabled={currentPage === 1}
                   >
                     <img src="/image/left.svg" /> anterior
                   </BtnPreviosNext>
