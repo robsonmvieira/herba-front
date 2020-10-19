@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React, { useCallback, useEffect, useState } from 'react'
 import { Modal, ModalHeader, ModalBody } from 'reactstrap'
 
@@ -55,15 +56,19 @@ interface IProduct {
 }
 
 const dashProdutos = ({ productsList }) => {
+  const router = useRouter()
   // const [listProducts, setlistProducts] = useState<IProduct[]>(products)
   const [modal, setModal] = useState(false)
   const [produtcEdit, setProdutcEdit] = useState<IProduct>({} as IProduct)
+  const [currentPage, setCurrentPage] = useState(
+    router.query.pages ? Number(router.query.pages) : 1
+  )
 
   useEffect(() => {}, [produtcEdit])
 
-  const router = useRouter()
+  useEffect(() => {}, [currentPage])
 
-  // const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   // const toggle = () => setIsOpen(!isOpen)
 
@@ -75,7 +80,7 @@ const dashProdutos = ({ productsList }) => {
 
   const option = ''
 
-  let currentPage = router.query.pages ? Number(router.query.pages) : 1
+  // let currentPage = router.query.pages ? Number(router.query.pages) : 1
 
   function editProductHandler(product: IProduct) {
     toggle()
@@ -101,49 +106,44 @@ const dashProdutos = ({ productsList }) => {
     if (currentPage <= 0 || isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       // currentPage++
-
+      setCurrentPage(currentPage => currentPage + 1)
       setProducts(response.data)
-    }
-
-    // verify if current page is equal 1
-    if (currentPage === 1) {
+    } else if (currentPage === 1) {
       const response = await apiService.get(
         `/products?pages=${currentPage + 1}`
       )
-      currentPage++
-
+      setCurrentPage(currentPage => currentPage + 1)
+      // currentPage++
       setProducts(response.data)
     } else {
       // then current page is biggest than one
       const response = await apiService.get(
         `/products?pages=${currentPage + 1}`
       )
-      currentPage++
-      console.log(currentPage)
+      setCurrentPage(currentPage => currentPage + 1)
+      // currentPage++
       setProducts(response.data)
     }
     // nextPagePagination(currentPage, apiService, setProducts)
   }, [currentPage])
 
-  const previusPage = useCallback(async () => {
+  const previousPage = async () => {
     // verify if current page is one or NaN
-    console.log('130')
     if (currentPage === 1 || isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       // currentPage++
-      console.log(currentPage)
       setProducts(response.data)
     } else {
       // then current page is bigger than one
+      setCurrentPage(currentPage => currentPage - 1)
+
       const response = await apiService.get(
         `/products?pages=${currentPage - 1}`
       )
-      currentPage--
-      console.log(currentPage)
 
       setProducts(response.data)
     }
-  }, [currentPage])
+  }
 
   const searchProductHandler = useCallback(async termOfFind => {
     const cacheProducts = products
@@ -273,10 +273,10 @@ const dashProdutos = ({ productsList }) => {
 
                 <ContainerBtnPagination>
                   <BtnPreviosNext
-                    onClick={previusPage}
-                    disabled={currentPage === 1}
+                    onClick={previousPage}
+                    disabled={currentPage <= 1}
                   >
-                    <img src="/image/left.svg" /> anterior
+                    <img src="/image/left.svg" /> Anterior
                   </BtnPreviosNext>
                   <BtnPreviosNext
                     onClick={nextProducts}
