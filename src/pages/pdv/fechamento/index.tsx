@@ -47,6 +47,10 @@ const CloseBox = ({
 }: InferGetStaticPropsType<typeof getServerSideProps>) => {
   const [salesSize, setSalesSize] = useState<number>(salesOfDay.length)
 
+  const [totalValueSalesDescount, setTotalValueSalesDescount] = useState(
+    salesOfDay.reduce((a: SaleProps, b: SaleProps) => a + String(b.descount), 0)
+  )
+
   const [totalValueSales, setTotalValueSales] = useState(
     salesOfDay.reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
   )
@@ -69,10 +73,29 @@ const CloseBox = ({
       .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
   )
 
+  const [totalSalesByCards, setTotalSalesByCards] = useState(
+    salesOfDay
+      .filter((p: SaleProps) => p.type_of_payment !== 'dinheiro')
+      .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
+  )
+
   const [parsedToBRLTotal, setParsedToBRLTotal] = useState('')
   const [parsedToBRLDebitosales, setParsedToBRLDebitosales] = useState('')
   const [parsedToBRLCreditosales, setParsedToBRLCreditoSales] = useState('')
   const [parsedToBRLMoneySales, setParsedToBRLMoneySales] = useState('')
+  const [parsedToBRLBySalesCards, setParsedToBRLBySalesCards] = useState('')
+  const [parsedToBRLBySalesDescount, setParsedToBRLBySalesDescount] = useState(
+    ''
+  )
+
+  useEffect(() => {
+    setParsedToBRLBySalesDescount(
+      new Intl.NumberFormat([], {
+        style: 'currency',
+        currency: 'BRL'
+      }).format(totalValueSalesDescount)
+    )
+  }, [totalValueSalesDescount])
 
   useEffect(() => {
     setParsedToBRLTotal(
@@ -109,6 +132,15 @@ const CloseBox = ({
       }).format(totalSalesByMoney)
     )
   }, [totalSalesByMoney])
+
+  useEffect(() => {
+    setParsedToBRLBySalesCards(
+      new Intl.NumberFormat([], {
+        style: 'currency',
+        currency: 'BRL'
+      }).format(totalSalesByCards)
+    )
+  }, [totalSalesByCards])
 
   return (
     <div>
@@ -196,15 +228,16 @@ const CloseBox = ({
               <Descricao>Cookie</Descricao>
             </ContainerValores>
 
-            <ContainerValores>
+            {/* <ContainerValores>
               <Label>Subtotais:</Label>
               <Descricao>R$100,00</Descricao>
-            </ContainerValores>
+            </ContainerValores> */}
 
             <ContainerValores>
               <Label>Descontos:</Label>
-
-              <Descricao>R$10,00</Descricao>
+              {parsedToBRLBySalesDescount && (
+                <Descricao>{parsedToBRLBySalesDescount}</Descricao>
+              )}
             </ContainerValores>
             <ContainerValores>
               <LabelValorTotal>Valor Total:</LabelValorTotal>
@@ -214,11 +247,15 @@ const CloseBox = ({
             </ContainerValores>
             <ContainerValores>
               <LabelValorTotal>Dinheiro:</LabelValorTotal>
-              <FormTotal>R$50,00</FormTotal>
+              {parsedToBRLMoneySales && (
+                <FormTotal>{parsedToBRLMoneySales}</FormTotal>
+              )}
             </ContainerValores>
             <ContainerValores>
               <LabelValorTotal>Cartões:</LabelValorTotal>
-              <FormTotal>R$40,00</FormTotal>
+              {parsedToBRLBySalesCards && (
+                <FormTotal>{parsedToBRLBySalesCards}</FormTotal>
+              )}
             </ContainerValores>
             <ContainerValores>
               <BtnFinalizar>Fechar Caixa</BtnFinalizar>
