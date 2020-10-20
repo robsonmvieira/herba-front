@@ -6,25 +6,22 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content:center;
+    
 `
 
 export const ContainerVenda = styled.div`
-  /* @media (max-width: 760px) {
-    
-    width: 100%;
-  } */
-  /* @media (min-width: 761px) { */
+  
     display: flex;
     width: 95%;
     height: 80%;
     margin-top: 25px;
     margin-right: auto;
     margin-left: auto;
-    display: flex;
     justify-content: center;
-    align-items: flex-start;
-  /* } */
+    
+  
 `
 export const ContainerVendido = styled.div`
 /* position: absolute;
@@ -43,10 +40,30 @@ border-radius: 25px;
 display: flex;
 justify-content: center;
 align-items: center;
+justify-items: center;
 `
 
 export const Imagem = styled.img`
 width: clamp(15rem, 50%, 60% );
+`
 
+export const Texto = styled.p`
+position: absolute;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: clamp(40px, 40px, 60px );
+line-height: 42px;
+color: #2FC84C;
+width: clamp(20rem, 50%, 60% );
+text-align: center;
+`
+
+
+export const BoxTexto = styled.div`
+width: 100%;
+height: 20%;
+display: flex;
+justify-content: center;
 
 `

@@ -5,7 +5,9 @@ import {
     ContainerVenda,
     Container,
     ContainerVendido,
-    Imagem
+    Imagem,
+    Texto,
+    BoxTexto
   
 } from './styles'
 
@@ -17,10 +19,12 @@ const SucessProducts = () => {
         <ContainerVenda>
         <ContainerVendido>
             <Imagem src="/image/Vector.svg" alt=""/>
-        </ContainerVendido>
-
-          
+        </ContainerVendido>                 
         </ContainerVenda>
+            <BoxTexto>
+                <Texto>Venda realizada com sucesso!</Texto>
+            </BoxTexto>
+
       </Container>
     </div>
   )}
