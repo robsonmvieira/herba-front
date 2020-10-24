@@ -37,7 +37,7 @@ interface SaleProps {
   collaborator_id: string
   type_of_payment: string
   sub_total: string
-  descount: number
+  descount: string
   total: string
   owner_id: string
 }
@@ -48,7 +48,13 @@ const CloseBox = ({
   const [salesSize, setSalesSize] = useState<number>(salesOfDay.length)
 
   const [totalValueSalesDescount, setTotalValueSalesDescount] = useState(
-    salesOfDay.reduce((a: SaleProps, b: SaleProps) => a + String(b.descount), 0)
+    salesOfDay.reduce((a: SaleProps, b: SaleProps) => a + b.descount, 0)
+  )
+
+  const [totalSalesByCards, setTotalSalesByCards] = useState(
+    salesOfDay
+      .filter((p: SaleProps) => p.type_of_payment !== 'dinheiro')
+      .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
   )
 
   const [totalValueSales, setTotalValueSales] = useState(
@@ -63,19 +69,13 @@ const CloseBox = ({
 
   const [totalSalesByCredito, setTotalSalesByCredito] = useState(
     salesOfDay
-      .filter((p: SaleProps) => p.type_of_payment === 'credito')
+      .filter((p: SaleProps) => p.type_of_payment !== 'dinheiro')
       .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
   )
 
   const [totalSalesByMoney, setTotalSalesByMoney] = useState(
     salesOfDay
       .filter((p: SaleProps) => p.type_of_payment === 'dinheiro')
-      .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
-  )
-
-  const [totalSalesByCards, setTotalSalesByCards] = useState(
-    salesOfDay
-      .filter((p: SaleProps) => p.type_of_payment !== 'dinheiro')
       .reduce((a: SaleProps, b: SaleProps) => a + b.total, 0)
   )
 
@@ -271,10 +271,11 @@ export default CloseBox
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const response = await apiService.get<SaleProps[]>(
-    '/associates//salesOfDay/?associado=9addaa98-ef00-4a21-b781-861b6e8fbc92'
+    '/associates/salesOfDay/?associado=2c7c5e72-41ef-4233-a096-67e1ded3703b'
   )
-  const res = response.data
-  console.log(res)
+  // console.log('278 => ', response.data)
+  const res = response.data.map(sa => ({ ...sa, total: Number(sa.total) }))
+  console.log('280 => ', res)
   return {
     props: { salesOfDay: res }
   }
