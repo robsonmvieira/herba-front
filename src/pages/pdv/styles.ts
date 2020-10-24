@@ -31,6 +31,25 @@ export const ToastHeader = styled(THeader)`
   width:100% !important;
 `
 
+export const ToastSucess = styled(TToast)`
+  color:#fff;
+  background:  rgba(47, 150, 71, 1);
+  width:100% !important;
+
+`
+export const ToastBodySucess = styled(TBody)`
+  color:#fff;
+  background:  rgba(47, 150, 71, 1);
+   width:100% !important;
+`
+
+export const ToastHeaderSucess = styled(THeader)`
+  color:#fff;
+  background:  rgba(47, 150, 71, 1);
+  width:100% !important;
+`
+
+
 export const BoxToast = styled.div`
   width: 100%;
   display: flex;

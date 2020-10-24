@@ -46,7 +46,11 @@ import {
     ToastBody,
   ToastHeader,
   BoxToast,
-  Toast
+  Toast,
+  ToastSucess,
+  ToastBodySucess,
+  ToastHeaderSucess,
+  
   
   
 } from './styles'
@@ -299,12 +303,18 @@ const ListProducts = ({
   const sendSaleHandler = useCallback(async () => {
     // const data = { ...newSale, type_of_payment: option }
     const data = { ...newSale, type_of_payment: option }
+   if (data.itemsSalesPDV.length <= 0 ) {
+    return 
+   }
+   console.log(data)
     const response = await apiService.post('/salesPDV', data)
     if (response.data) {
       router.push('pdv/sucesso')
     } else {
-      console.log('error')
+      // console.log('error', response.data)
       setErrorNumber(500)      
+
+      
     }
     // todo logic to redirect after save sales
     // console.log(data)
@@ -437,7 +447,19 @@ const ListProducts = ({
                 </Toast>
               </BoxToast>
             )}
-            
+
+             {option  && (
+              
+              <BoxToast >
+                <ToastSucess>
+                  <ToastHeaderSucess>{`Venda no ${option}`} </ToastHeaderSucess>
+                  <ToastBodySucess>{`Foi selecionado o ${option} como forma de pagamento`}</ToastBodySucess>
+                  
+                </ToastSucess>
+              </BoxToast>
+             
+            )}
+
             </ContainerValores>
             <ContainerValores>
                <LabelSubtotalDesconto>Subtotal:</LabelSubtotalDesconto>
