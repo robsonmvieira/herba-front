@@ -9,8 +9,8 @@ import {
   DropdownToggle as DDropdownToggle,
   Toast as TToast,
   ToastBody as TBody,
-  ToastHeader as THeader
-} from 'reactstrap'
+  ToastHeader as THeader,
+ } from 'reactstrap'
 
 
 export const Toast = styled(TToast)`

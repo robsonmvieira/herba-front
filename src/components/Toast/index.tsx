@@ -7,7 +7,7 @@ interface Props {
   bodyMessage: string
 }
 
-const Toast = ({ headerMessage, bodyMessage, isOpen }: Props) => {
+const ToastCustom = ({ headerMessage, bodyMessage, isOpen }: Props) => {
   const [show, setShow] = useState(isOpen)
 
   const toggle = () => setShow(!show)
@@ -28,4 +28,4 @@ const Toast = ({ headerMessage, bodyMessage, isOpen }: Props) => {
     </Container>
   )
 }
-export default Toast
+export default ToastCustom

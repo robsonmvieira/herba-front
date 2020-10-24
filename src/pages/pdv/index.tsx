@@ -2,6 +2,7 @@
 import React, { useCallback, useState, useRef, useEffect } from 'react'
 // import { formatUserName } from '../../utils/formatUserName'
 import { GetServerSideProps, InferGetStaticPropsType } from 'next'
+import  ToastCustom  from '../../components/Toast' 
 
 import {
   Navbar,
@@ -42,10 +43,12 @@ import {
   UserName,
   ContainerTh,
   DropdownToggle,
-  Toast,
-  ToastBody,
+    ToastBody,
   ToastHeader,
-  BoxToast
+  BoxToast,
+  Toast
+  
+  
 } from './styles'
 import { NavbarBrand } from 'reactstrap'
 import apiService from '../../services/apiService'
@@ -364,7 +367,7 @@ const ListProducts = ({
             </ContainerTh>
             <TabelaBody>
               {showToast && (
-                <Toast
+                <ToastCustom
                   headerMessage="Pronto!"
                   bodyMessage="Produto adicionado a cesta "
                   isOpen={showToast}
@@ -424,6 +427,7 @@ const ListProducts = ({
           <ContainerTotal>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
             <ContainerValores>
+
             {errorNumber === 500 && (
               <BoxToast >
                 <Toast>
@@ -433,6 +437,7 @@ const ListProducts = ({
                 </Toast>
               </BoxToast>
             )}
+            
             </ContainerValores>
             <ContainerValores>
                <LabelSubtotalDesconto>Subtotal:</LabelSubtotalDesconto>
