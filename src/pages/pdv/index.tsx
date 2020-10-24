@@ -43,13 +43,16 @@ import {
   UserName,
   ContainerTh,
   DropdownToggle,
-    ToastBody,
+  ToastBody,
   ToastHeader,
   BoxToast,
   Toast,
   ToastSucess,
   ToastBodySucess,
   ToastHeaderSucess,
+  InputDesconto,
+  FormTotalCustom,
+  LabelSubtotalDescontoCustom
   
   
   
@@ -155,6 +158,8 @@ const ListProducts = ({
   const [termOfFind, setTermOfFind] = useState('')
 
   const [showToast, setShowToast] = useState(false)
+
+  const [discount, setDiscount] = useState(0)
 
   const [option, setOption] = useState('')
   const [newSale, setNewSale] = useState<newSaleProps>({
@@ -466,8 +471,8 @@ const ListProducts = ({
               <FormSubtotalDesconto>R$100,00</FormSubtotalDesconto>
             </ContainerValores>
             <ContainerValores>
-              <LabelSubtotalDesconto>Desconto:</LabelSubtotalDesconto>
-              <FormSubtotalDesconto>R$10,00</FormSubtotalDesconto>
+              <LabelSubtotalDescontoCustom>Desconto:</LabelSubtotalDescontoCustom>
+              <FormTotalCustom>R$</FormTotalCustom><InputDesconto/>
             </ContainerValores>
             <ContainerValores>
               <LabelValorTotal>Valor Total:</LabelValorTotal>
