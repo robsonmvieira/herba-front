@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   IconsTags,
   ContainerIconsLg,
@@ -13,7 +13,7 @@ import {
   ContainerSide,
   ContainerConteudo,
   ContainerListAdicionar,
-  Containeradicionar,
+  ContainerAdicionar,
   Whapper,
   WhapperCustomName,
   ContainerSpan,
@@ -32,11 +32,18 @@ import {
 
 import Sidebar from '../../../components/sidebar'
 import Menu from '../../../components/Menu'
+import { GetServerSideProps, InferGetStaticPropsType } from 'next'
+import apiService from '../../../services/apiService'
+import { clientProps } from './interfaces'
+import Link from 'next/link'
 
-const dashClientes = () => {
+const dashClientes = ({
+  clientList
+}: InferGetStaticPropsType<typeof getServerSideProps>) => {
+  const [clients, setClients] = useState<clientProps[]>(clientList)
   return (
     <>
-      <Menu></Menu>
+      <Menu />
 
       <Container>
         <ContainerSide>
@@ -47,7 +54,9 @@ const dashClientes = () => {
             <ContainerTags>
               <IconsTags>
                 <ContainerSpan>
-                  <LabelClienteDashboard>45</LabelClienteDashboard>
+                  <LabelClienteDashboard>
+                    {clients.length}
+                  </LabelClienteDashboard>
                 </ContainerSpan>
                 <ContainerSpan>
                   <LabelDescricaoDashboard>
@@ -90,19 +99,22 @@ const dashClientes = () => {
 
           <ContainerListaLg>
             <ContainerListAdicionar>
-              <Containeradicionar>
-                <img src="\image\mais.svg" alt="" />
-              </Containeradicionar>
+              <ContainerAdicionar>
+                <Link href="/dashboard/clientes/novo">
+                  <img
+                    src="\image\mais.svg"
+                    alt="this is a icon that will go to new client pages"
+                  />
+                </Link>
+              </ContainerAdicionar>
             </ContainerListAdicionar>
 
             <ContainerBusca>
               <FormList>
-                <InputFormList/>
+                <InputFormList />
                 <BtnList>Cancelar</BtnList>
               </FormList>
             </ContainerBusca>
-
-
             <Tr>
               <WhapperCustomName>
                 <Th>Nome</Th>
@@ -120,25 +132,41 @@ const dashClientes = () => {
                 <Th>Del</Th>
               </Whapper>
             </Tr>
-          <TabelaBody>
-            <TBody>
-              <BoxTdCustomName><Td>Anderson Cooper</Td></BoxTdCustomName>
-              <BoxTd><Td>21964555580</Td></BoxTd>
-              <BoxTd><Td>20/05/2020</Td></BoxTd>
-              <BoxTd>
-              <img src="/image/edit.svg" alt="" />
-              </BoxTd>
-              <BoxTd>
-              <img src="/image/lixeira.svg" alt="" />
-              </BoxTd>   
-
-              </TBody>
-          </TabelaBody>
-                <DivBtnPreviusNext >
-                  <BtnPreviosNext ><img src="/image/left.svg" /> anterior</BtnPreviosNext>
-                  <BtnPreviosNext > Próximo <img src="/image/right.svg" /></BtnPreviosNext>
-                </DivBtnPreviusNext>
-            
+            <TabelaBody>
+              {clients.map(c => (
+                <TBody key={c.email}>
+                  <BoxTdCustomName>
+                    <Td>{c.name}</Td>
+                  </BoxTdCustomName>
+                  <BoxTd>
+                    <Td>{c.phone}</Td>
+                  </BoxTd>
+                  <BoxTd>
+                    <Td>
+                      {c.last_sale
+                        ? c.last_sale
+                        : 'ainda não tem compra realizada'}
+                    </Td>
+                  </BoxTd>
+                  <BoxTd>
+                    <img src="/image/edit.svg" alt="" />
+                  </BoxTd>
+                  <BoxTd>
+                    <img src="/image/lixeira.svg" alt="" />
+                  </BoxTd>
+                </TBody>
+              ))}
+              <TBody></TBody>
+            </TabelaBody>
+            <DivBtnPreviusNext>
+              <BtnPreviosNext>
+                <img src="/image/left.svg" /> anterior
+              </BtnPreviosNext>
+              <BtnPreviosNext>
+                {' '}
+                Próximo <img src="/image/right.svg" />
+              </BtnPreviosNext>
+            </DivBtnPreviusNext>
           </ContainerListaLg>
         </ContainerConteudo>
       </Container>
@@ -146,3 +174,10 @@ const dashClientes = () => {
   )
 }
 export default dashClientes
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const { data } = await apiService.get<clientProps[]>('clients')
+  return {
+    props: { clientList: data }
+  }
+}
