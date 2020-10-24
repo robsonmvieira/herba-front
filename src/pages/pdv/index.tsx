@@ -176,7 +176,7 @@ const ListProducts = ({
 
   const nextProducts = useCallback(async () => {
     // verify if current page is 0 or NaN
-    if (currentPage <= 0 || !isNaN(currentPage)) {
+    if (currentPage === 0 || isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       currentPage++
       const res = response.data.map((p: Product) => ({
@@ -214,7 +214,7 @@ const ListProducts = ({
 
   const previusPage = useCallback(async () => {
     // verify if current page is one or NaN
-    if (currentPage === 1 || isNaN(currentPage)) {
+    if (currentPage <= 1 || isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       // currentPage++
       setProducts(response.data)
@@ -398,11 +398,8 @@ const ListProducts = ({
                   </TrBody>
                 ))}
                 <DivBtnPreviusNext>
-                  <BtnPreviosNext
-                    onClick={previusPage}
-                    disabled={products.length < 10 || currentPage <= 1}
-                  >
-                    <img src="/image/left.svg" /> anterior
+                  <BtnPreviosNext onClick={previusPage}>
+                    <img src="/image/left.svg" /> Anterior
                   </BtnPreviosNext>
                   <BtnPreviosNext
                     onClick={nextProducts}
