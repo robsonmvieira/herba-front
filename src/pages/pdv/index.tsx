@@ -291,10 +291,9 @@ const ListProducts = ({
   const sendSaleHandler = useCallback(async () => {
     // const data = { ...newSale, type_of_payment: option }
     const data = { ...newSale, type_of_payment: option }
-    console.log(data)
     const response = await apiService.post('/salesPDV', data)
     if (response.data) {
-      console.log('salvo')
+      router.push('pdv/sucesso')
     } else {
       console.log('error')
     }
