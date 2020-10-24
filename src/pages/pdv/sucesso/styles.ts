@@ -8,6 +8,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content:center;
+  justify-items: center;
+  align-items: center;
     
 `
 
@@ -35,7 +37,7 @@ height: clamp(20rem, 90%, 100% );
 background: #1d1f2f;
 color: #FFF;
 padding: 20px;
-border: 25px solid #2FC84C;
+/* border: 25px solid #2FC84C; */
 border-radius: 25px;
 display: flex;
 justify-content: center;
@@ -44,7 +46,23 @@ justify-items: center;
 `
 
 export const Imagem = styled.img`
-width: clamp(15rem, 50%, 60% );
+width: 90%;
+height: auto;
+
+
+:hover {
+      font-weight: bolder;
+      overflow: hidden;
+      width: 120%;
+      border-radius: 2px;
+      -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+      -moz-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+      -ms-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+      -o-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+      transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+     
+    }
+
 `
 
 export const Texto = styled.p`
@@ -57,13 +75,16 @@ line-height: 42px;
 color: #2FC84C;
 width: clamp(20rem, 50%, 60% );
 text-align: center;
+
 `
 
 
 export const BoxTexto = styled.div`
-width: 100%;
+width: 80%;
 height: 20%;
 display: flex;
 justify-content: center;
+margin-right: 50px;
+
 
 `
