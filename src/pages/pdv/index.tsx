@@ -2,6 +2,7 @@
 import React, { useCallback, useState, useRef, useEffect } from 'react'
 // import { formatUserName } from '../../utils/formatUserName'
 import { GetServerSideProps, InferGetStaticPropsType } from 'next'
+import  ToastCustom  from '../../components/Toast' 
 
 import {
   Navbar,
@@ -42,10 +43,16 @@ import {
   UserName,
   ContainerTh,
   DropdownToggle,
-  Toast,
-  ToastBody,
+    ToastBody,
   ToastHeader,
-  BoxToast
+  BoxToast,
+  Toast,
+  ToastSucess,
+  ToastBodySucess,
+  ToastHeaderSucess,
+  
+  
+  
 } from './styles'
 import { NavbarBrand } from 'reactstrap'
 import apiService from '../../services/apiService'
@@ -296,12 +303,18 @@ const ListProducts = ({
   const sendSaleHandler = useCallback(async () => {
     // const data = { ...newSale, type_of_payment: option }
     const data = { ...newSale, type_of_payment: option }
+   if (data.itemsSalesPDV.length <= 0 ) {
+    return 
+   }
+   console.log(data)
     const response = await apiService.post('/salesPDV', data)
     if (response.data) {
       router.push('pdv/sucesso')
     } else {
-      console.log('error')
+      // console.log('error', response.data)
       setErrorNumber(500)      
+
+      
     }
     // todo logic to redirect after save sales
     // console.log(data)
@@ -364,7 +377,7 @@ const ListProducts = ({
             </ContainerTh>
             <TabelaBody>
               {showToast && (
-                <Toast
+                <ToastCustom
                   headerMessage="Pronto!"
                   bodyMessage="Produto adicionado a cesta "
                   isOpen={showToast}
@@ -421,6 +434,7 @@ const ListProducts = ({
           <ContainerTotal>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
             <ContainerValores>
+
             {errorNumber === 500 && (
               <BoxToast >
                 <Toast>
@@ -430,6 +444,19 @@ const ListProducts = ({
                 </Toast>
               </BoxToast>
             )}
+
+             {option  && (
+              
+              <BoxToast >
+                <ToastSucess>
+                  <ToastHeaderSucess>{`Venda no ${option}`} </ToastHeaderSucess>
+                  <ToastBodySucess>{`Foi selecionado o ${option} como forma de pagamento`}</ToastBodySucess>
+                  
+                </ToastSucess>
+              </BoxToast>
+             
+            )}
+
             </ContainerValores>
             <ContainerValores>
                <LabelSubtotalDesconto>Subtotal:</LabelSubtotalDesconto>

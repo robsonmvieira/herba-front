@@ -10,6 +10,7 @@ import {
     BoxTexto
   
 } from './styles'
+import Link from 'next/link'
 
 const SucessProducts = () => {
   return (
@@ -18,7 +19,13 @@ const SucessProducts = () => {
       <Container>
         <ContainerVenda>
         <ContainerVendido>
-            <Imagem src="/image/Vector.svg" alt=""/>
+
+          <Link href="/pdv">
+           <a>
+            <Imagem src="/image/Vector.svg" alt="volta ao menu do pdv" title="Retornar ao Ponto de Venda." />
+           </a>
+            </Link>
+        
         </ContainerVendido>                 
         </ContainerVenda>
             <BoxTexto>

@@ -9,8 +9,8 @@ import {
   DropdownToggle as DDropdownToggle,
   Toast as TToast,
   ToastBody as TBody,
-  ToastHeader as THeader
-} from 'reactstrap'
+  ToastHeader as THeader,
+ } from 'reactstrap'
 
 
 export const Toast = styled(TToast)`
@@ -30,6 +30,25 @@ export const ToastHeader = styled(THeader)`
   background: #c08b8e;
   width:100% !important;
 `
+
+export const ToastSucess = styled(TToast)`
+  color:#fff;
+  background:  rgba(47, 150, 71, 1);
+  width:100% !important;
+
+`
+export const ToastBodySucess = styled(TBody)`
+  color:#fff;
+  background:  rgba(47, 150, 71, 1);
+   width:100% !important;
+`
+
+export const ToastHeaderSucess = styled(THeader)`
+  color:#fff;
+  background:  rgba(47, 150, 71, 1);
+  width:100% !important;
+`
+
 
 export const BoxToast = styled.div`
   width: 100%;
