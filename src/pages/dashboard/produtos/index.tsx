@@ -102,14 +102,14 @@ const dashProdutos = ({ productsList }) => {
     if (currentPage === 0 || isNaN(currentPage)) {
       const response = await apiService.get(`/products?pages=${1}`)
       currentPage++
-      console.log(currentPage)
+
       setProducts(response.data)
     } else if (currentPage === 1) {
       const response = await apiService.get(
         `/products?pages=${currentPage + 1}`
       )
       currentPage++
-      console.log(currentPage)
+
       setProducts(response.data)
     } else {
       // then current page is biggest than one
@@ -117,14 +117,14 @@ const dashProdutos = ({ productsList }) => {
         `/products?pages=${currentPage + 1}`
       )
       currentPage++
-      console.log(currentPage)
+
       setProducts(response.data)
     }
     // nextPagePagination(currentPage, apiService, setProducts)
   }, [currentPage])
 
   const previousPage = useCallback(async () => {
-    // console.log(currentPage)
+    //
 
     // verify if current page is one or NaN
     if (currentPage === 0 || isNaN(currentPage)) {
@@ -136,11 +136,9 @@ const dashProdutos = ({ productsList }) => {
       const response = await apiService.get(`/products?pages=${1}`)
       // currentPage++
       setProducts(response.data)
-      console.log(currentPage)
     } else {
       currentPage--
       const response = await apiService.get(`/products?pages=${currentPage}`)
-      console.log(currentPage)
 
       setProducts(response.data)
     }
