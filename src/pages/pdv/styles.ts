@@ -881,13 +881,25 @@ export const BoxCustomName = styled.div`
 export const InputPdv = styled.input`
   @media (max-width: 424px) {
     width: 25px;
+    outline: none !important;
+    background: #1d1f2f;
+    color: #eff0f5;
+    border: none;
   }
   @media (min-width: 425px) and (max-width: 767px) {
     width: 30px;
+    outline: none !important;
+    background: #1d1f2f;
+    color: #eff0f5;
+    border: none;
   }
 
   @media (min-width: 768px) {
     width: 40px;
+    outline: none !important;
+    background: #1d1f2f;
+    color: #eff0f5;
+    border: none;
   }
 `
 
