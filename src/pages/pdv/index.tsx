@@ -147,7 +147,8 @@ const ListProducts = ({
 
   const [option, setOption] = useState('')
   const [newSale, setNewSale] = useState<newSaleProps>({
-    owner_id: '9addaa98-ef00-4a21-b781-861b6e8fbc92',
+    // owner_id: '9addaa98-ef00-4a21-b781-861b6e8fbc92', id de desenvolvimento
+    owner_id: '2c7c5e72-41ef-4233-a096-67e1ded3703b', // id de produção
     descount: 10,
     type_of_payment: option,
     itemsSalesPDV: []
@@ -290,8 +291,15 @@ const ListProducts = ({
   const sendSaleHandler = useCallback(async () => {
     // const data = { ...newSale, type_of_payment: option }
     const data = { ...newSale, type_of_payment: option }
+    console.log(data)
     const response = await apiService.post('/salesPDV', data)
+    if (response.data) {
+      console.log('salvo')
+    } else {
+      console.log('error')
+    }
     // todo logic to redirect after save sales
+    // console.log(data)
   }, [option, newSale])
 
   return (
