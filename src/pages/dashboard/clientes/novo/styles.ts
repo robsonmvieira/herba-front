@@ -455,6 +455,7 @@ export const InputComDivisaoCustomMobile = styled.input`
   justify-content: center;
   align-items: center;
   justify-items: center;
+  background-image: url ('/image/premium.svg')
 `
 
 export const LabelInputComDivisao = styled.span`

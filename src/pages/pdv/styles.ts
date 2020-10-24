@@ -390,6 +390,37 @@ export const LabelSubtotalDesconto = styled.span`
   }
 `
 
+
+
+export const LabelSubtotalDescontoCustom = styled.span`
+  @media (max-width: 497px) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 30%;
+  }
+  @media (min-width: 498px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    color: #958a8a;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 21px;
+    width: 100%;
+  }
+`
 export const FormSubtotalDesconto = styled.span`
   @media (max-width: 497px) {
     display: flex;
@@ -472,6 +503,37 @@ export const FormTotal = styled.span`
     flex-direction: row-reverse;
     align-items: end;
     color: #ff6198;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    width: 50%;
+  }
+`
+
+
+export const FormTotalCustom = styled.span`
+  @media (max-width: 497px) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    color: #fff;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 15px;
+    flex-direction: row-reverse;
+    width: 55%;
+    margin-right: 15px;
+  }
+  @media (min-width: 498px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    color: #fff;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -1390,5 +1452,34 @@ export const LabelClienteDashboardMenos = styled.span`
     text-align: center;
     font-family: Roboto;
     font-style: normal;
+  }
+`
+
+export const InputDesconto = styled.input`
+  @media (max-width: 497px) {
+    width: 30px;
+    outline: none !important;
+    background: #282741;
+    color: #ffffff;
+    border: none;
+    margin-top: 13px;
+    
+  }
+  @media (min-width: 498px) and (max-width: 767px) {
+    width: 35px;
+    outline: none !important;
+    background: #282741;
+    color: #ffffff;
+    border: none;
+    margin-left: 5px;
+  }
+
+  @media (min-width: 768px) {
+    width: 45px;
+    outline: none !important;
+    background: #1d1f2f;
+    color: #ffffff;
+    border: none;
+    margin-left: 5px;
   }
 `
