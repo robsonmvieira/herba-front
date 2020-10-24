@@ -2,7 +2,7 @@
 import React, { useCallback, useState, useRef, useEffect } from 'react'
 // import { formatUserName } from '../../utils/formatUserName'
 import { GetServerSideProps, InferGetStaticPropsType } from 'next'
-import Toast from '../../components/Toast'
+
 import {
   Navbar,
   Container,
@@ -26,7 +26,7 @@ import {
   Tr,
   TrBody,
   Th,
-  TBody,
+  TableBody,
   TabelaBody,
   BoxCustomName,
   Whapper,
@@ -41,7 +41,11 @@ import {
   UncontrolledDropdown,
   UserName,
   ContainerTh,
-  DropdownToggle
+  DropdownToggle,
+  Toast,
+  ToastBody,
+  ToastHeader,
+  BoxToast
 } from './styles'
 import { NavbarBrand } from 'reactstrap'
 import apiService from '../../services/apiService'
@@ -245,6 +249,7 @@ const ListProducts = ({
   }, [])
 
   const valueQuantityHandler = (ev: string) => {}
+  const [errorNumber, setErrorNumber] = useState(0)
 
   const addItemToBasketHandler = useCallback(
     (product: Product) => {
@@ -296,6 +301,7 @@ const ListProducts = ({
       router.push('pdv/sucesso')
     } else {
       console.log('error')
+      setErrorNumber(500)      
     }
     // todo logic to redirect after save sales
     // console.log(data)
@@ -364,7 +370,7 @@ const ListProducts = ({
                   isOpen={showToast}
                 />
               )}
-              <TBody>
+              <TableBody>
                 {products.map((p: Product) => (
                   <TrBody key={p.id}>
                     <BoxCustomName>
@@ -411,14 +417,25 @@ const ListProducts = ({
                     Próximo <img src="/image/right.svg" />
                   </BtnPreviosNext>
                 </DivBtnPreviusNext>
-              </TBody>
+              </TableBody>
             </TabelaBody>
           </ContainerProducts>
 
           <ContainerTotal>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
             <ContainerValores>
-              <LabelSubtotalDesconto>Subtotal:</LabelSubtotalDesconto>
+            {errorNumber === 500 && (
+              <BoxToast >
+                <Toast>
+                  <ToastHeader>Erro Interno! </ToastHeader>
+                  <ToastBody>Não foi possivel efetuar a venda! Tente Novamente!</ToastBody>
+                  
+                </Toast>
+              </BoxToast>
+            )}
+            </ContainerValores>
+            <ContainerValores>
+               <LabelSubtotalDesconto>Subtotal:</LabelSubtotalDesconto>
               <FormSubtotalDesconto>R$100,00</FormSubtotalDesconto>
             </ContainerValores>
             <ContainerValores>
@@ -450,6 +467,7 @@ const ListProducts = ({
 
             <ContainerValores>
               <BtnFinalizar onClick={sendSaleHandler}>Finalizar</BtnFinalizar>
+
             </ContainerValores>
           </ContainerTotal>
         </ContainerVenda>

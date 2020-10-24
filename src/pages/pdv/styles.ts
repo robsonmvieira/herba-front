@@ -6,8 +6,36 @@ import {
   DropdownItem as DDropDow,
   DropdownMenu as MDropDow,
   UncontrolledDropdown as ControleDropDow,
-  DropdownToggle as DDropdownToggle
+  DropdownToggle as DDropdownToggle,
+  Toast as TToast,
+  ToastBody as TBody,
+  ToastHeader as THeader
 } from 'reactstrap'
+
+
+export const Toast = styled(TToast)`
+  color: #9c0606;
+  background: #c08b8e;
+  width:100% !important;
+
+`
+export const ToastBody = styled(TBody)`
+  color: #9c0606;
+  background: #c08b8e;
+   width:100% !important;
+`
+
+export const ToastHeader = styled(THeader)`
+  color: #9c0606;
+  background: #c08b8e;
+  width:100% !important;
+`
+
+export const BoxToast = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
 
 export const DropdownToggle = styled(DDropdownToggle)`
   cursor: pointer;
@@ -231,7 +259,7 @@ export const ContainerTotal = styled.div`
     display: flex;
     flex-direction: column;
     width: 32%;
-    height: 650px;
+    height: 800px;
     align-items: center;
     background: #282741;
     margin-top: 20px;
@@ -999,7 +1027,7 @@ export const ContainerSpanTotais = styled.div`
 export const HTitulo = styled.h2`
   color: #fff;
 `
-export const TBody = styled.div`
+export const TableBody = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
