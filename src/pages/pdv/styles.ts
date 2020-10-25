@@ -1295,7 +1295,7 @@ export const ContainerTotais = styled.div`
     display: flex;
     flex-direction: column;
     width: 32%;
-    height: 600px;
+    height: 700px;
     align-items: center;
     background: #282741;
     margin-top: 20px;
