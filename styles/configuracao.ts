@@ -38,7 +38,7 @@ export const ContainerConteudo = styled.div`
   
 `
 
-export const ContainerIconsLg = styled.div`
+export const Section = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
@@ -65,9 +65,7 @@ export const ContainerIconsLg = styled.div`
   }
 `
 
-export const ContainerNovoCliente = styled.div`
-  
-
+export const BoxFormulario = styled.div`
  
     background: #1d1f2f;
     width: 90%;
@@ -83,7 +81,7 @@ export const ContainerNovoCliente = styled.div`
 `
 
 
-export const ContainerTituloNovoCliente = styled.div`
+export const BoxTitulo = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 80%;
@@ -127,7 +125,7 @@ export const Titulo = styled.h6`
 
 // a partir daqui é relacionado a desktop >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-export const LabelParaDesktop = styled.span`
+export const Label = styled.span`
   @media (max-width: 767px) {
     background: #1d1f2f;
     color: #ffffff;
@@ -167,7 +165,7 @@ export const ContainerAdicionarDesktop = styled.div`
   }
 `
 
-export const ContainerAdicionarDesktopCustom = styled.div`
+export const BoxInputCustom = styled.div`
   @media (max-width: 767px) {
     display: flex;
     justify-content: center;
@@ -180,13 +178,13 @@ export const ContainerAdicionarDesktopCustom = styled.div`
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
-    width: 45%;
+    width: 49%;
     height: 100%;
     background-color: #1d1f2f;
     flex-direction: column;
   }
 `
-export const ContainerDesktop = styled.div`
+export const BoxInput = styled.div`
   @media (max-width: 767px) {
     display: flex;
     justify-content: center;
@@ -199,7 +197,7 @@ export const ContainerDesktop = styled.div`
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 32%;
     height: 100%;
     background-color: #1d1f2f;
     flex-direction: column;
@@ -250,7 +248,7 @@ export const BoxAdicionarDesktopCustom = styled.div`
 
 
 
-export const ContainerListAdicionarDesktop = styled.div`
+export const ContainerFormulario = styled.div`
   /* aumenta o container com a label e o input dentro  */
   @media (max-width: 767px) {
     width: 100%;
@@ -277,7 +275,7 @@ export const ContainerListAdicionarDesktop = styled.div`
 
   
 `
-export const BoxStylesDiv = styled.div`
+export const Wrapper = styled.div`
   /* aumenta o container com a label e o input dentro  */
   @media (max-width: 767px) {
     background: #1d1f2f;
@@ -331,7 +329,7 @@ export const InputDesktop = styled.input`
   }
 `
 
-export const SelectDesktop = styled.select`
+export const Select = styled.select`
   @media (max-width: 767px) {
     background: #282741;
     color: #ffffff;
@@ -358,11 +356,11 @@ export const SelectDesktop = styled.select`
 `
 
 
-export const BtnAdicionarDesktop = styled.button`
+export const BtnAdicionar = styled.button`
   @media (max-width: 767px) {
     background: #2FC84C;
     width: 100%;
-    height: 70%;
+    height: 35%;
     display: flex;
     margin: none;
     padding: none;
