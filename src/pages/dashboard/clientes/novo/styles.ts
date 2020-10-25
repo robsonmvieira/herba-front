@@ -6,12 +6,14 @@ export const Container = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background: #1d1f2f;
   }
 
   @media (min-width: 768px) {
     width: 100%;
     height: 100%;
     display: flex;
+    background: #1d1f2f;
   }
 `
 
@@ -24,15 +26,9 @@ export const ContainerInclusao = styled.div`
 `
 
 export const ContainerConteudo = styled.div`
-  /* @media (max-width: 767px) {
-    display: none;
-    background: red;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
+   @media (max-width: 767px) {
+     background: #1d1f2f;
+  } 
 
   @media (min-width: 768px) {
     background: #1d1f2f;
