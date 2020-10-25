@@ -1284,7 +1284,7 @@ export const Descricao = styled.span`
   }
 `
 
-export const ContainerTotais = styled.div`
+export const ContainerResum = styled.div`
   @media (max-width: 760px) {
     display: flex;
     flex-direction: column;
@@ -1302,7 +1302,7 @@ export const ContainerTotais = styled.div`
   }
 `
 
-export const ContainerIconsLg = styled.div`
+export const ContainerBoxes = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
@@ -1326,7 +1326,7 @@ export const ContainerIconsLg = styled.div`
   }
 `
 
-export const ContainerTags = styled.div`
+export const Boxes = styled.div`
   @media (max-width: 767px) {
     width: 90%;
     display: flex;
@@ -1345,7 +1345,7 @@ export const ContainerTags = styled.div`
   }
 `
 
-export const IconsTags = styled.div`
+export const ContainerBox = styled.div`
   @media (max-width: 767px) {
     background: #282741;
     width: 90%;
@@ -1371,7 +1371,7 @@ export const IconsTags = styled.div`
     font-size: 1rem;
   }
 `
-export const ContainerSpan = styled.div`
+export const Box = styled.div`
   @media (max-width: 767px) {
     display: flex;
     justify-content: center;
@@ -1386,7 +1386,7 @@ export const ContainerSpan = styled.div`
   }
 `
 
-export const LabelClienteDashboard = styled.span`
+export const BoxDescription = styled.span`
   @media (max-width: 767px) {
     color: #2fc84c;
     width: 40%;
@@ -1409,7 +1409,7 @@ export const LabelClienteDashboard = styled.span`
   }
 `
 
-export const LabelDescricaoDashboard = styled.span`
+export const BoxInformations = styled.span`
   @media (max-width: 767px) {
     color: #fff;
     width: 45%;
@@ -1433,7 +1433,7 @@ export const LabelDescricaoDashboard = styled.span`
     font-size: 14px;
   }
 `
-export const LabelClienteDashboardMenos = styled.span`
+export const BoxDescriptionCustom = styled.span`
   @media (max-width: 767px) {
     color: #ef6e6e;
     width: 40%;
