@@ -23,7 +23,6 @@ import {
   ContainerSpan,
   Wrapper,
   BoxBtnAdicionar,
-  ContentCheckBoxCustomPremium,
   CheckBoxCustomPremium,
   LabelCheckBoxPremium,
   BoxFormulario,
