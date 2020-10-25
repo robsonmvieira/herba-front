@@ -654,22 +654,6 @@ export const ContentCheckBox = styled.div`
   
 `
 
-
-export const ContentCheckBoxCustomPremium = styled.div`
-  @media (max-width: 767px) {
-   
-  }
-
-  @media (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    align-items: center;
-    justify-items: flex-start;
-    justify-content: flex-start;
-  }
-`
-
 export const ContentCheckBoxSpecial = styled.div`
   @media (max-width: 767px) {
     display: flex;
