@@ -1,18 +1,18 @@
 import React from 'react'
 import {
-  IconsTags,
+  BoxDescription,
   ContainerIconsLg,
-  LabelClienteDashboard,
-  LabelDescricaoDashboard,
-  LabelClienteDashboardMenos,
+  BoxInformation,
+  BoxInfoDescription,
+  BoxInfoDescriptionCustom,
   Container,
   ContainerNovoCliente,
-  ContainerTags,
+  ContainerBox,
   ContainerSide,
-  ContainerConteudo,
+  Content,
   ContainerTituloNovoCliente,
   Titulo,
-  ContainerIconsDeCima,
+  ContainerBoxes,
   LabelInput,
   Input,
   ContentCheckBox,
@@ -20,7 +20,7 @@ import {
   LabelCheckBox,
   ContainerCheckBox,
   BtnAdicionar,
-  ContainerSpan,
+  BoxTitle,
   Wrapper,
   BoxBtnAdicionar,
   CheckBoxCustomPremium,
@@ -48,51 +48,51 @@ const NovoCliente = () => {
         <ContainerSide>
           <Sidebar />
         </ContainerSide>
-        <ContainerConteudo>
-          <ContainerIconsDeCima>
-            <ContainerTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelClienteDashboard>35</LabelClienteDashboard>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+        <Content>
+          <ContainerBoxes>
+            <ContainerBox>
+              <BoxDescription>
+                <BoxTitle>
+                  <BoxInformation>35</BoxInformation>
+                </BoxTitle>
+                <BoxTitle>
+                  <BoxInfoDescription>
                     Clientes cadastrados
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelClienteDashboard>Robson Shubba</LabelClienteDashboard>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </BoxInfoDescription>
+                </BoxTitle>
+              </BoxDescription>
+              <BoxDescription>
+                <BoxTitle>
+                  <BoxInformation>Robson Shubba</BoxInformation>
+                </BoxTitle>
+                <BoxTitle>
+                  <BoxInfoDescription>
                     Melhor Cliente
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelClienteDashboardMenos>5</LabelClienteDashboardMenos>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </BoxInfoDescription>
+                </BoxTitle>
+              </BoxDescription>
+              <BoxDescription>
+                <BoxTitle>
+                  <BoxInfoDescriptionCustom>5</BoxInfoDescriptionCustom>
+                </BoxTitle>
+                <BoxTitle>
+                  <BoxInfoDescription>
                     Cliente Ocioso
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelClienteDashboardMenos>10</LabelClienteDashboardMenos>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </BoxInfoDescription>
+                </BoxTitle>
+              </BoxDescription>
+              <BoxDescription>
+                <BoxTitle>
+                  <BoxInfoDescriptionCustom>10</BoxInfoDescriptionCustom>
+                </BoxTitle>
+                <BoxTitle>
+                  <BoxInfoDescription>
                     Clientes Inativos
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-            </ContainerTags>
-          </ContainerIconsDeCima>
+                  </BoxInfoDescription>
+                </BoxTitle>
+              </BoxDescription>
+            </ContainerBox>
+          </ContainerBoxes>
 
           <ContainerIconsLg>
     <ContainerNovoCliente>
@@ -364,7 +364,7 @@ const NovoCliente = () => {
 
      </ContainerNovoCliente>
    </ContainerIconsLg>
- </ContainerConteudo>
+ </Content>
 </Container>
     </>
   )
