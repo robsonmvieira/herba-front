@@ -388,22 +388,6 @@ export const ContainerTituloNovoCliente = styled.div`
   }
 `
 
-export const Input = styled.input`
-  @media (max-width: 767px) {
-    background: #282741;
-    color: #ffffff;
-    width: 100%;
-    height: 40px;
-    margin-top: 5px;
-    border: none;
-  }
-  @media (min-width: 768px) {
-    display: none;
-  }
-`
-
-
-
 export const InputCustomMobile = styled.input`
   @media (max-width: 767px) {
     background: #282741;
@@ -418,17 +402,6 @@ export const InputCustomMobile = styled.input`
   }
 `
 
-export const LabelInput = styled.span`
-  @media (max-width: 767px) {
-    background: #1d1f2f;
-    color: #ffffff;
-    width: 100%;
-    height: 40%;
-  }
-  @media (min-width: 768px) {
-    display: none;
-  }
-`
 
 export const InputComDivisao = styled.input`
   background: #282741;
@@ -591,7 +564,7 @@ export const BtnAdicionar = styled.button`
   }
 
   @media (min-width: 768px) {
-    background: #74f471;
+    background: #2FC84C;
     width: 40%;
     height: 50%;
     display: flex;
@@ -601,26 +574,14 @@ export const BtnAdicionar = styled.button`
     justify-items: center;
     align-items: center;
     outline: none !important;
+    color: #ffffff;
 
   }
 `
 
 // a partir daqui é relacionado a desktop >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-export const LabelParaDesktop = styled.span`
-  @media (max-width: 767px) {
-    display: none;
-  }
 
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: flex-start;
-    width: 90%;
-    height: 30%;
-    margin-left: 5px;
-    background-color: #1d1f2f;
-  }
-`
 
 export const ContainerAdicionarDesktop = styled.div`
   @media (max-width: 767px) {
@@ -638,45 +599,39 @@ export const ContainerAdicionarDesktop = styled.div`
   }
 `
 
-export const ContainerAdicionarDesktopCustom = styled.div`
-  @media (max-width: 767px) {
-    display: none;
-  }
 
-  @media (min-width: 768px) {
+export const BoxBtnAdicionar = styled.div`
+@media (max-width: 767px) {
     display: flex;
     justify-content: center;
-    width: 48%;
-    height: 100%;
+    width: 80%;
+    height: 50%;
     background-color: #1d1f2f;
-
     flex-direction: column;
-  }
-`
-
-
-export const BoxAdicionarDesktopCustom = styled.div`
-  @media (max-width: 767px) {
-    display: none;
   }
 
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 80px;
     background-color: #1d1f2f;
     flex-direction: column;
-    margin-top: 20px;
   }
 `
 
 
 
-export const ContainerListAdicionarDesktop = styled.div`
+export const ContainerFormulario = styled.div`
   /* aumenta o container com a label e o input dentro  */
   @media (max-width: 767px) {
-    display: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    color: #fff;
+    background-color: #1d1f2f;
+    flex-direction: column;
   }
 
   @media (min-width: 768px) {
@@ -689,45 +644,24 @@ export const ContainerListAdicionarDesktop = styled.div`
     background-color: #1d1f2f;
     margin-top: 15px;
     margin-bottom: 5px;
-  }
-`
-export const InputDesktop = styled.input`
-  @media (max-width: 767px) {
-    display: none;
-  }
+    flex-direction: column;}
 
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: #282741;
-    border: none;
-    color: #eff0f5;
-    height: 40px;
-    outline: none;
-    padding-left: 5px;
-  }
+  
 `
 
-export const DivCheckBox = styled.div`
-  @media (max-width: 767px) {
-    display: none;
-  }
-
-  @media (min-width: 768px) {
+export const ContentCheckBox = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
-
     align-items: center;
     justify-items: center;
-  }
+  
 `
 
 
-export const DivCheckBoxCustomPremium = styled.div`
+export const ContentCheckBoxCustomPremium = styled.div`
   @media (max-width: 767px) {
-    display: none;
+   
   }
 
   @media (min-width: 768px) {
@@ -740,40 +674,63 @@ export const DivCheckBoxCustomPremium = styled.div`
   }
 `
 
-
-
-export const CheckBoxDesktop = styled.input`
+export const ContentCheckBoxSpecial = styled.div`
   @media (max-width: 767px) {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    justify-items: flex-start;
+    justify-content: flex-start;
   }
 
   @media (min-width: 768px) {
-    width: 25%;
-    background-color: #1d1f2f;
-    height: 25px;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    justify-items: flex-start;
+    justify-content: flex-start;
   }
 `
 
+export const CheckBox = styled.input`
+    width: 25%;
+    background-color: #1d1f2f;
+    height: 25px;
+  
+`
 
-export const CheckBoxDesktopCustomPremium = styled.input`
-  @media (max-width: 767px) {
-    display: none;
-  }
 
-  @media (min-width: 768px) {
+export const CheckBoxCustomPremium = styled.input`
+@media (max-width: 767px) {
+  width: 25%;
+    background-color: #1d1f2f;
+    height: 25px;
+
+
+}
+@media (min-width: 768px) {
     width: 10%;
     background-color: #1d1f2f;
     height: 25px;
     /* visibility: hidden */
-
-  }
+}
+  
 `
 
 
 
-export const LabelParaCheckBox = styled.span`
+export const LabelCheckBox = styled.span`
   @media (max-width: 767px) {
-    display: none;
+    width: 65%;
+    height: 30px;
+    margin-left: 0px;
+    text-align: start;
+    background-color: #1d1f2f;
+    font-size: 1rem;
+    align-items: center;
+    display: flex;
   }
 
   @media (min-width: 768px) {
@@ -789,9 +746,16 @@ export const LabelParaCheckBox = styled.span`
 `
 
 
-export const LabelParaCheckBoxCustomPremium = styled.span`
+export const LabelCheckBoxPremium = styled.span`
   @media (max-width: 767px) {
-    display: none;
+    width: 100%;
+    height: 30px;
+    margin-left: 0px;
+    text-align: start;
+    background-color: #1d1f2f;
+    font-size: 1rem;
+    align-items: center;
+    display: flex;
   }
 
   @media (min-width: 768px) {
@@ -807,9 +771,15 @@ export const LabelParaCheckBoxCustomPremium = styled.span`
 `
 
 
-export const ContainerCheckBoxDesktop = styled.div`
+export const ContainerCheckBox = styled.div`
   @media (max-width: 767px) {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    background-color: #1d1f2f;
+    margin-top: 20px;
+    flex-direction: row;
   }
 
   @media (min-width: 768px) {
@@ -823,27 +793,7 @@ export const ContainerCheckBoxDesktop = styled.div`
   }
 `
 
-export const BtnAdicionarDesktop = styled.button`
-  @media (max-width: 767px) {
-    display: none;
-  }
 
-  @media (min-width: 768px) {
-    width: 330px;
-    height: 50px;
-    margin-top: 50px;
-    background-color:  #2FC84C;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    color: #ffffff;
-    margin-bottom: 50px;
-    outline: none !important;
-
-  }
-`
 
 export const ContainerSpan = styled.div`
   @media (max-width: 767px) {
@@ -863,3 +813,266 @@ export const ContainerSpan = styled.div`
 // #1D1F2F  - color fundo
 
 // #282741  -  color input
+
+
+
+
+export const BoxFormulario = styled.div`
+  /* aumenta o container com a label e o input dentro  */
+  @media (max-width: 767px) {
+    background: #1d1f2f;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+    flex-direction: column;
+    
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #1d1f2f;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    flex-direction: row;
+
+  }
+`
+
+
+
+export const BoxFormularioCustom = styled.div`
+  /* aumenta o container com a label e o input dentro  */
+  @media (max-width: 767px) {
+    background: #1d1f2f;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    color: #fff;
+    flex-direction: column;
+    
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #1d1f2f;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    flex-direction: row;
+
+  }
+`
+
+
+export const BoxPremium = styled.div`
+  /* aumenta o container com a label e o input dentro  */
+  @media (max-width: 767px) {
+    background: #1d1f2f;
+    width: 75%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    color: #fff;
+    
+    
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #1d1f2f;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    flex-direction: row;
+
+  }
+`
+
+
+export const BoxFormularioSpecial = styled.div`
+  /* aumenta o container com a label e o input dentro  */
+  @media (max-width: 767px) {
+    background: #1d1f2f;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    color: #fff;
+    flex-direction: column;
+    
+  }
+
+  @media (min-width: 768px) {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #1d1f2f;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    flex-direction: row;
+
+  }
+`
+
+
+
+export const Wrapper = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 49%;
+    height: 100%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+  }
+`
+
+
+export const WrapperCustom = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+  }
+`
+
+export const WrapperSpecial = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 32%;
+    height: 100%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+  }
+`
+
+export const LabelInput = styled.span`
+  @media (max-width: 767px) {
+    background: #1d1f2f;
+    color: #ffffff;
+    width: 100%;
+    height: 40%;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 30%;
+    margin-left: 5px;
+    background-color: #1d1f2f;
+  }
+`
+
+
+export const Input = styled.input`
+  @media (max-width: 767px) {
+    background: #282741;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #282741;
+    border: none;
+    color: #eff0f5;
+    height: 40px;
+    outline: none;
+    padding-left: 5px;
+  }
+`
+
+
+
+export const BoxDivision = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+`
+
+
+
+export const BoxDivisionCustom = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    display: flex;
+
+  }
+`

@@ -1290,7 +1290,7 @@ export const ContainerTotais = styled.div`
     flex-direction: column;
     align-items: center;
   }
-
+  
   @media (min-width: 761px) {
     display: flex;
     flex-direction: column;
