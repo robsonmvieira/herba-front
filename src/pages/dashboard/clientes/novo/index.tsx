@@ -124,11 +124,11 @@ const dashClientesNovo = () => {
               </ContainerListAdicionarDesktop> */}
 
               <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktopCustom >
-                  <LabelParaDesktop>Titulo:</LabelParaDesktop>
+                <ContainerAdicionarDesktopCustom>
+                  <LabelParaDesktop>Nome:</LabelParaDesktop>
                   <InputDesktop />
                 </ContainerAdicionarDesktopCustom>
-                <ContainerAdicionarDesktopCustom >
+                <ContainerAdicionarDesktopCustom>
                   <LabelParaDesktop>Data de Nascimento:</LabelParaDesktop>
                   <InputDesktop />
                 </ContainerAdicionarDesktopCustom>
@@ -330,14 +330,14 @@ const dashClientesNovo = () => {
                 <ContainerCheckBoxDesktop>
                   <DivCheckBox>
                     <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Hipertensao</LabelParaCheckBox>
+                    <LabelParaCheckBox>Hipertensão</LabelParaCheckBox>
                   </DivCheckBox>
                 </ContainerCheckBoxDesktop>
 
                 <ContainerCheckBoxDesktop>
                   <DivCheckBox>
                     <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Indispoisção</LabelParaCheckBox>
+                    <LabelParaCheckBox>Indisposição</LabelParaCheckBox>
                   </DivCheckBox>
                 </ContainerCheckBoxDesktop>
 
@@ -359,15 +359,17 @@ const dashClientesNovo = () => {
               </ContainerListAdicionarDesktop>
 
               <ContainerListAdicionarDesktop>
-              <DivCheckBoxCustomPremium>
-                    <CheckBoxDesktopCustomPremium type="checkbox" />
-                    <LabelParaCheckBoxCustomPremium>Cliente Premium</LabelParaCheckBoxCustomPremium>
-                    <img src="/image/premium.svg" alt=""/>
-                  </DivCheckBoxCustomPremium>
+                <DivCheckBoxCustomPremium>
+                  <CheckBoxDesktopCustomPremium type="checkbox" />
+                  <LabelParaCheckBoxCustomPremium>
+                    Cliente Premium
+                  </LabelParaCheckBoxCustomPremium>
+                  <img src="/image/premium.svg" alt="" />
+                </DivCheckBoxCustomPremium>
               </ContainerListAdicionarDesktop>
 
               <ContainerListAdicionarDesktop>
-                <BoxAdicionarDesktopCustom >
+                <BoxAdicionarDesktopCustom>
                   <BtnAdicionarDesktop> Adicionar </BtnAdicionarDesktop>
                 </BoxAdicionarDesktopCustom>
               </ContainerListAdicionarDesktop>
@@ -376,98 +378,98 @@ const dashClientesNovo = () => {
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Nome:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Data Nascimento:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Sexo:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Telefone:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Cpf:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Email:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Profissão:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Enderço:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Bairro:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Cidade:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Estado:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Peso:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Altura:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Alergias:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
@@ -632,15 +634,15 @@ const dashClientesNovo = () => {
               <ContainerListAdicionar>
                 <Containeradicionar>
                   <LabelInput>Outros:</LabelInput>
-                  <Input/>
+                  <Input />
                 </Containeradicionar>
               </ContainerListAdicionar>
 
               <ContainerListAdicionarCustomMobile>
-                  <InputComDivisaoCustomMobile type="checkbox"></InputComDivisaoCustomMobile>
-                  <LabelInputComDivisao>Cliente Premium:</LabelInputComDivisao>
-                  <img src="/image/premium.svg" alt=""/>
-                  </ContainerListAdicionarCustomMobile>
+                <InputComDivisaoCustomMobile type="checkbox"></InputComDivisaoCustomMobile>
+                <LabelInputComDivisao>Cliente Premium:</LabelInputComDivisao>
+                <img src="/image/premium.svg" alt="" />
+              </ContainerListAdicionarCustomMobile>
 
               <ContainerListAdicionar>
                 <Containeradicionar>

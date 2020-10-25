@@ -2,7 +2,7 @@
 import React, { useCallback, useState, useRef, useEffect } from 'react'
 // import { formatUserName } from '../../utils/formatUserName'
 import { GetServerSideProps, InferGetStaticPropsType } from 'next'
-import  ToastCustom  from '../../components/Toast' 
+import ToastCustom from '../../components/Toast'
 
 import {
   Navbar,
@@ -53,9 +53,6 @@ import {
   InputDesconto,
   FormTotalCustom,
   LabelSubtotalDescontoCustom
-  
-  
-  
 } from './styles'
 import { NavbarBrand } from 'reactstrap'
 import apiService from '../../services/apiService'
@@ -308,18 +305,16 @@ const ListProducts = ({
   const sendSaleHandler = useCallback(async () => {
     // const data = { ...newSale, type_of_payment: option }
     const data = { ...newSale, type_of_payment: option }
-   if (data.itemsSalesPDV.length <= 0 ) {
-    return 
-   }
-   console.log(data)
+    if (data.itemsSalesPDV.length <= 0) {
+      return
+    }
+    console.log(data)
     const response = await apiService.post('/salesPDV', data)
     if (response.data) {
       router.push('pdv/sucesso')
     } else {
       // console.log('error', response.data)
-      setErrorNumber(500)      
-
-      
+      setErrorNumber(500)
     }
     // todo logic to redirect after save sales
     // console.log(data)
@@ -439,37 +434,38 @@ const ListProducts = ({
           <ContainerTotal>
             <SpanDetalhes> Detalhes da venda </SpanDetalhes>
             <ContainerValores>
+              {errorNumber === 500 && (
+                <BoxToast>
+                  <Toast>
+                    <ToastHeader>Erro Interno! </ToastHeader>
+                    <ToastBody>
+                      Não foi possivel efetuar a venda! Tente Novamente!
+                    </ToastBody>
+                  </Toast>
+                </BoxToast>
+              )}
 
-            {errorNumber === 500 && (
-              <BoxToast >
-                <Toast>
-                  <ToastHeader>Erro Interno! </ToastHeader>
-                  <ToastBody>Não foi possivel efetuar a venda! Tente Novamente!</ToastBody>
-                  
-                </Toast>
-              </BoxToast>
-            )}
-
-             {option  && (
-              
-              <BoxToast >
-                <ToastSucess>
-                  <ToastHeaderSucess>{`Venda no ${option}`} </ToastHeaderSucess>
-                  <ToastBodySucess>{`Foi selecionado o ${option} como forma de pagamento`}</ToastBodySucess>
-                  
-                </ToastSucess>
-              </BoxToast>
-             
-            )}
-
+              {option && (
+                <BoxToast>
+                  <ToastSucess>
+                    <ToastHeaderSucess>
+                      {`Venda no ${option}`}{' '}
+                    </ToastHeaderSucess>
+                    <ToastBodySucess>{`Foi selecionado o ${option} como forma de pagamento`}</ToastBodySucess>
+                  </ToastSucess>
+                </BoxToast>
+              )}
             </ContainerValores>
             <ContainerValores>
-               <LabelSubtotalDesconto>Subtotal:</LabelSubtotalDesconto>
+              <LabelSubtotalDesconto>Subtotal:</LabelSubtotalDesconto>
               <FormSubtotalDesconto>R$100,00</FormSubtotalDesconto>
             </ContainerValores>
             <ContainerValores>
-              <LabelSubtotalDescontoCustom>Desconto:</LabelSubtotalDescontoCustom>
-              <FormTotalCustom>R$</FormTotalCustom><InputDesconto/>
+              <LabelSubtotalDescontoCustom>
+                Desconto:
+              </LabelSubtotalDescontoCustom>
+              <FormTotalCustom>R$</FormTotalCustom>
+              <InputDesconto />
             </ContainerValores>
             <ContainerValores>
               <LabelValorTotal>Valor Total:</LabelValorTotal>
@@ -496,7 +492,6 @@ const ListProducts = ({
 
             <ContainerValores>
               <BtnFinalizar onClick={sendSaleHandler}>Finalizar</BtnFinalizar>
-
             </ContainerValores>
           </ContainerTotal>
         </ContainerVenda>
