@@ -37,7 +37,7 @@ const Sidebar = () => {
         </ContainerSide>
 
         <ContainerSide>
-          <Link href="/Config">
+          <Link href="/configuracoes">
             <a style={{ textDecoration: 'none', color: '#fff' }}>Config.</a>
           </Link>
         </ContainerSide>
