@@ -8,14 +8,20 @@ const Sidebar = () => {
     <>
       <Container>
         <ContainerSide style={{ marginTop: '92px' }}>
-          <Link href="/dashboard/produtos">
-            <a style={{ textDecoration: 'none', color: '#fff' }}>Produtos</a>
+          <Link href="/dashboard">
+            <a style={{ textDecoration: 'none', color: '#fff' }}>Painel</a>
           </Link>
         </ContainerSide>
 
         <ContainerSide>
           <Link href="/dashboard/clientes">
             <a style={{ textDecoration: 'none', color: '#fff' }}>Clientes</a>
+          </Link>
+        </ContainerSide>
+
+        <ContainerSide>
+          <Link href="/dashboard/produtos">
+            <a style={{ textDecoration: 'none', color: '#fff' }}>Produtos</a>
           </Link>
         </ContainerSide>
 
@@ -27,17 +33,8 @@ const Sidebar = () => {
           </Link>
         </ContainerSide>
 
-
         <ContainerSide>
-          <Link href="/dashboard">
-            <a style={{ textDecoration: 'none', color: '#fff' }}>
-              Painel
-            </a>
-          </Link>
-        </ContainerSide>
-
-        <ContainerSide>
-          <Link href="/Config">
+          <Link href="/configuracao">
             <a style={{ textDecoration: 'none', color: '#fff' }}>Config.</a>
           </Link>
         </ContainerSide>

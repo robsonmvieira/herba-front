@@ -53,10 +53,11 @@ export const IconsTags = styled.div`
 
 export const BoxCustom = styled.div`
   width: 100%;
-  height: 20%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction:column
 `
 
 export const DivImg = styled.div`
