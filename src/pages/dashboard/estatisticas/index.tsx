@@ -21,7 +21,7 @@ const Estatisticas = () => {
 
           <Link href="/dashboard">
            <BoxLink>
-            <Imagem src="/image/cone.svg" alt="" title="" />
+            <Imagem src="/image/worker.svg" alt="" title="" />
             Página em Contrução...
            </BoxLink>
            
