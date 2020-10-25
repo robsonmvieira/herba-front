@@ -1,20 +1,19 @@
 import React from 'react'
 import {
-  ContainerIconsLg,
+  Section,
   Container,
-  ContainerNovoCliente,
+  BoxFormulario,
   ContainerConteudo,
-  ContainerTituloNovoCliente,
+  BoxTitulo,
   Titulo,
-  ContainerListAdicionarDesktop,
-  LabelParaDesktop,
+  ContainerFormulario,
+  Label,
   InputDesktop,
-  BtnAdicionarDesktop,
-  ContainerAdicionarDesktopCustom,
-  SelectDesktop,
-  BoxStylesDiv,
-  ContainerDesktop,
-  ContainerDesktopCustom,
+  BtnAdicionar,
+  Select,
+  Wrapper,
+  BoxInput,
+  BoxInputCustom,
   ContainerSide
   
 } from '../../../styles/configuracao'
@@ -25,7 +24,7 @@ import Menu from '../../components/Menu'
 const configuracao = () => {
   return (
     <>
-      <Menu></Menu>
+      <Menu />
 
       <Container>
       <ContainerSide>
@@ -34,61 +33,58 @@ const configuracao = () => {
         <ContainerConteudo>
          
 
-          <ContainerIconsLg>
-            <ContainerNovoCliente>
-              <ContainerTituloNovoCliente>
+          <Section>
+            <BoxFormulario>
+              <BoxTitulo>
                 <Titulo>Novo Colaborador:</Titulo>
-              </ContainerTituloNovoCliente>
+              </BoxTitulo>
 
-              <ContainerListAdicionarDesktop>
-                <BoxStylesDiv>
-                <ContainerAdicionarDesktopCustom >
-                  <LabelParaDesktop>Nome:</LabelParaDesktop>
+              <ContainerFormulario>
+                <Wrapper>
+                <BoxInputCustom >
+                  <Label>Nome:</Label>
                   <InputDesktop />
-                </ContainerAdicionarDesktopCustom>
-                <ContainerAdicionarDesktopCustom >
-                  <LabelParaDesktop>Email:</LabelParaDesktop>
+                </BoxInputCustom>
+                <BoxInputCustom >
+                  <Label>Email:</Label>
                   <InputDesktop />
-                </ContainerAdicionarDesktopCustom>
-                </BoxStylesDiv>
+                </BoxInputCustom>
+                </Wrapper>
 
-                <BoxStylesDiv>
-                <ContainerDesktop>
-                  <LabelParaDesktop>Cpf:</LabelParaDesktop>
+                <Wrapper>
+                <BoxInput>
+                  <Label>Cpf:</Label>
                   <InputDesktop />
-                </ContainerDesktop>
-                <ContainerDesktop>
-                  <LabelParaDesktop>Senha:</LabelParaDesktop>
+                </BoxInput>
+                <BoxInput>
+                  <Label>Senha:</Label>
                   <InputDesktop />
-                </ContainerDesktop>
+                </BoxInput>
 
-                <ContainerDesktop>
-                  <LabelParaDesktop>Permissão:</LabelParaDesktop>
-                  <SelectDesktop>
+                <BoxInput>
+                  <Label>Permissão:</Label>
+                  <Select>
                     
                   <option value="">Administrador</option>
                   <option value="">Estoquista</option>
                   <option value="">Vendedor</option>
                   
-                  </SelectDesktop>
-
-
-
+                  </Select>
                   
-                </ContainerDesktop>
-                </BoxStylesDiv>
+                </BoxInput>
+                </Wrapper>
 
-                <BoxStylesDiv>
-                  <ContainerDesktopCustom>
-                  <BtnAdicionarDesktop> Adicionar </BtnAdicionarDesktop>
-                  </ContainerDesktopCustom>
-                  </BoxStylesDiv>
+                <Wrapper>
+                  <BoxInputCustom>
+                  <BtnAdicionar> Adicionar </BtnAdicionar>
+                  </BoxInputCustom>
+                  </Wrapper>
 
-              </ContainerListAdicionarDesktop>
+              </ContainerFormulario>
 
             
-            </ContainerNovoCliente>
-          </ContainerIconsLg>
+            </BoxFormulario>
+          </Section>
 
           
         </ContainerConteudo>

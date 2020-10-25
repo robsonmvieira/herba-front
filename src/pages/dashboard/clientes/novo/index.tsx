@@ -10,44 +10,40 @@ import {
   ContainerTags,
   ContainerSide,
   ContainerConteudo,
-  ContainerListAdicionar,
-  Containeradicionar,
-  Input,
-  LabelInput,
   ContainerTituloNovoCliente,
   Titulo,
-  ContainerAdicionarComDivisao,
-  InputComDivisao,
-  LabelInputComDivisao,
-  ContainerListAdicionarComDivisao,
   ContainerIconsDeCima,
+  LabelInput,
+  Input,
+  ContentCheckBox,
+  CheckBox,
+  LabelCheckBox,
+  ContainerCheckBox,
   BtnAdicionar,
-  ContainerAdicionarDesktop,
-  ContainerListAdicionarDesktop,
-  LabelParaDesktop,
-  InputDesktop,
-  DivCheckBox,
-  CheckBoxDesktop,
-  LabelParaCheckBox,
-  ContainerCheckBoxDesktop,
-  BtnAdicionarDesktop,
   ContainerSpan,
-  ContainerAdicionarDesktopCustom,
-  BoxAdicionarDesktopCustom,
-  DivCheckBoxCustomPremium,
-  CheckBoxDesktopCustomPremium,
-  LabelParaCheckBoxCustomPremium,
-  ContainerListAdicionarCustomMobile,
-  InputComDivisaoCustomMobile
+  Wrapper,
+  BoxBtnAdicionar,
+  ContentCheckBoxCustomPremium,
+  CheckBoxCustomPremium,
+  LabelCheckBoxPremium,
+  BoxFormulario,
+  WrapperSpecial,
+  WrapperCustom,
+  BoxFormularioCustom,
+  BoxDivision,
+  BoxFormularioSpecial,
+  BoxDivisionCustom,
+  BoxPremium,
+  ContentCheckBoxSpecial
 } from './styles'
 
 import Sidebar from '../../../../components/sidebar'
 import Menu from '../../../../components/Menu'
 
-const dashClientesNovo = () => {
+const NovoCliente = () => {
   return (
     <>
-      <Menu></Menu>
+      <Menu />
 
       <Container>
         <ContainerSide>
@@ -100,562 +96,278 @@ const dashClientesNovo = () => {
           </ContainerIconsDeCima>
 
           <ContainerIconsLg>
-            <ContainerNovoCliente>
+    <ContainerNovoCliente>
               <ContainerTituloNovoCliente>
                 <Titulo>Novo Cliente:</Titulo>
               </ContainerTituloNovoCliente>
 
-              {/* Aqui é desktop  */}
-              {/* <ContainerListAdicionarDesktop>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    height: '30%',
-                    backgroundColor: 'red',
-                    marginTop: '20px'
-                  }}
-                >
-                  <ContainerAdicionarDesktop>oi </ContainerAdicionarDesktop>
-                  <ContainerAdicionarDesktop>oi</ContainerAdicionarDesktop>
-                  <ContainerAdicionarDesktop>oi</ContainerAdicionarDesktop>
-                </div>
-              </ContainerListAdicionarDesktop> */}
-
-              <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktopCustom>
-                  <LabelParaDesktop>Nome:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktopCustom>
-                <ContainerAdicionarDesktopCustom>
-                  <LabelParaDesktop>Data de Nascimento:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktopCustom>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktop>
-                  <LabelParaDesktop>Sexo:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktop>
-                <ContainerAdicionarDesktop>
-                  <LabelParaDesktop>Telefone:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktop>
-                <ContainerAdicionarDesktop>
-                  <LabelParaDesktop>Cpf:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktop>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktopCustom>
-                  <LabelParaDesktop>Email:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktopCustom>
-                <ContainerAdicionarDesktopCustom>
-                  <LabelParaDesktop>Profissão:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktopCustom>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktop style={{ width: '100%' }}>
-                  <LabelParaDesktop>Endereço:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktop>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktop>
-                  <LabelParaDesktop>Bairro:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktop>
-                <ContainerAdicionarDesktop>
-                  <LabelParaDesktop>Cidade:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktop>
-                <ContainerAdicionarDesktop>
-                  <LabelParaDesktop>Estado:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktop>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <ContainerAdicionarDesktop>
-                  <LabelParaDesktop>Peso:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktop>
-                <ContainerAdicionarDesktop>
-                  <LabelParaDesktop>Altura:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktop>
-                <ContainerAdicionarDesktop>
-                  <LabelParaDesktop>Alergias:</LabelParaDesktop>
-                  <InputDesktop />
-                </ContainerAdicionarDesktop>
-              </ContainerListAdicionarDesktop>
-
-              {/* todos os check box da versão desktop >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
-
-              <ContainerListAdicionarDesktop>
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-
-                    <LabelParaCheckBox>Triglicerideos</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Pressao baixa</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Insonia</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Gastrite</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Alergia</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Artrose</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Rinite</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Diabetes</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Anemia</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Sonolencia</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Depressao</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Osteoporose</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Colesterol</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Dor de Cabeça</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Asma</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Cardiopatias</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Dor nas pernas</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Hipertensão</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Indisposição</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-
-                <ContainerCheckBoxDesktop>
-                  <DivCheckBox>
-                    <CheckBoxDesktop type="checkbox" />
-                    <LabelParaCheckBox>Intestino preso</LabelParaCheckBox>
-                  </DivCheckBox>
-                </ContainerCheckBoxDesktop>
-              </ContainerListAdicionarDesktop>
-
-              {/* aqui termina os check boxs >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
-
-              <ContainerListAdicionarDesktop>
-                <BoxAdicionarDesktopCustom>
-                  <LabelParaDesktop>Outros:</LabelParaDesktop>
-                  <InputDesktop />
-                </BoxAdicionarDesktopCustom>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <DivCheckBoxCustomPremium>
-                  <CheckBoxDesktopCustomPremium type="checkbox" />
-                  <LabelParaCheckBoxCustomPremium>
-                    Cliente Premium
-                  </LabelParaCheckBoxCustomPremium>
-                  <img src="/image/premium.svg" alt="" />
-                </DivCheckBoxCustomPremium>
-              </ContainerListAdicionarDesktop>
-
-              <ContainerListAdicionarDesktop>
-                <BoxAdicionarDesktopCustom>
-                  <BtnAdicionarDesktop> Adicionar </BtnAdicionarDesktop>
-                </BoxAdicionarDesktopCustom>
-              </ContainerListAdicionarDesktop>
-
-              {/* Aqui é mobile  */}
-              <ContainerListAdicionar>
-                <Containeradicionar>
+            <BoxFormulario>
+              <BoxFormulario>
+                <Wrapper >
                   <LabelInput>Nome:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
-
-              <ContainerListAdicionar>
-                <Containeradicionar>
-                  <LabelInput>Data Nascimento:</LabelInput>
-                  <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
-
-              <ContainerListAdicionar>
-                <Containeradicionar>
-                  <LabelInput>Sexo:</LabelInput>
-                  <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
-
-              <ContainerListAdicionar>
-                <Containeradicionar>
-                  <LabelInput>Telefone:</LabelInput>
-                  <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
-
-              <ContainerListAdicionar>
-                <Containeradicionar>
-                  <LabelInput>Cpf:</LabelInput>
-                  <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
-
-              <ContainerListAdicionar>
-                <Containeradicionar>
+                </Wrapper>
+                <Wrapper >
                   <LabelInput>Email:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
+                </Wrapper>
+              </BoxFormulario>
+            </BoxFormulario>
 
-              <ContainerListAdicionar>
-                <Containeradicionar>
+              <BoxFormulario>
+                <WrapperSpecial>
+                  <LabelInput>Sexo:</LabelInput>
+                  <Input />
+                </WrapperSpecial>
+                <WrapperSpecial>
+                  <LabelInput>Telefone:</LabelInput>
+                  <Input />
+                </WrapperSpecial>
+                <WrapperSpecial>
+                  <LabelInput>Cpf:</LabelInput>
+                  <Input />
+                </WrapperSpecial>
+              </BoxFormulario>
+
+            <BoxFormulario>
+              <BoxFormulario>
+                <Wrapper >
+                  <LabelInput>Email:</LabelInput>
+                  <Input />
+                </Wrapper>
+                <Wrapper >
                   <LabelInput>Profissão:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
+                </Wrapper>
+              </BoxFormulario>
+            </BoxFormulario>
 
-              <ContainerListAdicionar>
-                <Containeradicionar>
-                  <LabelInput>Enderço:</LabelInput>
+            <BoxFormulario>
+              <BoxFormulario>
+                <WrapperCustom >
+                  <LabelInput>Endereço:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
+                </WrapperCustom>
+              </BoxFormulario>
+            </BoxFormulario>
 
-              <ContainerListAdicionar>
-                <Containeradicionar>
+              <BoxFormulario>
+                <WrapperSpecial>
                   <LabelInput>Bairro:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
-
-              <ContainerListAdicionar>
-                <Containeradicionar>
+                </WrapperSpecial>
+                <WrapperSpecial>
                   <LabelInput>Cidade:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
-
-              <ContainerListAdicionar>
-                <Containeradicionar>
+                </WrapperSpecial>
+                <WrapperSpecial>
                   <LabelInput>Estado:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
+                </WrapperSpecial>
+              </BoxFormulario>
 
-              <ContainerListAdicionar>
-                <Containeradicionar>
+              <BoxFormulario>
+                <WrapperSpecial>
                   <LabelInput>Peso:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
-
-              <ContainerListAdicionar>
-                <Containeradicionar>
+                </WrapperSpecial>
+                <WrapperSpecial>
                   <LabelInput>Altura:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
-
-              <ContainerListAdicionar>
-                <Containeradicionar>
+                </WrapperSpecial>
+                <WrapperSpecial>
                   <LabelInput>Alergias:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
+                </WrapperSpecial>
+              </BoxFormulario>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Triglecirideos</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
+<BoxDivision>              
+              <BoxFormularioCustom>
 
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Pressao baixa:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Triglicerideos</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Insonia:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Pressao baixa</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Gastrite:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Insonia</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Gastrite</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
+              </BoxFormularioCustom>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Artrose:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
+              <BoxFormularioCustom>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Alergia</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Alergia:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Artrose</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Osteoporose:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Rinite</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Falta de energia:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Diabetes</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
+              </BoxFormularioCustom>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Diabetes:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
+</BoxDivision>
+<BoxDivision>
+              <BoxFormularioCustom>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Anemia</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>
-                    Anemia/ Baixa Imun.:
-                  </LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Sonolencia</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Sonolencia:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Depressao</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Depressao:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Osteoporose</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
+              </BoxFormularioCustom>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Osteoporose:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
+              <BoxFormularioCustom>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Colesterol</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Intestino preso:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Dor de Cabeça</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Asma:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Asma</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Dor nas pernas:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Cardiopatias</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
+              </BoxFormularioCustom>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Doença cardiacas:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
+</BoxDivision>
+<BoxDivisionCustom>
 
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Colesterol:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
+              <BoxFormularioSpecial>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Dor nas pernas</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Triglecirideos:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Hipertensao</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
+              </BoxFormularioSpecial>
+                
+              <BoxFormularioSpecial>
+                <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Indispoisção</LabelCheckBox>
+                  </ContentCheckBox>
+              </ContainerCheckBox>
 
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Dor nas pernas:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
+              <ContainerCheckBox>
+                  <ContentCheckBox>
+                    <CheckBox type="checkbox" />
+                    <LabelCheckBox>Intestino preso</LabelCheckBox>
+                  </ContentCheckBox>
+                </ContainerCheckBox>
+              </BoxFormularioSpecial>
+</BoxDivisionCustom>
 
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Doença cardiacas:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Pressao baixa:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
-
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Dor de Cabeça:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Hipertensao:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
-
-              <ContainerListAdicionarComDivisao>
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Rinite:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-
-                <ContainerAdicionarComDivisao>
-                  <InputComDivisao type="checkbox"></InputComDivisao>
-                  <LabelInputComDivisao>Colesterol:</LabelInputComDivisao>
-                </ContainerAdicionarComDivisao>
-              </ContainerListAdicionarComDivisao>
-
-              <ContainerListAdicionar>
-                <Containeradicionar>
+              
+              <BoxFormulario>
+                <WrapperCustom >
                   <LabelInput>Outros:</LabelInput>
                   <Input />
-                </Containeradicionar>
-              </ContainerListAdicionar>
+                </WrapperCustom>
+              </BoxFormulario>
+            
 
-              <ContainerListAdicionarCustomMobile>
-                <InputComDivisaoCustomMobile type="checkbox"></InputComDivisaoCustomMobile>
-                <LabelInputComDivisao>Cliente Premium:</LabelInputComDivisao>
-                <img src="/image/premium.svg" alt="" />
-              </ContainerListAdicionarCustomMobile>
+            <BoxPremium>
+              <ContentCheckBoxSpecial>
+                    <CheckBoxCustomPremium type="checkbox" />
+                    <LabelCheckBoxPremium>Cliente Premium</LabelCheckBoxPremium>
+                    <img src="/image/premium.svg" alt=""/>
+              </ContentCheckBoxSpecial>
+            </BoxPremium>
 
-              <ContainerListAdicionar>
-                <Containeradicionar>
-                  <BtnAdicionar>Adicionar</BtnAdicionar>
-                </Containeradicionar>
-              </ContainerListAdicionar>
-            </ContainerNovoCliente>
-          </ContainerIconsLg>
+              <BoxFormulario>
+                <BoxBtnAdicionar >
+                  <BtnAdicionar> Adicionar </BtnAdicionar>
+                </BoxBtnAdicionar>
+              </BoxFormulario>
 
-          {/* a partir daqui é para tela desktop */}
-        </ContainerConteudo>
-      </Container>
+     </ContainerNovoCliente>
+   </ContainerIconsLg>
+ </ContainerConteudo>
+</Container>
     </>
   )
 }
-export default dashClientesNovo
+export default NovoCliente

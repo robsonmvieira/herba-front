@@ -258,6 +258,18 @@ const CloseBox = ({
               )}
             </ContainerValores>
             <ContainerValores>
+              <LabelValorTotal>Débito:</LabelValorTotal>
+              {parsedToBRLBySalesCards && (
+                <FormTotal>{parsedToBRLBySalesCards}</FormTotal>
+              )}
+            </ContainerValores>
+            <ContainerValores>
+              <LabelValorTotal>Crédito:</LabelValorTotal>
+              {parsedToBRLBySalesCards && (
+                <FormTotal>{parsedToBRLBySalesCards}</FormTotal>
+              )}
+            </ContainerValores>
+            <ContainerValores>
               <BtnFinalizar>Fechar Caixa</BtnFinalizar>
             </ContainerValores>
           </ContainerTotais>
