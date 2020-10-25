@@ -6,17 +6,18 @@ import {
   ContainerConteudo,
   ContainerTituloNovoCliente,
   Titulo,
-  ContainerAdicionarDesktop,
   ContainerListAdicionarDesktop,
   LabelParaDesktop,
   InputDesktop,
   BtnAdicionarDesktop,
   ContainerAdicionarDesktopCustom,
-  BoxAdicionarDesktopCustom,
   SelectDesktop,
-  BoxStylesDiv
+  BoxStylesDiv,
+  ContainerDesktop,
+  ContainerDesktopCustom,
+  ContainerSide
   
-} from './styles'
+} from '../../../styles/configuracao'
 
 import Sidebar from '../../components/sidebar'
 import Menu from '../../components/Menu'
@@ -27,7 +28,9 @@ const configuracao = () => {
       <Menu></Menu>
 
       <Container>
-        
+      <ContainerSide>
+          <Sidebar />
+        </ContainerSide>
         <ContainerConteudo>
          
 
@@ -50,31 +53,36 @@ const configuracao = () => {
                 </BoxStylesDiv>
 
                 <BoxStylesDiv>
-                <ContainerAdicionarDesktopCustom>
+                <ContainerDesktop>
                   <LabelParaDesktop>Cpf:</LabelParaDesktop>
                   <InputDesktop />
-                </ContainerAdicionarDesktopCustom>
-                <ContainerAdicionarDesktopCustom>
+                </ContainerDesktop>
+                <ContainerDesktop>
                   <LabelParaDesktop>Senha:</LabelParaDesktop>
                   <InputDesktop />
-                </ContainerAdicionarDesktopCustom>
+                </ContainerDesktop>
 
-                <ContainerAdicionarDesktopCustom>
+                <ContainerDesktop>
                   <LabelParaDesktop>Permissão:</LabelParaDesktop>
                   <SelectDesktop>
+                    
                   <option value="">Administrador</option>
                   <option value="">Estoquista</option>
                   <option value="">Vendedor</option>
-
+                  
                   </SelectDesktop>
-                </ContainerAdicionarDesktopCustom>
+
+
+
+                  
+                </ContainerDesktop>
                 </BoxStylesDiv>
 
-               
-                <BoxAdicionarDesktopCustom >
+                <BoxStylesDiv>
+                  <ContainerDesktopCustom>
                   <BtnAdicionarDesktop> Adicionar </BtnAdicionarDesktop>
-                </BoxAdicionarDesktopCustom>
-               
+                  </ContainerDesktopCustom>
+                  </BoxStylesDiv>
 
               </ContainerListAdicionarDesktop>
 

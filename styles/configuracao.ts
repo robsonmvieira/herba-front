@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
- 
+ @media (max-width: 767px) {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;}
   
 
-  /* @media (min-width: 768px) {
+  @media (min-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
-  } */
+  }
 `
 
 
@@ -42,7 +42,7 @@ export const ContainerIconsLg = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
-    height: 60%;
+    height: 600px;
     display: flex;
     margin: none;
     padding: none;
@@ -75,7 +75,7 @@ export const ContainerNovoCliente = styled.div`
     display: flex;
     margin: none;
     padding: none;
-    justify-content: flex-start;
+    justify-content: space-between;
     justify-items: center;
     align-items: center;
     flex-direction: column;
@@ -180,7 +180,45 @@ export const ContainerAdicionarDesktopCustom = styled.div`
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
-    width: 20%;
+    width: 45%;
+    height: 100%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+  }
+`
+export const ContainerDesktop = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+  }
+`
+export const ContainerDesktopCustom = styled.div`
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 50%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 30%;
     height: 100%;
     background-color: #1d1f2f;
     flex-direction: column;
@@ -190,7 +228,13 @@ export const ContainerAdicionarDesktopCustom = styled.div`
 
 export const BoxAdicionarDesktopCustom = styled.div`
   @media (max-width: 767px) {
-    display: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    background-color: #1d1f2f;
+    flex-direction: column;
+    margin-top: 20px;
   }
 
   @media (min-width: 768px) {
@@ -215,8 +259,7 @@ export const ContainerListAdicionarDesktop = styled.div`
     justify-items: center;
     color: #fff;
     background-color: #1d1f2f;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    
     flex-direction: column;
   }
 
@@ -239,14 +282,14 @@ export const BoxStylesDiv = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
-    height: 30%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     justify-items: center;
     color: #fff;
     flex-direction: column;
-    margin-bottom: 15px;
+    
   }
 
   @media (min-width: 768px) {
@@ -296,6 +339,7 @@ export const SelectDesktop = styled.select`
     height: 40px;
     margin-top: 5px;
     border: none;
+    
   }
 
   @media (min-width: 768px) {
@@ -308,6 +352,8 @@ export const SelectDesktop = styled.select`
     height: 40px;
     outline: none;
     padding-left: 5px;
+    
+
   }
 `
 
@@ -316,7 +362,7 @@ export const BtnAdicionarDesktop = styled.button`
   @media (max-width: 767px) {
     background: #2FC84C;
     width: 100%;
-    height: 100%;
+    height: 70%;
     display: flex;
     margin: none;
     padding: none;
@@ -345,6 +391,31 @@ export const BtnAdicionarDesktop = styled.button`
     margin-bottom: 50px;
     outline: none !important;
 
+  }
+`
+
+
+export const ContainerSide = styled.div`
+  @media (max-width: 767px) {
+    background: #1d1f2f;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+  }
+  @media (min-width: 768px) {
+    background: #282741;
+    width: 15%;
+    max-width: 20%;
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    justify-items: center;
   }
 `
 
