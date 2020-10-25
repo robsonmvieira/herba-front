@@ -1,15 +1,15 @@
 import React from 'react'
 import {
-  IconsTags,
-  ContainerIconsLg,
-  LabelProdutoDashboard,
-  LabelDescricaoDashboard,
-  LabelProdutoDashboardMenos,
+  Box,
+  FormContainer,
+  BoxDescription,
+  BoxInformations,
+  BoxDescriptionCustom,
   Container,
   ContainerNovoProduto,
-  ContainerTags,
+  Boxes,
   ContainerSide,
-  ContainerConteudo,
+  Content,
   ContainerListAdicionar,
   Containeradicionar,
   Input,
@@ -22,9 +22,9 @@ import {
   ContainerListAdicionarComDivisao,
   ContainerListAdicionarSemDivisao,
   ContainerAdicionarSemDivisao,
-  ContainerIconsDeCima,
+  ContainerBoxes,
   BtnAdicionar,
-  ContainerSpan
+  ContentBox
 } from './styles'
 
 import Sidebar from '../../../../components/sidebar'
@@ -39,55 +39,55 @@ const dashProdutosNovo = () => {
         <ContainerSide>
           <Sidebar />
         </ContainerSide>
-        <ContainerConteudo>
-          <ContainerIconsDeCima>
-            <ContainerTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelProdutoDashboard>35</LabelProdutoDashboard>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+        <Content>
+          <ContainerBoxes>
+            <Boxes>
+              <Box>
+                <ContentBox>
+                  <BoxDescription>35</BoxDescription>
+                </ContentBox>
+                <ContentBox>
+                  <BoxInformations>
                     Produto cadastrados
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelProdutoDashboard>shake de banana</LabelProdutoDashboard>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </BoxInformations>
+                </ContentBox>
+              </Box>
+              <Box>
+                <ContentBox>
+                  <BoxDescription>shake de banana</BoxDescription>
+                </ContentBox>
+                <ContentBox>
+                  <BoxInformations>
                     Mais vendido
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelProdutoDashboardMenos>5</LabelProdutoDashboardMenos>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </BoxInformations>
+                </ContentBox>
+              </Box>
+              <Box>
+                <ContentBox>
+                  <BoxDescriptionCustom>5</BoxDescriptionCustom>
+                </ContentBox>
+                <ContentBox>
+                  <BoxInformations>
                     Produtos zerados
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelProdutoDashboardMenos>
+                  </BoxInformations>
+                </ContentBox>
+              </Box>
+              <Box>
+                <ContentBox>
+                  <BoxDescriptionCustom>
                     Suco de coca
-                  </LabelProdutoDashboardMenos>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </BoxDescriptionCustom>
+                </ContentBox>
+                <ContentBox>
+                  <BoxInformations>
                     Menos vendido
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-            </ContainerTags>
-          </ContainerIconsDeCima>
+                  </BoxInformations>
+                </ContentBox>
+              </Box>
+            </Boxes>
+          </ContainerBoxes>
 
-          <ContainerIconsLg>
+          <FormContainer>
             <ContainerNovoProduto>
               <ContainerTituloNovoProduto>
                 <Titulo>Novo Produto:</Titulo>
@@ -143,43 +143,43 @@ const dashProdutosNovo = () => {
 
               <ContainerListAdicionarSemDivisao>
                 <ContainerAdicionarSemDivisao>
-                  <ContainerSpan style={{ justifyContent: 'flex-start' }}>
+                  <ContentBox style={{ justifyContent: 'flex-start' }}>
                     <LabelInputComDivisao>Sku:</LabelInputComDivisao>
-                  </ContainerSpan>
+                  </ContentBox>
 
-                  <ContainerSpan>
+                  <ContentBox>
                     <InputComDivisao></InputComDivisao>
-                  </ContainerSpan>
+                  </ContentBox>
                 </ContainerAdicionarSemDivisao>
 
                 <ContainerAdicionarSemDivisao>
-                  <ContainerSpan style={{ justifyContent: 'flex-start' }}>
+                  <ContentBox style={{ justifyContent: 'flex-start' }}>
                     <LabelInputComDivisao>Custo Pv:</LabelInputComDivisao>
-                  </ContainerSpan>
+                  </ContentBox>
 
-                  <ContainerSpan>
+                  <ContentBox>
                     <InputComDivisao></InputComDivisao>
-                  </ContainerSpan>
+                  </ContentBox>
                 </ContainerAdicionarSemDivisao>
 
                 <ContainerAdicionarSemDivisao>
-                  <ContainerSpan style={{ justifyContent: 'flex-start' }}>
+                  <ContentBox style={{ justifyContent: 'flex-start' }}>
                     <LabelInputComDivisao>Pontos de Vol.:</LabelInputComDivisao>
-                  </ContainerSpan>
+                  </ContentBox>
 
-                  <ContainerSpan>
+                  <ContentBox>
                     <InputComDivisao></InputComDivisao>
-                  </ContainerSpan>
+                  </ContentBox>
                 </ContainerAdicionarSemDivisao>
 
                 <ContainerAdicionarSemDivisao>
-                  <ContainerSpan style={{ justifyContent: 'flex-start' }}>
+                  <ContentBox style={{ justifyContent: 'flex-start' }}>
                     <LabelInputComDivisao>Preço Sugerido:</LabelInputComDivisao>
-                  </ContainerSpan>
+                  </ContentBox>
 
-                  <ContainerSpan>
+                  <ContentBox>
                     <InputComDivisao></InputComDivisao>
-                  </ContainerSpan>
+                  </ContentBox>
                 </ContainerAdicionarSemDivisao>
               </ContainerListAdicionarSemDivisao>
 
@@ -189,8 +189,8 @@ const dashProdutosNovo = () => {
                 </Containeradicionar>
               </ContainerListAdicionar>
             </ContainerNovoProduto>
-          </ContainerIconsLg>
-        </ContainerConteudo>
+          </FormContainer>
+        </Content>
       </Container>
     </>
   )
