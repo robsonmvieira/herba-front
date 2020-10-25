@@ -65,7 +65,7 @@ export const ContainerSide = styled.div`
   }
 `
 
-export const ContainerIconsLg = styled.div`
+export const FormContainer = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;

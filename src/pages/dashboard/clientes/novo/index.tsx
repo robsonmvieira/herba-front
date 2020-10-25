@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   BoxDescription,
-  ContainerIconsLg,
+  FormContainer,
   BoxInformation,
   BoxInfoDescription,
   BoxInfoDescriptionCustom,
@@ -94,7 +94,7 @@ const NovoCliente = () => {
             </ContainerBox>
           </ContainerBoxes>
 
-          <ContainerIconsLg>
+          <FormContainer>
             <ContainerNovoCliente>
               <ContainerTituloNovoCliente>
                 <Titulo>Novo Cliente:</Titulo>
@@ -356,7 +356,7 @@ const NovoCliente = () => {
               </BoxFormulario>
 
      </ContainerNovoCliente>
-   </ContainerIconsLg>
+   </FormContainer>
  </Content>
 </Container>
     </>
