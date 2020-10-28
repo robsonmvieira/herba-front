@@ -569,22 +569,6 @@ export const BtnAdicionar = styled.button`
   }
 `
 
-// a partir daqui é relacionado a desktop >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>export const ContainerAdicionarDesktop = styled.div`
-  @media (max-width: 767px) {
-    display: none;
-  }
-
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-    width: 30%;
-    height: 100%;
-    background-color: #1d1f2f;
-
-    flex-direction: column;
-  }
-`
-
 export const BoxBtnAdicionar = styled.div`
   @media (max-width: 767px) {
     display: flex;
