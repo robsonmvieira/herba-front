@@ -24,7 +24,7 @@ export const ContainerInclusao = styled.div`
   justify-content: flex-end;
 `
 
-export const ContainerConteudo = styled.div`
+export const Content = styled.div`
   /* @media (max-width: 767px) {
     display: none;
     background: red;
@@ -107,7 +107,7 @@ export const ContainerIcones = styled.div`
   }
 `
 
-export const ContainerIconsLg = styled.div`
+export const ContainerBoxes = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
@@ -131,7 +131,7 @@ export const ContainerIconsLg = styled.div`
   }
 `
 
-export const ContainerListaLg = styled.div`
+export const FormContainer = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
@@ -158,7 +158,7 @@ export const ContainerListaLg = styled.div`
   }
 `
 
-export const IconsTags = styled.div`
+export const BoxDescription = styled.div`
   @media (max-width: 767px) {
     background: #282741;
     width: 90%;
@@ -338,7 +338,7 @@ export const WhapperCustomName = styled.div`
 //   }
 // `
 
-export const ContainerTags = styled.div`
+export const Boxes = styled.div`
   @media (max-width: 767px) {
     width: 90%;
     display: flex;
@@ -356,7 +356,7 @@ export const ContainerTags = styled.div`
   }
 `
 
-export const LabelProdutoDashboard = styled.span`
+export const BoxTitle = styled.span`
   @media (max-width: 767px) {
     color: #2fc84c;
     width: 100%;
@@ -375,7 +375,7 @@ export const LabelProdutoDashboard = styled.span`
   }
 `
 
-export const LabelProdutoDashboardMenos = styled.span`
+export const BoxTitleCustom = styled.span`
   @media (max-width: 767px) {
     color: #ef6e6e;
     width: 100%;
@@ -394,7 +394,7 @@ export const LabelProdutoDashboardMenos = styled.span`
   }
 `
 
-export const LabelDescricaoDashboard = styled.span`
+export const BoxTitleDescription = styled.span`
   @media (max-width: 767px) {
     color: #fff;
     width: 100%;
@@ -448,7 +448,7 @@ export const Containeradicionar = styled.div`
   }
 `
 
-export const ContainerSpan = styled.div`
+export const BoxInformations = styled.div`
   @media (max-width: 767px) {
     display: flex;
     justify-content: center;

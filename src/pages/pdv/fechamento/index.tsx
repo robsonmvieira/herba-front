@@ -16,14 +16,14 @@ import {
   Detalhes,
   Label,
   Descricao,
-  ContainerTotais,
-  ContainerIconsLg,
-  ContainerTags,
-  IconsTags,
-  ContainerSpan,
-  LabelClienteDashboard,
-  LabelDescricaoDashboard,
-  LabelClienteDashboardMenos,
+  ContainerResum,
+  ContainerBoxes,
+  Boxes,
+  ContainerBox,
+  Box,
+  BoxDescription,
+  BoxInformations,
+  BoxDescriptionCustom,
   FormTotalCustomColor
 } from '../styles'
 import { NavbarBrand } from 'reactstrap'
@@ -168,53 +168,53 @@ const CloseBox = ({
       <Container>
         <ContainerVenda>
           <ContainerProducts>
-            <ContainerIconsLg>
-              <ContainerTags>
-                <IconsTags>
-                  <ContainerSpan>
+            <ContainerBoxes>
+              <Boxes>
+                <ContainerBox>
+                  <Box>
                     {parsedToBRLMoneySales && (
-                      <LabelClienteDashboard>
+                      <BoxDescription>
                         {parsedToBRLMoneySales}
-                      </LabelClienteDashboard>
+                      </BoxDescription>
                     )}
-                  </ContainerSpan>
-                  <ContainerSpan>
-                    <LabelDescricaoDashboard>
+                  </Box>
+                  <Box>
+                    <BoxInformations>
                       Venda no Dinheiro
-                    </LabelDescricaoDashboard>
-                  </ContainerSpan>
-                </IconsTags>
-                <IconsTags>
-                  <ContainerSpan>
+                    </BoxInformations>
+                  </Box>
+                </ContainerBox>
+                <ContainerBox>
+                  <Box>
                     {parsedToBRLDebitosales && (
-                      <LabelClienteDashboard>
+                      <BoxDescription>
                         {parsedToBRLDebitosales}
-                      </LabelClienteDashboard>
+                      </BoxDescription>
                     )}
-                  </ContainerSpan>
-                  <ContainerSpan>
-                    <LabelDescricaoDashboard>
+                  </Box>
+                  <Box>
+                    <BoxInformations>
                       Venda no Débito
-                    </LabelDescricaoDashboard>
-                  </ContainerSpan>
-                </IconsTags>
-                <IconsTags>
-                  <ContainerSpan>
-                    <LabelClienteDashboardMenos>
+                    </BoxInformations>
+                  </Box>
+                </ContainerBox>
+                <ContainerBox>
+                  <Box>
+                    <BoxDescriptionCustom>
                       {parsedToBRLCreditosales}
-                    </LabelClienteDashboardMenos>
-                  </ContainerSpan>
-                  <ContainerSpan>
-                    <LabelDescricaoDashboard>
+                    </BoxDescriptionCustom>
+                  </Box>
+                  <Box>
+                    <BoxInformations>
                       Venda no Crédito
-                    </LabelDescricaoDashboard>
-                  </ContainerSpan>
-                </IconsTags>
-              </ContainerTags>
-            </ContainerIconsLg>
+                    </BoxInformations>
+                  </Box>
+                </ContainerBox>
+              </Boxes>
+            </ContainerBoxes>
           </ContainerProducts>
 
-          <ContainerTotais>
+          <ContainerResum>
             <BoxDetalhes>
               <Detalhes>Vendas:</Detalhes>
             </BoxDetalhes>
@@ -272,7 +272,7 @@ const CloseBox = ({
             <ContainerValores>
               <BtnFinalizar>Fechar Caixa</BtnFinalizar>
             </ContainerValores>
-          </ContainerTotais>
+          </ContainerResum>
         </ContainerVenda>
       </Container>
     </div>
