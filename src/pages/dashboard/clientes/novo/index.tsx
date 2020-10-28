@@ -56,9 +56,7 @@ const NovoCliente = () => {
                   <BoxInformation>35</BoxInformation>
                 </BoxTitle>
                 <BoxTitle>
-                  <BoxInfoDescription>
-                    Clientes cadastrados
-                  </BoxInfoDescription>
+                  <BoxInfoDescription>Clientes cadastrados</BoxInfoDescription>
                 </BoxTitle>
               </BoxDescription>
               <BoxDescription>
@@ -66,9 +64,7 @@ const NovoCliente = () => {
                   <BoxInformation>Robson Shubba</BoxInformation>
                 </BoxTitle>
                 <BoxTitle>
-                  <BoxInfoDescription>
-                    Melhor Cliente
-                  </BoxInfoDescription>
+                  <BoxInfoDescription>Melhor Cliente</BoxInfoDescription>
                 </BoxTitle>
               </BoxDescription>
               <BoxDescription>
@@ -76,9 +72,7 @@ const NovoCliente = () => {
                   <BoxInfoDescriptionCustom>5</BoxInfoDescriptionCustom>
                 </BoxTitle>
                 <BoxTitle>
-                  <BoxInfoDescription>
-                    Cliente Ocioso
-                  </BoxInfoDescription>
+                  <BoxInfoDescription>Cliente Ocioso</BoxInfoDescription>
                 </BoxTitle>
               </BoxDescription>
               <BoxDescription>
@@ -86,9 +80,7 @@ const NovoCliente = () => {
                   <BoxInfoDescriptionCustom>10</BoxInfoDescriptionCustom>
                 </BoxTitle>
                 <BoxTitle>
-                  <BoxInfoDescription>
-                    Clientes Inativos
-                  </BoxInfoDescription>
+                  <BoxInfoDescription>Clientes Inativos</BoxInfoDescription>
                 </BoxTitle>
               </BoxDescription>
             </ContainerBox>
@@ -123,7 +115,7 @@ const NovoCliente = () => {
                   <Input />
                 </WrapperSpecial>
                 <WrapperSpecial>
-                  <LabelInput>Cpf:</LabelInput>
+                  <LabelInput>CPF:</LabelInput>
                   <Input />
                 </WrapperSpecial>
               </BoxFormulario>
@@ -354,11 +346,10 @@ const NovoCliente = () => {
                   <BtnAdicionar> Adicionar </BtnAdicionar>
                 </BoxBtnAdicionar>
               </BoxFormulario>
-
-     </ContainerNovoCliente>
-   </FormContainer>
- </Content>
-</Container>
+            </ContainerNovoCliente>
+          </FormContainer>
+        </Content>
+      </Container>
     </>
   )
 }

@@ -26,9 +26,9 @@ export const ContainerInclusao = styled.div`
 `
 
 export const Content = styled.div`
-   @media (max-width: 767px) {
-     background: #1d1f2f;
-  } 
+  @media (max-width: 767px) {
+    background: #1d1f2f;
+  }
 
   @media (min-width: 768px) {
     background: #1d1f2f;
@@ -74,7 +74,7 @@ export const FormContainer = styled.div`
     margin: none;
     padding: none;
     justify-content: center;
-    margin-bottom: 100px
+    margin-bottom: 100px;
   }
 
   @media (min-width: 768px) {
@@ -87,8 +87,7 @@ export const FormContainer = styled.div`
     justify-content: center;
     justify-items: center;
     margin-top: 50px;
-    margin-bottom: 100px
-
+    margin-bottom: 100px;
   }
 `
 
@@ -251,7 +250,6 @@ export const ContainerListAdicionar = styled.div`
   }
 `
 
-
 export const ContainerListAdicionarCustomMobile = styled.div`
   /* aumenta o container com a label e o input dentro  */
   @media (max-width: 767px) {
@@ -397,8 +395,6 @@ export const InputCustomMobile = styled.input`
     display: none;
   }
 `
-
-
 export const InputComDivisao = styled.input`
   background: #282741;
   color: #fff;
@@ -412,7 +408,6 @@ export const InputComDivisao = styled.input`
   justify-items: center;
 `
 
-
 export const InputComDivisaoCustomMobile = styled.input`
   background: #282741;
   color: #fff;
@@ -424,7 +419,7 @@ export const InputComDivisaoCustomMobile = styled.input`
   justify-content: center;
   align-items: center;
   justify-items: center;
-  background-image: url ('/image/premium.svg')
+  background-image: url ('/image/premium.svg');
 `
 
 export const LabelInputComDivisao = styled.span`
@@ -542,7 +537,7 @@ export const ContainerBoxes = styled.div`
 
 export const BtnAdicionar = styled.button`
   @media (max-width: 767px) {
-    background: #2FC84C;
+    background: #2fc84c;
     width: 100%;
     height: 100%;
     display: flex;
@@ -560,7 +555,7 @@ export const BtnAdicionar = styled.button`
   }
 
   @media (min-width: 768px) {
-    background: #2FC84C;
+    background: #2fc84c;
     width: 40%;
     height: 50%;
     display: flex;
@@ -571,15 +566,10 @@ export const BtnAdicionar = styled.button`
     align-items: center;
     outline: none !important;
     color: #ffffff;
-
   }
 `
 
-// a partir daqui é relacionado a desktop >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-
-export const ContainerAdicionarDesktop = styled.div`
+// a partir daqui é relacionado a desktop >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>export const ContainerAdicionarDesktop = styled.div`
   @media (max-width: 767px) {
     display: none;
   }
@@ -595,9 +585,8 @@ export const ContainerAdicionarDesktop = styled.div`
   }
 `
 
-
 export const BoxBtnAdicionar = styled.div`
-@media (max-width: 767px) {
+  @media (max-width: 767px) {
     display: flex;
     justify-content: center;
     width: 80%;
@@ -615,8 +604,6 @@ export const BoxBtnAdicionar = styled.div`
     flex-direction: column;
   }
 `
-
-
 
 export const ContainerFormulario = styled.div`
   /* aumenta o container com a label e o input dentro  */
@@ -640,21 +627,17 @@ export const ContainerFormulario = styled.div`
     background-color: #1d1f2f;
     margin-top: 15px;
     margin-bottom: 5px;
-    flex-direction: column;}
-
-  
+    flex-direction: column;
+  }
 `
 
 export const ContentCheckBox = styled.div`
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    justify-items: center;
-  
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
 `
-
-
 export const ContentCheckBoxSpecial = styled.div`
   @media (max-width: 767px) {
     display: flex;
@@ -676,31 +659,24 @@ export const ContentCheckBoxSpecial = styled.div`
 `
 
 export const CheckBox = styled.input`
+  width: 25%;
+  background-color: #1d1f2f;
+  height: 25px;
+`
+
+export const CheckBoxCustomPremium = styled.input`
+  @media (max-width: 767px) {
     width: 25%;
     background-color: #1d1f2f;
     height: 25px;
-  
-`
-
-
-export const CheckBoxCustomPremium = styled.input`
-@media (max-width: 767px) {
-  width: 25%;
-    background-color: #1d1f2f;
-    height: 25px;
-
-
-}
-@media (min-width: 768px) {
+  }
+  @media (min-width: 768px) {
     width: 10%;
     background-color: #1d1f2f;
     height: 25px;
     /* visibility: hidden */
-}
-  
+  }
 `
-
-
 
 export const LabelCheckBox = styled.span`
   @media (max-width: 767px) {
@@ -726,7 +702,6 @@ export const LabelCheckBox = styled.span`
   }
 `
 
-
 export const LabelCheckBoxPremium = styled.span`
   @media (max-width: 767px) {
     width: 100%;
@@ -751,7 +726,6 @@ export const LabelCheckBoxPremium = styled.span`
   }
 `
 
-
 export const ContainerCheckBox = styled.div`
   @media (max-width: 767px) {
     display: flex;
@@ -774,8 +748,6 @@ export const ContainerCheckBox = styled.div`
   }
 `
 
-
-
 export const BoxTitle = styled.div`
   @media (max-width: 767px) {
     display: flex;
@@ -791,11 +763,6 @@ export const BoxTitle = styled.div`
     width: 100%;
   }
 `
-// #1D1F2F  - color fundo
-
-// #282741  -  color input
-
-
 
 
 export const BoxFormulario = styled.div`
@@ -810,7 +777,6 @@ export const BoxFormulario = styled.div`
     justify-items: center;
     color: #fff;
     flex-direction: column;
-    
   }
 
   @media (min-width: 768px) {
@@ -824,11 +790,8 @@ export const BoxFormulario = styled.div`
     margin-top: 15px;
     margin-bottom: 5px;
     flex-direction: row;
-
   }
 `
-
-
 
 export const BoxFormularioCustom = styled.div`
   /* aumenta o container com a label e o input dentro  */
@@ -842,7 +805,6 @@ export const BoxFormularioCustom = styled.div`
     justify-items: center;
     color: #fff;
     flex-direction: column;
-    
   }
 
   @media (min-width: 768px) {
@@ -856,11 +818,8 @@ export const BoxFormularioCustom = styled.div`
     margin-top: 15px;
     margin-bottom: 5px;
     flex-direction: row;
-
   }
 `
-
-
 export const BoxPremium = styled.div`
   /* aumenta o container com a label e o input dentro  */
   @media (max-width: 767px) {
@@ -872,8 +831,6 @@ export const BoxPremium = styled.div`
     justify-content: space-between;
     justify-items: center;
     color: #fff;
-    
-    
   }
 
   @media (min-width: 768px) {
@@ -887,11 +844,8 @@ export const BoxPremium = styled.div`
     margin-top: 15px;
     margin-bottom: 5px;
     flex-direction: row;
-
   }
 `
-
-
 export const BoxFormularioSpecial = styled.div`
   /* aumenta o container com a label e o input dentro  */
   @media (max-width: 767px) {
@@ -904,7 +858,6 @@ export const BoxFormularioSpecial = styled.div`
     justify-items: center;
     color: #fff;
     flex-direction: column;
-    
   }
 
   @media (min-width: 768px) {
@@ -918,11 +871,8 @@ export const BoxFormularioSpecial = styled.div`
     margin-top: 15px;
     margin-bottom: 5px;
     flex-direction: row;
-
   }
 `
-
-
 
 export const Wrapper = styled.div`
   @media (max-width: 767px) {
@@ -943,8 +893,6 @@ export const Wrapper = styled.div`
     flex-direction: column;
   }
 `
-
-
 export const WrapperCustom = styled.div`
   @media (max-width: 767px) {
     display: flex;
@@ -1003,7 +951,6 @@ export const LabelInput = styled.span`
   }
 `
 
-
 export const Input = styled.input`
   @media (max-width: 767px) {
     background: #282741;
@@ -1027,22 +974,17 @@ export const Input = styled.input`
   }
 `
 
-
-
 export const BoxDivision = styled.div`
   @media (max-width: 767px) {
     display: flex;
     width: 100%;
     height: 100%;
-    
   }
 
   @media (min-width: 768px) {
     width: 100%;
   }
 `
-
-
 
 export const BoxDivisionCustom = styled.div`
   @media (max-width: 767px) {
@@ -1054,6 +996,5 @@ export const BoxDivisionCustom = styled.div`
   @media (min-width: 768px) {
     width: 100%;
     display: flex;
-
   }
 `
