@@ -1,22 +1,22 @@
 import React, { useState } from 'react'
 import {
-  IconsTags,
-  ContainerIconsLg,
-  LabelClienteDashboard,
-  LabelDescricaoDashboard,
-  LabelClienteDashboardMenos,
+  BoxDescription,
+  ContainerBoxes,
+  Title,
+  Description,
+  TitleCustom,
   Container,
-  ContainerListaLg,
+  FormContainer,
   Tr,
   TabelaBody,
-  ContainerTags,
+  Box,
   ContainerSide,
-  ContainerConteudo,
+  Content,
   ContainerListAdicionar,
   ContainerAdicionar,
   Whapper,
   WhapperCustomName,
-  ContainerSpan,
+  BoxTitle,
   Th,
   TBody,
   BoxTdCustomName,
@@ -49,55 +49,55 @@ const dashClientes = ({
         <ContainerSide>
           <Sidebar />
         </ContainerSide>
-        <ContainerConteudo>
-          <ContainerIconsLg>
-            <ContainerTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelClienteDashboard>
+        <Content>
+          <ContainerBoxes>
+            <Box>
+              <BoxDescription>
+                <BoxTitle>
+                  <Title>
                     {clients.length}
-                  </LabelClienteDashboard>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </Title>
+                </BoxTitle>
+                <BoxTitle>
+                  <Description>
                     Clientes cadastrados
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelClienteDashboard>Allison Cruz</LabelClienteDashboard>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </Description>
+                </BoxTitle>
+              </BoxDescription>
+              <BoxDescription>
+                <BoxTitle>
+                  <Title>Allison Cruz</Title>
+                </BoxTitle>
+                <BoxTitle>
+                  <Description>
                     Melhor Cliente
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelClienteDashboardMenos>7</LabelClienteDashboardMenos>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </Description>
+                </BoxTitle>
+              </BoxDescription>
+              <BoxDescription>
+                <BoxTitle>
+                  <TitleCustom>7</TitleCustom>
+                </BoxTitle>
+                <BoxTitle>
+                  <Description>
                     Clientes Ociosos
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelClienteDashboardMenos>5</LabelClienteDashboardMenos>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </Description>
+                </BoxTitle>
+              </BoxDescription>
+              <BoxDescription>
+                <BoxTitle>
+                  <TitleCustom>5</TitleCustom>
+                </BoxTitle>
+                <BoxTitle>
+                  <Description>
                     Clientes Inativos
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-            </ContainerTags>
-          </ContainerIconsLg>
+                  </Description>
+                </BoxTitle>
+              </BoxDescription>
+            </Box>
+          </ContainerBoxes>
 
-          <ContainerListaLg>
+          <FormContainer>
             <ContainerListAdicionar>
               <ContainerAdicionar>
                 <Link href="/dashboard/clientes/novo">
@@ -167,8 +167,8 @@ const dashClientes = ({
                 Próximo <img src="/image/right.svg" />
               </BtnPreviosNext>
             </DivBtnPreviusNext>
-          </ContainerListaLg>
-        </ContainerConteudo>
+          </FormContainer>
+        </Content>
       </Container>
     </>
   )
