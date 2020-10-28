@@ -132,7 +132,16 @@ const dashAdmin = () => {
         <Grid>
           <IconsTags>
             <BoxSpan>
-              
+            <BoxCustom>
+                <Title >Estatisticas</Title>
+                <Link href="dashboard/estatisticas">
+                 <a>
+                  <DivImg>
+                    <img src="/image/stats.svg" alt="" />
+                  </DivImg>
+                 </a>
+                </Link>
+              </BoxCustom>
             </BoxSpan>
           </IconsTags>
         </Grid>

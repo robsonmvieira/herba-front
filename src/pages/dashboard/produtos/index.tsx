@@ -4,21 +4,21 @@ import { Modal, ModalHeader, ModalBody } from 'reactstrap'
 
 import { GetServerSideProps } from 'next'
 import {
-  IconsTags,
-  ContainerIconsLg,
-  LabelProdutoDashboard,
-  LabelDescricaoDashboard,
-  LabelProdutoDashboardMenos,
+  BoxDescription,
+  ContainerBoxes,
+  BoxTitle,
+  BoxTitleDescription,
+  BoxTitleCustom,
   Container,
-  ContainerListaLg,
+  FormContainer,
   Tr,
   TrBody,
-  ContainerTags,
+  Boxes,
   Th,
   Td,
   ContainerSide,
-  ContainerConteudo,
-  ContainerSpan,
+  Content,
+  BoxInformations,
   ContainerTh,
   Whapper,
   TabelaBody,
@@ -166,55 +166,55 @@ const dashProdutos = ({ productsList }) => {
         <ContainerSide>
           <Sidebar />
         </ContainerSide>
-        <ContainerConteudo>
-          <ContainerIconsLg>
-            <ContainerTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelProdutoDashboard>35</LabelProdutoDashboard>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+        <Content>
+          <ContainerBoxes>
+            <Boxes>
+              <BoxDescription>
+                <BoxInformations>
+                  <BoxTitle>35</BoxTitle>
+                </BoxInformations>
+                <BoxInformations>
+                  <BoxTitleDescription>
                     Produto cadastrados
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelProdutoDashboard>Sopa de ninhaça</LabelProdutoDashboard>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </BoxTitleDescription>
+                </BoxInformations>
+              </BoxDescription>
+              <BoxDescription>
+                <BoxInformations>
+                  <BoxTitle>Sopa de ninhaça</BoxTitle>
+                </BoxInformations>
+                <BoxInformations>
+                  <BoxTitleDescription>
                     Mais vendido
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelProdutoDashboardMenos>5</LabelProdutoDashboardMenos>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </BoxTitleDescription>
+                </BoxInformations>
+              </BoxDescription>
+              <BoxDescription>
+                <BoxInformations>
+                  <BoxTitleCustom>5</BoxTitleCustom>
+                </BoxInformations>
+                <BoxInformations>
+                  <BoxTitleDescription>
                     Produtos zerados
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-              <IconsTags>
-                <ContainerSpan>
-                  <LabelProdutoDashboardMenos>
+                  </BoxTitleDescription>
+                </BoxInformations>
+              </BoxDescription>
+              <BoxDescription>
+                <BoxInformations>
+                  <BoxTitleCustom>
                     Suco de coca
-                  </LabelProdutoDashboardMenos>
-                </ContainerSpan>
-                <ContainerSpan>
-                  <LabelDescricaoDashboard>
+                  </BoxTitleCustom>
+                </BoxInformations>
+                <BoxInformations>
+                  <BoxTitleDescription>
                     Menos vendido
-                  </LabelDescricaoDashboard>
-                </ContainerSpan>
-              </IconsTags>
-            </ContainerTags>
-          </ContainerIconsLg>
+                  </BoxTitleDescription>
+                </BoxInformations>
+              </BoxDescription>
+            </Boxes>
+          </ContainerBoxes>
 
-          <ContainerListaLg>
+          <FormContainer>
             <ContainerBusca>
               <FormList>
                 <InputFormList
@@ -286,8 +286,8 @@ const dashProdutos = ({ productsList }) => {
                 </ContainerBtnPagination>
               </TBody>
             </TabelaBody>
-          </ContainerListaLg>
-        </ContainerConteudo>
+          </FormContainer>
+        </Content>
       </Container>
 
       {/* modal */}

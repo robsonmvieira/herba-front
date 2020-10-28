@@ -23,7 +23,7 @@ export const ContainerInclusao = styled.div`
   justify-content: flex-end;
 `
 
-export const ContainerConteudo = styled.div`
+export const Content = styled.div`
   @media (min-width: 768px) {
     background: #1d1f2f;
     width: 100%;
@@ -59,7 +59,7 @@ export const ContainerSide = styled.div`
   }
 `
 
-export const ContainerIconsLg = styled.div`
+export const FormContainer = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
@@ -109,7 +109,7 @@ export const ContainerNovoProduto = styled.div`
   }
 `
 
-export const IconsTags = styled.div`
+export const Box = styled.div`
   @media (max-width: 767px) {
     background: #282741;
     width: 90%;
@@ -135,7 +135,7 @@ export const IconsTags = styled.div`
   }
 `
 
-export const ContainerTags = styled.div`
+export const Boxes = styled.div`
   @media (max-width: 767px) {
     width: 90%;
     height: 80%;
@@ -156,7 +156,7 @@ export const ContainerTags = styled.div`
   }
 `
 
-export const LabelProdutoDashboard = styled.span`
+export const BoxDescription = styled.span`
   @media (max-width: 767px) {
     color: #2fc84c;
 
@@ -177,7 +177,7 @@ export const LabelProdutoDashboard = styled.span`
   }
 `
 
-export const LabelProdutoDashboardMenos = styled.span`
+export const BoxDescriptionCustom = styled.span`
   @media (max-width: 767px) {
     color: #ef6e6e;
     width: max-content;
@@ -201,7 +201,7 @@ export const LabelProdutoDashboardMenos = styled.span`
   }
 `
 
-export const LabelDescricaoDashboard = styled.span`
+export const BoxInformations = styled.span`
   @media (max-width: 767px) {
     color: #fff;
     width: 100%;
@@ -220,7 +220,7 @@ export const LabelDescricaoDashboard = styled.span`
   }
 `
 
-export const ContainerSpan = styled.div`
+export const ContentBox = styled.div`
   @media (max-width: 767px) {
     display: flex;
     justify-content: center;
@@ -454,7 +454,7 @@ export const ContainerAdicionarSemDivisao = styled.div`
   }
 `
 
-export const ContainerIconsDeCima = styled.div`
+export const ContainerBoxes = styled.div`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
