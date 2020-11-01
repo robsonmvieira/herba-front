@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { Form } from '@unform/web'
+
 
 export const Container = styled.div`
   @media (max-width: 767px) {
@@ -65,7 +67,7 @@ export const ContainerSide = styled.div`
   }
 `
 
-export const FormContainer = styled.div`
+export const FormContainer = styled(Form)`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;

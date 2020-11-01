@@ -152,12 +152,13 @@ const Login = () => {
             >
               <FormTitle>Login</FormTitle>
               <LabelLogin>Email:</LabelLogin>
-              <Input placeholder="Digite seu email" name="email" />
+              <Input placeholder="Digite seu email" name="email" style={{width: "80%"}} />
               <LabelLogin style={{ marginTop: 25 }}>Senha:</LabelLogin>
               <Input
                 placeholder="Digite sua senha"
                 name="password"
                 type="password"
+                style={{width: "80%"}}
               />
               <BtnLogin>Logar</BtnLogin>
             </Form>
