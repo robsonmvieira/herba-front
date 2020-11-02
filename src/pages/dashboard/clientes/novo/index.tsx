@@ -1,4 +1,5 @@
 import React from 'react'
+import Input from '../../../../components/Input'
 import {
   BoxDescription,
   FormContainer,
@@ -14,7 +15,6 @@ import {
   Titulo,
   ContainerBoxes,
   LabelInput,
-  Input,
   ContentCheckBox,
   CheckBox,
   LabelCheckBox,
@@ -40,6 +40,11 @@ import Sidebar from '../../../../components/sidebar'
 import Menu from '../../../../components/Menu'
 
 const NovoCliente = () => {
+
+function HendlerForm (){
+
+}
+
   return (
     <>
       <Menu />
@@ -86,7 +91,7 @@ const NovoCliente = () => {
             </ContainerBox>
           </ContainerBoxes>
 
-          <FormContainer>
+          <FormContainer onSubmit={HendlerForm}>
             <ContainerNovoCliente>
               <ContainerTituloNovoCliente>
                 <Titulo>Novo Cliente:</Titulo>
@@ -96,11 +101,11 @@ const NovoCliente = () => {
                 <BoxFormulario>
                   <Wrapper>
                     <LabelInput>Nome:</LabelInput>
-                    <Input />
+                    <Input name="nome" />
                   </Wrapper>
                   <Wrapper>
                     <LabelInput>Email:</LabelInput>
-                    <Input />
+                    <Input name="email" />
                   </Wrapper>
                 </BoxFormulario>
               </BoxFormulario>
@@ -108,15 +113,15 @@ const NovoCliente = () => {
               <BoxFormulario>
                 <WrapperSpecial>
                   <LabelInput>Sexo:</LabelInput>
-                  <Input />
+                  <Input name="sexo" />
                 </WrapperSpecial>
                 <WrapperSpecial>
                   <LabelInput>Telefone:</LabelInput>
-                  <Input />
+                  <Input name="telefone" />
                 </WrapperSpecial>
                 <WrapperSpecial>
                   <LabelInput>CPF:</LabelInput>
-                  <Input />
+                  <Input name="cpf" />
                 </WrapperSpecial>
               </BoxFormulario>
 
@@ -124,11 +129,11 @@ const NovoCliente = () => {
                 <BoxFormulario>
                   <Wrapper>
                     <LabelInput>Email:</LabelInput>
-                    <Input />
+                    <Input name="email" />
                   </Wrapper>
                   <Wrapper>
                     <LabelInput>Profissão:</LabelInput>
-                    <Input />
+                    <Input name="profissão"/>
                   </Wrapper>
                 </BoxFormulario>
               </BoxFormulario>
@@ -137,7 +142,7 @@ const NovoCliente = () => {
                 <BoxFormulario>
                   <WrapperCustom>
                     <LabelInput>Endereço:</LabelInput>
-                    <Input />
+                    <Input name="endereço" />
                   </WrapperCustom>
                 </BoxFormulario>
               </BoxFormulario>
@@ -145,30 +150,30 @@ const NovoCliente = () => {
               <BoxFormulario>
                 <WrapperSpecial>
                   <LabelInput>Bairro:</LabelInput>
-                  <Input />
+                  <Input name="bairro"/>
                 </WrapperSpecial>
                 <WrapperSpecial>
                   <LabelInput>Cidade:</LabelInput>
-                  <Input />
+                  <Input name="cidade" />
                 </WrapperSpecial>
                 <WrapperSpecial>
                   <LabelInput>Estado:</LabelInput>
-                  <Input />
+                  <Input name="estado" />
                 </WrapperSpecial>
               </BoxFormulario>
 
               <BoxFormulario>
                 <WrapperSpecial>
                   <LabelInput>Peso:</LabelInput>
-                  <Input />
+                  <Input name="peso" />
                 </WrapperSpecial>
                 <WrapperSpecial>
                   <LabelInput>Altura:</LabelInput>
-                  <Input />
+                  <Input name="altura" />
                 </WrapperSpecial>
                 <WrapperSpecial>
                   <LabelInput>Alergias:</LabelInput>
-                  <Input />
+                  <Input name="alergias" />
                 </WrapperSpecial>
               </BoxFormulario>
 
@@ -329,7 +334,7 @@ const NovoCliente = () => {
               <BoxFormulario>
                 <WrapperCustom>
                   <LabelInput>Outros:</LabelInput>
-                  <Input />
+                  <Input name="outros" />
                 </WrapperCustom>
               </BoxFormulario>
 
