@@ -1,6 +1,28 @@
 import styled from 'styled-components'
-import { Form } from '@unform/web'
+import { Formik, Field as FField } from 'formik'
 
+export const Field = styled(FField)`
+  @media (max-width: 767px) {
+    background: #282741;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #282741;
+    border: none;
+    color: #eff0f5;
+    height: 40px;
+    outline: none;
+    padding-left: 5px;
+  }
+`
 
 export const Container = styled.div`
   @media (max-width: 767px) {
@@ -67,7 +89,7 @@ export const ContainerSide = styled.div`
   }
 `
 
-export const FormContainer = styled(Form)`
+export const FormContainer = styled(Formik)`
   @media (max-width: 767px) {
     background: #1d1f2f;
     width: 100%;
@@ -539,35 +561,39 @@ export const ContainerBoxes = styled.div`
 
 export const BtnAdicionar = styled.button`
   @media (max-width: 767px) {
-    background: #2fc84c;
     width: 100%;
+    border: none;
     height: 100%;
-    display: flex;
     margin: none;
     padding: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    font-style: normal;
+    font-family: Roboto;
+    background: #2fc84c;
+    outline: none !important;
+
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    color: #ffffff;
-    outline: none !important;
   }
 
   @media (min-width: 768px) {
-    background: #2fc84c;
     width: 40%;
     height: 50%;
-    display: flex;
+    border: none;
     margin: none;
     padding: none;
+    color: #ffffff;
+    background: #2fc84c;
+    outline: none !important;
+
+    display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
-    outline: none !important;
-    color: #ffffff;
   }
 `
 
@@ -749,8 +775,6 @@ export const BoxTitle = styled.div`
     width: 100%;
   }
 `
-
-
 export const BoxFormulario = styled.div`
   /* aumenta o container com a label e o input dentro  */
   @media (max-width: 767px) {
