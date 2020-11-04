@@ -90,3 +90,19 @@ export const birthDateMask = [
   /\d/,
   /\d/
 ]
+export const CPFMask = [
+  /\d/,
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  /\d/,
+  '.',
+  /\d/,
+  /\d/,
+  /\d/,
+  '-',
+  /\d/,
+  /\d/
+]
