@@ -63,7 +63,6 @@ export interface NewClient {
 
 export const phoneNumberMask = [
   '(',
-  /[1-9]/,
   /\d/,
   /\d/,
   ')',
@@ -73,6 +72,7 @@ export const phoneNumberMask = [
   /\d/,
   /\d/,
   '-',
+  /\d/,
   /\d/,
   /\d/,
   /\d/,

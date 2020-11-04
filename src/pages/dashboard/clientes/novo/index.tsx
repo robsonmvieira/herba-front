@@ -36,7 +36,7 @@ import {
 } from './styles'
 import Sidebar from '../../../../components/sidebar'
 import Menu from '../../../../components/Menu'
-import { birthDateMask, NewClient, state } from './interfaces'
+import { birthDateMask, NewClient, phoneNumberMask, state } from './interfaces'
 import { Form } from 'formik'
 import MaskedInput from 'react-text-mask'
 
@@ -131,7 +131,17 @@ const NovoCliente = () => {
                   </WrapperSpecial>
                   <WrapperSpecial>
                     <LabelInput>Telefone:</LabelInput>
-                    <Field name="phone" />
+                    <Field
+                      name="phone"
+                      render={({ field }) => (
+                        <MaskedInput
+                          {...field}
+                          mask={phoneNumberMask}
+                          placeholder="Telefone"
+                          type="text"
+                        />
+                      )}
+                    />
                   </WrapperSpecial>
                   <WrapperSpecial>
                     <LabelInput>CPF:</LabelInput>
