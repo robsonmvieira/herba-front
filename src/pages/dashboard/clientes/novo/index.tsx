@@ -36,8 +36,9 @@ import {
 } from './styles'
 import Sidebar from '../../../../components/sidebar'
 import Menu from '../../../../components/Menu'
-import { NewClient, state } from './interfaces'
+import { birthDateMask, NewClient, state } from './interfaces'
 import { Form } from 'formik'
+import MaskedInput from 'react-text-mask'
 
 const NovoCliente = () => {
   const handlerFormSubmit = useCallback(
@@ -108,7 +109,17 @@ const NovoCliente = () => {
                     </Wrapper>
                     <Wrapper>
                       <LabelInput>Data de Nascimento:</LabelInput>
-                      <Field name="birthdate" />
+                      <Field
+                        name="birthdate"
+                        render={({ field }) => (
+                          <MaskedInput
+                            {...field}
+                            mask={birthDateMask}
+                            placeholder="Data de Nascimento do cliente"
+                            type="text"
+                          />
+                        )}
+                      />
                     </Wrapper>
                   </BoxFormulario>
                 </BoxFormulario>

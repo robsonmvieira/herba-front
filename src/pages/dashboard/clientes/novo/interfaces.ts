@@ -60,3 +60,33 @@ export interface NewClient {
   falta_de_energia: boolean
   doencas_cardiacas: boolean
 }
+
+export const phoneNumberMask = [
+  '(',
+  /[1-9]/,
+  /\d/,
+  /\d/,
+  ')',
+  ' ',
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/,
+  '-',
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/
+]
+export const birthDateMask = [
+  /\d/,
+  /\d/,
+  '/',
+  /\d/,
+  /\d/,
+  '/',
+  /\d/,
+  /\d/,
+  /\d/,
+  /\d/
+]
