@@ -133,7 +133,7 @@ export const ContainerNovoCliente = styled.div`
     width: 90%;
     height: 100%;
     display: flex;
-    margin: none;
+    margin: auto;
     padding: none;
     justify-content: flex-start;
     justify-items: center;

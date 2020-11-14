@@ -107,7 +107,7 @@ const NovoCliente = () => {
                   <Titulo>Novo Cliente:</Titulo>
                 </ContainerTituloNovoCliente>
 
-                <BoxFormulario>
+                
                   <BoxFormulario>
                     <Wrapper>
                       <LabelInput>Nome:</LabelInput>
@@ -128,7 +128,7 @@ const NovoCliente = () => {
                       />
                     </Wrapper>
                   </BoxFormulario>
-                </BoxFormulario>
+                
 
                 <BoxFormulario>
                   <WrapperSpecial>
@@ -165,7 +165,7 @@ const NovoCliente = () => {
                   </WrapperSpecial>
                 </BoxFormulario>
 
-                <BoxFormulario>
+                
                   <BoxFormulario>
                     <Wrapper>
                       <LabelInput>Email:</LabelInput>
@@ -176,9 +176,9 @@ const NovoCliente = () => {
                       <Field name="profission" />
                     </Wrapper>
                   </BoxFormulario>
-                </BoxFormulario>
+                
 
-                <BoxFormulario>
+                
                   <BoxFormulario>
                     <Wrapper>
                       <LabelInput>CEP:</LabelInput>
@@ -189,7 +189,7 @@ const NovoCliente = () => {
                       <Field name="address" />
                     </Wrapper>
                   </BoxFormulario>
-                </BoxFormulario>
+               
 
                 <BoxFormulario>
                   <WrapperSpecial>
